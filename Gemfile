@@ -37,6 +37,9 @@ group :development, :test do
 
   # RuboCop extension focused on enforcing Rails best practices and coding conventions.
   gem 'rubocop-rails', require: false
+
+  # A library for setting up Ruby objects as test data
+  gem 'factory_bot_rails'
 end
 
 group :development do
@@ -62,3 +65,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # The Rails adapter for Inertia.js
 # Use my own (patched) repo, because the official one has some serios issues.
 gem 'inertia_rails', github: 'ledermann/inertia-rails', branch: 'patched'
+
+# A library for generating fake data such as names, addresses, and phone numbers.
+gem 'faker', require: false

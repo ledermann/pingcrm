@@ -58,3 +58,7 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# The Rails adapter for Inertia.js
+# Use my own (patched) repo, because the official one has some serios issues.
+gem 'inertia_rails', github: 'ledermann/inertia-rails', branch: 'patched'

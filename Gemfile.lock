@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/ledermann/inertia-rails.git
+  revision: 14b48781e78576babde7a2f0f79bf3ad9ca356b4
+  branch: patched
+  specs:
+    inertia_rails (1.2.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -213,6 +220,7 @@ DEPENDENCIES
   bundler-audit
   byebug
   capybara (>= 2.15)
+  inertia_rails!
   jbuilder (~> 2.7)
   listen (>= 3.0.5, < 3.2)
   pg (>= 0.18, < 2.0)

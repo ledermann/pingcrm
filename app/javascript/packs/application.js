@@ -49,10 +49,13 @@ import {
 } from '@inertiajs/inertia-vue'
 Vue.use(InertiaApp)
 
-let route = function (...args) {
-  return "/some-path"
-}
+import Routes from '../routes.js';
+Vue.prototype.$routes = Routes
 
+// temp
+let route = function (...args) {
+  return "/"
+}
 Vue.mixin({ methods: { route: route } })
 
 const app = document.getElementById('app')

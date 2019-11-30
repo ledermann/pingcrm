@@ -1,13 +1,13 @@
 <template>
   <div>
     <div class="mb-4">
-      <inertia-link class="flex items-center group py-3" :href="route('dashboard')">
+      <inertia-link class="flex items-center group py-3" :href="$routes.root()">
         <icon name="dashboard" class="w-4 h-4 mr-2" :class="isUrl('') ? 'fill-white' : 'fill-indigo-light group-hover:fill-white'" />
         <div :class="isUrl('') ? 'text-white' : 'text-indigo-lighter group-hover:text-white'">Dashboard</div>
       </inertia-link>
     </div>
     <div class="mb-4">
-      <inertia-link class="flex items-center group py-3" :href="route('organizations')">
+      <inertia-link class="flex items-center group py-3" :href="$routes.organizations()">
         <icon name="office" class="w-4 h-4 mr-2" :class="isUrl('organizations') ? 'fill-white' : 'fill-indigo-light group-hover:fill-white'" />
         <div :class="isUrl('organizations') ? 'text-white' : 'text-indigo-lighter group-hover:text-white'">Organizations</div>
       </inertia-link>

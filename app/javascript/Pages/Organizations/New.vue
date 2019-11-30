@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1 class="mb-8 font-bold text-3xl">
-      <inertia-link class="text-indigo-light hover:text-indigo-dark" :href="route('organizations')">Organizations</inertia-link>
+      <inertia-link class="text-indigo-light hover:text-indigo-dark" :href="$routes.organizations()">Organizations</inertia-link>
       <span class="text-indigo-light font-medium">/</span> Create
     </h1>
     <div class="bg-white rounded shadow overflow-hidden max-w-lg">
@@ -40,7 +40,7 @@ export default {
   components: {
     LoadingButton,
     SelectInput,
-    TextInput,
+    TextInput
   },
   remember: 'form',
   data() {
@@ -54,16 +54,17 @@ export default {
         city: null,
         region: null,
         country: null,
-        postal_code: null,
-      },
+        postal_code: null
+      }
     }
   },
   methods: {
     submit() {
       this.sending = true
-      this.$inertia.post(this.route('organizations.store'), this.form)
-        .then(() => this.sending = false)
-    },
-  },
+      this.$inertia
+        .post(this.$routes.organizations(), this.form)
+        .then(() => (this.sending = false))
+    }
+  }
 }
 </script>

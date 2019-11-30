@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1 class="mb-8 font-bold text-3xl">
-      <inertia-link class="text-indigo-light hover:text-indigo-dark" :href="route('organizations')">Organizations</inertia-link>
+      <inertia-link class="text-indigo-light hover:text-indigo-dark" :href="$routes.organizations()">Organizations</inertia-link>
       <span class="text-indigo-light font-medium">/</span>
       {{ form.name }}
     </h1>
@@ -87,10 +87,10 @@ export default {
     LoadingButton,
     SelectInput,
     TextInput,
-    TrashedMessage,
+    TrashedMessage
   },
   props: {
-    organization: Object,
+    organization: Object
   },
   remember: 'form',
   data() {
@@ -104,26 +104,29 @@ export default {
         city: this.organization.city,
         region: this.organization.region,
         country: this.organization.country,
-        postal_code: this.organization.postal_code,
-      },
+        postal_code: this.organization.postal_code
+      }
     }
   },
   methods: {
     submit() {
       this.sending = true
-      this.$inertia.put(this.route('organizations.update', this.organization.id), this.form)
-        .then(() => this.sending = false)
+      this.$inertia
+        .put(this.$routes.organization(this.organization.id), this.form)
+        .then(() => (this.sending = false))
     },
     destroy() {
       if (confirm('Are you sure you want to delete this organization?')) {
-        this.$inertia.delete(this.route('organizations.destroy', this.organization.id))
+        this.$inertia.delete(this.$routes.organization(this.organization.id))
       }
     },
     restore() {
       if (confirm('Are you sure you want to restore this organization?')) {
-        this.$inertia.put(this.route('organizations.restore', this.organization.id))
+        this.$inertia.put(
+          this.$routes.restore_organization(this.organization.id)
+        )
       }
-    },
-  },
+    }
+  }
 }
 </script>

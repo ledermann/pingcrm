@@ -491,9 +491,24 @@ Based on Rails 6.0.1 routes of Pingcrm::Application
     make: function() {
       var routes;
       routes = {
+// edit_organization => /organizations/:id/edit(.:format)
+  // function(id, options)
+  edit_organization: Utils.route([["id",true],["format",false]], {}, [2,[7,"/",false],[2,[6,"organizations",false],[2,[7,"/",false],[2,[3,"id",false],[2,[7,"/",false],[2,[6,"edit",false],[1,[2,[8,".",false],[3,"format",false]],false]]]]]]]),
+// new_organization => /organizations/new(.:format)
+  // function(options)
+  new_organization: Utils.route([["format",false]], {}, [2,[7,"/",false],[2,[6,"organizations",false],[2,[7,"/",false],[2,[6,"new",false],[1,[2,[8,".",false],[3,"format",false]],false]]]]]),
+// organization => /organizations/:id(.:format)
+  // function(id, options)
+  organization: Utils.route([["id",true],["format",false]], {}, [2,[7,"/",false],[2,[6,"organizations",false],[2,[7,"/",false],[2,[3,"id",false],[1,[2,[8,".",false],[3,"format",false]],false]]]]]),
+// organizations => /organizations(.:format)
+  // function(options)
+  organizations: Utils.route([["format",false]], {}, [2,[7,"/",false],[2,[6,"organizations",false],[1,[2,[8,".",false],[3,"format",false]],false]]]),
 // reports => /reports(.:format)
   // function(options)
   reports: Utils.route([["format",false]], {}, [2,[7,"/",false],[2,[6,"reports",false],[1,[2,[8,".",false],[3,"format",false]],false]]]),
+// restore_organization => /organizations/:id/restore(.:format)
+  // function(id, options)
+  restore_organization: Utils.route([["id",true],["format",false]], {}, [2,[7,"/",false],[2,[6,"organizations",false],[2,[7,"/",false],[2,[3,"id",false],[2,[7,"/",false],[2,[6,"restore",false],[1,[2,[8,".",false],[3,"format",false]],false]]]]]]]),
 // root => /
   // function(options)
   root: Utils.route([], {}, [7,"/",false])}

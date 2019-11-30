@@ -71,3 +71,6 @@ gem 'inertia_rails', github: 'ledermann/inertia-rails', branch: 'patched'
 
 # A library for generating fake data such as names, addresses, and phone numbers.
 gem 'faker', require: false
+
+# The ultimate pagination ruby gem
+gem 'pagy'

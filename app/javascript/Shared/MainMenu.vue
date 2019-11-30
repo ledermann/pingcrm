@@ -13,7 +13,7 @@
       </inertia-link>
     </div>
     <div class="mb-4">
-      <inertia-link class="flex items-center group py-3" :href="route('contacts')">
+      <inertia-link class="flex items-center group py-3" :href="$routes.contacts()">
         <icon name="users" class="w-4 h-4 mr-2" :class="isUrl('contacts') ? 'fill-white' : 'fill-indigo-light group-hover:fill-white'" />
         <div :class="isUrl('contacts') ? 'text-white' : 'text-indigo-lighter group-hover:text-white'">Contacts</div>
       </inertia-link>
@@ -32,10 +32,10 @@ import Icon from '@/Shared/Icon'
 
 export default {
   components: {
-    Icon,
+    Icon
   },
   props: {
-    url: String,
+    url: String
   },
   methods: {
     isUrl(...urls) {
@@ -44,7 +44,7 @@ export default {
       }
 
       return urls.filter(url => this.url.startsWith(url)).length
-    },
-  },
+    }
+  }
 }
 </script>

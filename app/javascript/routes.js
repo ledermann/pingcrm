@@ -491,9 +491,21 @@ Based on Rails 6.0.1 routes of Pingcrm::Application
     make: function() {
       var routes;
       routes = {
+// contact => /contacts/:id(.:format)
+  // function(id, options)
+  contact: Utils.route([["id",true],["format",false]], {}, [2,[7,"/",false],[2,[6,"contacts",false],[2,[7,"/",false],[2,[3,"id",false],[1,[2,[8,".",false],[3,"format",false]],false]]]]]),
+// contacts => /contacts(.:format)
+  // function(options)
+  contacts: Utils.route([["format",false]], {}, [2,[7,"/",false],[2,[6,"contacts",false],[1,[2,[8,".",false],[3,"format",false]],false]]]),
+// edit_contact => /contacts/:id/edit(.:format)
+  // function(id, options)
+  edit_contact: Utils.route([["id",true],["format",false]], {}, [2,[7,"/",false],[2,[6,"contacts",false],[2,[7,"/",false],[2,[3,"id",false],[2,[7,"/",false],[2,[6,"edit",false],[1,[2,[8,".",false],[3,"format",false]],false]]]]]]]),
 // edit_organization => /organizations/:id/edit(.:format)
   // function(id, options)
   edit_organization: Utils.route([["id",true],["format",false]], {}, [2,[7,"/",false],[2,[6,"organizations",false],[2,[7,"/",false],[2,[3,"id",false],[2,[7,"/",false],[2,[6,"edit",false],[1,[2,[8,".",false],[3,"format",false]],false]]]]]]]),
+// new_contact => /contacts/new(.:format)
+  // function(options)
+  new_contact: Utils.route([["format",false]], {}, [2,[7,"/",false],[2,[6,"contacts",false],[2,[7,"/",false],[2,[6,"new",false],[1,[2,[8,".",false],[3,"format",false]],false]]]]]),
 // new_organization => /organizations/new(.:format)
   // function(options)
   new_organization: Utils.route([["format",false]], {}, [2,[7,"/",false],[2,[6,"organizations",false],[2,[7,"/",false],[2,[6,"new",false],[1,[2,[8,".",false],[3,"format",false]],false]]]]]),
@@ -506,6 +518,9 @@ Based on Rails 6.0.1 routes of Pingcrm::Application
 // reports => /reports(.:format)
   // function(options)
   reports: Utils.route([["format",false]], {}, [2,[7,"/",false],[2,[6,"reports",false],[1,[2,[8,".",false],[3,"format",false]],false]]]),
+// restore_contact => /contacts/:id/restore(.:format)
+  // function(id, options)
+  restore_contact: Utils.route([["id",true],["format",false]], {}, [2,[7,"/",false],[2,[6,"contacts",false],[2,[7,"/",false],[2,[3,"id",false],[2,[7,"/",false],[2,[6,"restore",false],[1,[2,[8,".",false],[3,"format",false]],false]]]]]]]),
 // restore_organization => /organizations/:id/restore(.:format)
   // function(id, options)
   restore_organization: Utils.route([["id",true],["format",false]], {}, [2,[7,"/",false],[2,[6,"organizations",false],[2,[7,"/",false],[2,[3,"id",false],[2,[7,"/",false],[2,[6,"restore",false],[1,[2,[8,".",false],[3,"format",false]],false]]]]]]]),

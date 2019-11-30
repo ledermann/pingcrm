@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1 class="mb-8 font-bold text-3xl">
-      <inertia-link class="text-indigo-light hover:text-indigo-dark" :href="route('contacts')">Contacts</inertia-link>
+      <inertia-link class="text-indigo-light hover:text-indigo-dark" :href="$routes.contacts()">Contacts</inertia-link>
       <span class="text-indigo-light font-medium">/</span> Create
     </h1>
     <div class="bg-white rounded shadow overflow-hidden max-w-lg">
@@ -45,10 +45,10 @@ export default {
   components: {
     LoadingButton,
     SelectInput,
-    TextInput,
+    TextInput
   },
   props: {
-    organizations: Array,
+    organizations: Array
   },
   remember: 'form',
   data() {
@@ -64,16 +64,17 @@ export default {
         city: null,
         region: null,
         country: null,
-        postal_code: null,
-      },
+        postal_code: null
+      }
     }
   },
   methods: {
     submit() {
       this.sending = true
-      this.$inertia.post(this.route('contacts.store'), this.form)
-        .then(() => this.sending = false)
-    },
-  },
+      this.$inertia
+        .post(this.$routes.contacts(), this.form)
+        .then(() => (this.sending = false))
+    }
+  }
 }
 </script>

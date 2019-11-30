@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1 class="mb-8 font-bold text-3xl">
-      <inertia-link class="text-indigo-light hover:text-indigo-dark" :href="route('contacts')">Contacts</inertia-link>
+      <inertia-link class="text-indigo-light hover:text-indigo-dark" :href="$routes.contacts()">Contacts</inertia-link>
       <span class="text-indigo-light font-medium">/</span>
       {{ form.first_name }} {{ form.last_name }}
     </h1>
@@ -48,7 +48,7 @@ import TrashedMessage from '@/Shared/TrashedMessage'
 export default {
   metaInfo() {
     return {
-      title: `${this.form.first_name} ${this.form.last_name}`,
+      title: `${this.form.first_name} ${this.form.last_name}`
     }
   },
   layout: (h, page) => h(Layout, [page]),
@@ -56,11 +56,11 @@ export default {
     LoadingButton,
     SelectInput,
     TextInput,
-    TrashedMessage,
+    TrashedMessage
   },
   props: {
     contact: Object,
-    organizations: Array,
+    organizations: Array
   },
   remember: 'form',
   data() {
@@ -76,26 +76,27 @@ export default {
         city: this.contact.city,
         region: this.contact.region,
         country: this.contact.country,
-        postal_code: this.contact.postal_code,
-      },
+        postal_code: this.contact.postal_code
+      }
     }
   },
   methods: {
     submit() {
       this.sending = true
-      this.$inertia.put(this.route('contacts.update', this.contact.id), this.form)
-        .then(() => this.sending = false)
+      this.$inertia
+        .put(this.$routes.contact(this.contact.id), this.form)
+        .then(() => (this.sending = false))
     },
     destroy() {
       if (confirm('Are you sure you want to delete this contact?')) {
-        this.$inertia.delete(this.route('contacts.destroy', this.contact.id))
+        this.$inertia.delete(this.$routes.contact(this.contact.id))
       }
     },
     restore() {
       if (confirm('Are you sure you want to restore this contact?')) {
-        this.$inertia.put(this.route('contacts.restore', this.contact.id))
+        this.$inertia.put(this.$routes.restore_contact(this.contact.id))
       }
-    },
-  },
+    }
+  }
 }
 </script>

@@ -1,24 +1,60 @@
-# README
+# PingCRM on Rails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A demo application built with Ruby on Rails and Vue.js to illustrate how **[Inertia.js](https://inertiajs.com/)** works.
 
-Things you may want to cover:
+![Screenshot](screenshot.jpg)
 
-* Ruby version
+This is a port of the [original PingCRM written in Laravel/PHP](https://github.com/inertiajs/pingcrm) to Ruby on Rails. Now it's possible to dive into the beautiful world of **Inertia.js** without having to install PHP ;-)
 
-* System dependencies
+There is a hosted installation of this demo available at https://pingcrm.ledermann.dev. Login with:
 
-* Configuration
+- **Username:** johndoe@example.com
+- **Password:** secret
 
-* Database creation
 
-* Database initialization
+## Installation
 
-* How to run the test suite
+Clone the repo locally:
 
-* Services (job queues, cache servers, search engines, etc.)
+```
+git clone https://github.com/ledermann/pingcrm.git
+```
 
-* Deployment instructions
+Setup (install dependencies, create and seed database):
 
-* ...
+```
+cd pingcrm
+bin/setup
+```
+
+Start it:
+
+```
+foreman start
+```
+
+You're ready to go! Visit PingCRM in your browser (http://localhost:3000), and login with:
+
+- **Username:** johndoe@example.com
+- **Password:** secret
+
+
+## Running tests
+
+To run the PingCRM tests, run:
+
+```
+rails test:system
+```
+
+
+## Requirements
+
+- Ruby 2.6
+- PostgreSQL
+
+
+## Credits
+
+* Original work by Jonathan Reinink (@reinink) and contributors
+* Port to Ruby on Rails by Georg Ledermann (@ledermann)

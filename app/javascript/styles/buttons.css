@@ -1,7 +1,10 @@
 .btn-indigo {
-  @apply px-6 py-3 rounded bg-indigo-dark text-white text-sm font-bold whitespace-no-wrap;
+  @apply px-6 py-3 rounded bg-indigo-700 text-white text-sm font-bold whitespace-no-wrap;
 
-  &:hover, &:focus { @apply bg-orange }
+  &:hover,
+  &:focus {
+    @apply bg-orange-500
+  }
 }
 
 .btn-spinner,
@@ -24,6 +27,11 @@
 }
 
 @keyframes spinning {
-  0% { transform: rotate(0deg) }
-  100% { transform: rotate(360deg) }
+  0% {
+    transform: rotate(0deg)
+  }
+
+  100% {
+    transform: rotate(360deg)
+  }
 }

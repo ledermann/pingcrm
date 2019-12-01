@@ -8,7 +8,7 @@ const environment = {
       },
       stage: 3
     }),
-    require('tailwindcss')('./tailwind.js'),
+    require('tailwindcss')('./app/javascript/styles/tailwind.config.js'),
     require('autoprefixer'),
   ]
 }

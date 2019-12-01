@@ -4,23 +4,25 @@
       <div
         v-if="link.label === 'gap'"
         :key="key"
-        class="mr-1 mb-1 px-4 py-3 text-sm text-grey"
+        class="mr-1 mb-1 px-4 py-3 text-sm text-gray-500"
       >
         …
       </div>
       <div
         v-else-if="link.url === null"
         :key="key"
-        class="mr-1 mb-1 px-4 py-3 text-sm border rounded text-grey"
+        class="mr-1 mb-1 px-4 py-3 text-sm border rounded text-gray-500 border-gray-400"
         :class="{ 'ml-auto': link.label === 'Next' }"
       >
         {{ link.label }}
       </div>
       <inertia-link v-else
         :key="key"
-        class="mr-1 mb-1 px-4 py-3 text-sm border rounded hover:bg-white focus:border-indigo focus:text-indigo"
+        class="mr-1 mb-1 px-4 py-3 text-sm border rounded border-gray-400 hover:bg-white focus:border-indigo-500 focus:text-indigo"
         :class="{ 'bg-white': link.active, 'ml-auto': link.label === 'Next' }"
-        :href="link.url">{{ link.label }}
+        :href="link.url"
+      >
+          {{ link.label }}
       </inertia-link>
     </template>
   </div>

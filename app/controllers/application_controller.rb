@@ -1,9 +1,8 @@
 class ApplicationController < ActionController::Base
-  include Pagy::Backend
+  before_action :set_csrf_cookie
+  before_action :authenticate_user!
 
-  def current_user
-    @current_user ||= User.first
-  end
+  include Pagy::Backend
 
   inertia_share do
     {
@@ -13,22 +12,25 @@ class ApplicationController < ActionController::Base
         alert: flash.alert
       },
       auth: {
-        user: {
-          id: 1,
-          name: "john",
-          first_name: 'John',
-          last_name: 'Doe',
-          role: 'Admin',
-          account: {
-            id: 1,
-            name: 'Acme Corporation'
+        user: current_user.as_json(
+          only: [ :id, :first_name, :last_name, :role ],
+          include: {
+            account: {
+              only: [ :id, :name ]
+            }
           }
-        }
+        )
       }
     }
   end
 
-  before_action :set_csrf_cookie
+  def after_sign_in_path_for(resource)
+    stored_location_for(resource) || root_path
+  end
+
+  def after_sign_out_path_for(_resource_or_scope)
+    new_user_session_path
+  end
 
   private
 

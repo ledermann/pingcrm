@@ -7,6 +7,7 @@ class OrganizationsTest < ApplicationSystemTestCase
   end
 
   test 'list all organizations and allows to paginate and search' do
+    sign_in @user
     organizations = Array.new(15) { create(:organization, account: @account) }.sort_by(&:name)
 
     visit '/organizations'
@@ -32,6 +33,7 @@ class OrganizationsTest < ApplicationSystemTestCase
   end
 
   test 'cannot view deleted organizations by default, but allows to change filter' do
+    sign_in @user
     organizations = Array.new(5) { create(:organization, account: @account) }
     organizations.first.soft_delete!
 
@@ -45,5 +47,11 @@ class OrganizationsTest < ApplicationSystemTestCase
 
     assert_selector 'h1', text: 'Organizations'
     assert_selector 'table tbody tr', count: 5
+  end
+
+  test 'cannot do anything without login' do
+    visit '/organizations'
+
+    assert_selector 'div', text: 'You need to sign in or sign up before continuing.'
   end
 end

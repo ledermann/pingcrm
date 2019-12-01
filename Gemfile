@@ -74,3 +74,6 @@ gem 'faker', require: false
 
 # The ultimate pagination ruby gem
 gem 'pagy'
+
+# Flexible authentication solution for Rails with Warden
+gem 'devise'

@@ -497,6 +497,9 @@ Based on Rails 6.0.1 routes of Pingcrm::Application
 // contacts => /contacts(.:format)
   // function(options)
   contacts: Utils.route([["format",false]], {}, [2,[7,"/",false],[2,[6,"contacts",false],[1,[2,[8,".",false],[3,"format",false]],false]]]),
+// destroy_user_session => /logout(.:format)
+  // function(options)
+  destroy_user_session: Utils.route([["format",false]], {}, [2,[7,"/",false],[2,[6,"logout",false],[1,[2,[8,".",false],[3,"format",false]],false]]]),
 // edit_contact => /contacts/:id/edit(.:format)
   // function(id, options)
   edit_contact: Utils.route([["id",true],["format",false]], {}, [2,[7,"/",false],[2,[6,"contacts",false],[2,[7,"/",false],[2,[3,"id",false],[2,[7,"/",false],[2,[6,"edit",false],[1,[2,[8,".",false],[3,"format",false]],false]]]]]]]),
@@ -509,6 +512,9 @@ Based on Rails 6.0.1 routes of Pingcrm::Application
 // new_organization => /organizations/new(.:format)
   // function(options)
   new_organization: Utils.route([["format",false]], {}, [2,[7,"/",false],[2,[6,"organizations",false],[2,[7,"/",false],[2,[6,"new",false],[1,[2,[8,".",false],[3,"format",false]],false]]]]]),
+// new_user_session => /login(.:format)
+  // function(options)
+  new_user_session: Utils.route([["format",false]], {}, [2,[7,"/",false],[2,[6,"login",false],[1,[2,[8,".",false],[3,"format",false]],false]]]),
 // organization => /organizations/:id(.:format)
   // function(id, options)
   organization: Utils.route([["id",true],["format",false]], {}, [2,[7,"/",false],[2,[6,"organizations",false],[2,[7,"/",false],[2,[3,"id",false],[1,[2,[8,".",false],[3,"format",false]],false]]]]]),
@@ -526,7 +532,10 @@ Based on Rails 6.0.1 routes of Pingcrm::Application
   restore_organization: Utils.route([["id",true],["format",false]], {}, [2,[7,"/",false],[2,[6,"organizations",false],[2,[7,"/",false],[2,[3,"id",false],[2,[7,"/",false],[2,[6,"restore",false],[1,[2,[8,".",false],[3,"format",false]],false]]]]]]]),
 // root => /
   // function(options)
-  root: Utils.route([], {}, [7,"/",false])}
+  root: Utils.route([], {}, [7,"/",false]),
+// user_session => /login(.:format)
+  // function(options)
+  user_session: Utils.route([["format",false]], {}, [2,[7,"/",false],[2,[6,"login",false],[1,[2,[8,".",false],[3,"format",false]],false]]])}
 ;
       routes.configure = function(config) {
         return Utils.configure(config);

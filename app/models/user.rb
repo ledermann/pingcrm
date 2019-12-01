@@ -1,6 +1,11 @@
 class User < ApplicationRecord
   belongs_to :account
 
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  # :registerable, :recoverable, :validatable
+  devise :database_authenticatable, :rememberable
+
   validates :first_name, :last_name, :email, presence: true
 
   include SoftDelete
@@ -30,5 +35,15 @@ class User < ApplicationRecord
 
   def name
     "#{first_name} #{last_name}"
+  end
+
+  # ensure user account is active
+  def active_for_authentication?
+    super && !deleted_at
+  end
+
+  # provide a custom message for a deleted account
+  def inactive_message
+    deleted_at ? :deleted : super
   end
 end

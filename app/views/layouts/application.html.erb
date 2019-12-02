@@ -10,6 +10,9 @@
     <meta content="black" name="apple-mobile-web-app-status-bar-style" />
     <meta content="#667eea" name="theme-color" />
 
+    <%= tag :meta, name: 'matomo-host', content: ENV['MATOMO_HOST'] %>
+    <%= tag :meta, name: 'matomo-id', content: ENV['MATOMO_ID'] %>
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 

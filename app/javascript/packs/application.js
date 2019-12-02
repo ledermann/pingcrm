@@ -23,8 +23,10 @@ import PortalVue from 'portal-vue'
 Vue.use(PortalVue)
 
 import axios from 'axios'
-axios.defaults.xsrfCookieName = "CSRF-TOKEN";
-axios.defaults.xsrfHeaderName = "X-CSRF-Token";
+window.addEventListener('DOMContentLoaded', () => {
+  const csrfToken = document.querySelector("meta[name=csrf-token]").content
+  axios.defaults.headers.common['X-CSRF-Token'] = csrfToken
+})
 
 import MatomoTracker from '@/utils/matomo-tracker'
 const matomo = new MatomoTracker()

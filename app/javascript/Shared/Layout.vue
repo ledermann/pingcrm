@@ -26,8 +26,8 @@
                 <icon class="w-5 h-5 group-hover:fill-indigo-600 fill-gray-800 focus:fill-indigo-600" name="cheveron-down" />
               </div>
               <div slot="dropdown" class="mt-2 py-2 shadow-xl bg-white rounded text-sm">
-                <inertia-link class="block px-6 py-2 hover:bg-indigo-600 hover:text-white" :href="route('users.edit', $page.auth.user.id)">My Profile</inertia-link>
-                <inertia-link class="block px-6 py-2 hover:bg-indigo-600 hover:text-white" :href="route('users')">Manage Users</inertia-link>
+                <inertia-link class="block px-6 py-2 hover:bg-indigo-600 hover:text-white" :href="$routes.edit_user($page.auth.user.id)">My Profile</inertia-link>
+                <inertia-link class="block px-6 py-2 hover:bg-indigo-600 hover:text-white" :href="$routes.users()">Manage Users</inertia-link>
                 <inertia-link class="block px-6 py-2 hover:bg-indigo-600 hover:text-white" :href="$routes.destroy_user_session()" method="delete">Logout</inertia-link>
               </div>
             </dropdown>

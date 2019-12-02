@@ -9,6 +9,11 @@ Rails.application.routes.draw do
   end
 
   resources :reports, only: [:index]
+  resources :users, except: [ :show ] do
+    member do
+      put 'restore'
+    end
+  end
   resources :organizations, except: [ :show ] do
     member do
       put 'restore'

@@ -506,12 +506,18 @@ Based on Rails 6.0.1 routes of Pingcrm::Application
 // edit_organization => /organizations/:id/edit(.:format)
   // function(id, options)
   edit_organization: Utils.route([["id",true],["format",false]], {}, [2,[7,"/",false],[2,[6,"organizations",false],[2,[7,"/",false],[2,[3,"id",false],[2,[7,"/",false],[2,[6,"edit",false],[1,[2,[8,".",false],[3,"format",false]],false]]]]]]]),
+// edit_user => /users/:id/edit(.:format)
+  // function(id, options)
+  edit_user: Utils.route([["id",true],["format",false]], {}, [2,[7,"/",false],[2,[6,"users",false],[2,[7,"/",false],[2,[3,"id",false],[2,[7,"/",false],[2,[6,"edit",false],[1,[2,[8,".",false],[3,"format",false]],false]]]]]]]),
 // new_contact => /contacts/new(.:format)
   // function(options)
   new_contact: Utils.route([["format",false]], {}, [2,[7,"/",false],[2,[6,"contacts",false],[2,[7,"/",false],[2,[6,"new",false],[1,[2,[8,".",false],[3,"format",false]],false]]]]]),
 // new_organization => /organizations/new(.:format)
   // function(options)
   new_organization: Utils.route([["format",false]], {}, [2,[7,"/",false],[2,[6,"organizations",false],[2,[7,"/",false],[2,[6,"new",false],[1,[2,[8,".",false],[3,"format",false]],false]]]]]),
+// new_user => /users/new(.:format)
+  // function(options)
+  new_user: Utils.route([["format",false]], {}, [2,[7,"/",false],[2,[6,"users",false],[2,[7,"/",false],[2,[6,"new",false],[1,[2,[8,".",false],[3,"format",false]],false]]]]]),
 // new_user_session => /login(.:format)
   // function(options)
   new_user_session: Utils.route([["format",false]], {}, [2,[7,"/",false],[2,[6,"login",false],[1,[2,[8,".",false],[3,"format",false]],false]]]),
@@ -530,12 +536,21 @@ Based on Rails 6.0.1 routes of Pingcrm::Application
 // restore_organization => /organizations/:id/restore(.:format)
   // function(id, options)
   restore_organization: Utils.route([["id",true],["format",false]], {}, [2,[7,"/",false],[2,[6,"organizations",false],[2,[7,"/",false],[2,[3,"id",false],[2,[7,"/",false],[2,[6,"restore",false],[1,[2,[8,".",false],[3,"format",false]],false]]]]]]]),
+// restore_user => /users/:id/restore(.:format)
+  // function(id, options)
+  restore_user: Utils.route([["id",true],["format",false]], {}, [2,[7,"/",false],[2,[6,"users",false],[2,[7,"/",false],[2,[3,"id",false],[2,[7,"/",false],[2,[6,"restore",false],[1,[2,[8,".",false],[3,"format",false]],false]]]]]]]),
 // root => /
   // function(options)
   root: Utils.route([], {}, [7,"/",false]),
+// user => /users/:id(.:format)
+  // function(id, options)
+  user: Utils.route([["id",true],["format",false]], {}, [2,[7,"/",false],[2,[6,"users",false],[2,[7,"/",false],[2,[3,"id",false],[1,[2,[8,".",false],[3,"format",false]],false]]]]]),
 // user_session => /login(.:format)
   // function(options)
-  user_session: Utils.route([["format",false]], {}, [2,[7,"/",false],[2,[6,"login",false],[1,[2,[8,".",false],[3,"format",false]],false]]])}
+  user_session: Utils.route([["format",false]], {}, [2,[7,"/",false],[2,[6,"login",false],[1,[2,[8,".",false],[3,"format",false]],false]]]),
+// users => /users(.:format)
+  // function(options)
+  users: Utils.route([["format",false]], {}, [2,[7,"/",false],[2,[6,"users",false],[1,[2,[8,".",false],[3,"format",false]],false]]])}
 ;
       routes.configure = function(config) {
         return Utils.configure(config);

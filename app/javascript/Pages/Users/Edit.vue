@@ -2,7 +2,7 @@
   <div>
     <div class="mb-8 flex justify-start max-w-3xl">
       <h1 class="font-bold text-3xl">
-        <inertia-link class="text-indigo-400 hover:text-indigo-600" :href="route('users')">Users</inertia-link>
+        <inertia-link class="text-indigo-400 hover:text-indigo-600" :href="$routes.users()">Users</inertia-link>
         <span class="text-indigo-400 font-medium">/</span>
         {{ form.first_name }} {{ form.last_name }}
       </h1>
@@ -77,32 +77,30 @@ export default {
       this.sending = true
 
       var data = new FormData()
-      data.append('first_name', this.form.first_name || '')
-      data.append('last_name', this.form.last_name || '')
-      data.append('email', this.form.email || '')
-      data.append('password', this.form.password || '')
-      data.append('owner', this.form.owner ? '1' : '0')
-      data.append('photo', this.form.photo || '')
+      data.append('user[first_name]', this.form.first_name || '')
+      data.append('user[last_name]', this.form.last_name || '')
+      data.append('user[email]', this.form.email || '')
+      data.append('user[password]', this.form.password || '')
+      data.append('user[owner]', this.form.owner ? '1' : '0')
+      data.append('user[photo]', this.form.photo || '')
       data.append('_method', 'put')
 
-      this.$inertia
-        .post(this.route('users.update', this.user.id), data)
-        .then(() => {
-          this.sending = false
-          if (Object.keys(this.$page.errors).length === 0) {
-            this.form.photo = null
-            this.form.password = null
-          }
-        })
+      this.$inertia.post(this.$routes.user(this.user.id), data).then(() => {
+        this.sending = false
+        if (Object.keys(this.$page.errors).length === 0) {
+          this.form.photo = null
+          this.form.password = null
+        }
+      })
     },
     destroy() {
       if (confirm('Are you sure you want to delete this user?')) {
-        this.$inertia.delete(this.route('users.destroy', this.user.id))
+        this.$inertia.delete(this.$routes.user(this.user.id))
       }
     },
     restore() {
       if (confirm('Are you sure you want to restore this user?')) {
-        this.$inertia.put(this.route('users.restore', this.user.id))
+        this.$inertia.put(this.$routes.restore_user(this.user.id))
       }
     }
   }

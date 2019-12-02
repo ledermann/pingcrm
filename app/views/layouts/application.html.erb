@@ -1,15 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Pingcrm</title>
+    <meta charset="utf-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta content="width=device-width,initial-scale=1.0" name="viewport" />
+    <meta content="Example on how to use Inertia.js to build the frontend with Vue.js within a Ruby on Rails application" name="description" />
+    <meta content="PingCRM" name="apple-mobile-web-app-title" />
+    <meta content="PingCRM" name="application-name" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="#667eea" name="theme-color" />
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all' %>
-    <%= javascript_pack_tag 'application' %>
+    <%= stylesheet_pack_tag 'application' %>
+    <%= javascript_packs_with_chunks_tag 'application', defer: true %>
   </head>
 
   <body>
+    <noscript>
+      <p>We're sorry but PingCRM doesn't work properly without JavaScript enabled. Please enable it to continue.</p>
+    </noscript>
+
     <%= yield %>
   </body>
 </html>

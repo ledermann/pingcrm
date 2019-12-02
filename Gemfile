@@ -1,12 +1,12 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.6.5'
+ruby '~> 2.6'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.1'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3', '~> 1.4'
+# Use postgresql as the database for Active Record
+gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
@@ -25,6 +25,18 @@ gem 'bootsnap', '>= 1.4.2', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+
+  # Security Audit for installed Gems
+  gem 'bundler-audit', require: false
+
+  # Ruby static code analyzer, based on the community Ruby style guide
+  gem 'rubocop', require: false
+
+  # An extension of RuboCop focused on code performance checks.
+  gem 'rubocop-performance', require: false
+
+  # RuboCop extension focused on enforcing Rails best practices and coding conventions.
+  gem 'rubocop-rails', require: false
 end
 
 group :development do

@@ -1,0 +1,153 @@
+require:
+  - rubocop-performance
+  - rubocop-rails
+
+AllCops:
+  TargetRubyVersion: 2.6
+  Exclude:
+    - db/**/*
+    - bin/**/*
+    - log/**/*
+    - node_modules/**/*
+    - tmp/**/*
+    - vendor/**/*
+
+### Rails
+
+Rails:
+  Enabled: true
+
+Rails/SkipsModelValidations:
+  Enabled: false
+
+Rails/CreateTableWithTimestamps:
+  Enabled: false
+
+Rails/TimeZone:
+  Enabled: false
+
+Rails/BulkChangeTable:
+  Enabled: false
+
+Rails/ReversibleMigration:
+  Enabled: false
+
+Rails/FilePath:
+  EnforcedStyle: arguments
+
+### Bundler
+
+Bundler/OrderedGems:
+  Enabled: false
+
+### Metrics
+
+Metrics/AbcSize:
+  Max: 35
+
+Metrics/BlockLength:
+  Max: 150
+
+Metrics/LineLength:
+  Max: 165
+
+Metrics/MethodLength:
+  Max: 30
+
+### Style
+
+Style/AutoResourceCleanup:
+  Enabled: true
+
+Style/BlockComments:
+  Exclude:
+    - "spec/spec_helper.rb"
+
+Style/Encoding:
+  Enabled: true
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/ImplicitRuntimeError:
+  Enabled: true
+
+Style/RegexpLiteral:
+  Enabled: false
+
+Style/SingleLineBlockParams:
+  Enabled: true
+
+Style/StringLiterals:
+  Enabled: false
+
+Style/StringMethods:
+  Enabled: true
+
+Style/SymbolArray:
+  EnforcedStyle: brackets
+
+Style/MixinUsage:
+  Enabled: false
+
+Style/StderrPuts:
+  Enabled: false
+
+Style/NumericLiteralPrefix:
+  Enabled: false
+
+Style/DateTime:
+  Enabled: false
+
+Style/EmptyMethod:
+  Enabled: false
+
+Style/AsciiComments:
+  Enabled: false
+
+Style/FormatString:
+  EnforcedStyle: percent
+
+Style/Documentation:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/Lambda:
+  EnforcedStyle: literal
+
+### Layout
+
+Layout/DotPosition:
+  EnforcedStyle: trailing
+
+Layout/EndAlignment:
+  EnforcedStyleAlignWith: variable
+
+Layout/FirstArrayElementLineBreak:
+  Enabled: true
+
+Layout/FirstHashElementLineBreak:
+  Enabled: true
+
+Layout/FirstMethodArgumentLineBreak:
+  Enabled: true
+
+Layout/FirstMethodParameterLineBreak:
+  Enabled: true
+
+Layout/SpaceInsideArrayLiteralBrackets:
+  Enabled: false
+
+Layout/SpaceAfterComma:
+  Enabled: false
+
+Layout/SpaceInsideReferenceBrackets:
+  Enabled: false
+
+Layout/SpaceInsideParens:
+  Enabled: false
+
+Layout/HashAlignment:
+  Enabled: false

@@ -1,0 +1,92 @@
+name: Continuous integration
+on: push
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    services:
+      postgres:
+        image: postgres:alpine
+        ports: ["5432:5432"]
+
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: Set up Ruby
+        uses: actions/setup-ruby@v1
+        with:
+          ruby-version: 2.6.x
+
+      - name: Install PostgreSQL client
+        run: sudo apt-get -yqq install libpq-dev
+
+      - name: Cache Ruby gems
+        uses: actions/cache@v1
+        with:
+          path: vendor/bundle
+          key: ${{ runner.os }}-gem-${{ hashFiles('**/Gemfile.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-gem-
+
+      - name: Bundle gems
+        run: |
+          gem install bundler
+          bundle config path vendor/bundle
+          bundle install --jobs 4 --retry 3 --without production development
+
+      - name: Audit gems
+        run: bundle exec bundle-audit check --update
+
+      - name: Lint with RuboCop
+        run: bundle exec rubocop --parallel
+
+      - name: Get yarn cache
+        id: yarn-cache
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+
+      - uses: actions/cache@v1
+        with:
+          path: ${{ steps.yarn-cache.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
+      - name: Install Node modules
+        run: yarn install
+
+      - name: Run Tests
+        env:
+          DB_HOST: localhost
+          DB_USER: postgres
+          RAILS_ENV: test
+        run: |
+          bundle exec rake db:prepare
+          bundle exec rake test
+          bundle exec rake test:system
+
+  deploy:
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/master'
+    needs: test
+
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: Build the production image
+        run: |
+          export COMMIT_TIME=$(git show -s --format=%ci ${GITHUB_SHA})
+          export COMMIT_SHA=${GITHUB_SHA}
+          docker-compose build --pull
+
+      - name: Tag the image as production
+        run: docker tag pingcrm_app ${{ secrets.GITLAB_REGISTRY }}/${{ secrets.GITLAB_REPO }}:latest
+
+      - name: Login to GitLab Docker Registry
+        run: echo ${{ secrets.GITLAB_TOKEN }} | docker login -u gitlab-ci-token --password-stdin ${{ secrets.GITLAB_REGISTRY }}
+
+      - name: Push the production image
+        run: docker push ${{ secrets.GITLAB_REGISTRY }}/${{ secrets.GITLAB_REPO }}:latest
+
+      - name: Send notification
+        run: curl -X POST ${{ secrets.DEPLOY_HOOK }}

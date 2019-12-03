@@ -54,12 +54,6 @@ Vue.use(InertiaApp)
 import Routes from '../routes.js';
 Vue.prototype.$routes = Routes
 
-// temp
-let route = function (...args) {
-  return "/"
-}
-Vue.mixin({ methods: { route: route } })
-
 const app = document.getElementById('app')
 
 new Vue({

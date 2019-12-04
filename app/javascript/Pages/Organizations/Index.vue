@@ -33,17 +33,17 @@
               </inertia-link>
             </td>
             <td class="border-t">
-              <inertia-link class="px-6 py-4 flex items-center" :href="$routes.edit_organization(organization.id)" tabindex="-1">
+              <inertia-link class="px-6 py-4 flex items-center" :href="$routes.edit_organization(organization.id)" tabindex="-1" aria-label="Edit">
                 {{ organization.city }}
               </inertia-link>
             </td>
             <td class="border-t">
-              <inertia-link class="px-6 py-4 flex items-center" :href="$routes.edit_organization(organization.id)" tabindex="-1">
+              <inertia-link class="px-6 py-4 flex items-center" :href="$routes.edit_organization(organization.id)" tabindex="-1" aria-label="Edit">
                 {{ organization.phone }}
               </inertia-link>
             </td>
             <td class="border-t w-px">
-              <inertia-link class="px-4 flex items-center" :href="$routes.edit_organization(organization.id)" tabindex="-1">
+              <inertia-link class="px-4 flex items-center" :href="$routes.edit_organization(organization.id)" tabindex="-1" aria-label="Edit">
                 <icon name="cheveron-right" class="block w-6 h-6 fill-gray-500" />
               </inertia-link>
             </td>

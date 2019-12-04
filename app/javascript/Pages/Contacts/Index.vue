@@ -25,30 +25,30 @@
         </tr>
         <tr v-for="contact in contacts.data" :key="contact.id" class="hover:bg-gray-100 focus-within:bg-gray-100">
           <td class="border-t">
-            <inertia-link class="px-6 py-4 flex items-center focus:text-indigo" :href="$routes.edit_contact(contact.id)">
+            <inertia-link class="px-6 py-4 flex items-center focus:text-indigo" :href="$routes.edit_contact(contact.id)" aria-label="Edit">
               {{ contact.name }}
               <icon v-if="contact.deleted_at" name="trash" class="flex-shrink-0 w-3 h-3 fill-gray-500 ml-2" />
             </inertia-link>
           </td>
           <td class="border-t">
-            <inertia-link class="px-6 py-4 flex items-center" :href="$routes.edit_contact(contact.id)" tabindex="-1">
+            <inertia-link class="px-6 py-4 flex items-center" :href="$routes.edit_contact(contact.id)" tabindex="-1" aria-label="Edit">
               <div v-if="contact.organization">
                 {{ contact.organization.name }}
               </div>
             </inertia-link>
           </td>
           <td class="border-t">
-            <inertia-link class="px-6 py-4 flex items-center" :href="$routes.edit_contact(contact.id)" tabindex="-1">
+            <inertia-link class="px-6 py-4 flex items-center" :href="$routes.edit_contact(contact.id)" tabindex="-1" aria-label="Edit">
               {{ contact.city }}
             </inertia-link>
           </td>
           <td class="border-t">
-            <inertia-link class="px-6 py-4 flex items-center" :href="$routes.edit_contact(contact.id)" tabindex="-1">
+            <inertia-link class="px-6 py-4 flex items-center" :href="$routes.edit_contact(contact.id)" tabindex="-1" aria-label="Edit">
               {{ contact.phone }}
             </inertia-link>
           </td>
           <td class="border-t w-px">
-            <inertia-link class="px-4 flex items-center" :href="$routes.edit_contact(contact.id)" tabindex="-1">
+            <inertia-link class="px-4 flex items-center" :href="$routes.edit_contact(contact.id)" tabindex="-1" aria-label="Edit">
               <icon name="cheveron-right" class="block w-6 h-6 fill-gray-500" />
             </inertia-link>
           </td>

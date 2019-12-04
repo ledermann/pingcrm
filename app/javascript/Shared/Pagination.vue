@@ -11,14 +11,14 @@
       <div
         v-else-if="link.url === null"
         :key="key"
-        class="mr-1 mb-1 px-4 py-3 text-sm border rounded text-gray-500 border-gray-400"
+        class="mr-1 mb-1 px-4 py-3 text-sm border rounded text-gray-700 border-gray-400"
         :class="{ 'ml-auto': link.label === 'Next' }"
       >
         {{ link.label }}
       </div>
       <inertia-link v-else
         :key="key"
-        class="mr-1 mb-1 px-4 py-3 text-sm border rounded border-gray-400 hover:bg-white focus:border-indigo-500 focus:text-indigo"
+        class="mr-1 mb-1 px-4 py-3 text-sm border rounded text-gray-900 border-gray-400 hover:bg-white focus:border-indigo-500 focus:text-indigo"
         :class="{ 'bg-white': link.active, 'ml-auto': link.label === 'Next' }"
         :href="link.url"
         preserve-state

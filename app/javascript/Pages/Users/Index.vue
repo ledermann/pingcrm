@@ -33,24 +33,24 @@
         <tbody>
           <tr v-for="user in users" :key="user.id" class="hover:bg-gray-100 focus-within:bg-gray-100">
             <td class="border-t">
-              <inertia-link class="px-6 py-4 flex items-center focus:text-indigo" :href="$routes.edit_user(user.id)">
+              <inertia-link class="px-6 py-4 flex items-center focus:text-indigo" :href="$routes.edit_user(user.id)" aria-label="Edit">
                 <img v-if="user.photo" class="block w-5 h-5 rounded-full mr-2 -my-2" :src="user.photo">
                 {{ user.name }}
                 <icon v-if="user.deleted_at" name="trash" class="flex-shrink-0 w-3 h-3 fill-gray-500 ml-2" />
               </inertia-link>
             </td>
             <td class="border-t">
-              <inertia-link class="px-6 py-4 flex items-center" :href="$routes.edit_user(user.id)" tabindex="-1">
+              <inertia-link class="px-6 py-4 flex items-center" :href="$routes.edit_user(user.id)" tabindex="-1" aria-label="Edit">
                 {{ user.email }}
               </inertia-link>
             </td>
             <td class="border-t">
-              <inertia-link class="px-6 py-4 flex items-center" :href="$routes.edit_user(user.id)" tabindex="-1">
+              <inertia-link class="px-6 py-4 flex items-center" :href="$routes.edit_user(user.id)" tabindex="-1" aria-label="Edit">
                 {{ user.owner ? 'Owner' : 'User' }}
               </inertia-link>
             </td>
             <td class="border-t w-px">
-              <inertia-link class="px-4 flex items-center" :href="$routes.edit_user(user.id)" tabindex="-1">
+              <inertia-link class="px-4 flex items-center" :href="$routes.edit_user(user.id)" tabindex="-1" aria-label="Edit">
                 <icon name="cheveron-right" class="block w-6 h-6 fill-gray-500" />
               </inertia-link>
             </td>

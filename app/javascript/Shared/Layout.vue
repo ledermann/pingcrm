@@ -5,7 +5,7 @@
       <div class="h-screen flex flex-col" @click="hideDropdownMenus">
         <div class="md:flex">
           <div class="bg-indigo-900 md:flex-shrink-0 md:w-56 px-6 py-4 flex items-center justify-between md:justify-center">
-            <inertia-link class="mt-1" href="/">
+            <inertia-link class="mt-1" href="/" aria-label="Home" role="navigation">
               <logo class="fill-white" width="120" height="28" />
             </inertia-link>
             <dropdown class="md:hidden" placement="bottom-end">
@@ -26,8 +26,8 @@
                 <icon class="w-5 h-5 group-hover:fill-indigo-600 fill-gray-800 focus:fill-indigo-600" name="cheveron-down" />
               </div>
               <div slot="dropdown" class="mt-2 py-2 shadow-xl bg-white rounded text-sm">
-                <inertia-link class="block px-6 py-2 hover:bg-indigo-600 hover:text-white" :href="$routes.edit_user($page.auth.user.id)">My Profile</inertia-link>
-                <inertia-link class="block px-6 py-2 hover:bg-indigo-600 hover:text-white" :href="$routes.users()">Manage Users</inertia-link>
+                <inertia-link class="block px-6 py-2 hover:bg-indigo-600 hover:text-white" role="navigation" :href="$routes.edit_user($page.auth.user.id)">My Profile</inertia-link>
+                <inertia-link class="block px-6 py-2 hover:bg-indigo-600 hover:text-white" role="navigation" :href="$routes.users()">Manage Users</inertia-link>
                 <inertia-link class="block px-6 py-2 hover:bg-indigo-600 hover:text-white" :href="$routes.destroy_user_session()" method="delete">Logout</inertia-link>
               </div>
             </dropdown>

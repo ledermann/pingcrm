@@ -36,7 +36,7 @@ class UsersController < ApplicationController
           :owner,
           :deleted_at
         ]
-      ).merge(photo: @user.photo.attached? ? polymorphic_url(@user.photo) : nil)
+      ).merge(photo: @user.photo.attached? ? polymorphic_url(@user.photo.variant(resize: '64x64!')) : nil)
     }
   end
 

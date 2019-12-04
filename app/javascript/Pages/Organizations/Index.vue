@@ -92,7 +92,11 @@ export default {
         this.$inertia.replace(
           this.$routes.organizations(
             Object.keys(query).length ? query : { remember: 'forget' }
-          )
+          ),
+          {
+            preserveState: true,
+            preserveScroll: true
+          }
         )
       }, 150),
       deep: true

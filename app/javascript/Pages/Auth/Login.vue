@@ -11,7 +11,7 @@
           <text-input v-model="form.email" class="mt-10" label="Email" type="email" autofocus autocapitalize="off" />
           <text-input v-model="form.password" class="mt-6" label="Password" type="password" />
           <label class="mt-6 select-none flex items-center" for="remember">
-            <input id="remember" v-model="form.remember" class="mr-1" type="checkbox">
+            <input id="remember" v-model="form.remember_me" class="mr-1" type="checkbox" >
             <span class="text-sm">Remember Me</span>
           </label>
         </div>
@@ -44,7 +44,7 @@ export default {
       form: {
         email: null,
         password: null,
-        remember: null
+        remember_me: null
       }
     }
   },

@@ -55,7 +55,7 @@ ENV COMMIT_SHA=${COMMIT_SHA} \
 # Add Alpine packages
 RUN apk add --update --no-cache \
   postgresql-client \
-  imagemagick \
+  vips \
   tzdata \
   file
 

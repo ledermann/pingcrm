@@ -8,6 +8,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :rememberable
 
   validates :first_name, :last_name, :email, presence: true
+  validate :photo_is_web_image
 
   include SoftDelete
 
@@ -46,5 +47,14 @@ class User < ApplicationRecord
   # provide a custom message for a deleted account
   def inactive_message
     deleted_at ? :deleted : super
+  end
+
+  private
+
+  def photo_is_web_image
+    return unless photo.attached?
+    return if photo.content_type.in?(ActiveStorage::Variant::WEB_IMAGE_CONTENT_TYPES)
+
+    errors.add(:photo, 'Must be a .JPG, .PNG or .GIF file')
   end
 end

@@ -9,31 +9,12 @@
       This contact has been deleted.
     </trashed-message>
     <div class="bg-white rounded shadow overflow-hidden max-w-3xl">
-      <form @submit.prevent="submit">
-        <div class="p-8 -mr-6 -mb-8 flex flex-wrap">
-          <text-input v-model="form.first_name" :errors="$page.errors.first_name" class="pr-6 pb-8 w-full lg:w-1/2" label="First name" />
-          <text-input v-model="form.last_name" :errors="$page.errors.last_name" class="pr-6 pb-8 w-full lg:w-1/2" label="Last name" />
-          <select-input v-model="form.organization_id" :errors="$page.errors.organization_id" class="pr-6 pb-8 w-full lg:w-1/2" label="Organization">
-            <option :value="null" />
-            <option v-for="organization in organizations" :key="organization.id" :value="organization.id">{{ organization.name }}</option>
-          </select-input>
-          <text-input v-model="form.email" :errors="$page.errors.email" class="pr-6 pb-8 w-full lg:w-1/2" label="Email" />
-          <text-input v-model="form.phone" :errors="$page.errors.phone" class="pr-6 pb-8 w-full lg:w-1/2" label="Phone" />
-          <text-input v-model="form.address" :errors="$page.errors.address" class="pr-6 pb-8 w-full lg:w-1/2" label="Address" />
-          <text-input v-model="form.city" :errors="$page.errors.city" class="pr-6 pb-8 w-full lg:w-1/2" label="City" />
-          <text-input v-model="form.region" :errors="$page.errors.region" class="pr-6 pb-8 w-full lg:w-1/2" label="Province/State" />
-          <select-input v-model="form.country" :errors="$page.errors.country" class="pr-6 pb-8 w-full lg:w-1/2" label="Country">
-            <option :value="null" />
-            <option value="CA">Canada</option>
-            <option value="US">United States</option>
-          </select-input>
-          <text-input v-model="form.postal_code" :errors="$page.errors.postal_code" class="pr-6 pb-8 w-full lg:w-1/2" label="Postal code" />
-        </div>
+      <contact-form @submit="submit" :form="form" :organizations="organizations">
         <div class="px-8 py-4 bg-gray-100 border-t border-gray-200 flex items-center">
           <button v-if="!contact.deleted_at" class="text-red-700 hover:underline" tabindex="-1" type="button" @click="destroy">Delete Contact</button>
           <loading-button :loading="sending" class="btn-indigo ml-auto" type="submit">Update Contact</loading-button>
         </div>
-      </form>
+      </contact-form>
     </div>
   </div>
 </template>
@@ -41,8 +22,7 @@
 <script>
 import Layout from '@/Shared/Layout'
 import LoadingButton from '@/Shared/LoadingButton'
-import SelectInput from '@/Shared/SelectInput'
-import TextInput from '@/Shared/TextInput'
+import ContactForm from './Form'
 import TrashedMessage from '@/Shared/TrashedMessage'
 
 export default {
@@ -54,8 +34,7 @@ export default {
   layout: (h, page) => h(Layout, [page]),
   components: {
     LoadingButton,
-    SelectInput,
-    TextInput,
+    ContactForm,
     TrashedMessage
   },
   props: {
@@ -66,18 +45,7 @@ export default {
   data() {
     return {
       sending: false,
-      form: {
-        first_name: this.contact.first_name,
-        last_name: this.contact.last_name,
-        organization_id: this.contact.organization_id,
-        email: this.contact.email,
-        phone: this.contact.phone,
-        address: this.contact.address,
-        city: this.contact.city,
-        region: this.contact.region,
-        country: this.contact.country,
-        postal_code: this.contact.postal_code
-      }
+      form: this.contact
     }
   },
   methods: {

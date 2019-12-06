@@ -9,26 +9,12 @@
       This organization has been deleted.
     </trashed-message>
     <div class="bg-white rounded shadow overflow-hidden max-w-3xl">
-      <form @submit.prevent="submit">
-        <div class="p-8 -mr-6 -mb-8 flex flex-wrap">
-          <text-input v-model="form.name" :errors="$page.errors.name" class="pr-6 pb-8 w-full lg:w-1/2" label="Name" />
-          <text-input v-model="form.email" :errors="$page.errors.email" class="pr-6 pb-8 w-full lg:w-1/2" label="Email" />
-          <text-input v-model="form.phone" :errors="$page.errors.phone" class="pr-6 pb-8 w-full lg:w-1/2" label="Phone" />
-          <text-input v-model="form.address" :errors="$page.errors.address" class="pr-6 pb-8 w-full lg:w-1/2" label="Address" />
-          <text-input v-model="form.city" :errors="$page.errors.city" class="pr-6 pb-8 w-full lg:w-1/2" label="City" />
-          <text-input v-model="form.region" :errors="$page.errors.region" class="pr-6 pb-8 w-full lg:w-1/2" label="Province/State" />
-          <select-input v-model="form.country" :errors="$page.errors.country" class="pr-6 pb-8 w-full lg:w-1/2" label="Country">
-            <option :value="null" />
-            <option value="CA">Canada</option>
-            <option value="US">United States</option>
-          </select-input>
-          <text-input v-model="form.postal_code" :errors="$page.errors.postal_code" class="pr-6 pb-8 w-full lg:w-1/2" label="Postal code" />
-        </div>
+      <organization-form @submit="submit" :form="form">
         <div class="px-8 py-4 bg-gray-100 border-t border-gray-200 flex items-center">
           <button v-if="!organization.deleted_at" class="text-red-700 hover:underline" tabindex="-1" type="button" @click="destroy">Delete Organization</button>
           <loading-button :loading="sending" class="btn-indigo ml-auto" type="submit">Update Organization</loading-button>
         </div>
-      </form>
+      </organization-form>
     </div>
     <h2 class="mt-12 font-bold text-2xl">Contacts</h2>
     <div class="mt-6 bg-white rounded shadow overflow-x-auto">
@@ -73,8 +59,7 @@
 import Icon from '@/Shared/Icon'
 import Layout from '@/Shared/Layout'
 import LoadingButton from '@/Shared/LoadingButton'
-import SelectInput from '@/Shared/SelectInput'
-import TextInput from '@/Shared/TextInput'
+import OrganizationForm from './Form'
 import TrashedMessage from '@/Shared/TrashedMessage'
 
 export default {
@@ -85,8 +70,7 @@ export default {
   components: {
     Icon,
     LoadingButton,
-    SelectInput,
-    TextInput,
+    OrganizationForm,
     TrashedMessage
   },
   props: {
@@ -96,16 +80,7 @@ export default {
   data() {
     return {
       sending: false,
-      form: {
-        name: this.organization.name,
-        email: this.organization.email,
-        phone: this.organization.phone,
-        address: this.organization.address,
-        city: this.organization.city,
-        region: this.organization.region,
-        country: this.organization.country,
-        postal_code: this.organization.postal_code
-      }
+      form: this.organization
     }
   },
   methods: {

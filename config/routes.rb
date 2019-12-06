@@ -25,8 +25,7 @@ Rails.application.routes.draw do
     end
   end
 
-  get '/error-500' => 'errors#server_error'
-  get '/error-404' => 'errors#not_found'
+  get '/error-500' => 'dashboard#error_500'
 
   root 'dashboard#index'
 end

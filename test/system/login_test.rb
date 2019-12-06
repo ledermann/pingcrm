@@ -30,4 +30,17 @@ class LoginTest < ApplicationSystemTestCase
 
     assert_selector 'div', text: 'Invalid email or password!'
   end
+
+  test 'Redirect to login for Inertia requests, too' do
+    sign_in @user
+    visit '/organizations'
+
+    # Signout user, e.g. in a second browser window
+    sign_out @user
+
+    # Click a link that requires authentication
+    click_on 'Contacts'
+
+    assert_current_path('/login')
+  end
 end

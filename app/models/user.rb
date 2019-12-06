@@ -8,6 +8,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :rememberable
 
   validates :first_name, :last_name, :email, presence: true
+  validates :email, uniqueness: true
   validate :photo_is_web_image
 
   include SoftDelete

@@ -30,5 +30,7 @@ module Pingcrm
     # the framework and any gems in your application.
 
     config.active_storage.variant_processor = :vips
+
+    config.exceptions_app = ->(env) { ExceptionsController.action(:show).call(env) }
   end
 end

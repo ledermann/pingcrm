@@ -72,6 +72,6 @@ class UsersTest < ApplicationSystemTestCase
   test 'cannot do anything without login' do
     visit '/users'
 
-    assert_selector 'div', text: 'You need to sign in or sign up before continuing.'
+    assert_selector 'div', text: 'You need to sign in before continuing.'
   end
 end

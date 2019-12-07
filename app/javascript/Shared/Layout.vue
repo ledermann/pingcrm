@@ -8,7 +8,7 @@
             <inertia-link class="mt-1" href="/" aria-label="Home" role="navigation">
               <logo class="fill-white" width="120" height="28" />
             </inertia-link>
-            <dropdown class="md:hidden" placement="bottom-end">
+            <dropdown class="md:hidden" placement="bottom-end" aria-label="Main menu">
               <svg class="fill-white w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" /></svg>
               <div slot="dropdown" class="mt-2 px-8 py-4 shadow-xl bg-indigo-700 rounded">
                 <main-menu :url="url()" />
@@ -17,7 +17,7 @@
           </div>
           <div class="bg-white border-b w-full p-4 md:py-0 md:px-12 text-sm md:text-md flex justify-between items-center">
             <div class="mt-1 mr-4">{{ $page.auth.user.account.name }}</div>
-            <dropdown class="mt-1" placement="bottom-end">
+            <dropdown class="mt-1" placement="bottom-end" aria-label="User menu">
               <div class="flex items-center cursor-pointer select-none group">
                 <div class="text-gray-800 group-hover:text-indigo-600 focus:text-indigo-600 mr-1 whitespace-no-wrap">
                   <span>{{ $page.auth.user.first_name }}</span>

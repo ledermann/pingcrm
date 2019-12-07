@@ -100,7 +100,8 @@ export default {
           ),
           {
             preserveState: true,
-            preserveScroll: true
+            preserveScroll: true,
+            only: ['users']
           }
         )
       }, 150),

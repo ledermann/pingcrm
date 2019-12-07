@@ -103,7 +103,8 @@ export default {
           ),
           {
             preserveState: true,
-            preserveScroll: true
+            preserveScroll: true,
+            only: ['contacts']
           }
         )
       }, 150),

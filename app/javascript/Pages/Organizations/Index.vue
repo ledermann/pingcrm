@@ -95,7 +95,8 @@ export default {
           ),
           {
             preserveState: true,
-            preserveScroll: true
+            preserveScroll: true,
+            only: ['organizations']
           }
         )
       }, 150),

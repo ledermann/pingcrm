@@ -1,5 +1,10 @@
 class User < ApplicationRecord
   belongs_to :account
+
+  has_many :contacts, through: :account
+  has_many :organizations, through: :account
+  has_many :users, through: :account
+
   has_one_attached :photo
 
   # Include default devise modules. Others available are:

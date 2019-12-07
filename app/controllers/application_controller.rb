@@ -4,25 +4,29 @@ class ApplicationController < ActionController::Base
 
   include Pagy::Backend
 
-  inertia_share do
+  inertia_share auth: -> {
     {
-      errors: session.delete(:errors) || [],
-      flash: {
-        success: flash.notice,
-        alert: flash.alert
-      },
-      auth: {
-        user: current_user.as_json(
-          only: [ :id, :first_name, :last_name, :role ],
-          include: {
-            account: {
-              only: [ :id, :name ]
-            }
+      user: current_user.as_json(
+        only: [ :id, :first_name, :last_name, :role ],
+        include: {
+          account: {
+            only: [ :id, :name ]
           }
-        )
-      }
+        }
+      )
     }
-  end
+  }
+
+  inertia_share errors: -> {
+    session.delete(:errors) || []
+  }
+
+  inertia_share flash: -> {
+    {
+      success: flash.notice,
+      alert: flash.alert
+    }
+  }
 
   private
 

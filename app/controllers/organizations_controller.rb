@@ -3,7 +3,6 @@ class OrganizationsController < ApplicationController
 
   def index
     @organizations = current_user.
-                     account.
                      organizations.
                      search(params[:search]).
                      trash_filter(params[:trashed]).

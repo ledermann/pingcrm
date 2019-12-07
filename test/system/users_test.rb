@@ -3,7 +3,8 @@ require "application_system_test_case"
 class UsersTest < ApplicationSystemTestCase
   setup do
     @account = create(:account)
-    @user = create(:user, account: @account, owner: true)
+    @owner = create(:user, account: @account, owner: true)
+    @user = create(:user, account: @account, owner: false)
   end
 
   test 'list all users and allows to search' do
@@ -13,7 +14,7 @@ class UsersTest < ApplicationSystemTestCase
     visit '/users'
 
     assert_selector 'h1', text: 'Users'
-    assert_selector 'table tbody tr', count: 15 + 1
+    assert_selector 'table tbody tr', count: 15 + 2
     users.each do |user|
       assert_selector 'table', text: user.name
     end
@@ -26,24 +27,59 @@ class UsersTest < ApplicationSystemTestCase
     assert_selector 'table', text: users.first.name
   end
 
-  test 'edits a user' do
+  test 'Owner can add user' do
+    sign_in @owner
+
+    visit "/users"
+    click_on 'Create User'
+
+    assert_selector 'form'
+    assert_selector 'button', text: 'Create User'
+    fill_in 'First name:', with: 'Jonathan'
+    fill_in 'Last name:', with: 'Smith'
+    fill_in 'Email:', with: 'john@smith.com'
+    click_on 'Create User'
+    assert_selector 'div', text: 'User created.'
+  end
+
+  test 'Non-owner cannot add user' do
     sign_in @user
+
+    visit "/users"
+    assert_no_selector 'button', text: 'Create User'
+
+    visit "/users/new"
+    assert_selector 'div', text: 'You are not allowed to do this!'
+  end
+
+  test 'Owner can edit user' do
+    sign_in @owner
 
     visit "/users/#{@user.id}/edit"
 
     assert_selector 'form'
+    assert_selector 'button', text: 'Update User'
     fill_in 'First name:', with: 'Jonathan'
     click_on 'Update User'
 
     assert_selector 'div', text: 'User updated.'
   end
 
-  test 'deletes a user' do
-    other_user = create(:user, account: @account)
+  test 'Non-owner cannot edit user' do
     sign_in @user
 
-    visit "/users/#{other_user.id}/edit"
+    visit "/users/#{@user.id}/edit"
 
+    assert_selector 'form'
+    assert_no_selector 'button', text: 'Update User'
+  end
+
+  test 'Owner can delete a user' do
+    sign_in @owner
+
+    visit "/users/#{@user.id}/edit"
+
+    assert_selector 'button', text: 'Delete User'
     accept_confirm do
       click_on 'Delete User'
     end
@@ -51,22 +87,29 @@ class UsersTest < ApplicationSystemTestCase
     assert_selector 'div', text: 'User deleted.'
   end
 
-  test 'cannot view deleted users by default, but allows to change filter' do
+  test 'Non-owner cannot delete a user' do
     sign_in @user
-    users = Array.new(5) { create(:user, account: @account) }
-    users.first.soft_delete!
+
+    visit "/users/#{@user.id}/edit"
+
+    assert_no_selector 'button', text: 'Delete User'
+  end
+
+  test 'cannot view deleted users by default, but allows to change filter' do
+    sign_in @owner
+    @user.soft_delete!
 
     visit '/users'
 
     assert_selector 'h1', text: 'Users'
-    assert_selector 'table tbody tr', count: 4 + 1
+    assert_selector 'table tbody tr', count: 1
 
     click_on 'Filter'
     select 'With Trashed', from: 'Trashed:'
     select 'User', from: 'Role:'
 
     assert_selector 'h1', text: 'Users'
-    assert_selector 'table tbody tr', count: 5
+    assert_selector 'table tbody tr', count: 2
   end
 
   test 'cannot do anything without login' do

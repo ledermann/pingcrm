@@ -11,14 +11,30 @@ class UsersController < ApplicationController
 
     render inertia: 'Users/Index', props: {
       filters: {},
-      users: @users.as_json(
-        only: [ :id, :email, :owner, :deleted_at ],
-        methods: [ :name ]
-      )
+      can: {
+        create_user: current_user.owner?
+      },
+      users: @users.map do |user|
+        {
+          id:         user.id,
+          email:      user.email,
+          owner:      user.owner,
+          deleted_at: user.deleted_at,
+          name:       user.name,
+          can: {
+            edit_user: current_user.owner?
+          }
+        }
+      end
     }
   end
 
   def new
+    unless current_user.owner?
+      redirect_to users_path, alert: 'You are not allowed to do this!'
+      return
+    end
+
     @user = User.new
 
     render inertia: 'Users/New'
@@ -26,20 +42,27 @@ class UsersController < ApplicationController
 
   def edit
     render inertia: 'Users/Edit', props: {
-      user: @user.as_json(
-        only: [
-          :id,
-          :first_name,
-          :last_name,
-          :email,
-          :owner,
-          :deleted_at
-        ]
-      ).merge(photo: @user.photo.attached? ? polymorphic_url(@user.photo.variant(resize_to_fill: [64, 64])) : nil)
+      can: {
+        edit_user: current_user.owner?
+      },
+      user: {
+        id:         @user.id,
+        email:      @user.email,
+        owner:      @user.owner,
+        deleted_at: @user.deleted_at,
+        first_name: @user.first_name,
+        last_name:  @user.last_name,
+        photo: @user.photo.attached? ? polymorphic_url(@user.photo.variant(resize_to_fill: [64, 64])) : nil
+      }
     }
   end
 
   def create
+    unless current_user.owner?
+      redirect_to users_path, alert: 'You are not allowed to do this!'
+      return
+    end
+
     @user = current_user.account.users.new(user_params)
 
     if @user.save
@@ -51,6 +74,11 @@ class UsersController < ApplicationController
   end
 
   def update
+    unless current_user.owner?
+      redirect_to edit_user_path(@user), alert: 'You are not allowed to do this!'
+      return
+    end
+
     if @user.update(user_params)
       redirect_to [ :edit, @user ], notice: 'User updated.'
     else
@@ -60,6 +88,11 @@ class UsersController < ApplicationController
   end
 
   def destroy
+    unless current_user.owner?
+      redirect_to edit_user_path(@user), alert: 'You are not allowed to do this!'
+      return
+    end
+
     @user.soft_delete!
     redirect_to edit_user_path(@user), notice: 'User deleted.'
   end

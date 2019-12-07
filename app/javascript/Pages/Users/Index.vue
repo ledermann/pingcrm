@@ -16,7 +16,7 @@
           <option value="only">Only Trashed</option>
         </select>
       </search-filter>
-      <inertia-link class="btn-indigo" :href="$routes.new_user()">
+      <inertia-link v-if="this.can.create_user" class="btn-indigo" :href="$routes.new_user()">
         <span>Create</span>
         <span class="hidden md:inline">User</span>
       </inertia-link>
@@ -79,7 +79,8 @@ export default {
   },
   props: {
     users: Array,
-    filters: Object
+    filters: Object,
+    can: Object
   },
   data() {
     return {

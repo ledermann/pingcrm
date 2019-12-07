@@ -54,6 +54,9 @@ Metrics/LineLength:
 Metrics/MethodLength:
   Max: 30
 
+Metrics/ClassLength:
+  Max: 150
+
 ### Style
 
 Style/AutoResourceCleanup:

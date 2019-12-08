@@ -1,19 +1,11 @@
 class OrganizationsController < ApplicationController
-  before_action :set_organization, only: [:edit, :update, :destroy, :restore]
-
   def index
-    @organizations = current_user.
-                     organizations.
-                     search(params[:search]).
-                     trash_filter(params[:trashed]).
-                     order(:name)
-
-    pagy, records = pagy(@organizations)
+    pagy, paged_organizations = pagy(organizations)
 
     render inertia: 'Organizations/Index', props: {
       filters: {},
       organizations: {
-        data: records.as_json(
+        data: paged_organizations.as_json(
           only: [
             :id,
             :name,
@@ -28,14 +20,12 @@ class OrganizationsController < ApplicationController
   end
 
   def new
-    @organization = Organization.new
-
     render inertia: 'Organizations/New'
   end
 
   def edit
     render inertia: 'Organizations/Edit', props: {
-      organization: @organization.as_json(
+      organization: organization.as_json(
         only: [
           :id,
           :name,
@@ -48,49 +38,56 @@ class OrganizationsController < ApplicationController
           :postal_code,
           :deleted_at
         ]
-      ).merge(
-        contacts: @organization.contacts.order_by_name.as_json(
-          only: [:id, :city, :phone],
-          methods: [ :name ]
-        )
+      ),
+      contacts: organization.contacts.order_by_name.as_json(
+        only: [:id, :city, :phone],
+        methods: [ :name ]
       )
     }
   end
 
   def create
-    @organization = current_user.account.organizations.new(organization_params)
+    new_organization = current_user.account.organizations.new(organization_params)
 
-    if @organization.save
+    if new_organization.save
       redirect_to organizations_path, notice: 'Organization created.'
     else
-      session[:errors] = @organization.errors
+      session[:errors] = new_organization.errors
       redirect_to new_organization_path
     end
   end
 
   def update
-    if @organization.update(organization_params)
-      redirect_to [ :edit, @organization ], notice: 'Organization updated.'
+    if organization.update(organization_params)
+      redirect_to [ :edit, organization ], notice: 'Organization updated.'
     else
-      session[:errors] = @organization.errors
-      redirect_to edit_organization_path(@organization)
+      session[:errors] = organization.errors
+      redirect_to edit_organization_path(organization)
     end
   end
 
   def destroy
-    @organization.soft_delete!
-    redirect_to edit_organization_path(@organization), notice: 'Organization deleted.'
+    organization.soft_delete!
+    redirect_to edit_organization_path(organization), notice: 'Organization deleted.'
   end
 
   def restore
-    @organization.restore!
-    redirect_to edit_organization_path(@organization), notice: 'Organization restored.'
+    organization.restore!
+    redirect_to edit_organization_path(organization), notice: 'Organization restored.'
   end
 
   private
 
-  def set_organization
-    @organization = current_user.account.organizations.find(params[:id])
+  def organization
+    @organization ||= current_user.account.organizations.find(params[:id])
+  end
+
+  def organizations
+    @organizations ||= current_user.
+                       organizations.
+                       search(params[:search]).
+                       trash_filter(params[:trashed]).
+                       order(:name)
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.

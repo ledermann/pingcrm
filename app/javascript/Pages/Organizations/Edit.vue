@@ -24,7 +24,7 @@
           <th class="px-6 pt-6 pb-4">City</th>
           <th class="px-6 pt-6 pb-4" colspan="2">Phone</th>
         </tr>
-        <tr v-for="contact in organization.contacts" :key="contact.id" class="hover:bg-gray-100 focus-within:bg-gray-100">
+        <tr v-for="contact in contacts" :key="contact.id" class="hover:bg-gray-100 focus-within:bg-gray-100">
           <td class="border-t">
             <inertia-link class="px-6 py-4 flex items-center focus:text-indigo" :href="$routes.edit_contact(contact.id)">
               {{ contact.name }}
@@ -47,7 +47,7 @@
             </inertia-link>
           </td>
         </tr>
-        <tr v-if="organization.contacts.length === 0">
+        <tr v-if="contacts.length === 0">
           <td class="border-t px-6 py-4" colspan="4">No contacts found.</td>
         </tr>
       </table>
@@ -74,7 +74,8 @@ export default {
     TrashedMessage
   },
   props: {
-    organization: Object
+    organization: Object,
+    contacts: Array
   },
   remember: 'form',
   data() {

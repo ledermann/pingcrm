@@ -6,20 +6,20 @@ class UsersController < ApplicationController
           json.array! users do |user|
             json.(user, :id, :email, :name, :owner, :deleted_at)
             json.can do
-              json.edit_user current_user.owner?
+              json.edit_user can?(:edit, user)
             end
           end
         end
       },
       can: {
-        create_user: current_user.owner?
+        create_user: can?(:create, User)
       },
       filters: {}
     }
   end
 
   def new
-    unless current_user.owner?
+    unless can?(:create, User)
       redirect_to users_path, alert: 'You are not allowed to do this!'
       return
     end
@@ -36,13 +36,13 @@ class UsersController < ApplicationController
         end
       },
       can: {
-        edit_user: current_user.owner?
+        edit_user: can?(:edit, user)
       }
     }
   end
 
   def create
-    unless current_user.owner?
+    unless can?(:create, User)
       redirect_to users_path, alert: 'You are not allowed to do this!'
       return
     end
@@ -58,7 +58,7 @@ class UsersController < ApplicationController
   end
 
   def update
-    unless current_user.owner?
+    unless can?(:edit, user)
       redirect_to edit_user_path(user), alert: 'You are not allowed to do this!'
       return
     end
@@ -72,7 +72,7 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    unless current_user.owner?
+    unless can?(:destroy, user)
       redirect_to edit_user_path(user), alert: 'You are not allowed to do this!'
       return
     end

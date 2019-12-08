@@ -79,3 +79,6 @@ gem 'devise'
 
 # Optimized JSON
 gem 'oj'
+
+# The authorization Gem for Ruby on Rails
+gem 'cancancan'

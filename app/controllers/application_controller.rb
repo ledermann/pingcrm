@@ -28,6 +28,15 @@ class ApplicationController < ActionController::Base
     }
   }
 
+  protected
+
+  # Render Hash with Jbuilder
+  def jbuilder
+    JbuilderTemplate.new(view_context) do |json|
+      yield(json)
+    end.attributes!
+  end
+
   private
 
   def after_sign_in_path_for(resource)

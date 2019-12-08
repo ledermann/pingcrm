@@ -1,22 +1,20 @@
 class UsersController < ApplicationController
   def index
     render inertia: 'Users/Index', props: {
-      filters: {},
+      users: -> {
+        jbuilder do |json|
+          json.array! users do |user|
+            json.(user, :id, :email, :name, :owner, :deleted_at)
+            json.can do
+              json.edit_user current_user.owner?
+            end
+          end
+        end
+      },
       can: {
         create_user: current_user.owner?
       },
-      users: users.map do |user|
-        {
-          id:         user.id,
-          email:      user.email,
-          owner:      user.owner,
-          deleted_at: user.deleted_at,
-          name:       user.name,
-          can: {
-            edit_user: current_user.owner?
-          }
-        }
-      end
+      filters: {}
     }
   end
 
@@ -31,17 +29,14 @@ class UsersController < ApplicationController
 
   def edit
     render inertia: 'Users/Edit', props: {
+      user: -> {
+        jbuilder do |json|
+          json.(user, :id, :email, :first_name, :last_name, :owner, :deleted_at)
+          json.photo user.photo.attached? ? polymorphic_url(user.photo.variant(resize_to_fill: [64, 64])) : nil
+        end
+      },
       can: {
         edit_user: current_user.owner?
-      },
-      user: {
-        id:         user.id,
-        email:      user.email,
-        owner:      user.owner,
-        deleted_at: user.deleted_at,
-        first_name: user.first_name,
-        last_name:  user.last_name,
-        photo: user.photo.attached? ? polymorphic_url(user.photo.variant(resize_to_fill: [64, 64])) : nil
       }
     }
   end

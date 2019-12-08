@@ -54,9 +54,6 @@ Metrics/LineLength:
 Metrics/MethodLength:
   Max: 30
 
-Metrics/ClassLength:
-  Max: 150
-
 ### Style
 
 Style/AutoResourceCleanup:
@@ -119,6 +116,9 @@ Style/ClassAndModuleChildren:
 
 Style/Lambda:
   EnforcedStyle: literal
+
+Style/LambdaCall:
+  Enabled: false
 
 ### Layout
 

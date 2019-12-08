@@ -3,19 +3,13 @@ class OrganizationsController < ApplicationController
     pagy, paged_organizations = pagy(organizations)
 
     render inertia: 'Organizations/Index', props: {
-      filters: {},
-      organizations: {
-        data: paged_organizations.as_json(
-          only: [
-            :id,
-            :name,
-            :phone,
-            :city,
-            :deleted_at
-          ]
-        ),
-        meta: pagy_metadata(pagy)
-      }
+      organizations: -> {
+        jbuilder do |json|
+          json.data(paged_organizations, :id, :name, :phone, :city, :deleted_at)
+          json.meta pagy_metadata(pagy)
+        end
+      },
+      filters: {}
     }
   end
 
@@ -25,24 +19,16 @@ class OrganizationsController < ApplicationController
 
   def edit
     render inertia: 'Organizations/Edit', props: {
-      organization: organization.as_json(
-        only: [
-          :id,
-          :name,
-          :email,
-          :phone,
-          :address,
-          :city,
-          :region,
-          :country,
-          :postal_code,
-          :deleted_at
-        ]
-      ),
-      contacts: organization.contacts.order_by_name.as_json(
-        only: [:id, :city, :phone],
-        methods: [ :name ]
-      )
+      organization: -> {
+        jbuilder do |json|
+          json.(organization, :id, :name, :email, :phone, :address, :city, :region, :country, :postal_code, :deleted_at)
+        end
+      },
+      contacts: -> {
+        jbuilder do |json|
+          json.array! organization.contacts.order_by_name, :id, :name, :phone, :city, :deleted_at
+        end
+      }
     }
   end
 

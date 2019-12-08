@@ -128,6 +128,7 @@ GEM
     nio4r (2.5.2)
     nokogiri (1.10.7)
       mini_portile2 (~> 2.4.0)
+    oj (3.10.0)
     orm_adapter (0.5.0)
     pagy (3.7.0)
     parallel (1.19.1)
@@ -250,6 +251,7 @@ DEPENDENCIES
   jbuilder (~> 2.7)
   js-routes
   listen (>= 3.0.5, < 3.3)
+  oj
   pagy
   pg (>= 0.18, < 2.0)
   puma (~> 4.3)

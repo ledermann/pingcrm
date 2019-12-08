@@ -76,3 +76,6 @@ gem 'pagy'
 
 # Flexible authentication solution for Rails with Warden
 gem 'devise'
+
+# Optimized JSON
+gem 'oj'

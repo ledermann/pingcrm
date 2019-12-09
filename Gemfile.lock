@@ -131,7 +131,7 @@ GEM
       mini_portile2 (~> 2.4.0)
     oj (3.10.0)
     orm_adapter (0.5.0)
-    pagy (3.7.0)
+    pagy (3.7.1)
     parallel (1.19.1)
     parser (2.6.5.0)
       ast (~> 2.4.0)

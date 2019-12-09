@@ -102,14 +102,13 @@ class UsersTest < ApplicationSystemTestCase
     visit '/users'
 
     assert_selector 'h1', text: 'Users'
-    assert_selector 'table tbody tr', count: 1
+    assert_no_selector 'table tbody tr', text: @user.email
 
     click_on 'Filter'
     select 'With Trashed', from: 'Trashed:'
     select 'User', from: 'Role:'
 
-    assert_selector 'h1', text: 'Users'
-    assert_selector 'table tbody tr', count: 2
+    assert_selector 'table tbody tr', text: @user.email
   end
 
   test 'cannot do anything without login' do

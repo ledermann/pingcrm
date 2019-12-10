@@ -1,5 +1,4 @@
 const { environment } = require('@rails/webpacker')
-const webpack = require('webpack')
 const { VueLoaderPlugin } = require('vue-loader')
 const vue = require('./loaders/vue')
 
@@ -9,8 +8,8 @@ environment.config.merge({
     alias: {
       '@': path.resolve('app/javascript'),
       vue$: 'vue/dist/vue.runtime.esm.js',
-    }
-  }
+    },
+  },
 })
 
 environment.plugins.prepend('VueLoaderPlugin', new VueLoaderPlugin())

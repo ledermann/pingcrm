@@ -16,7 +16,8 @@
       >
         {{ link.label }}
       </div>
-      <inertia-link v-else
+      <inertia-link
+        v-else
         :key="key"
         class="mr-1 mb-1 px-4 py-3 text-sm border rounded text-gray-900 border-gray-400 hover:bg-white focus:border-indigo-500 focus:text-indigo"
         :class="{ 'bg-white': link.active, 'ml-auto': link.label === 'Next' }"
@@ -24,7 +25,7 @@
         preserve-state
         preserve-scroll
       >
-          {{ link.label }}
+        {{ link.label }}
       </inertia-link>
     </template>
   </div>
@@ -33,7 +34,10 @@
 <script>
 export default {
   props: {
-    meta: Object
+    meta: {
+      type: Object,
+      required: true,
+    },
   },
 
   computed: {
@@ -41,21 +45,21 @@ export default {
       return [
         {
           label: 'Previous',
-          url: this.url(this.meta.prev)
+          url: this.url(this.meta.prev),
         },
         ...this.meta.sequels['0'].map(page => {
           return {
             label: page,
             url: this.url(page),
-            active: this.active(page)
+            active: this.active(page),
           }
         }),
         {
           label: 'Next',
-          url: this.url(this.meta.next)
-        }
+          url: this.url(this.meta.next),
+        },
       ]
-    }
+    },
   },
 
   methods: {
@@ -66,7 +70,7 @@ export default {
     },
     active(pageNumber) {
       return this.meta.page == pageNumber
-    }
-  }
+    },
+  },
 }
 </script>

@@ -8,12 +8,12 @@ export default class MatomoTracker {
     window._paq.push(['setSiteId', this.matomoId])
 
     // Create a script element and insert it in the DOM
-    var pa = document.createElement('script')
+    let pa = document.createElement('script')
     pa.type = 'text/javascript'
     pa.defer = true
     pa.async = true
     pa.src = this.matomoUrl
-    var firstScript = document.getElementsByTagName('script')[0]
+    let firstScript = document.getElementsByTagName('script')[0]
     firstScript.parentNode.insertBefore(pa, firstScript)
   }
 

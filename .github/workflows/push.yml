@@ -55,6 +55,9 @@ jobs:
       - name: Install Node modules
         run: yarn install
 
+      - name: Lint with ESLint
+        run: yarn lint
+
       - name: Compile assets
         env:
           RAILS_ENV: test

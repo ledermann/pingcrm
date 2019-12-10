@@ -3,8 +3,8 @@
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
 
-require("@rails/ujs").start()
-require("@rails/activestorage").start()
+require('@rails/ujs').start()
+require('@rails/activestorage').start()
 
 import '../styles/application.scss'
 
@@ -12,8 +12,8 @@ import '../styles/application.scss'
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
 // or the `imagePath` JavaScript helper below.
 //
-const images = require.context('../images', true)
-const imagePath = (name) => images(name, true)
+require.context('../images', true)
+// const imagePath = (name) => images(name, true)
 
 import Vue from 'vue'
 import VueMeta from 'vue-meta'
@@ -43,16 +43,14 @@ if (matomo.enabled) {
           matomo.trackPageView()
         }, 100)
       }
-    }
+    },
   })
 }
 
-import {
-  InertiaApp
-} from '@inertiajs/inertia-vue'
+import { InertiaApp } from '@inertiajs/inertia-vue'
 Vue.use(InertiaApp)
 
-import Routes from '../routes.js';
+import Routes from '../routes.js'
 Vue.prototype.$routes = Routes
 
 const app = document.getElementById('app')

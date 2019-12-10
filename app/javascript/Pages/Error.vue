@@ -1,8 +1,12 @@
 <template>
   <div class="p-5 bg-indigo-800 text-indigo-100 min-h-screen flex justify-center items-center">
     <div class="w-full max-w-md">
-      <h1 class="text-3xl">{{ title }}</h1>
-      <p class="mt-3 text-lg leading-tight">{{ description }}</p>
+      <h1 class="text-3xl">
+        {{ title }}
+      </h1>
+      <p class="mt-3 text-lg leading-tight">
+        {{ description }}
+      </p>
     </div>
   </div>
 </template>
@@ -11,7 +15,10 @@
 export default {
   metaInfo: { title: 'Error' },
   props: {
-    status: Number,
+    status: {
+      type: Number,
+      required: true,
+    },
   },
   computed: {
     title() {

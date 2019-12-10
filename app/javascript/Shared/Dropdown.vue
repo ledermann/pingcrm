@@ -1,10 +1,23 @@
 <template>
-  <button type="button" @click="toggle">
+  <button
+    type="button"
+    @click="toggle"
+  >
     <slot />
-    <portal v-if="show" to="dropdown">
+    <portal
+      v-if="show"
+      to="dropdown"
+    >
       <div>
-        <div style="position: fixed; top: 0; right: 0; left: 0; bottom: 0; z-index: 99998; background: black; opacity: .2" @click="toggle" />
-        <div ref="dropdown" style="position: absolute; z-index: 99999;" @click.stop>
+        <div
+          style="position: fixed; top: 0; right: 0; left: 0; bottom: 0; z-index: 99998; background: black; opacity: .2"
+          @click="toggle"
+        />
+        <div
+          ref="dropdown"
+          style="position: absolute; z-index: 99999;"
+          @click.stop
+        >
           <slot name="dropdown" />
         </div>
       </div>
@@ -48,7 +61,7 @@ export default {
     },
   },
   mounted() {
-    document.addEventListener('keydown', (e) => {
+    document.addEventListener('keydown', e => {
       if (e.keyCode === 27) {
         this.close()
       }

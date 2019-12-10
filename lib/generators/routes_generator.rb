@@ -4,8 +4,7 @@ require 'js-routes'
 
 JsRoutes.setup do |config|
   config.exclude = [
-    /rails_/,
-    /^error_/
+    /rails_/
   ]
   config.compact = true
 end

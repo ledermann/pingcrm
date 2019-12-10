@@ -34,7 +34,7 @@
     <div>
       <inertia-link
         class="btn-indigo"
-        href="/error-500"
+        :href="$routes.error_500()"
       >
         500 error
       </inertia-link>

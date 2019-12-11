@@ -31,6 +31,14 @@ module Pingcrm
 
     config.active_storage.variant_processor = :vips
 
-    config.exceptions_app = ->(env) { ExceptionsController.action(:show).call(env) }
+    config.exceptions_app = ->(env) do
+      Class.new(ActionController::Base) do # rubocop:disable Rails/ApplicationController
+        def show
+          render inertia: 'Error', props: {
+            status: request.path_info[1..-1].to_i
+          }
+        end
+      end.action(:show).call(env)
+    end
   end
 end

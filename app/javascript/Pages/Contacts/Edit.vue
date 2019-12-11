@@ -51,6 +51,7 @@ import Layout from '@/Shared/Layout'
 import LoadingButton from '@/Shared/LoadingButton'
 import ContactForm from './Form'
 import TrashedMessage from '@/Shared/TrashedMessage'
+import _ from 'lodash'
 
 export default {
   metaInfo() {
@@ -78,7 +79,7 @@ export default {
   data() {
     return {
       sending: false,
-      form: this.contact,
+      form: _.omit(this.contact, 'id', 'deleted_at'),
     }
   },
   methods: {

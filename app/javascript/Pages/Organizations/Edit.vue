@@ -129,6 +129,7 @@ import Layout from '@/Shared/Layout'
 import LoadingButton from '@/Shared/LoadingButton'
 import OrganizationForm from './Form'
 import TrashedMessage from '@/Shared/TrashedMessage'
+import _ from 'lodash'
 
 export default {
   metaInfo() {
@@ -155,7 +156,7 @@ export default {
   data() {
     return {
       sending: false,
-      form: this.organization,
+      form: _.omit(this.organization, 'id', 'deleted_at'),
     }
   },
   methods: {

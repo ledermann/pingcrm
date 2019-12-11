@@ -51,13 +51,19 @@ class OrganizationsController < ApplicationController
   end
 
   def destroy
-    organization.soft_delete!
-    redirect_to edit_organization_path(organization), notice: 'Organization deleted.'
+    if organization.soft_delete
+      redirect_to edit_organization_path(organization), notice: 'Organization deleted.'
+    else
+      redirect_to edit_organization_path(organization), alert: 'Organization cannot be deleted!'
+    end
   end
 
   def restore
-    organization.restore!
-    redirect_to edit_organization_path(organization), notice: 'Organization restored.'
+    if organization.restore
+      redirect_to edit_organization_path(organization), notice: 'Organization restored.'
+    else
+      redirect_to edit_organization_path(organization), alert: 'Organization cannot be restored!'
+    end
   end
 
   private

@@ -60,13 +60,19 @@ class ContactsController < ApplicationController
   end
 
   def destroy
-    contact.soft_delete!
-    redirect_to edit_contact_path(contact), notice: 'Contact deleted.'
+    if contact.soft_delete
+      redirect_to edit_contact_path(contact), notice: 'Contact deleted.'
+    else
+      redirect_to edit_contact_path(contact), alert: 'Contact be deleted!'
+    end
   end
 
   def restore
-    contact.restore!
-    redirect_to edit_contact_path(contact), notice: 'Contact restored.'
+    if contact.restore
+      redirect_to edit_contact_path(contact), notice: 'Contact restored.'
+    else
+      redirect_to edit_contact_path(contact), alert: 'Contact be restored!'
+    end
   end
 
   private

@@ -75,13 +75,19 @@ class UsersController < ApplicationController
       return
     end
 
-    user.soft_delete!
-    redirect_to edit_user_path(user), notice: 'User deleted.'
+    if user.soft_delete
+      redirect_to edit_user_path(user), notice: 'User deleted.'
+    else
+      redirect_to edit_user_path(user), alert: 'User cannot be deleted!'
+    end
   end
 
   def restore
-    user.restore!
-    redirect_to edit_user_path(user), notice: 'User restored.'
+    if user.restore
+      redirect_to edit_user_path(user), notice: 'User restored.'
+    else
+      redirect_to edit_user_path(user), alert: 'User cannot be restored!'
+    end
   end
 
   private

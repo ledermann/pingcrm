@@ -63,7 +63,7 @@ class OrganizationsController < ApplicationController
   private
 
   def organization
-    @organization ||= current_user.account.organizations.find(params[:id])
+    @organization ||= current_user.organizations.find(params[:id])
   end
 
   def organizations
@@ -81,14 +81,7 @@ class OrganizationsController < ApplicationController
   # Never trust parameters from the scary internet, only allow the white list through.
   def organization_params
     params.require(:organization).permit(
-      :name,
-      :email,
-      :phone,
-      :address,
-      :city,
-      :region,
-      :country,
-      :portal_code
+      :name, :email, :phone, :address, :city, :region, :country, :postal_code
     )
   end
 end

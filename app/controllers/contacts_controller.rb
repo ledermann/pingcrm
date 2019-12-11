@@ -6,7 +6,7 @@ class ContactsController < ApplicationController
       contacts: jbuilder do |json|
         json.data(paged_contacts) do |contact|
           json.(contact, :id, :name, :phone, :city, :deleted_at)
-          json.organization(contact.organization, :name)
+          json.organization(contact.organization, :name) if contact.organization
         end
         json.meta pagy_metadata(pagy)
       end,
@@ -18,7 +18,7 @@ class ContactsController < ApplicationController
     render inertia: 'Contacts/New', props: {
       organizations: -> {
         jbuilder do |json|
-          json.array! current_user.account.organizations.order(:name), :id, :name
+          json.array! current_user.organizations.order(:name), :id, :name
         end
       }
     }
@@ -31,7 +31,7 @@ class ContactsController < ApplicationController
       end,
       organizations: -> {
         jbuilder do |json|
-          json.array! current_user.account.organizations.order(:name), :id, :name
+          json.array! current_user.organizations.order(:name), :id, :name
         end
       }
     }
@@ -72,7 +72,7 @@ class ContactsController < ApplicationController
   private
 
   def contact
-    @contact ||= current_user.account.contacts.find(params[:id])
+    @contact ||= current_user.contacts.find(params[:id])
   end
 
   def contacts
@@ -91,16 +91,8 @@ class ContactsController < ApplicationController
   # Never trust parameters from the scary internet, only allow the white list through.
   def contact_params
     params.require(:contact).permit(
-      :organization_id,
-      :first_name,
-      :last_name,
-      :email,
-      :phone,
-      :address,
-      :city,
-      :region,
-      :country,
-      :postal_code
+      :organization_id, :first_name, :last_name, :email, :phone, :address, :city,
+      :region, :country, :postal_code
     )
   end
 end

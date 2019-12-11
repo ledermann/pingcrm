@@ -91,7 +91,7 @@ class UsersController < ApplicationController
   private
 
   def user
-    @user ||= current_user.account.users.find(params[:id])
+    @user ||= current_user.users.find(params[:id])
   end
 
   def users
@@ -110,12 +110,7 @@ class UsersController < ApplicationController
   # Never trust parameters from the scary internet, only allow the white list through.
   def user_params
     params.require(:user).permit(
-      :first_name,
-      :last_name,
-      :email,
-      :owner,
-      :password,
-      :photo
+      :first_name, :last_name, :email, :owner, :password, :photo
     ).tap do |p|
       p.delete(:photo) if p[:photo].blank?
     end

@@ -42,12 +42,12 @@ class ContactsController < ApplicationController
   end
 
   def create
-    new_contact = current_user.account.contacts.new(contact_params)
+    contact = current_user.account.contacts.new(contact_params)
 
-    if new_contact.save
+    if contact.save
       redirect_to contacts_path, notice: 'Contact created.'
     else
-      session[:errors] = new_contact.errors
+      session[:errors] = contact.errors
       redirect_to new_contact_path
     end
   end

@@ -33,12 +33,12 @@ class OrganizationsController < ApplicationController
   end
 
   def create
-    new_organization = current_user.account.organizations.new(organization_params)
+    organization = current_user.account.organizations.new(organization_params)
 
-    if new_organization.save
+    if organization.save
       redirect_to organizations_path, notice: 'Organization created.'
     else
-      session[:errors] = new_organization.errors
+      session[:errors] = organization.errors
       redirect_to new_organization_path
     end
   end

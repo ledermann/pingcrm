@@ -47,12 +47,12 @@ class UsersController < ApplicationController
       return
     end
 
-    new_user = current_user.account.users.new(user_params)
+    user = current_user.account.users.new(user_params)
 
-    if new_user.save
+    if user.save
       redirect_to users_path, notice: 'User created.'
     else
-      session[:errors] = new_user.errors
+      session[:errors] = user.errors
       redirect_to new_user_path
     end
   end

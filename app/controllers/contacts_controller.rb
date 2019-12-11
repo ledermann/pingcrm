@@ -3,15 +3,13 @@ class ContactsController < ApplicationController
     pagy, paged_contacts = pagy(contacts)
 
     render inertia: 'Contacts/Index', props: {
-      contacts: -> {
-        jbuilder do |json|
-          json.data(paged_contacts) do |contact|
-            json.(contact, :id, :name, :phone, :city, :deleted_at)
-            json.organization(contact.organization, :name)
-          end
-          json.meta pagy_metadata(pagy)
+      contacts: jbuilder do |json|
+        json.data(paged_contacts) do |contact|
+          json.(contact, :id, :name, :phone, :city, :deleted_at)
+          json.organization(contact.organization, :name)
         end
-      },
+        json.meta pagy_metadata(pagy)
+      end,
       filters: {}
     }
   end
@@ -28,11 +26,9 @@ class ContactsController < ApplicationController
 
   def edit
     render inertia: 'Contacts/Edit', props: {
-      contact: -> {
-        jbuilder do |json|
-          json.(contact, :id, :first_name, :last_name, :organization_id, :email, :phone, :address, :city, :region, :country, :postal_code, :deleted_at)
-        end
-      },
+      contact: jbuilder do |json|
+        json.(contact, :id, :first_name, :last_name, :organization_id, :email, :phone, :address, :city, :region, :country, :postal_code, :deleted_at)
+      end,
       organizations: -> {
         jbuilder do |json|
           json.array! current_user.account.organizations.order(:name), :id, :name

@@ -1,16 +1,14 @@
 class UsersController < ApplicationController
   def index
     render inertia: 'Users/Index', props: {
-      users: -> {
-        jbuilder do |json|
-          json.array! users do |user|
-            json.(user, :id, :email, :name, :owner, :deleted_at)
-            json.can do
-              json.edit_user can?(:edit, user)
-            end
+      users: jbuilder do |json|
+        json.array! users do |user|
+          json.(user, :id, :email, :name, :owner, :deleted_at)
+          json.can do
+            json.edit_user can?(:edit, user)
           end
         end
-      },
+      end,
       can: {
         create_user: can?(:create, User)
       },
@@ -25,22 +23,18 @@ class UsersController < ApplicationController
     end
 
     render inertia: 'Users/New', props: {
-      user: -> {
-        jbuilder do |json|
-          json.(new_user, :email, :first_name, :last_name, :owner)
-        end
-      }
+      user: jbuilder do |json|
+        json.(new_user, :email, :first_name, :last_name, :owner)
+      end
     }
   end
 
   def edit
     render inertia: 'Users/Edit', props: {
-      user: -> {
-        jbuilder do |json|
-          json.(user, :id, :email, :first_name, :last_name, :owner, :deleted_at)
-          json.photo user.photo.attached? ? polymorphic_url(user.photo.variant(resize_to_fill: [64, 64])) : nil
-        end
-      },
+      user: jbuilder do |json|
+        json.(user, :id, :email, :first_name, :last_name, :owner, :deleted_at)
+        json.photo user.photo.attached? ? polymorphic_url(user.photo.variant(resize_to_fill: [64, 64])) : nil
+      end,
       can: {
         edit_user: can?(:edit, user)
       }

@@ -50,6 +50,50 @@ class ContactsTest < ApplicationSystemTestCase
     assert_selector 'table tbody tr', count: 5
   end
 
+  test 'can add contact' do
+    sign_in @user
+
+    visit "/contacts"
+    click_on 'Create Contact'
+
+    assert_selector 'form'
+    assert_selector 'button', text: 'Create Contact'
+
+    fill_in 'First name:', with: 'Jane'
+    fill_in 'Last name:', with: 'Doe'
+    click_on 'Create Contact'
+    assert_selector 'div', text: 'Contact created.'
+  end
+
+  test 'can edit contact' do
+    sign_in @user
+    contact = create(:contact, account: @account)
+
+    visit "/contacts/#{contact.id}/edit"
+
+    assert_selector 'form'
+    assert_selector 'button', text: 'Update Contact'
+    fill_in 'First name:', with: 'Jane'
+    fill_in 'Last name:', with: 'Doe'
+    click_on 'Update Contact'
+
+    assert_selector 'div', text: 'Contact updated.'
+  end
+
+  test 'can delete an contact' do
+    sign_in @user
+    contact = create(:contact, account: @account)
+
+    visit "/contacts/#{contact.id}/edit"
+
+    assert_selector 'button', text: 'Delete Contact'
+    accept_confirm do
+      click_on 'Delete Contact'
+    end
+
+    assert_selector 'div', text: 'Contact deleted.'
+  end
+
   test 'cannot do anything without login' do
     visit '/contacts'
 

@@ -49,6 +49,48 @@ class OrganizationsTest < ApplicationSystemTestCase
     assert_selector 'table tbody tr', count: 5
   end
 
+  test 'can add organization' do
+    sign_in @user
+
+    visit "/organizations"
+    click_on 'Create Organization'
+
+    assert_selector 'form'
+    assert_selector 'button', text: 'Create Organization'
+
+    fill_in 'Name:', with: 'The new organization'
+    click_on 'Create Organization'
+    assert_selector 'div', text: 'Organization created.'
+  end
+
+  test 'can edit organization' do
+    sign_in @user
+    organization = create(:organization, account: @account)
+
+    visit "/organizations/#{organization.id}/edit"
+
+    assert_selector 'form'
+    assert_selector 'button', text: 'Update Organization'
+    fill_in 'Name:', with: 'The updated organization'
+    click_on 'Update Organization'
+
+    assert_selector 'div', text: 'Organization updated.'
+  end
+
+  test 'can delete an organization' do
+    sign_in @user
+    organization = create(:organization, account: @account)
+
+    visit "/organizations/#{organization.id}/edit"
+
+    assert_selector 'button', text: 'Delete Organization'
+    accept_confirm do
+      click_on 'Delete Organization'
+    end
+
+    assert_selector 'div', text: 'Organization deleted.'
+  end
+
   test 'cannot do anything without login' do
     visit '/organizations'
 

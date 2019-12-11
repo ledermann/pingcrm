@@ -89,11 +89,7 @@ export default {
     return {
       sending: false,
       form: {
-        first_name: this.user.first_name,
-        last_name: this.user.last_name,
-        email: this.user.email,
-        password: this.user.password,
-        owner: this.user.owner,
+        ...this.user,
         photo: null,
       },
     }

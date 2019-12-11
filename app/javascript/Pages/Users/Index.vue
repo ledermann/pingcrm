@@ -87,6 +87,7 @@
                   v-if="user.photo"
                   class="block w-5 h-5 rounded-full mr-2 -my-2"
                   :src="user.photo"
+                  alt="Photo"
                 >
                 {{ user.name }}
                 <icon

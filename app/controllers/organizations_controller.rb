@@ -33,12 +33,10 @@ class OrganizationsController < ApplicationController
   end
 
   def create
-    organization = current_user.account.organizations.new(organization_params)
-
-    if organization.save
+    if new_organization.update(organization_params)
       redirect_to organizations_path, notice: 'Organization created.'
     else
-      redirect_to new_organization_path, errors: organization.errors
+      redirect_to new_organization_path, errors: new_organization.errors
     end
   end
 
@@ -78,6 +76,10 @@ class OrganizationsController < ApplicationController
                        search(params[:search]).
                        trash_filter(params[:trashed]).
                        order(:name)
+  end
+
+  def new_organization
+    @new_organization ||= current_user.account.organizations.new
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.

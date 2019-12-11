@@ -42,12 +42,10 @@ class ContactsController < ApplicationController
   end
 
   def create
-    contact = current_user.account.contacts.new(contact_params)
-
-    if contact.save
+    if new_contact.update(contact_params)
       redirect_to contacts_path, notice: 'Contact created.'
     else
-      redirect_to new_contact_path, errors: contact.errors
+      redirect_to new_contact_path, errors: new_contact.errors
     end
   end
 
@@ -88,6 +86,10 @@ class ContactsController < ApplicationController
                   search(params[:search]).
                   trash_filter(params[:trashed]).
                   order_by_name
+  end
+
+  def new_contact
+    @new_contact ||= current_user.account.contacts.new
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.

@@ -47,12 +47,10 @@ class UsersController < ApplicationController
       return
     end
 
-    user = current_user.account.users.new(user_params)
-
-    if user.save
+    if new_user.update(user_params)
       redirect_to users_path, notice: 'User created.'
     else
-      redirect_to new_user_path, errors: user.errors
+      redirect_to new_user_path, errors: new_user.errors
     end
   end
 
@@ -103,6 +101,10 @@ class UsersController < ApplicationController
                trash_filter(params[:trashed]).
                role_filter(params[:role]).
                order_by_name
+  end
+
+  def new_user
+    @new_user ||= current_user.account.users.new
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.

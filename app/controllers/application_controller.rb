@@ -9,13 +9,15 @@ class ApplicationController < ActionController::Base
   include InertiaJson
 
   inertia_share auth: -> {
-    return unless current_user
-
-    jbuilder do |json|
-      json.user do
-        json.(current_user, :id, :first_name, :last_name)
-        json.account(current_user.account, :id, :name)
-      end
-    end
+    {
+      user: current_user.as_json(
+        only: [ :id, :first_name, :last_name, :role ],
+        include: {
+          account: {
+            only: [ :id, :name ]
+          }
+        }
+      )
+    }
   }
 end

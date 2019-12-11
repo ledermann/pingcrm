@@ -61,7 +61,7 @@ class UsersController < ApplicationController
     end
 
     if user.update(user_params)
-      redirect_to [ :edit, user ], notice: 'User updated.'
+      redirect_to edit_user_path(user), notice: 'User updated.'
     else
       redirect_to edit_user_path(user), errors: user.errors
     end

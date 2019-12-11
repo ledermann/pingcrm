@@ -51,7 +51,7 @@ class ContactsController < ApplicationController
 
   def update
     if contact.update(contact_params)
-      redirect_to [ :edit, contact ], notice: 'Contact updated.'
+      redirect_to edit_contact_path(contact), notice: 'Contact updated.'
     else
       redirect_to edit_contact_path(contact), errors: contact.errors
     end

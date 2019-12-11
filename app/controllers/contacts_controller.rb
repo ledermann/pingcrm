@@ -10,7 +10,7 @@ class ContactsController < ApplicationController
         end
         json.meta pagy_metadata(pagy)
       end,
-      filters: {}
+      filters: params.slice(:search, :trashed)
     }
   end
 

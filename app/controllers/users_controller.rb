@@ -12,7 +12,7 @@ class UsersController < ApplicationController
       can: {
         create_user: can?(:create, User)
       },
-      filters: {}
+      filters: params.slice(:search, :trashed, :role)
     }
   end
 

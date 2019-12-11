@@ -38,8 +38,7 @@ class OrganizationsController < ApplicationController
     if organization.save
       redirect_to organizations_path, notice: 'Organization created.'
     else
-      session[:errors] = organization.errors
-      redirect_to new_organization_path
+      redirect_to new_organization_path, errors: organization.errors
     end
   end
 
@@ -47,8 +46,7 @@ class OrganizationsController < ApplicationController
     if organization.update(organization_params)
       redirect_to [ :edit, organization ], notice: 'Organization updated.'
     else
-      session[:errors] = organization.errors
-      redirect_to edit_organization_path(organization)
+      redirect_to edit_organization_path(organization), errors: organization.errors
     end
   end
 

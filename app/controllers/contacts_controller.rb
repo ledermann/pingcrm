@@ -47,8 +47,7 @@ class ContactsController < ApplicationController
     if contact.save
       redirect_to contacts_path, notice: 'Contact created.'
     else
-      session[:errors] = contact.errors
-      redirect_to new_contact_path
+      redirect_to new_contact_path, errors: contact.errors
     end
   end
 
@@ -56,8 +55,7 @@ class ContactsController < ApplicationController
     if contact.update(contact_params)
       redirect_to [ :edit, contact ], notice: 'Contact updated.'
     else
-      session[:errors] = contact.errors
-      redirect_to edit_contact_path(contact)
+      redirect_to edit_contact_path(contact), errors: contact.errors
     end
   end
 

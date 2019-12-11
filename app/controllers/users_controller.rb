@@ -52,8 +52,7 @@ class UsersController < ApplicationController
     if user.save
       redirect_to users_path, notice: 'User created.'
     else
-      session[:errors] = user.errors
-      redirect_to new_user_path
+      redirect_to new_user_path, errors: user.errors
     end
   end
 
@@ -66,8 +65,7 @@ class UsersController < ApplicationController
     if user.update(user_params)
       redirect_to [ :edit, user ], notice: 'User updated.'
     else
-      session[:errors] = user.errors
-      redirect_to edit_user_path(user)
+      redirect_to edit_user_path(user), errors: user.errors
     end
   end
 

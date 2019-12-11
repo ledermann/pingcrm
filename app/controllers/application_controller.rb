@@ -28,6 +28,14 @@ class ApplicationController < ActionController::Base
     }
   }
 
+  def redirect_to(options = {}, response_options_and_flash = {})
+    if (errors = response_options_and_flash.delete(:errors))
+      session[:errors] = errors
+    end
+
+    super(options, response_options_and_flash)
+  end
+
   protected
 
   # Render Hash with Jbuilder

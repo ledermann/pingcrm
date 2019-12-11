@@ -40,11 +40,17 @@ export default {
     LoadingButton,
     UserForm,
   },
+  props: {
+    user: {
+      type: Object,
+      required: true,
+    },
+  },
   remember: 'form',
   data() {
     return {
       sending: false,
-      form: { last_name: null },
+      form: this.user,
     }
   },
   methods: {

@@ -34,6 +34,8 @@ class UsersTest < ApplicationSystemTestCase
     click_on 'Create User'
 
     assert_selector 'form'
+    assert true, find_field('Owner:').value
+
     assert_selector 'button', text: 'Create User'
     fill_in 'First name:', with: 'Jonathan'
     fill_in 'Last name:', with: 'Smith'

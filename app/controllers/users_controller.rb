@@ -24,7 +24,13 @@ class UsersController < ApplicationController
       return
     end
 
-    render inertia: 'Users/New'
+    render inertia: 'Users/New', props: {
+      user: -> {
+        jbuilder do |json|
+          json.(new_user, :email, :first_name, :last_name, :owner)
+        end
+      }
+    }
   end
 
   def edit
@@ -104,7 +110,7 @@ class UsersController < ApplicationController
   end
 
   def new_user
-    @new_user ||= current_user.account.users.new
+    @new_user ||= current_user.account.users.new owner: false
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.

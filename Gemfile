@@ -66,7 +66,7 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # The Rails adapter for Inertia.js
-gem 'inertia_rails', '>= 1.2.1'
+gem 'inertia_rails', '>= 1.2.1', github: 'ledermann/inertia-rails', branch: 'patched'
 
 # A library for generating fake data such as names, addresses, and phone numbers.
 gem 'faker', require: false

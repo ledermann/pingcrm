@@ -1,6 +1,15 @@
 class ContactsController < ApplicationController
+  # Let CanCanCan load and authorize the instance variables
+  load_and_authorize_resource
+
   def index
-    pagy, paged_contacts = pagy(contacts)
+    pagy, paged_contacts = pagy(
+      @contacts.
+        includes(:organization).
+        search(params[:search]).
+        trash_filter(params[:trashed]).
+        order_by_name
+    )
 
     render inertia: 'Contacts/Index', props: {
       contacts: jbuilder do |json|
@@ -27,7 +36,7 @@ class ContactsController < ApplicationController
   def edit
     render inertia: 'Contacts/Edit', props: {
       contact: jbuilder do |json|
-        json.(contact, :id, :first_name, :last_name, :organization_id, :email, :phone, :address, :city, :region, :country, :postal_code, :deleted_at)
+        json.(@contact, :id, :first_name, :last_name, :organization_id, :email, :phone, :address, :city, :region, :country, :postal_code, :deleted_at)
       end,
       organizations: -> {
         jbuilder do |json|
@@ -38,55 +47,42 @@ class ContactsController < ApplicationController
   end
 
   def create
-    if new_contact.update(contact_params)
+    if @contact.update(contact_params)
       redirect_to contacts_path, notice: 'Contact created.'
     else
-      redirect_to new_contact_path, errors: new_contact.errors
+      redirect_to new_contact_path, errors: @contact.errors
     end
   end
 
   def update
-    if contact.update(contact_params)
-      redirect_to edit_contact_path(contact), notice: 'Contact updated.'
+    if @contact.update(contact_params)
+      redirect_to edit_contact_path(@contact), notice: 'Contact updated.'
     else
-      redirect_to edit_contact_path(contact), errors: contact.errors
+      redirect_to edit_contact_path(@contact), errors: contact.errors
     end
   end
 
   def destroy
-    if contact.soft_delete
-      redirect_to edit_contact_path(contact), notice: 'Contact deleted.'
+    if @contact.soft_delete
+      if can? :edit, @contact
+        redirect_to edit_contact_path(@contact), notice: 'Contact deleted.'
+      else
+        redirect_to contacts_path, notice: 'Contact deleted.'
+      end
     else
-      redirect_to edit_contact_path(contact), alert: 'Contact be deleted!'
+      redirect_to edit_contact_path(@contact), alert: 'Contact be deleted!'
     end
   end
 
   def restore
-    if contact.restore
-      redirect_to edit_contact_path(contact), notice: 'Contact restored.'
+    if @contact.restore
+      redirect_to edit_contact_path(@contact), notice: 'Contact restored.'
     else
-      redirect_to edit_contact_path(contact), alert: 'Contact be restored!'
+      redirect_to edit_contact_path(@contact), alert: 'Contact be restored!'
     end
   end
 
   private
-
-  def contact
-    @contact ||= current_user.contacts.find(params[:id])
-  end
-
-  def contacts
-    @contacts ||= current_user.
-                  contacts.
-                  includes(:organization).
-                  search(params[:search]).
-                  trash_filter(params[:trashed]).
-                  order_by_name
-  end
-
-  def new_contact
-    @new_contact ||= current_user.account.contacts.new
-  end
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def contact_params

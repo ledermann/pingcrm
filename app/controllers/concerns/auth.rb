@@ -1,10 +1,16 @@
 require 'active_support/concern'
 
-module DeviseSetup
+module Auth
   extend ActiveSupport::Concern
 
   included do
     before_action :authenticate_user!
+
+    rescue_from CanCan::AccessDenied do
+      render inertia: 'Error', props: {
+        status: 403
+      }
+    end
   end
 
   private

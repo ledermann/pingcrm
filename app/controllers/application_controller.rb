@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  include DeviseSetup
+  include Auth
 
   include Pagy::Backend
 

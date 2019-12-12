@@ -51,7 +51,7 @@ class UsersTest < ApplicationSystemTestCase
     assert_no_selector 'button', text: 'Create User'
 
     visit "/users/new"
-    assert_selector 'div', text: 'You are not allowed to do this!'
+    assert_selector 'div', text: 'Forbidden'
   end
 
   test 'Owner can edit user' do

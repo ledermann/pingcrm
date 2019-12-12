@@ -70,7 +70,7 @@ class ContactsController < ApplicationController
         redirect_to contacts_path, notice: 'Contact deleted.'
       end
     else
-      redirect_to edit_contact_path(@contact), alert: 'Contact be deleted!'
+      redirect_to edit_contact_path(@contact), alert: 'Contact cannot be deleted!'
     end
   end
 
@@ -78,7 +78,7 @@ class ContactsController < ApplicationController
     if @contact.restore
       redirect_to edit_contact_path(@contact), notice: 'Contact restored.'
     else
-      redirect_to edit_contact_path(@contact), alert: 'Contact be restored!'
+      redirect_to edit_contact_path(@contact), alert: 'Contact cannot be restored!'
     end
   end
 

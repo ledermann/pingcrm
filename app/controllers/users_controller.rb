@@ -82,7 +82,7 @@ class UsersController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def user_params
-    params.require(:user).permit(
+    params.fetch(:user, {}).permit(
       :first_name, :last_name, :email, :owner, :password, :photo
     ).tap do |p|
       p.delete(:photo) if p[:photo].blank?

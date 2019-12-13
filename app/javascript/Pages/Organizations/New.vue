@@ -44,7 +44,7 @@ export default {
   data() {
     return {
       sending: false,
-      form: { name: null },
+      form: {},
     }
   },
   methods: {

@@ -51,7 +51,7 @@ export default {
   data() {
     return {
       sending: false,
-      form: { last_name: null },
+      form: {},
     }
   },
   methods: {

@@ -14,7 +14,7 @@ Rails.application.routes.draw do
       put 'restore'
     end
   end
-  resources :organizations, except: [ :show ] do
+  resources :organizations, except: [ :show, :new ] do
     member do
       put 'restore'
     end

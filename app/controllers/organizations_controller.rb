@@ -19,10 +19,6 @@ class OrganizationsController < ApplicationController
     }
   end
 
-  def new
-    render inertia: 'Organizations/New'
-  end
-
   def edit
     render inertia: 'Organizations/Edit', props: {
       organization: jbuilder do |json|
@@ -40,7 +36,7 @@ class OrganizationsController < ApplicationController
     if @organization.update(organization_params)
       redirect_to organizations_path, notice: 'Organization created.'
     else
-      redirect_to new_organization_path, errors: @organization.errors
+      redirect_to organizations_path, errors: @organization.errors
     end
   end
 

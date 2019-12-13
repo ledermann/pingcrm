@@ -25,7 +25,7 @@
         </div>
       </dropdown>
       <input
-        class="relative w-full px-6 py-3 rounded-r focus:shadow-outline"
+        class="w-full px-6 py-3 rounded-r focus:shadow-outline"
         aria-label="Search"
         autocomplete="off"
         type="text"

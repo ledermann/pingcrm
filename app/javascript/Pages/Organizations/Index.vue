@@ -27,13 +27,20 @@
           </option>
         </select>
       </search-filter>
-      <inertia-link
+
+      <button
         class="btn-indigo"
-        :href="$routes.new_organization()"
+        @click="modalNew = true"
       >
         <span>Create</span>
         <span class="hidden md:inline">Organization</span>
-      </inertia-link>
+      </button>
+      <modal
+        :open="modalNew"
+        @close="modalNew = false"
+      >
+        <new-organization @success="modalNew = false" />
+      </modal>
     </div>
     <div class="bg-white rounded shadow overflow-x-auto">
       <table class="w-full whitespace-no-wrap">
@@ -127,6 +134,8 @@ import Icon from '@/Shared/Icon'
 import Layout from '@/Shared/Layout'
 import Pagination from '@/Shared/Pagination'
 import SearchFilter from '@/Shared/SearchFilter'
+import Modal from '@/Shared/Modal'
+import NewOrganization from '@/Pages/Organizations/_New'
 
 export default {
   metaInfo: { title: 'Organizations' },
@@ -135,6 +144,8 @@ export default {
     Icon,
     Pagination,
     SearchFilter,
+    Modal,
+    NewOrganization,
   },
   props: {
     organizations: {
@@ -152,6 +163,7 @@ export default {
         search: this.filters.search,
         trashed: this.filters.trashed,
       },
+      modalNew: false,
     }
   },
   watch: {

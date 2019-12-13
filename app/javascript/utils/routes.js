@@ -515,9 +515,6 @@ Based on Rails 6.0.1 routes of Pingcrm::Application
 // new_contact => /contacts/new(.:format)
   // function(options)
   new_contact: Utils.route([["format",false]], {}, [2,[7,"/",false],[2,[6,"contacts",false],[2,[7,"/",false],[2,[6,"new",false],[1,[2,[8,".",false],[3,"format",false]],false]]]]]),
-// new_organization => /organizations/new(.:format)
-  // function(options)
-  new_organization: Utils.route([["format",false]], {}, [2,[7,"/",false],[2,[6,"organizations",false],[2,[7,"/",false],[2,[6,"new",false],[1,[2,[8,".",false],[3,"format",false]],false]]]]]),
 // new_user => /users/new(.:format)
   // function(options)
   new_user: Utils.route([["format",false]], {}, [2,[7,"/",false],[2,[6,"users",false],[2,[7,"/",false],[2,[6,"new",false],[1,[2,[8,".",false],[3,"format",false]],false]]]]]),

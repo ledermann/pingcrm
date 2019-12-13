@@ -58,8 +58,10 @@ class OrganizationsTest < ApplicationSystemTestCase
     assert_selector 'form'
     assert_selector 'button', text: 'Create Organization'
 
-    fill_in 'Name:', with: 'The new organization'
-    click_on 'Create Organization'
+    within 'form' do
+      fill_in 'Name:', with: 'The new organization'
+      click_on 'Create Organization'
+    end
     assert_selector 'div', text: 'Organization created.'
   end
 

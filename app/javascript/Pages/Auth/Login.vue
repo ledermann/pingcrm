@@ -10,8 +10,6 @@
         @submit.prevent="submit"
       >
         <div class="px-10 py-12">
-          <flash-messages />
-
           <h1 class="text-center font-bold text-3xl">
             Welcome Back!
           </h1>
@@ -63,15 +61,15 @@
 </template>
 
 <script>
-import FlashMessages from '@/Shared/FlashMessages'
 import LoadingButton from '@/Shared/LoadingButton'
 import Logo from '@/Shared/Logo'
 import TextInput from '@/Shared/TextInput'
+import SimpleLayout from '@/Shared/SimpleLayout'
 
 export default {
   metaInfo: { title: 'Login' },
+  layout: (h, page) => h(SimpleLayout, [page]),
   components: {
-    FlashMessages,
     LoadingButton,
     Logo,
     TextInput,

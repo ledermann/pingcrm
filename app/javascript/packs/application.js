@@ -29,6 +29,36 @@ axios.defaults.xsrfHeaderName = 'X-CSRF-Token'
 import MatomoTracker from '@/utils/matomo-tracker'
 const matomo = new MatomoTracker()
 
+import Notifications from 'vue-notification'
+Vue.use(Notifications)
+
+function handleNotications(props) {
+  if (props.flash.success) {
+    Vue.notify({
+      group: 'default',
+      text: props.flash.success,
+      type: 'success',
+    })
+  } else if (props.flash.alert) {
+    Vue.notify({
+      group: 'default',
+      text: props.flash.alert,
+      type: 'error',
+    })
+  } else if (Object.keys(props.errors).length === 1) {
+    Vue.notify({
+      group: 'default',
+      text: 'There is one form error.',
+      type: 'error',
+    })
+  } else if (Object.keys(props.errors).length > 1) {
+    Vue.notify({
+      group: 'default',
+      text: `There are ${Object.keys(props.errors).length} form errors.`,
+      type: 'error',
+    })
+  }
+}
 
 import { InertiaApp } from '@inertiajs/inertia-vue'
 Vue.use(InertiaApp)
@@ -48,6 +78,10 @@ new Vue({
       initialPage: JSON.parse(app.dataset.page),
       resolveComponent: name => import(`@/Pages/${name}`).then(module => module.default),
       transformProps: props => {
+        Vue.nextTick(() => {
+          handleNotications(props)
+        })
+
         if (matomo.enabled)
           // Wait a bit to allow VueMeta to update the document.title
           setTimeout(() => {

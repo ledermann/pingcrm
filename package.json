@@ -13,10 +13,10 @@
     "lodash": "^4.17.5",
     "popper.js": "^1.12",
     "portal-vue": "^2.1.6",
-    "vue": "^2.6.10",
+    "vue": "^2.6.11",
     "vue-loader": "^15.7.2",
     "vue-meta": "^2.3.1",
-    "vue-template-compiler": "^2.6.10"
+    "vue-template-compiler": "^2.6.11"
   },
   "version": "0.1.0",
   "devDependencies": {

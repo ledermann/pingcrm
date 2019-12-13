@@ -50,7 +50,7 @@ if (matomo.enabled) {
 import { InertiaApp } from '@inertiajs/inertia-vue'
 Vue.use(InertiaApp)
 
-import Routes from '../routes.js'
+import Routes from '@/utils/routes.js'
 Vue.prototype.$routes = Routes
 
 const app = document.getElementById('app')

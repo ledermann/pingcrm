@@ -13,6 +13,6 @@ class RoutesGenerator < Rails::Generators::Base
   desc 'This generator creates named routes for the client side'
 
   def create_initializer_file
-    create_file "app/javascript/routes.js", JsRoutes.generate
+    create_file "app/javascript/utils/routes.js", JsRoutes.generate
   end
 end

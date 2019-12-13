@@ -1,0 +1,11 @@
+.my-notification-style {
+  @apply .mt-2 .p-5 .text-xl .text-white .rounded-full .border-white .border;
+
+  &.error {
+    @apply bg-red-500;
+  }
+
+  &.success {
+    @apply bg-green-500;
+  }
+}

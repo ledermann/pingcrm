@@ -29,20 +29,6 @@ axios.defaults.xsrfHeaderName = 'X-CSRF-Token'
 import MatomoTracker from '@/utils/matomo-tracker'
 const matomo = new MatomoTracker()
 
-// Matomo integration is tricky, because Inertia doesn't have hooks yet
-if (matomo.enabled) {
-  Vue.mixin({
-    mounted() {
-      if (this._vueMeta === true) {
-        // A Vue component with vueMeta seems to be a Page, so track the visit -
-        // but wait a bit to allow VueMeta to update the document.title
-        setTimeout(() => {
-          matomo.trackPageView()
-        }, 100)
-      }
-    },
-  })
-}
 
 import { InertiaApp } from '@inertiajs/inertia-vue'
 Vue.use(InertiaApp)
@@ -61,6 +47,15 @@ new Vue({
     props: {
       initialPage: JSON.parse(app.dataset.page),
       resolveComponent: name => import(`@/Pages/${name}`).then(module => module.default),
+      transformProps: props => {
+        if (matomo.enabled)
+          // Wait a bit to allow VueMeta to update the document.title
+          setTimeout(() => {
+            matomo.trackPageView()
+          }, 100)
+
+        return props
+      },
     },
   }),
 }).$mount(app)

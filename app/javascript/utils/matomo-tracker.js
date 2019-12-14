@@ -1,4 +1,11 @@
-export default class MatomoTracker {
+export default function install(Vue) {
+  if (install.installed) return
+  install.installed = true
+
+  Vue.matomo = new MatomoTracker()
+}
+
+class MatomoTracker {
   constructor() {
     if (!this.enabled) return
 

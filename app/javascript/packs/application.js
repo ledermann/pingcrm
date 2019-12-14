@@ -27,7 +27,7 @@ import axios from 'axios'
 axios.defaults.xsrfHeaderName = 'X-CSRF-Token'
 
 import MatomoTracker from '@/utils/matomo-tracker'
-const matomo = new MatomoTracker()
+Vue.use(MatomoTracker)
 
 import showFlash from '@/utils/flash'
 
@@ -53,10 +53,10 @@ new Vue({
           showFlash(props)
         })
 
-        if (matomo.enabled)
+        if (Vue.matomo.enabled)
           // Wait a bit to allow VueMeta to update the document.title
           setTimeout(() => {
-            matomo.trackPageView()
+            Vue.matomo.trackPageView()
           }, 100)
 
         return props

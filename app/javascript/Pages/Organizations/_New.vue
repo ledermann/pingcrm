@@ -1,8 +1,10 @@
 <template>
   <div class="bg-white rounded shadow overflow-hidden max-w-3xl">
-    <h1 class="px-8 py-4 font-bold text-3xl">
-      Create Organization
-    </h1>
+    <div class="px-8 py-4 bg-gray-100 border-b border-gray-200">
+      <h1 class="font-bold text-xl">
+        Create Organization
+      </h1>
+    </div>
 
     <organization-form
       :form="form"

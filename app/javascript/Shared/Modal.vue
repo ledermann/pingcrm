@@ -1,8 +1,10 @@
+<!-- Source: https://github.com/adamwathan/vue-tailwind-examples -->
+
 <template>
   <portal to="modal">
     <div
       v-if="showModal"
-      class="fixed inset-0 flex items-center justify-center"
+      class="fixed inset-0"
     >
       <transition
         enter-active-class="transition-all transition-fast ease-out-quad"
@@ -16,10 +18,7 @@
         @after-leave="backdropLeaving = false"
       >
         <div v-if="showBackdrop">
-          <div
-            class="absolute inset-0 bg-black opacity-50"
-            @click="close"
-          />
+          <div class="fixed inset-0 bg-black opacity-50" />
         </div>
       </transition>
 
@@ -36,9 +35,17 @@
       >
         <div
           v-if="showContent"
-          class="relative"
+          class="relative h-full overflow-y-auto text-center"
+          @click="close"
         >
-          <slot />
+          <div class="absolute inline-block align-middle w-0 h-screen" />
+
+          <div
+            class="inline-block align-middle text-left my-6"
+            @click.stop
+          >
+            <slot />
+          </div>
         </div>
       </transition>
     </div>
@@ -101,10 +108,12 @@ export default {
       this.showModal = true
       this.showBackdrop = true
       this.showContent = true
+      document.body.style.setProperty('overflow', 'hidden')
     },
     close() {
       this.showBackdrop = false
       this.showContent = false
+      document.body.style.removeProperty('overflow')
     },
   },
 }

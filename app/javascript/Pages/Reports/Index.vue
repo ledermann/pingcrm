@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import Layout from '@/Shared/Layout'
+import Layout from '@/Layouts/Full'
 
 export default {
   metaInfo: { title: 'Reports' },

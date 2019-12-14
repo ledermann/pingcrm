@@ -125,7 +125,7 @@
 
 <script>
 import Icon from '@/Shared/Icon'
-import Layout from '@/Shared/Layout'
+import Layout from '@/Layouts/Full'
 import LoadingButton from '@/Shared/LoadingButton'
 import OrganizationForm from './Form'
 import TrashedMessage from '@/Shared/TrashedMessage'

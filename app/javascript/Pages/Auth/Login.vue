@@ -61,14 +61,14 @@
 </template>
 
 <script>
-import SiteLayout from '@/Shared/SiteLayout'
+import Layout from '@/Layouts/Site'
 import LoadingButton from '@/Shared/LoadingButton'
 import Logo from '@/Shared/Logo'
 import TextInput from '@/Shared/TextInput'
 
 export default {
   metaInfo: { title: 'Login' },
-  layout: SiteLayout,
+  layout: Layout,
   components: {
     LoadingButton,
     Logo,

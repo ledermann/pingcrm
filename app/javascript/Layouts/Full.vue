@@ -103,7 +103,7 @@
 </template>
 
 <script>
-import SiteLayout from '@/Shared/SiteLayout'
+import SiteLayout from '@/Layouts/Site'
 import Dropdown from '@/Shared/Dropdown'
 import Icon from '@/Shared/Icon'
 import Logo from '@/Shared/Logo'

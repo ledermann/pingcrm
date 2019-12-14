@@ -140,7 +140,7 @@
 <script>
 import _ from 'lodash'
 import Icon from '@/Shared/Icon'
-import Layout from '@/Shared/Layout'
+import Layout from '@/Layouts/Full'
 import Pagination from '@/Shared/Pagination'
 import SearchFilter from '@/Shared/SearchFilter'
 

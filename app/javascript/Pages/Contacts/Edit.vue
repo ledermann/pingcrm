@@ -47,7 +47,7 @@
 </template>
 
 <script>
-import Layout from '@/Shared/Layout'
+import Layout from '@/Layouts/Full'
 import LoadingButton from '@/Shared/LoadingButton'
 import ContactForm from './Form'
 import TrashedMessage from '@/Shared/TrashedMessage'

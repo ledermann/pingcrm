@@ -1,0 +1,25 @@
+.flash {
+  @apply .mt-2 .p-3 .rounded;
+
+  &.error {
+    @apply bg-red-500 .text-red-100;
+
+    &:before {
+      @apply absolute text-xl font-bold;
+      content: 'Ⓧ';
+    }
+  }
+
+  &.success {
+    @apply bg-green-500 .text-green-100;
+
+    &:before {
+      @apply absolute text-xl font-bold;
+      content: '✓';
+    }
+  }
+
+  .notification-title {
+    @apply .text-center;
+  }
+}

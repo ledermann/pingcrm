@@ -1,13 +1,5 @@
 <template>
-  <div>
-    <portal-target
-      name="modal"
-      slim
-    />
-    <portal-target
-      name="dropdown"
-      slim
-    />
+  <site-layout>
     <div class="flex flex-col">
       <div
         class="h-screen flex flex-col"
@@ -102,26 +94,25 @@
             class="w-full overflow-hidden px-4 py-8 md:p-12 overflow-y-auto"
             scroll-region
           >
-            <flash-messages />
             <slot />
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </site-layout>
 </template>
 
 <script>
+import SiteLayout from '@/Shared/SiteLayout'
 import Dropdown from '@/Shared/Dropdown'
-import FlashMessages from '@/Shared/FlashMessages'
 import Icon from '@/Shared/Icon'
 import Logo from '@/Shared/Logo'
 import MainMenu from '@/Shared/MainMenu'
 
 export default {
   components: {
+    SiteLayout,
     Dropdown,
-    FlashMessages,
     Icon,
     Logo,
     MainMenu,

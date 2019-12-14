@@ -29,6 +29,7 @@ axios.defaults.xsrfHeaderName = 'X-CSRF-Token'
 import MatomoTracker from '@/utils/matomo-tracker'
 const matomo = new MatomoTracker()
 
+import showFlash from '@/utils/flash'
 
 import { InertiaApp } from '@inertiajs/inertia-vue'
 Vue.use(InertiaApp)
@@ -48,6 +49,10 @@ new Vue({
       initialPage: JSON.parse(app.dataset.page),
       resolveComponent: name => import(`@/Pages/${name}`).then(module => module.default),
       transformProps: props => {
+        Vue.nextTick(() => {
+          showFlash(props)
+        })
+
         if (matomo.enabled)
           // Wait a bit to allow VueMeta to update the document.title
           setTimeout(() => {

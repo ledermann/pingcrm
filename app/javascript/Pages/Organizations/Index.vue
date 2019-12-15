@@ -37,6 +37,7 @@
       </button>
       <modal
         :open="modalNew"
+        title="Create Organization"
         @close="modalNew = false"
       >
         <new-organization @success="modalNew = false" />
@@ -172,13 +173,13 @@ export default {
         let query = _.pickBy(this.form)
         this.$inertia.replace(
           this.$routes.organizations(
-            Object.keys(query).length ? query : { remember: 'forget' },
+            Object.keys(query).length ? query : { remember: 'forget' }
           ),
           {
             preserveState: true,
             preserveScroll: true,
             only: ['organizations'],
-          },
+          }
         )
       }, 150),
       deep: true,

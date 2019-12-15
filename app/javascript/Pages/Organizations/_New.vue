@@ -1,26 +1,19 @@
 <template>
-  <div class="bg-white rounded shadow overflow-hidden max-w-3xl">
-    <div class="px-8 py-4 bg-gray-100 border-b border-gray-200">
-      <h1 class="font-bold text-xl">
+  <organization-form
+    :form="form"
+    class="bg-white max-w-3xl"
+    @submit="submit"
+  >
+    <div class="px-8 py-4 bg-gray-100 border-t border-gray-200 flex justify-end items-center">
+      <loading-button
+        :loading="sending"
+        class="btn-indigo"
+        type="submit"
+      >
         Create Organization
-      </h1>
+      </loading-button>
     </div>
-
-    <organization-form
-      :form="form"
-      @submit="submit"
-    >
-      <div class="px-8 py-4 bg-gray-100 border-t border-gray-200 flex justify-end items-center">
-        <loading-button
-          :loading="sending"
-          class="btn-indigo"
-          type="submit"
-        >
-          Create Organization
-        </loading-button>
-      </div>
-    </organization-form>
-  </div>
+  </organization-form>
 </template>
 
 <script>

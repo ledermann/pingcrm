@@ -33,7 +33,8 @@ jobs:
         run: |
           gem install bundler
           bundle config path vendor/bundle
-          bundle install --jobs 4 --retry 3 --without production development
+          bundle config set without 'production development'
+          bundle install --jobs 4 --retry 3
 
       - name: Audit gems
         run: bundle exec bundle-audit check --update

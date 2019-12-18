@@ -11,6 +11,6 @@ import Layout from '@/Layouts/Full'
 
 export default {
   metaInfo: { title: 'Reports' },
-  layout: (h, page) => h(Layout, [page]),
+  layout: Layout,
 }
 </script>

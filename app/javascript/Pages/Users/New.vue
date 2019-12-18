@@ -35,7 +35,7 @@ import UserForm from './Form'
 
 export default {
   metaInfo: { title: 'Create User' },
-  layout: (h, page) => h(Layout, [page]),
+  layout: Layout,
   components: {
     LoadingButton,
     UserForm,

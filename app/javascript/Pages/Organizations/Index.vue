@@ -140,7 +140,7 @@ import NewOrganization from '@/Pages/Organizations/_New'
 
 export default {
   metaInfo: { title: 'Organizations' },
-  layout: (h, page) => h(Layout, [page]),
+  layout: Layout,
   components: {
     Icon,
     Pagination,

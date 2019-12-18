@@ -135,7 +135,7 @@ export default {
   metaInfo() {
     return { title: this.form.name }
   },
-  layout: (h, page) => h(Layout, [page]),
+  layout: Layout,
   components: {
     Icon,
     LoadingButton,

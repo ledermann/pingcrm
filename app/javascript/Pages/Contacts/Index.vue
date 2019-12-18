@@ -146,7 +146,7 @@ import SearchFilter from '@/Shared/SearchFilter'
 
 export default {
   metaInfo: { title: 'Contacts' },
-  layout: (h, page) => h(Layout, [page]),
+  layout: Layout,
   components: {
     Icon,
     Pagination,

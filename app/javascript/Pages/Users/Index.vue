@@ -153,7 +153,7 @@ import SearchFilter from '@/Shared/SearchFilter'
 
 export default {
   metaInfo: { title: 'Users' },
-  layout: (h, page) => h(Layout, [page]),
+  layout: Layout,
   components: {
     Icon,
     SearchFilter,

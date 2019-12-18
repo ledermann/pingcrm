@@ -138,11 +138,13 @@
 </template>
 
 <script>
-import _ from 'lodash'
 import Icon from '@/Shared/Icon'
 import Layout from '@/Layouts/Full'
+import mapValues from 'lodash/mapValues'
 import Pagination from '@/Shared/Pagination'
+import pickBy from 'lodash/pickBy'
 import SearchFilter from '@/Shared/SearchFilter'
+import throttle from 'lodash/throttle'
 
 export default {
   metaInfo: { title: 'Contacts' },
@@ -172,8 +174,8 @@ export default {
   },
   watch: {
     form: {
-      handler: _.throttle(function() {
-        let query = _.pickBy(this.form)
+      handler: throttle(function() {
+        let query = pickBy(this.form)
         this.$inertia.replace(
           this.$routes.contacts(
             Object.keys(query).length ? query : { remember: 'forget' },
@@ -190,7 +192,7 @@ export default {
   },
   methods: {
     reset() {
-      this.form = _.mapValues(this.form, () => null)
+      this.form = mapValues(this.form, () => null)
     },
   },
 }

@@ -130,13 +130,15 @@
 </template>
 
 <script>
-import _ from 'lodash'
 import Icon from '@/Shared/Icon'
 import Layout from '@/Layouts/Full'
+import mapValues from 'lodash/mapValues'
 import Pagination from '@/Shared/Pagination'
+import pickBy from 'lodash/pickBy'
 import SearchFilter from '@/Shared/SearchFilter'
 import Modal from '@/Shared/Modal'
 import NewOrganization from '@/Pages/Organizations/_New'
+import throttle from 'lodash/throttle'
 
 export default {
   metaInfo: { title: 'Organizations' },
@@ -169,17 +171,17 @@ export default {
   },
   watch: {
     form: {
-      handler: _.throttle(function() {
-        let query = _.pickBy(this.form)
+      handler: throttle(function() {
+        let query = pickBy(this.form)
         this.$inertia.replace(
           this.$routes.organizations(
-            Object.keys(query).length ? query : { remember: 'forget' }
+            Object.keys(query).length ? query : { remember: 'forget' },
           ),
           {
             preserveState: true,
             preserveScroll: true,
             only: ['organizations'],
-          }
+          },
         )
       }, 150),
       deep: true,
@@ -187,7 +189,7 @@ export default {
   },
   methods: {
     reset() {
-      this.form = _.mapValues(this.form, () => null)
+      this.form = mapValues(this.form, () => null)
     },
   },
 }

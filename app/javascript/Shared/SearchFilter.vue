@@ -5,6 +5,7 @@
         class="px-4 md:px-6 rounded-l border-r hover:bg-gray-100 focus:border-white focus:shadow-outline focus:z-10"
         placement="bottom-start"
         aria-label="Filter"
+        :auto-close="false"
       >
         <div class="flex items-baseline">
           <span class="text-gray-800 hidden md:inline">Filter</span>

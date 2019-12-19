@@ -1,7 +1,7 @@
 <template>
   <button
     type="button"
-    @click="toggle"
+    @click="show = true"
   >
     <slot />
     <portal
@@ -11,12 +11,12 @@
       <div>
         <div
           style="position: fixed; top: 0; right: 0; left: 0; bottom: 0; z-index: 99998; background: black; opacity: .2"
-          @click="toggle"
+          @click="show = false"
         />
         <div
           ref="dropdown"
           style="position: absolute; z-index: 99999;"
-          @click.stop
+          @click.stop="show = autoClose ? false : true"
         >
           <slot name="dropdown" />
         </div>
@@ -37,6 +37,10 @@ export default {
     boundary: {
       type: String,
       default: 'scrollParent',
+    },
+    autoClose: {
+      type: Boolean,
+      default: true,
     },
   },
   data() {
@@ -63,17 +67,9 @@ export default {
   mounted() {
     document.addEventListener('keydown', e => {
       if (e.keyCode === 27) {
-        this.close()
+        this.show = false
       }
     })
-  },
-  methods: {
-    close() {
-      this.show = false
-    },
-    toggle() {
-      this.show = !this.show
-    },
   },
 }
 </script>

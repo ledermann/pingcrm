@@ -25,9 +25,9 @@ if (process.env.RAILS_ENV !== 'development') {
       ],
       defaultExtractor: content => content.match(/[A-Za-z0-9-_:/]+/g) || [],
       whitelistPatterns: [
-        // vue-notification
         /^vue-notification/,
         /^notification/,
+        /nprogress/,
       ],
     }),
   )

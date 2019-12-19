@@ -55,6 +55,10 @@ class User < ApplicationRecord
     deleted_at ? :deleted : super
   end
 
+  def demo?
+    email == 'johndoe@example.com'
+  end
+
   private
 
   def photo_is_web_image

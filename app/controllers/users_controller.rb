@@ -55,6 +55,11 @@ class UsersController < ApplicationController
   end
 
   def update
+    if @user.demo?
+      redirect_to edit_user_path(@user), alert: 'Updating the demo user is not allowed.'
+      return
+    end
+
     if @user.update(user_params)
       redirect_to edit_user_path(@user), notice: 'User updated.'
     else
@@ -63,6 +68,11 @@ class UsersController < ApplicationController
   end
 
   def destroy
+    if @user.demo?
+      redirect_to edit_user_path(@user), alert: 'Deleting the demo user is not allowed.'
+      return
+    end
+
     if @user.soft_delete
       redirect_to edit_user_path(@user), notice: 'User deleted.'
     else

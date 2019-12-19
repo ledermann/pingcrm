@@ -7,7 +7,7 @@
       Hey there! Welcome to Ping CRM, a demo app designed to help illustrate how
       <a
         class="text-indigo-700 underline hover:text-orange-600"
-        href="https://github.com/inertiajs"
+        href="https://inertiajs.com"
       >
         Inertia.js
       </a> works.

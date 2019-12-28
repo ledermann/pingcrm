@@ -201,7 +201,7 @@ GEM
     ruby-vips (2.0.16)
       ffi (~> 1.9)
     rubyzip (2.0.0)
-    selenium-webdriver (3.142.6)
+    selenium-webdriver (3.142.7)
       childprocess (>= 0.5, < 4.0)
       rubyzip (>= 1.2.2)
     spring (2.1.0)

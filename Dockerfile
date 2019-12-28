@@ -1,6 +1,6 @@
 ######################
 # Stage: Builder
-FROM ruby:2.6.5-alpine as Builder
+FROM ruby:2.7.0-alpine as Builder
 
 RUN apk add --update --no-cache \
   build-base \
@@ -40,7 +40,7 @@ RUN rm -rf node_modules tmp/cache vendor/bundle test
 
 ###############################
 # Stage Final
-FROM ruby:2.6.5-alpine
+FROM ruby:2.7.0-alpine
 LABEL maintainer="georg@ledermann.dev"
 
 ARG COMMIT_SHA

@@ -11,7 +11,7 @@
     "axios": "^0.19.0",
     "lodash": "^4.17.5",
     "popper.js": "^1.12",
-    "portal-vue": "^2.1.6",
+    "portal-vue": "^2.1.7",
     "vue": "^2.6.11",
     "vue-loader": "^15.8.3",
     "vue-meta": "^2.3.1",

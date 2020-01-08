@@ -104,7 +104,7 @@ GEM
     ffi (1.11.3)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
-    i18n (1.7.0)
+    i18n (1.7.1)
       concurrent-ruby (~> 1.0)
     image_processing (1.10.1)
       mini_magick (>= 4.9.5, < 5)

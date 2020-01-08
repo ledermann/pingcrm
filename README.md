@@ -11,6 +11,10 @@ There is a hosted installation of this demo available at https://pingcrm.lederma
 - **Username:** johndoe@example.com
 - **Password:** secret
 
+## Lighthouse performance audit
+
+![Lighthouse audit](lighthouse.png)
+
 
 ## Installation
 

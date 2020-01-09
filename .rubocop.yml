@@ -51,9 +51,6 @@ Metrics/ClassLength:
 Metrics/BlockLength:
   Max: 150
 
-Metrics/LineLength:
-  Max: 165
-
 Metrics/MethodLength:
   Max: 30
 
@@ -157,3 +154,6 @@ Layout/SpaceInsideParens:
 
 Layout/HashAlignment:
   Enabled: false
+
+Layout/LineLength:
+  Max: 165

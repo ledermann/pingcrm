@@ -1,0 +1,7 @@
+{
+  "name": "PingCRM on Rails",
+  "short_name": "PingCRM",
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "/"
+}

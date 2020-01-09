@@ -6,7 +6,7 @@
     <p class="mb-12 leading-normal">
       Hey there! Welcome to Ping CRM, a demo app designed to help illustrate how
       <a
-        class="text-indigo-700 underline hover:text-orange-600"
+        class="text-indigo-800 underline hover:text-orange-600"
         href="https://inertiajs.com"
       >
         Inertia.js

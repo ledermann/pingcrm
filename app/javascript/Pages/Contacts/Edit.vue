@@ -2,7 +2,7 @@
   <div>
     <h1 class="mb-8 font-bold text-3xl">
       <inertia-link
-        class="text-indigo-500 hover:text-indigo-700"
+        class="text-indigo-500 hover:text-indigo-800"
         :href="$routes.contacts()"
       >
         Contacts

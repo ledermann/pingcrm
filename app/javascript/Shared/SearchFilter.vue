@@ -37,7 +37,7 @@
       >
     </div>
     <button
-      class="ml-3 text-sm text-gray-700 hover:text-gray-700 focus:text-indigo"
+      class="ml-3 text-sm text-gray-700 hover:text-gray-700 focus:text-indigo-500"
       type="button"
       @click="$emit('reset')"
     >

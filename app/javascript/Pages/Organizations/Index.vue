@@ -69,7 +69,7 @@
           >
             <td class="border-t">
               <inertia-link
-                class="px-6 py-4 flex items-center focus:text-indigo"
+                class="px-6 py-4 flex items-center focus:text-indigo-500"
                 :href="$routes.edit_organization(organization.id)"
               >
                 {{ organization.name }}

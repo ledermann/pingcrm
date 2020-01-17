@@ -90,13 +90,13 @@ jobs:
           docker-compose build --pull
 
       - name: Tag the image as production
-        run: docker tag pingcrm_app ${{ secrets.GITLAB_REGISTRY }}/${{ secrets.GITLAB_REPO }}:latest
+        run: docker tag pingcrm_app "docker.pkg.github.com/ledermann/pingcrm/pingcrm:latest"
 
-      - name: Login to GitLab Docker Registry
-        run: echo ${{ secrets.GITLAB_TOKEN }} | docker login -u gitlab-ci-token --password-stdin ${{ secrets.GITLAB_REGISTRY }}
+      - name: Login to GitHub Package Registry
+        run: docker login docker.pkg.github.com -u $GITHUB_ACTOR -p ${{ secrets.GITHUB_TOKEN }}
 
       - name: Push the production image
-        run: docker push ${{ secrets.GITLAB_REGISTRY }}/${{ secrets.GITLAB_REPO }}:latest
+        run: docker push "docker.pkg.github.com/ledermann/pingcrm/pingcrm:latest"
 
       - name: Send notification
         run: curl -X POST ${{ secrets.DEPLOY_HOOK }}

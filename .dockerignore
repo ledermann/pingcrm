@@ -4,7 +4,6 @@
 .gitignore
 .dockerignore
 .github/*
-docker-compose.*
 Dockerfile
 log/*
 node_modules/*
@@ -15,3 +14,5 @@ tmp/*
 yarn-error.log
 screenshot.jpg
 *.DS_Store
+docker-cache
+docker-builder.tar

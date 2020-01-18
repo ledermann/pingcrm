@@ -83,14 +83,35 @@ jobs:
     steps:
       - uses: actions/checkout@v1
 
-      - name: Build the production image
+      - name: Load Cache Keys
+        uses: actions/cache@v1
+        id: cache
+        with:
+          path: docker-cache
+          key: ${{ runner.os }}-docker-${{ github.sha }}
+          restore-keys: |
+            ${{ runner.os }}-docker-
+
+      - name: Load cached Docker layers
         run: |
+          if [ -d "docker-cache" ]; then
+            cat docker-cache/x* > docker-builder.tar
+            docker load < docker-builder.tar
+            rm -rf docker-cache
+            rm -rf docker-builder.tar
+          fi
+
+      - name: Build the production image
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: |
+          docker build --target Builder -t pingcrm:builder .
+          docker save pingcrm:builder $(docker history -q pingcrm:builder | awk '!/<missing>/{print}') > docker-builder.tar
+          mkdir docker-cache
+          split -b 100m docker-builder.tar docker-cache/x
+          rm -rf docker-builder.tar
           export COMMIT_TIME=$(git show -s --format=%ci ${GITHUB_SHA})
           export COMMIT_SHA=${GITHUB_SHA}
-          docker-compose build --pull
-
-      - name: Tag the image as production
-        run: docker tag pingcrm_app "docker.pkg.github.com/ledermann/pingcrm/pingcrm:latest"
+          docker build --build-arg COMMIT_TIME --build-arg COMMIT_SHA -t "docker.pkg.github.com/ledermann/pingcrm/pingcrm:latest" .
 
       - name: Login to GitHub Package Registry
         run: docker login docker.pkg.github.com -u $GITHUB_ACTOR -p ${{ secrets.GITHUB_TOKEN }}

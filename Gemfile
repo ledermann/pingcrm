@@ -70,7 +70,7 @@ gem 'inertia_rails', '>= 1.2.1', github: 'ledermann/inertia-rails', branch: 'pat
 
 # Rack v2.1.0 and 2.1.1 are not compatible with inertia-rails, so use older v2.0.8
 # https://github.com/inertiajs/inertia-rails/issues/22
-gem 'rack', '2.0.8'
+gem 'rack', '2.1.1'
 # TODO: Check this after next release of the "rack" gem!
 
 # A library for generating fake data such as names, addresses, and phone numbers.

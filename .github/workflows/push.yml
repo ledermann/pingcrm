@@ -114,7 +114,7 @@ jobs:
           docker build --build-arg COMMIT_TIME --build-arg COMMIT_SHA -t "docker.pkg.github.com/ledermann/pingcrm/pingcrm:latest" .
 
       - name: Login to GitHub Package Registry
-        run: docker login docker.pkg.github.com -u $GITHUB_ACTOR -p ${{ secrets.GITHUB_TOKEN }}
+        run: docker login docker.pkg.github.com -u $GITHUB_ACTOR -p ${{ secrets.PACKAGES_TOKEN }}
 
       - name: Push the production image
         run: docker push "docker.pkg.github.com/ledermann/pingcrm/pingcrm:latest"

@@ -692,13 +692,13 @@
   resolved "https://registry.yarnpkg.com/@csstools/convert-colors/-/convert-colors-1.4.0.tgz#ad495dc41b12e75d588c6db8b9834f08fa131eb7"
   integrity sha512-5a6wqoJV/xEdbRNKVo6I4hO3VjyDq//8q2f9I6PBAvMesJHFauXDorcNCsr9RzvsZnaWi5NYCcfyqP1QeFHFbw==
 
-"@fullhuman/postcss-purgecss@^2.0.4":
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/@fullhuman/postcss-purgecss/-/postcss-purgecss-2.0.4.tgz#0b53279aeec7801d7747f7d718b045623d727a5c"
-  integrity sha512-h1BohiFiVBuOEaG/t45u6kV4zBbS9FOvC7sXxFAa/cG/W9Cl5yGCzHne++/vWf4R4WyWJFInaV/fhLUAcXzMjg==
+"@fullhuman/postcss-purgecss@^2.0.5":
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/@fullhuman/postcss-purgecss/-/postcss-purgecss-2.0.5.tgz#01ea0ac16ecc7ae8b24a4bcb6ef9f200765c7216"
+  integrity sha512-lWSnRiLfI3dGowZkPBfFOVkWlBP+Wk12u91mtjCTmA3hJ+d5+MyizVsTAOB1e52QJww6BRSD4g6XpknF+dEPnA==
   dependencies:
     postcss "7.0.26"
-    purgecss "^2.0.3"
+    purgecss "^2.0.5"
 
 "@inertiajs/inertia-vue@^0.1.2":
   version "0.1.2"
@@ -6338,10 +6338,10 @@ punycode@^2.1.0:
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-2.1.1.tgz#b58b010ac40c22c5657616c8d2c2c02c7bf479ec"
   integrity sha512-XRsRjdf+j5ml+y/6GKHPZbrF/8p2Yga0JPtdqTIY2Xe5ohJPD9saDJJLPvp9+NSBprVvevdXZybnj2cv8OEd0A==
 
-purgecss@^2.0.3:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/purgecss/-/purgecss-2.0.3.tgz#d49eccb10fd28892b841549159db841eea04288a"
-  integrity sha512-prjGGwr1OsBEUpO6zXI5yRx5SuMJxPTHEy0vSvfG8TSr4iFxGQaIRfiMOUVcWEtgjWG/gp77QFSbkPNi88iGgg==
+purgecss@^2.0.5:
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/purgecss/-/purgecss-2.0.5.tgz#b7aa3e3634704aa041d03f007504c303e8c6586e"
+  integrity sha512-VwQoDXImH0pabZ6ivLPCsWuRGd979NEzACaT/P3pWzDVCwHXSgXUM4QDbnMklMawU0r4MrCvdaORM84KJvsCIA==
   dependencies:
     commander "^4.0.0"
     glob "^7.0.0"

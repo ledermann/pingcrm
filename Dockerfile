@@ -1,14 +1,6 @@
 ######################
 # Stage: Builder
-FROM ruby:2.6.5-alpine as Builder
-
-RUN apk add --update --no-cache \
-  build-base \
-  postgresql-dev \
-  git \
-  nodejs \
-  yarn \
-  tzdata
+FROM docker.pkg.github.com/ledermann/docker-rails-base/rails-base-builder:latest as Builder
 
 WORKDIR /app
 
@@ -18,8 +10,8 @@ ENV SECRET_KEY_BASE=just-for-assets-compiling
 
 # Install gems
 ADD Gemfile* /app/
-RUN bundle config --global frozen 1 && \
-  bundle install -j4 --retry 3 && \
+RUN bundle install -j4 --retry 3 && \
+  bundle clean --force && \
   # Remove unneeded files (cached *.gem, *.o, *.c)
   rm -rf /usr/local/bundle/cache/*.gem && \
   find /usr/local/bundle/gems/ -name "*.c" -delete && \
@@ -40,7 +32,7 @@ RUN rm -rf node_modules tmp/cache vendor/bundle test
 
 ###############################
 # Stage Final
-FROM ruby:2.6.5-alpine
+FROM docker.pkg.github.com/ledermann/docker-rails-base/rails-base-final:latest
 LABEL maintainer="georg@ledermann.dev"
 
 ARG COMMIT_SHA
@@ -50,13 +42,6 @@ ENV COMMIT_SHA=${COMMIT_SHA} \
   COMMIT_TIME=${COMMIT_TIME} \
   RAILS_LOG_TO_STDOUT=true \
   RAILS_SERVE_STATIC_FILES=true
-
-# Add Alpine packages
-RUN apk add --update --no-cache \
-  postgresql-client \
-  vips \
-  tzdata \
-  file
 
 # Add user
 RUN addgroup -g 1000 -S app && \

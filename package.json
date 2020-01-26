@@ -5,12 +5,14 @@
     "lint": "eslint --ext .js,.vue app/javascript/"
   },
   "dependencies": {
+    "@fullhuman/postcss-purgecss": "^2.0.5",
     "@inertiajs/inertia": "^0.1.7",
     "@inertiajs/inertia-vue": "^0.1.2",
     "@rails/webpacker": "^4.2.2",
     "lodash": "^4.17.5",
     "popper.js": "^1.16",
     "portal-vue": "^2.1.7",
+    "tailwindcss": "^1.2.0-canary.5",
     "vue": "^2.6.11",
     "vue-loader": "^15.8.3",
     "vue-meta": "^2.3.2",
@@ -19,11 +21,9 @@
   },
   "version": "0.1.0",
   "devDependencies": {
-    "@fullhuman/postcss-purgecss": "^2.0.5",
     "babel-eslint": "^10.0.3",
     "eslint": "^6.8.0",
     "eslint-plugin-vue": "^6.1.2",
-    "tailwindcss": "^1.2.0-canary.5",
     "webpack-dev-server": "^3.10.1"
   }
 }

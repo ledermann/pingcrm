@@ -12,7 +12,7 @@
     "lodash": "^4.17.5",
     "popper.js": "^1.16",
     "portal-vue": "^2.1.7",
-    "tailwindcss": "^1.2.0-canary.5",
+    "tailwindcss": "^1.2.0-canary.7",
     "vue": "^2.6.11",
     "vue-loader": "^15.8.3",
     "vue-meta": "^2.3.2",

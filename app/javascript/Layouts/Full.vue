@@ -5,7 +5,7 @@
         class="h-screen flex flex-col"
         @click="hideDropdownMenus"
       >
-        <div class="md:flex">
+        <div class="md:flex flex-shrink-0">
           <div class="bg-indigo-900 md:flex-shrink-0 md:w-56 px-6 py-4 flex items-center justify-between md:justify-center">
             <inertia-link
               class="mt-1"
@@ -91,7 +91,7 @@
             class="bg-indigo-800 flex-shrink-0 w-56 p-12 hidden md:block overflow-y-auto"
           />
           <div
-            class="w-full overflow-hidden px-4 py-8 md:p-12 overflow-y-auto"
+            class="flex-1 px-4 py-8 md:p-12 overflow-y-auto"
             scroll-region
           >
             <slot />

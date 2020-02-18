@@ -6,11 +6,17 @@
     <p class="mb-12 leading-normal">
       Hey there! Welcome to Ping CRM, a demo app designed to help illustrate how
       <a
-        class="text-indigo-800 underline hover:text-orange-600"
+        class="text-indigo-800 underline hover:text-orange-600 font-bold"
         href="https://inertiajs.com"
       >
         Inertia.js
-      </a> works.
+      </a> works with
+      <a
+        href="https://rubyonrails.org/"
+        class="text-indigo-800 underline hover:text-orange-600 font-bold"
+      >
+        Ruby on Rails
+      </a>.
     </p>
 
     <p
@@ -24,11 +30,8 @@
       >
         {{ git.commit_sha }}
       </a>
-      <br>
-      Built at
-      <span class="ml-1 text-gray-700">
-        {{ git.commit_time }}
-      </span>
+      &minus;
+      {{ relativeCommitTime }}
     </p>
 
     <div>
@@ -50,6 +53,7 @@
 
 <script>
 import Layout from '@/Layouts/Main'
+import * as timeago from 'timeago.js'
 
 export default {
   metaInfo: { title: 'Dashboard' },
@@ -58,6 +62,11 @@ export default {
     git: {
       type: Object,
       required: true,
+    },
+  },
+  computed: {
+    relativeCommitTime() {
+      return timeago.format(this.git.commit_time)
     },
   },
 }

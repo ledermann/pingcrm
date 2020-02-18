@@ -20,6 +20,6 @@
   }
 
   .notification-title {
-    @apply .text-center;
+    @apply .text-left pl-8;
   }
 }

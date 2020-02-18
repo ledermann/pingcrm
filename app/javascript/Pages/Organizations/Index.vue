@@ -131,7 +131,7 @@
 
 <script>
 import Icon from '@/Shared/Icon'
-import Layout from '@/Layouts/Full'
+import Layout from '@/Layouts/Main'
 import mapValues from 'lodash/mapValues'
 import Pagination from '@/Shared/Pagination'
 import pickBy from 'lodash/pickBy'

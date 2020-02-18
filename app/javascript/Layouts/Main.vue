@@ -1,5 +1,5 @@
 <template>
-  <site-layout>
+  <minimal-layout>
     <div class="flex flex-col">
       <div
         class="h-screen flex flex-col"
@@ -99,11 +99,11 @@
         </div>
       </div>
     </div>
-  </site-layout>
+  </minimal-layout>
 </template>
 
 <script>
-import SiteLayout from '@/Layouts/Site'
+import MinimalLayout from '@/Layouts/Minimal'
 import Dropdown from '@/Shared/Dropdown'
 import Icon from '@/Shared/Icon'
 import Logo from '@/Shared/Logo'
@@ -111,7 +111,7 @@ import MainMenu from '@/Shared/MainMenu'
 
 export default {
   components: {
-    SiteLayout,
+    MinimalLayout,
     Dropdown,
     Icon,
     Logo,

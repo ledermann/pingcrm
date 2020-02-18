@@ -61,7 +61,7 @@
 </template>
 
 <script>
-import Layout from '@/Layouts/Site'
+import Layout from '@/Layouts/Minimal'
 import LoadingButton from '@/Shared/LoadingButton'
 import Logo from '@/Shared/Logo'
 import TextInput from '@/Shared/TextInput'

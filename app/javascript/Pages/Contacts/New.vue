@@ -30,7 +30,7 @@
 </template>
 
 <script>
-import Layout from '@/Layouts/Full'
+import Layout from '@/Layouts/Main'
 import LoadingButton from '@/Shared/LoadingButton'
 import ContactForm from './Form'
 

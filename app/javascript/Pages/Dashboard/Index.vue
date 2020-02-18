@@ -49,7 +49,7 @@
 </template>
 
 <script>
-import Layout from '@/Layouts/Full'
+import Layout from '@/Layouts/Main'
 
 export default {
   metaInfo: { title: 'Dashboard' },

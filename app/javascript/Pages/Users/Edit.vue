@@ -57,7 +57,7 @@
 </template>
 
 <script>
-import Layout from '@/Layouts/Full'
+import Layout from '@/Layouts/Main'
 import LoadingButton from '@/Shared/LoadingButton'
 import UserForm from './Form'
 import TrashedMessage from '@/Shared/TrashedMessage'

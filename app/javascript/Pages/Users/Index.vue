@@ -147,7 +147,7 @@
 
 <script>
 import Icon from '@/Shared/Icon'
-import Layout from '@/Layouts/Full'
+import Layout from '@/Layouts/Main'
 import mapValues from 'lodash/mapValues'
 import pickBy from 'lodash/pickBy'
 import SearchFilter from '@/Shared/SearchFilter'

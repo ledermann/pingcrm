@@ -55,6 +55,7 @@ rails test:system
 ## Requirements
 
 - Ruby 2.6
+- Ruby on Rails 6
 - PostgreSQL
 
 

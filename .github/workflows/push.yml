@@ -20,9 +20,6 @@ jobs:
         with:
           ruby-version: 2.6.x
 
-      - name: Install PostgreSQL client
-        run: sudo apt-get -yqq install libpq-dev
-
       - name: Cache Ruby gems
         uses: actions/cache@v1
         with:

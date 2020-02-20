@@ -120,6 +120,15 @@ Style/Lambda:
 Style/LambdaCall:
   Enabled: false
 
+Style/HashEachMethods:
+  Enabled: true
+
+Style/HashTransformKeys:
+  Enabled: true
+
+Style/HashTransformValues:
+  Enabled: true
+
 ### Layout
 
 Layout/DotPosition:

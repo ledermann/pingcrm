@@ -61,7 +61,7 @@ GEM
     ast (2.4.0)
     bcrypt (3.1.13)
     bindex (0.8.1)
-    bootsnap (1.4.5)
+    bootsnap (1.4.6)
       msgpack (~> 1.0)
     builder (3.2.4)
     bundler-audit (0.6.1)

@@ -1,0 +1,63 @@
+version: '3.7'
+
+services:
+  db:
+    hostname: db.${APP_HOST}
+    environment:
+      - POSTGRES_PASSWORD
+    networks:
+      - internal
+    image: postgres:12-alpine
+    restart: always
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 30s
+      timeout: 30s
+      retries: 3
+
+  app:
+    hostname: app.${APP_HOST}
+    image: docker.pkg.github.com/ledermann/pingcrm/pingcrm:latest
+    volumes:
+      - ${APP_VOLUME_PATH}:/app/storage
+    environment:
+      - APP_HOST
+      - DB_HOST=db
+      - DB_PASSWORD=${POSTGRES_PASSWORD}
+      - DB_USER=postgres
+      - RAILS_ENV=production
+      - SECRET_KEY_BASE
+      - TZ
+      - MATOMO_HOST
+      - MATOMO_ID
+    deploy:
+      update_config:
+        order: start-first
+      replicas: 1
+      labels:
+        - traefik.enable=true
+        - traefik.port=3000
+        - traefik.docker.network=traefik_traefik-net
+        - traefik.frontend.rule=Host:${APP_HOST}
+        - traefik.frontend.redirect.entryPoint=https
+        - traefik.frontend.redirect.permanent=true
+        - traefik.frontend.headers.STSSeconds=31536000
+        - traefik.frontend.headers.STSIncludeSubdomains=true
+        - traefik.frontend.headers.STSPreload=true
+    networks:
+      - traefik_traefik-net
+      - internal
+    links:
+      - db
+    restart: always
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 3000 || exit 1"]
+      interval: 1m
+      start_period: 1m
+
+networks:
+  internal:
+    driver_opts:
+      encrypted: ""
+  traefik_traefik-net:
+    external: true

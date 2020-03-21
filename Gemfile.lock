@@ -133,7 +133,7 @@ GEM
     orm_adapter (0.5.0)
     pagy (3.7.3)
     parallel (1.19.1)
-    parser (2.7.0.4)
+    parser (2.7.0.5)
       ast (~> 2.4.0)
     pg (1.2.3)
     public_suffix (4.0.3)

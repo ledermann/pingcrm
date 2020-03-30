@@ -2,7 +2,7 @@
 #
 class AuthFailure < Devise::FailureApp
   def http_auth?
-    if request.headers['X-Inertia']
+    if request.inertia?
       # Explicitly disable HTTP authentication on Inertia
       # requests and force a redirect on failure
       false

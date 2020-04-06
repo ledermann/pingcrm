@@ -24,9 +24,9 @@ jobs:
         uses: actions/cache@v1
         with:
           path: vendor/bundle
-          key: ${{ runner.os }}-gem-${{ hashFiles('**/Gemfile.lock') }}
+          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
           restore-keys: |
-            ${{ runner.os }}-gem-
+            ${{ runner.os }}-gems-
 
       - name: Bundle gems
         run: |
@@ -37,18 +37,20 @@ jobs:
       - name: Lint with RuboCop
         run: bundle exec rubocop --parallel
 
-      - name: Get yarn cache
-        id: yarn-cache
+      - name: Get Yarn cache directory path
+        id: yarn-cache-dir-path
         run: echo "::set-output name=dir::$(yarn cache dir)"
 
-      - uses: actions/cache@v1
+      - name: Cache Yarn packages
+        uses: actions/cache@v1
+        id: yarn-cache
         with:
-          path: ${{ steps.yarn-cache.outputs.dir }}
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
           key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
             ${{ runner.os }}-yarn-
 
-      - name: Install Node modules
+      - name: Install Yarn packages
         run: yarn install
 
       - name: Lint with ESLint

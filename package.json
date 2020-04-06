@@ -2,7 +2,7 @@
   "name": "pingcrm",
   "private": true,
   "scripts": {
-    "lint": "eslint --ext .js,.vue app/javascript/"
+    "lint": "eslint --ext .js,.vue ."
   },
   "dependencies": {
     "@fullhuman/postcss-purgecss": "^2.1.0",

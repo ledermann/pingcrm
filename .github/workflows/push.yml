@@ -35,9 +35,6 @@ jobs:
           bundle config set without 'production development'
           bundle install --jobs 4 --retry 3
 
-      - name: Audit gems
-        run: bundle exec bundle-audit check --update
-
       - name: Lint with RuboCop
         run: bundle exec rubocop --parallel
 

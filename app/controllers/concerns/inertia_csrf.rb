@@ -18,6 +18,9 @@ module InertiaCsrf
   private
 
   def set_csrf_cookie
-    cookies['XSRF-TOKEN'] = form_authenticity_token
+    cookies['XSRF-TOKEN'] = {
+      value: form_authenticity_token,
+      same_site: 'Strict'
+    }
   end
 end

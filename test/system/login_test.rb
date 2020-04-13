@@ -14,11 +14,11 @@ class LoginTest < ApplicationSystemTestCase
     fill_in 'Password', with: @user.password
     click_on 'Login'
 
-    assert_selector 'div', text: 'Signed in successfully.'
+    assert_selector 'div', text: 'Hey there!'
 
     click_on 'John Doe'
     click_on 'Logout'
-    assert_selector 'div', text: 'Signed out successfully.'
+    assert_selector 'div', text: 'Welcome Back!'
   end
 
   test 'Login with invalid credentials will fail' do
@@ -28,7 +28,7 @@ class LoginTest < ApplicationSystemTestCase
     fill_in 'Password', with: 'invalid'
     click_on 'Login'
 
-    assert_selector 'div', text: 'Invalid email or password!'
+    assert_selector 'div', text: 'Invalid email or password.'
   end
 
   test 'Redirect to login for Inertia requests, too' do

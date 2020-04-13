@@ -12,7 +12,7 @@ class Users::SessionsController < Devise::SessionsController
       yield resource if block_given?
       respond_with resource, location: after_sign_in_path_for(resource)
     else
-      flash.alert = 'Invalid email or password!'
+      session[:errors] = { email: [t('devise.failure.invalid', authentication_keys: :email)] }
       redirect_to new_user_session_path
     end
   end

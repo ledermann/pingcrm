@@ -94,6 +94,7 @@
             class="flex-1 px-4 py-8 md:p-12 overflow-y-auto"
             scroll-region
           >
+            <flash-messages />
             <slot />
           </div>
         </div>
@@ -105,6 +106,7 @@
 <script>
 import MinimalLayout from '@/Layouts/Minimal'
 import Dropdown from '@/Shared/Dropdown'
+import FlashMessages from '@/Shared/FlashMessages'
 import Icon from '@/Shared/Icon'
 import Logo from '@/Shared/Logo'
 import MainMenu from '@/Shared/MainMenu'
@@ -113,6 +115,7 @@ export default {
   components: {
     MinimalLayout,
     Dropdown,
+    FlashMessages,
     Icon,
     Logo,
     MainMenu,

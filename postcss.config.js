@@ -25,8 +25,6 @@ if (process.env.RAILS_ENV !== 'development') {
       ],
       defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || [],
       whitelistPatterns: [
-        /^vue-notification/,
-        /^notification/,
         /nprogress/,
       ],
     }),

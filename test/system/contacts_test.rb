@@ -97,6 +97,6 @@ class ContactsTest < ApplicationSystemTestCase
   test 'cannot do anything without login' do
     visit '/contacts'
 
-    assert_selector 'div', text: 'You need to sign in before continuing.'
+    assert_selector 'div', text: 'Welcome Back!'
   end
 end

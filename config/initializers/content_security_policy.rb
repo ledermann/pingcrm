@@ -9,7 +9,7 @@ Rails.application.config.content_security_policy do |policy|
   policy.font_src     :self
   policy.img_src(*[   :self, :data, ENV['MATOMO_HOST']].compact)
   policy.object_src   :none
-  policy.style_src    :self, :unsafe_inline
+  policy.style_src    :self
   policy.form_action  :self
   policy.manifest_src :self
 

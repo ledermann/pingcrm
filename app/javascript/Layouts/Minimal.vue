@@ -10,11 +10,6 @@
       slim
     />
 
-    <notifications
-      position="top center"
-      classes="flash"
-    />
-
     <slot />
   </div>
 </template>

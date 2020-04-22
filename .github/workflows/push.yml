@@ -51,7 +51,7 @@ jobs:
             ${{ runner.os }}-yarn-
 
       - name: Install Yarn packages
-        run: yarn install
+        run: yarn install --frozen-lockfile
 
       - name: Lint with ESLint
         run: yarn lint

@@ -56,12 +56,6 @@ jobs:
       - name: Lint with ESLint
         run: yarn lint
 
-      - name: Compile assets
-        env:
-          RAILS_ENV: test
-          NODE_ENV: test
-        run: bundle exec rails webpacker:compile
-
       - name: Run Tests
         env:
           DB_HOST: localhost

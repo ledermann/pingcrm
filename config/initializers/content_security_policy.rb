@@ -9,17 +9,19 @@ Rails.application.config.content_security_policy do |policy|
   policy.font_src     :self
   policy.img_src(*[   :self, :data, ENV['MATOMO_HOST']].compact)
   policy.object_src   :none
-  policy.style_src    :self
   policy.form_action  :self
   policy.manifest_src :self
 
   if Rails.env.development?
+    policy.style_src :self, :unsafe_inline
+
     # If you are using webpack-dev-server then specify webpack-dev-server host
     policy.connect_src :self, 'http://localhost:3035', 'ws://localhost:3035'
 
     # Inertia.js uses inline scripts to display error modal in development
     policy.script_src :self, :unsafe_inline, 'https://polyfill.io'
   else
+    policy.style_src :self
     policy.connect_src :self
     policy.script_src(*[:self, 'https://polyfill.io', ENV['MATOMO_HOST']].compact)
   end

@@ -129,6 +129,9 @@ Style/HashTransformKeys:
 Style/HashTransformValues:
   Enabled: true
 
+Style/ExponentialNotation:
+  Enabled: true
+
 ### Layout
 
 Layout/DotPosition:
@@ -163,6 +166,9 @@ Layout/SpaceInsideParens:
 
 Layout/HashAlignment:
   Enabled: false
+
+Layout/SpaceAroundMethodCallOperator:
+  Enabled: true
 
 Layout/LineLength:
   Max: 165

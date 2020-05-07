@@ -786,10 +786,10 @@
     postcss "7.0.28"
     purgecss "^2.2.0"
 
-"@inertiajs/inertia-vue@^0.1.2":
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/@inertiajs/inertia-vue/-/inertia-vue-0.1.2.tgz#e45ec9e5b75c31c302e8dc486ae484fff3c91460"
-  integrity sha512-a0+j0RoMEXHj24aMiaequfW6X9fMpLac9FABv+hCddQTj9yBfmpwFrubxJEZkQuRWlDZ7P1MB/N3qZSWTubs8w==
+"@inertiajs/inertia-vue@^0.1.4":
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/@inertiajs/inertia-vue/-/inertia-vue-0.1.4.tgz#d9d0e845d731176fa8ccdcf6879f53206737b669"
+  integrity sha512-n10fqZ3MyH/fypR2J3ej6edXn6BfCxfr7wqNeJrkCXiNF21uXhb4FeWX0qF3l2K6WB1Gr3YRT/RLdESlAMcGAw==
 
 "@inertiajs/inertia@^0.1.9":
   version "0.1.9"

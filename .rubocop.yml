@@ -132,6 +132,9 @@ Style/HashTransformValues:
 Style/ExponentialNotation:
   Enabled: true
 
+Style/SlicingWithRange:
+  Enabled: true
+
 ### Layout
 
 Layout/DotPosition:
@@ -168,6 +171,9 @@ Layout/HashAlignment:
   Enabled: false
 
 Layout/SpaceAroundMethodCallOperator:
+  Enabled: true
+
+Layout/EmptyLinesAroundAttributeAccessor:
   Enabled: true
 
 Layout/LineLength:

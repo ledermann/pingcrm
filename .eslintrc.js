@@ -1,7 +1,7 @@
 module.exports = {
   root: true,
   env: {
-    node: true
+    node: true,
   },
   plugins: [],
   extends: [
@@ -9,7 +9,7 @@ module.exports = {
     'plugin:vue/base',
     'plugin:vue/essential',
     'plugin:vue/strongly-recommended',
-    'plugin:vue/recommended'
+    'plugin:vue/recommended',
   ],
   globals: {},
   rules: {
@@ -22,6 +22,6 @@ module.exports = {
     'comma-dangle': ['warn', 'always-multiline'],
   },
   parserOptions: {
-    parser: 'babel-eslint'
-  }
+    parser: 'babel-eslint',
+  },
 }

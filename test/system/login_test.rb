@@ -28,7 +28,7 @@ class LoginTest < ApplicationSystemTestCase
     fill_in 'Password', with: 'invalid'
     click_on 'Login'
 
-    assert_selector 'div', text: 'Invalid email or password.'
+    assert_selector 'div', text: I18n.t('devise.failure.invalid')
   end
 
   test 'Redirect to login for Inertia requests, too' do

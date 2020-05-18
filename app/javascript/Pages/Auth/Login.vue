@@ -10,13 +10,14 @@
         @submit.prevent="submit"
       >
         <div class="px-10 py-12">
+          <flash-messages />
+
           <h1 class="text-center font-bold text-3xl">
             Welcome Back!
           </h1>
           <div class="mx-auto mt-6 w-24 border-b-2" />
           <text-input
             v-model="form.email"
-            :errors="$page.errors.email"
             class="mt-10"
             label="Email"
             type="email"
@@ -63,6 +64,7 @@
 
 <script>
 import Layout from '@/Layouts/Minimal'
+import FlashMessages from '@/Shared/FlashMessages'
 import LoadingButton from '@/Shared/LoadingButton'
 import Logo from '@/Shared/Logo'
 import TextInput from '@/Shared/TextInput'
@@ -71,6 +73,7 @@ export default {
   metaInfo: { title: 'Login' },
   layout: Layout,
   components: {
+    FlashMessages,
     LoadingButton,
     Logo,
     TextInput,

@@ -9,7 +9,7 @@ en:
     failure:
       already_authenticated: "You are already signed in."
       inactive: "Your account is not activated yet."
-      invalid: "Invalid %{authentication_keys} or password."
+      invalid: "These credentials do not match our records."
       locked: "Your account is locked."
       deleted: "Your account does not exist anymore!"
       last_attempt: "You have one more attempt before your account is locked."

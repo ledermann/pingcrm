@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
   inertia_share auth: -> {
     {
       user: current_user.as_json(
-        only: [ :id, :first_name, :last_name, :role ],
+        only: [ :id, :first_name, :last_name ],
         include: {
           account: {
             only: [ :id, :name ]

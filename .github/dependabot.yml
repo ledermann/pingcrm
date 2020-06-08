@@ -1,0 +1,20 @@
+version: 2
+updates:
+- package-ecosystem: bundler
+  directory: "/"
+  schedule:
+    interval: daily
+    time: '01:00'
+    timezone: Europe/Berlin
+  open-pull-requests-limit: 10
+  versioning-strategy: lockfile-only
+  allow:
+  - dependency-type: direct
+  - dependency-type: indirect
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+    time: '01:00'
+    timezone: Europe/Berlin
+  open-pull-requests-limit: 10

@@ -15,7 +15,7 @@
     "tailwindcss": "^1.4.6",
     "timeago.js": "^4.0.2",
     "vue": "^2.6.11",
-    "vue-loader": "^15.9.2",
+    "vue-loader": "^15.9.3",
     "vue-meta": "^2.4.0",
     "vue-template-compiler": "^2.6.11"
   },

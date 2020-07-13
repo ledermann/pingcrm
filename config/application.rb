@@ -36,7 +36,7 @@ module Pingcrm
         def show
           render inertia: 'Error', props: {
             status: request.path_info[1..].to_i
-          }
+          }, status: request.path_info[1..].to_i
         end
       end.action(:show).call(env)
     end

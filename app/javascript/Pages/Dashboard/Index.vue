@@ -3,7 +3,7 @@
     <h1 class="mb-8 font-bold text-3xl">
       Dashboard
     </h1>
-    <p class="mb-12 leading-normal">
+    <p class="mb-8 leading-normal">
       Hey there! Welcome to Ping CRM, a demo app designed to help illustrate how
       <a
         class="text-indigo-800 underline hover:text-orange-600 font-bold"
@@ -34,7 +34,7 @@
       {{ relativeCommitTime }}
     </p>
 
-    <div>
+    <div class="mb-8 flex">
       <inertia-link
         class="btn-indigo"
         :href="$routes.error_500()"
@@ -48,6 +48,10 @@
         404 error
       </inertia-link>
     </div>
+
+    <p class="leading-normal">
+      👆 These links are intended to be broken to illustrate how error handling works with Inertia.js.
+    </p>
   </div>
 </template>
 

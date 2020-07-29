@@ -11,6 +11,10 @@ updates:
   allow:
   - dependency-type: direct
   - dependency-type: indirect
+  labels:
+    - "dependencies"
+    - "ruby"
+    - "automerge"
 - package-ecosystem: npm
   directory: "/"
   schedule:
@@ -18,3 +22,7 @@ updates:
     time: '01:00'
     timezone: Europe/Berlin
   open-pull-requests-limit: 10
+  labels:
+    - "dependencies"
+    - "javascript"
+    - "automerge"

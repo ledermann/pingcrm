@@ -12,7 +12,7 @@
     "lodash": "^4.17.19",
     "popper.js": "^1.16",
     "portal-vue": "^2.1.7",
-    "tailwindcss": "^1.6.0",
+    "tailwindcss": "^1.6.1",
     "timeago.js": "^4.0.2",
     "vue": "^2.6.11",
     "vue-loader": "^15.9.3",

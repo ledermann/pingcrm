@@ -22,9 +22,7 @@ require 'active_support/concern'
 module InertiaJson
   extend ActiveSupport::Concern
 
-  def jbuilder
-    JbuilderTemplate.new(view_context) do |json|
-      yield(json)
-    end.attributes!
+  def jbuilder(&block)
+    JbuilderTemplate.new(view_context, &block).attributes!
   end
 end

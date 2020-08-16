@@ -8,7 +8,7 @@
     "@fullhuman/postcss-purgecss": "^2.3.0",
     "@inertiajs/inertia": "^0.1.9",
     "@inertiajs/inertia-vue": "^0.1.4",
-    "@rails/webpacker": "^5.1.1",
+    "@rails/webpacker": "^5.2.0",
     "lodash": "^4.17.20",
     "popper.js": "^1.16",
     "portal-vue": "^2.1.7",

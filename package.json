@@ -14,10 +14,10 @@
     "portal-vue": "^2.1.7",
     "tailwindcss": "^1.7.3",
     "timeago.js": "^4.0.2",
-    "vue": "^2.6.11",
+    "vue": "^2.6.12",
     "vue-loader": "^15.9.3",
     "vue-meta": "^2.4.0",
-    "vue-template-compiler": "^2.6.11"
+    "vue-template-compiler": "^2.6.12"
   },
   "version": "0.1.0",
   "devDependencies": {

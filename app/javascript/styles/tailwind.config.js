@@ -24,4 +24,7 @@ module.exports = {
     zIndex: ['responsive', 'focus'],
   },
   plugins: [],
+  future: {
+    removeDeprecatedGapUtilities: true,
+  },
 }

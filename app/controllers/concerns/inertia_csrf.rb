@@ -3,9 +3,6 @@ require 'active_support/concern'
 # Store the CSRF token in a non-session cookie so Axios can access it
 # Name it as XSRF-TOKEN, because this is the Axios default
 #
-# Important: Axios needs to be told the name of the header to set:
-#   axios.defaults.xsrfHeaderName = 'X-CSRF-Token'
-#
 # More info: https://pragmaticstudio.com/tutorials/rails-session-cookies-for-api-authentication
 #
 module InertiaCsrf
@@ -13,6 +10,13 @@ module InertiaCsrf
 
   included do
     before_action :set_csrf_cookie
+  end
+
+  # Rails uses HTTP_X_CSRF_TOKEN, but axios sends HTTP_X_XSRF_TOKEN (different name, X instead of C)
+  # By overriding `request_authenticity_tokens` we can tell Rails to check HTTP_X_XSRF_TOKEN, too
+  # Source: https://github.com/rails/rails/blob/v6.0.3.2/actionpack/lib/action_controller/metal/request_forgery_protection.rb#L305-L308
+  def request_authenticity_tokens
+    super << request.headers['HTTP_X_XSRF_TOKEN']
   end
 
   private

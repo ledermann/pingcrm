@@ -19,13 +19,6 @@ Vue.use(VueMeta)
 import PortalVue from 'portal-vue'
 Vue.use(PortalVue)
 
-import axios from 'axios'
-
-// Tell Axios to send the CSRF token (taken from the cookie)
-// in the header named as "X-CSRF-Token", as this is the name
-// expected by Rails
-axios.defaults.xsrfHeaderName = 'X-CSRF-Token'
-
 import MatomoTracker from '@/utils/matomo-tracker'
 Vue.use(MatomoTracker)
 

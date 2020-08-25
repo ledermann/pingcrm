@@ -26,7 +26,7 @@
 </template>
 
 <script>
-import Popper from 'popper.js'
+import { createPopper } from '@popperjs/core'
 
 export default {
   props: {
@@ -52,11 +52,16 @@ export default {
     show(show) {
       if (show) {
         this.$nextTick(() => {
-          this.popper = new Popper(this.$el, this.$refs.dropdown, {
+          this.popper = createPopper(this.$el, this.$refs.dropdown, {
             placement: this.placement,
-            modifiers: {
-              preventOverflow: { boundariesElement: this.boundary },
-            },
+            modifiers: [
+              {
+                name: 'preventOverflow',
+                options: {
+                  boundariesElement: this.boundary,
+                },
+              },
+            ],
           })
         })
       } else if (this.popper) {

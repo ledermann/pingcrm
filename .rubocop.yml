@@ -4,6 +4,7 @@ require:
 
 AllCops:
   TargetRubyVersion: 2.7
+  NewCops: enable
   Exclude:
     - db/**/*
     - bin/**/*
@@ -17,60 +18,8 @@ AllCops:
 Rails:
   Enabled: true
 
-Rails/SkipsModelValidations:
-  Enabled: false
-
-Rails/CreateTableWithTimestamps:
-  Enabled: false
-
-Rails/TimeZone:
-  Enabled: false
-
-Rails/BulkChangeTable:
-  Enabled: false
-
-Rails/ReversibleMigration:
-  Enabled: false
-
 Rails/FilePath:
   EnforcedStyle: arguments
-
-Rails/ActiveRecordCallbacksOrder:
-  Enabled: true
-
-Rails/FindById:
-  Enabled: true
-
-Rails/Inquiry:
-  Enabled: true
-
-Rails/MailerName:
-  Enabled: true
-
-Rails/MatchRoute:
-  Enabled: true
-
-Rails/NegateInclude:
-  Enabled: true
-
-Rails/Pluck:
-  Enabled: true
-
-Rails/PluckInWhere:
-  Enabled: true
-
-Rails/RenderInline:
-  Enabled: true
-
-Rails/RenderPlainText:
-  Enabled: true
-
-Rails/ShortI18n:
-  Enabled: true
-
-Rails/WhereExists:
-  Enabled: true
-
 
 ### Bundler
 
@@ -93,57 +42,18 @@ Metrics/MethodLength:
 
 ### Style
 
-Style/AutoResourceCleanup:
-  Enabled: true
-
 Style/BlockComments:
   Exclude:
     - "spec/spec_helper.rb"
 
-Style/Encoding:
-  Enabled: true
-
 Style/FrozenStringLiteralComment:
   Enabled: false
-
-Style/ImplicitRuntimeError:
-  Enabled: true
-
-Style/RegexpLiteral:
-  Enabled: false
-
-Style/SingleLineBlockParams:
-  Enabled: true
 
 Style/StringLiterals:
   Enabled: false
 
-Style/StringMethods:
-  Enabled: true
-
 Style/SymbolArray:
   EnforcedStyle: brackets
-
-Style/MixinUsage:
-  Enabled: false
-
-Style/StderrPuts:
-  Enabled: false
-
-Style/NumericLiteralPrefix:
-  Enabled: false
-
-Style/DateTime:
-  Enabled: false
-
-Style/EmptyMethod:
-  Enabled: false
-
-Style/AsciiComments:
-  Enabled: false
-
-Style/FormatString:
-  EnforcedStyle: percent
 
 Style/Documentation:
   Enabled: false
@@ -157,69 +67,6 @@ Style/Lambda:
 Style/LambdaCall:
   Enabled: false
 
-Style/HashEachMethods:
-  Enabled: true
-
-Style/HashTransformKeys:
-  Enabled: true
-
-Style/HashTransformValues:
-  Enabled: true
-
-Style/ExponentialNotation:
-  Enabled: true
-
-Style/SlicingWithRange:
-  Enabled: true
-
-Style/AccessorGrouping:
-  Enabled: true
-
-Style/BisectedAttrAccessor:
-  Enabled: true
-
-Style/RedundantAssignment:
-  Enabled: true
-
-Style/RedundantFetchBlock:
-  Enabled: true
-
-Style/RedundantRegexpCharacterClass:
-  Enabled: true
-
-Style/RedundantRegexpEscape:
-  Enabled: true
-
-Style/ArrayCoercion:
-  Enabled: true
-
-Style/CaseLikeIf:
-  Enabled: true
-
-Style/ExplicitBlockArgument:
-  Enabled: true
-
-Style/GlobalStdStream:
-  Enabled: true
-
-Style/HashAsLastArrayItem:
-  Enabled: true
-
-Style/HashLikeCase:
-  Enabled: true
-
-Style/OptionalBooleanParameter:
-  Enabled: true
-
-Style/RedundantFileExtensionInRequire:
-  Enabled: true
-
-Style/SingleArgumentDig:
-  Enabled: true
-
-Style/StringConcatenation:
-  Enabled: true
-
 ### Layout
 
 Layout/DotPosition:
@@ -228,108 +75,11 @@ Layout/DotPosition:
 Layout/EndAlignment:
   EnforcedStyleAlignWith: variable
 
-Layout/FirstArrayElementLineBreak:
-  Enabled: true
-
-Layout/FirstHashElementLineBreak:
-  Enabled: true
-
-Layout/FirstMethodArgumentLineBreak:
-  Enabled: true
-
-Layout/FirstMethodParameterLineBreak:
-  Enabled: true
-
 Layout/SpaceInsideArrayLiteralBrackets:
-  Enabled: false
-
-Layout/SpaceAfterComma:
-  Enabled: false
-
-Layout/SpaceInsideReferenceBrackets:
-  Enabled: false
-
-Layout/SpaceInsideParens:
   Enabled: false
 
 Layout/HashAlignment:
   Enabled: false
 
-Layout/SpaceAroundMethodCallOperator:
-  Enabled: true
-
-Layout/EmptyLinesAroundAttributeAccessor:
-  Enabled: true
-
 Layout/LineLength:
   Max: 165
-
-# Lint
-
-Lint/RaiseException:
-  Enabled: true
-
-Lint/StructNewOverride:
-  Enabled: true
-
-Lint/DeprecatedOpenSSLConstant:
-  Enabled: true
-
-Lint/MixedRegexpCaptureTypes:
-  Enabled: true
-
-Lint/BinaryOperatorWithIdenticalOperands:
-  Enabled: true
-
-Lint/DuplicateElsifCondition:
-  Enabled: true
-
-Lint/DuplicateRescueException:
-  Enabled: true
-
-Lint/EmptyConditionalBody:
-  Enabled: true
-
-Lint/FloatComparison:
-  Enabled: true
-
-Lint/MissingSuper:
-  Enabled: true
-
-Lint/OutOfRangeRegexpRef:
-  Enabled: true
-
-Lint/SelfAssignment:
-  Enabled: true
-
-Lint/TopLevelReturnWithArgument:
-  Enabled: true
-
-Lint/UnreachableLoop:
-  Enabled: true
-
-# Performance
-
-Performance/AncestorsInclude:
-  Enabled: true
-
-Performance/BigDecimalWithNumericArgument:
-  Enabled: true
-
-Performance/RedundantSortBlock:
-  Enabled: true
-
-Performance/RedundantStringChars:
-  Enabled: true
-
-Performance/ReverseFirst:
-  Enabled: true
-
-Performance/SortReverse:
-  Enabled: true
-
-Performance/Squeeze:
-  Enabled: true
-
-Performance/StringInclude:
-  Enabled: true

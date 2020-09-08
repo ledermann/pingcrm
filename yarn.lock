@@ -872,10 +872,10 @@
   resolved "https://registry.yarnpkg.com/@inertiajs/inertia-vue/-/inertia-vue-0.2.2.tgz#44648ec61a002eb9c5378d813f6b26ba42c36ab1"
   integrity sha512-35fFSqBe+p1zw1ZQtenWdBQFX6k+/t0KEPeH9BENSMRmAKTmsW2xHruteE6f+LJ9wFdZkMucAX8UDCfpXqC71g==
 
-"@inertiajs/inertia@^0.2.1":
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/@inertiajs/inertia/-/inertia-0.2.1.tgz#14f0e772f7b083687cff8a83985bfd17282dba6e"
-  integrity sha512-FwaCe1c5si1k/K6pAoMiqENBd3jALuEkvJm4Yu2hDJjA23cVJKFcjfC3sD4Us0iRfGXL3QBORmJZpvSEVzEcGw==
+"@inertiajs/inertia@^0.2.3":
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/@inertiajs/inertia/-/inertia-0.2.3.tgz#c59ea7fd94a692ce897d3d63c8cbf098c21e1c9a"
+  integrity sha512-vCCsSRWLMzH6vDDdSBnSnQ8vopyBHdCK3X9BH+wIQWDwTqrIx/FgOcwA9MokiHTNdrOVZlN3s4cy+fppEh++pg==
   dependencies:
     axios "^0.19.0"
     nprogress "^0.2.0"

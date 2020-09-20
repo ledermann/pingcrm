@@ -5,7 +5,7 @@
     "lint": "eslint --ext .js,.vue ."
   },
   "dependencies": {
-    "@fullhuman/postcss-purgecss": "^2.3.0",
+    "@fullhuman/postcss-purgecss": "^3.0.0",
     "@inertiajs/inertia": "^0.2.3",
     "@inertiajs/inertia-vue": "^0.2.3",
     "@popperjs/core": "^2.4.4",

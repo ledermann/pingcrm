@@ -90,12 +90,13 @@ export default {
   },
   methods: {
     submit() {
-      this.sending = true
       this.$inertia
         .post(this.$routes.user_session(), {
           user: this.form,
+        }, {
+          onStart: () => this.sending = true,
+          onFinish: () => this.sending = false,
         })
-        .then(() => (this.sending = false))
     },
   },
 }

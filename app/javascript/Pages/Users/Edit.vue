@@ -96,8 +96,6 @@ export default {
   },
   methods: {
     submit() {
-      this.sending = true
-
       let data = new FormData()
       data.append('user[first_name]', this.form.first_name || '')
       data.append('user[last_name]', this.form.last_name || '')
@@ -107,12 +105,15 @@ export default {
       data.append('user[photo]', this.form.photo || '')
       data.append('_method', 'put')
 
-      this.$inertia.post(this.$routes.user(this.user.id), data).then(() => {
-        this.sending = false
-        if (Object.keys(this.$page.errors).length === 0) {
-          this.form.photo = null
-          this.form.password = null
-        }
+      this.$inertia.post(this.$routes.user(this.user.id), data, {
+        onStart: () => this.sending = true,
+        onFinish: () => {
+          this.sending = false
+          if (Object.keys(this.$page.errors).length === 0) {
+            this.form.photo = null
+            this.form.password = null
+          }
+        },
       })
     },
     destroy() {

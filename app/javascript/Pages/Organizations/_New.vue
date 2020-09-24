@@ -34,13 +34,15 @@ export default {
   },
   methods: {
     submit() {
-      this.sending = true
-      this.$inertia.post(this.$routes.organizations(), this.form).then(() => {
-        this.sending = false
-        if (Object.keys(this.$page.errors).length === 0) {
-          this.form = {}
-          this.$emit('success')
-        }
+      this.$inertia.post(this.$routes.organizations(), this.form, {
+        onStart: () => this.sending = true,
+        onFinish: () => {
+          this.sending = false
+          if (Object.keys(this.$page.errors).length === 0) {
+            this.form = {}
+            this.$emit('success')
+          }
+        },
       })
     },
   },

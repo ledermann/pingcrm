@@ -887,6 +887,13 @@
   dependencies:
     axios "^0.19.0 || ^0.20.0"
 
+"@inertiajs/progress@^0.1.0":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@inertiajs/progress/-/progress-0.1.1.tgz#c6239b32a6042f9949a58b3a85f6270082107302"
+  integrity sha512-ZrFnGBIGq0FUWglODYEZbj3kX1dttJOHdG9rKg6xdGzLo2c4B/xyvhlp0pGk9Oq7v/Wd8IDsRlF9nwP56iyk1Q==
+  dependencies:
+    nprogress "^0.2.0"
+
 "@npmcli/move-file@^1.0.1":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@npmcli/move-file/-/move-file-1.0.1.tgz#de103070dac0f48ce49cf6693c23af59c0f70464"
@@ -5217,6 +5224,11 @@ npm-run-path@^2.0.0:
     console-control-strings "~1.1.0"
     gauge "~2.7.3"
     set-blocking "~2.0.0"
+
+nprogress@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/nprogress/-/nprogress-0.2.0.tgz#cb8f34c53213d895723fcbab907e9422adbcafb1"
+  integrity sha1-y480xTIT2JVyP8urkH6UIq28r7E=
 
 nth-check@^1.0.2:
   version "1.0.2"

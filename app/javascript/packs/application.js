@@ -23,7 +23,9 @@ import MatomoTracker from '@/utils/matomo-tracker'
 Vue.use(MatomoTracker)
 
 import { InertiaApp } from '@inertiajs/inertia-vue'
+import { InertiaProgress } from '@inertiajs/progress/src'
 Vue.use(InertiaApp)
+InertiaProgress.init()
 
 import Routes from '@/utils/routes.js'
 Vue.prototype.$routes = Routes

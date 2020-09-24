@@ -880,13 +880,12 @@
   resolved "https://registry.yarnpkg.com/@inertiajs/inertia-vue/-/inertia-vue-0.2.3.tgz#93f048951623fb0aa4d820632ab96a05462a5cab"
   integrity sha512-h1mX/A3Ou5afpvqkHDRwroeD4ZOkCjC0lsWlEbNIauNbyVYOQUFv7uCKOJRuI0+n5PUvMUKzoJq5IZ8hM4icTg==
 
-"@inertiajs/inertia@^0.2.3":
-  version "0.2.3"
-  resolved "https://registry.yarnpkg.com/@inertiajs/inertia/-/inertia-0.2.3.tgz#c59ea7fd94a692ce897d3d63c8cbf098c21e1c9a"
-  integrity sha512-vCCsSRWLMzH6vDDdSBnSnQ8vopyBHdCK3X9BH+wIQWDwTqrIx/FgOcwA9MokiHTNdrOVZlN3s4cy+fppEh++pg==
+"@inertiajs/inertia@^0.3.3":
+  version "0.3.3"
+  resolved "https://registry.yarnpkg.com/@inertiajs/inertia/-/inertia-0.3.3.tgz#7dbc4d6cf55a7160b93be71d42afaa7f16329493"
+  integrity sha512-KFEoPYW5BIuNYSScR3aNHx8Ud2fLIFl4e29XCHjS2l1Y7M3f7G0x0T1isLBtplMsG/2rYbSQRkdXoY6cZl7V0w==
   dependencies:
-    axios "^0.19.0"
-    nprogress "^0.2.0"
+    axios "^0.19.0 || ^0.20.0"
 
 "@npmcli/move-file@^1.0.1":
   version "1.0.1"
@@ -5218,11 +5217,6 @@ npm-run-path@^2.0.0:
     console-control-strings "~1.1.0"
     gauge "~2.7.3"
     set-blocking "~2.0.0"
-
-nprogress@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/nprogress/-/nprogress-0.2.0.tgz#cb8f34c53213d895723fcbab907e9422adbcafb1"
-  integrity sha1-y480xTIT2JVyP8urkH6UIq28r7E=
 
 nth-check@^1.0.2:
   version "1.0.2"

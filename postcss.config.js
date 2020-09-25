@@ -24,9 +24,7 @@ if (process.env.RAILS_ENV !== 'development') {
         './app/javascript/**/*.js',
       ],
       defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || [],
-      whitelistPatterns: [
-        /nprogress/,
-      ],
+      whitelistPatterns: [],
     }),
   )
 }

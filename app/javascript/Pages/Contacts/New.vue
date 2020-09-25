@@ -56,10 +56,11 @@ export default {
   },
   methods: {
     submit() {
-      this.sending = true
       this.$inertia
-        .post(this.$routes.contacts(), this.form)
-        .then(() => (this.sending = false))
+        .post(this.$routes.contacts(), this.form, {
+          onStart: () => this.sending = true,
+          onFinish: () => this.sending = false,
+        })
     },
   },
 }

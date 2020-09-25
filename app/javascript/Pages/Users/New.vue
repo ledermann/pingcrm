@@ -55,8 +55,6 @@ export default {
   },
   methods: {
     submit() {
-      this.sending = true
-
       let data = new FormData()
       data.append('user[first_name]', this.form.first_name || '')
       data.append('user[last_name]', this.form.last_name || '')
@@ -66,8 +64,10 @@ export default {
       data.append('user[photo]', this.form.photo || '')
 
       this.$inertia
-        .post(this.$routes.users(), data)
-        .then(() => (this.sending = false))
+        .post(this.$routes.users(), data, {
+          onStart: () => this.sending = true,
+          onFinish: () => this.sending = false,
+        })
     },
   },
 }

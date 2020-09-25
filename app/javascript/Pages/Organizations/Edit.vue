@@ -161,10 +161,11 @@ export default {
   },
   methods: {
     submit() {
-      this.sending = true
       this.$inertia
-        .put(this.$routes.organization(this.organization.id), this.form)
-        .then(() => (this.sending = false))
+        .put(this.$routes.organization(this.organization.id), this.form, {
+          onStart: () => this.sending = true,
+          onFinish: () => this.sending = false,
+        })
     },
     destroy() {
       if (confirm('Are you sure you want to delete this organization?')) {

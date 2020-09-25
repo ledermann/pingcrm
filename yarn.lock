@@ -887,10 +887,10 @@
   dependencies:
     axios "^0.19.0 || ^0.20.0"
 
-"@inertiajs/progress@^0.1.0":
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/@inertiajs/progress/-/progress-0.1.1.tgz#c6239b32a6042f9949a58b3a85f6270082107302"
-  integrity sha512-ZrFnGBIGq0FUWglODYEZbj3kX1dttJOHdG9rKg6xdGzLo2c4B/xyvhlp0pGk9Oq7v/Wd8IDsRlF9nwP56iyk1Q==
+"@inertiajs/progress@^0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@inertiajs/progress/-/progress-0.1.2.tgz#4a52d75c45d818a469384bd4ffd632c5c38a1889"
+  integrity sha512-XazXCp9ezY2GLfS37O+LUf6Ni1xYLtrQg+svUi+videi3Aby28d4xRCtrqLvyo3HIWQE5DvNqCPQ8BFbaPZTOA==
   dependencies:
     nprogress "^0.2.0"
 

@@ -1,10 +1,10 @@
 <template>
   <minimal-layout>
-    <div class="flex flex-col">
+    <div class="md:flex md:flex-col">
       <div
-        class="h-screen flex flex-col"
+        class="md:h-screen md:flex md:flex-col"
       >
-        <div class="md:flex flex-shrink-0">
+        <div class="md:flex md:flex-shrink-0">
           <div class="bg-indigo-900 md:flex-shrink-0 md:w-56 px-6 py-4 flex items-center justify-between md:justify-center">
             <inertia-link
               class="mt-1"
@@ -84,13 +84,13 @@
             </dropdown>
           </div>
         </div>
-        <div class="flex flex-grow overflow-hidden">
+        <div class="md:flex md:flex-grow md:overflow-hidden">
           <main-menu
             :url="url()"
-            class="bg-indigo-800 flex-shrink-0 w-56 p-12 hidden md:block overflow-y-auto"
+            class="hidden md:block bg-indigo-800 flex-shrink-0 w-56 p-12 overflow-y-auto"
           />
           <div
-            class="flex-1 px-4 py-8 md:p-12 overflow-y-auto"
+            class="md:flex-1 px-4 py-8 md:p-12 md:overflow-y-auto"
             scroll-region
           >
             <flash-messages />

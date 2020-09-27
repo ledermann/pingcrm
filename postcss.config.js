@@ -13,20 +13,4 @@ const environment = {
   ],
 }
 
-// Only run PurgeCSS in production and test
-if (process.env.RAILS_ENV !== 'development') {
-  environment.plugins.push(
-    require('@fullhuman/postcss-purgecss')({
-      content: [
-        './app/**/*.html.erb',
-        './app/**/*.vue',
-        './app/helpers/**/*.rb',
-        './app/javascript/**/*.js',
-      ],
-      defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || [],
-      whitelistPatterns: [],
-    }),
-  )
-}
-
 module.exports = environment

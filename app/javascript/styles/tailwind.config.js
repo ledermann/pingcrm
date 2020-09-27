@@ -23,8 +23,19 @@ module.exports = {
     textColor: ['responsive', 'hover', 'focus', 'group-hover'],
     zIndex: ['responsive', 'focus'],
   },
+  purge: {
+    mode: 'all',
+
+    content: [
+      './app/**/*.html.erb',
+      './app/**/*.vue',
+      './app/helpers/**/*.rb',
+      './app/javascript/**/*.js',
+    ],
+  },
   plugins: [],
   future: {
     removeDeprecatedGapUtilities: true,
+    purgeLayersByDefault: true,
   },
 }

@@ -94,13 +94,23 @@ export default {
     TextInput,
   },
   props: {
-    form: {
+    value: {
       type: Object,
       required: true,
     },
     organizations: {
       type: Array,
       required: true,
+    },
+  },
+  computed: {
+    form: {
+      get() {
+        return this.value
+      },
+      set(val) {
+        this.$emit('input', val)
+      },
     },
   },
 }

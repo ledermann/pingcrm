@@ -11,7 +11,7 @@
     </h1>
     <div class="bg-white rounded shadow overflow-hidden max-w-3xl">
       <user-form
-        :form="form"
+        v-model="form"
         @submit="submit"
       >
         <div class="px-8 py-4 bg-gray-100 border-t border-gray-200 flex justify-end items-center">

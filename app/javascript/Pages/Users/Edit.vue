@@ -27,7 +27,7 @@
     </trashed-message>
     <div class="bg-white rounded shadow overflow-hidden max-w-3xl">
       <user-form
-        :form="form"
+        v-model="form"
         @submit="submit"
       >
         <div

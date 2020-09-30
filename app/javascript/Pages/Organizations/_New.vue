@@ -1,6 +1,6 @@
 <template>
   <organization-form
-    :form="form"
+    v-model="form"
     class="bg-white max-w-3xl"
     @submit="submit"
   >

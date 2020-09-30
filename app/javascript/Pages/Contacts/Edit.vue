@@ -19,7 +19,7 @@
     </trashed-message>
     <div class="bg-white rounded shadow overflow-hidden max-w-3xl">
       <contact-form
-        :form="form"
+        v-model="form"
         :organizations="organizations"
         @submit="submit"
       >

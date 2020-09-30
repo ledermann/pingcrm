@@ -36,11 +36,11 @@ import ContactForm from './Form'
 
 export default {
   metaInfo: { title: 'Create Contact' },
-  layout: Layout,
   components: {
     LoadingButton,
     ContactForm,
   },
+  layout: Layout,
   props: {
     organizations: {
       type: Array,

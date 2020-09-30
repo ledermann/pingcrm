@@ -135,13 +135,13 @@ export default {
   metaInfo() {
     return { title: this.form.name }
   },
-  layout: Layout,
   components: {
     Icon,
     LoadingButton,
     OrganizationForm,
     TrashedMessage,
   },
+  layout: Layout,
   props: {
     organization: {
       type: Object,

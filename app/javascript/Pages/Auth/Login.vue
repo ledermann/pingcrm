@@ -71,13 +71,13 @@ import TextInput from '@/Shared/TextInput'
 
 export default {
   metaInfo: { title: 'Login' },
-  layout: Layout,
   components: {
     FlashMessages,
     LoadingButton,
     Logo,
     TextInput,
   },
+  layout: Layout,
   data() {
     return {
       sending: false,

@@ -155,11 +155,11 @@ import throttle from 'lodash/throttle'
 
 export default {
   metaInfo: { title: 'Users' },
-  layout: Layout,
   components: {
     Icon,
     SearchFilter,
   },
+  layout: Layout,
   props: {
     users: {
       type: Array,

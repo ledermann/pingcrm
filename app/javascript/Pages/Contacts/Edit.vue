@@ -59,12 +59,12 @@ export default {
       title: `${this.form.first_name} ${this.form.last_name}`,
     }
   },
-  layout: Layout,
   components: {
     LoadingButton,
     ContactForm,
     TrashedMessage,
   },
+  layout: Layout,
   props: {
     contact: {
       type: Object,

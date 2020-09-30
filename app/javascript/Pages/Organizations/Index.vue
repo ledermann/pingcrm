@@ -142,7 +142,6 @@ import throttle from 'lodash/throttle'
 
 export default {
   metaInfo: { title: 'Organizations' },
-  layout: Layout,
   components: {
     Icon,
     Pagination,
@@ -150,6 +149,7 @@ export default {
     Modal,
     NewOrganization,
   },
+  layout: Layout,
   props: {
     organizations: {
       type: Object,

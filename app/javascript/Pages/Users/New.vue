@@ -35,11 +35,11 @@ import UserForm from './Form'
 
 export default {
   metaInfo: { title: 'Create User' },
-  layout: Layout,
   components: {
     LoadingButton,
     UserForm,
   },
+  layout: Layout,
   props: {
     user: {
       type: Object,

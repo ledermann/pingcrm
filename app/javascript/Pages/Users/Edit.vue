@@ -68,12 +68,12 @@ export default {
       title: `${this.form.first_name} ${this.form.last_name}`,
     }
   },
-  layout: Layout,
   components: {
     LoadingButton,
     UserForm,
     TrashedMessage,
   },
+  layout: Layout,
   props: {
     user: {
       type: Object,

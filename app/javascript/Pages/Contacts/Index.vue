@@ -148,12 +148,12 @@ import throttle from 'lodash/throttle'
 
 export default {
   metaInfo: { title: 'Contacts' },
-  layout: Layout,
   components: {
     Icon,
     Pagination,
     SearchFilter,
   },
+  layout: Layout,
   props: {
     contacts: {
       type: Object,

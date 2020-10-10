@@ -78,19 +78,15 @@ export default {
   components: {
     Icon,
   },
-  props: {
-    url: {
-      type: String,
-      required: true,
-    },
-  },
   methods: {
     isUrl(...urls) {
+      let currentUrl = this.$page.url.substr(1)
+
       if (urls[0] === '') {
-        return this.url === ''
+        return currentUrl === ''
       }
 
-      return urls.filter(url => this.url.startsWith(url)).length
+      return urls.filter(url => currentUrl.startsWith(url)).length
     },
   },
 }

@@ -32,7 +32,7 @@
                 slot="dropdown"
                 class="mt-2 px-8 py-4 shadow-lg bg-indigo-800 rounded"
               >
-                <main-menu :url="url()" />
+                <main-menu />
               </div>
             </dropdown>
           </div>
@@ -85,10 +85,7 @@
           </div>
         </div>
         <div class="md:flex md:flex-grow md:overflow-hidden">
-          <main-menu
-            :url="url()"
-            class="hidden md:block bg-indigo-800 flex-shrink-0 w-56 p-12 overflow-y-auto"
-          />
+          <main-menu class="hidden md:block bg-indigo-800 flex-shrink-0 w-56 p-12 overflow-y-auto" />
           <div
             class="md:flex-1 px-4 py-8 md:p-12 md:overflow-y-auto"
             scroll-region
@@ -118,11 +115,6 @@ export default {
     Icon,
     Logo,
     MainMenu,
-  },
-  methods: {
-    url() {
-      return location.pathname.substr(1)
-    },
   },
 }
 </script>

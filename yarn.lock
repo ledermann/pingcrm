@@ -867,15 +867,15 @@
     postcss "7.0.32"
     purgecss "^2.3.0"
 
-"@inertiajs/inertia-vue@^0.2.4":
-  version "0.2.4"
-  resolved "https://registry.yarnpkg.com/@inertiajs/inertia-vue/-/inertia-vue-0.2.4.tgz#187fd455ffd1105f759cc752bb242e68ac86a1e4"
-  integrity sha512-q5CfxAzNg12qsvI75h+bh5RlvKViNu7zmWbpnb6D0VUA2asbxjlJcMXpaMKXZt1U5fP6ti8NiTJgFy35vs2vOQ==
+"@inertiajs/inertia-vue@^0.3.1":
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/@inertiajs/inertia-vue/-/inertia-vue-0.3.1.tgz#b02e25214b08aec1a4c3fdcc854544b6c07cbcdb"
+  integrity sha512-6pOLn6jreF+DKn65VI5vpuWgBeQJBKCT2ffzF5z3qfL1kk2DjoQzMTUD9Uk+V/B2RJAGdZDdHnups7FlbOHW9Q==
 
-"@inertiajs/inertia@^0.3.6":
-  version "0.3.6"
-  resolved "https://registry.yarnpkg.com/@inertiajs/inertia/-/inertia-0.3.6.tgz#7e87ee21da568ac1230d3034c1bd86122e5dad99"
-  integrity sha512-4Hr5dU0iQCO2qc+1b0FWH7reFYve2HnsTgQWaFPSS3JCPGYSGuyxkP2efVghzl3O05RZpsoHuR3dcch2RMfQOw==
+"@inertiajs/inertia@^0.4.0":
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/@inertiajs/inertia/-/inertia-0.4.0.tgz#5bf235c193f84923be97d8a7d9875b474b36c35c"
+  integrity sha512-TEp+ACP49qnGrtirzQlH5jbFZnRwdM1t4McIW8LsfKFJrE+aKo6ZEUaQ1zd6Sy7z6re1I7r1IN515Z4Hz6fj4w==
   dependencies:
     axios "^0.19.0 || ^0.20.0"
 

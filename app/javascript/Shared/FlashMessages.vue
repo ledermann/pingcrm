@@ -1,7 +1,7 @@
 <template>
   <div v-if="show">
     <div
-      v-if="$page.flash.success"
+      v-if="$page.props.flash.success"
       class="mb-8 flex items-center justify-between bg-green-500 rounded max-w-3xl"
     >
       <div class="flex items-center">
@@ -11,7 +11,7 @@
           viewBox="0 0 20 20"
         ><polygon points="0 11 2 9 7 14 18 3 20 5 7 18" /></svg>
         <div class="py-4 text-white text-sm font-medium">
-          {{ $page.flash.success }}
+          {{ $page.props.flash.success }}
         </div>
       </div>
       <button
@@ -29,7 +29,7 @@
       </button>
     </div>
     <div
-      v-else-if="$page.flash.alert"
+      v-else-if="$page.props.flash.alert"
       class="mb-8 flex items-center justify-between bg-red-400 rounded max-w-3xl"
     >
       <div class="flex items-center">
@@ -39,7 +39,7 @@
           viewBox="0 0 20 20"
         ><path d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm1.41-1.41A8 8 0 1 0 15.66 4.34 8 8 0 0 0 4.34 15.66zm9.9-8.49L11.41 10l2.83 2.83-1.41 1.41L10 11.41l-2.83 2.83-1.41-1.41L8.59 10 5.76 7.17l1.41-1.41L10 8.59l2.83-2.83 1.41 1.41z" /></svg>
         <div class="py-4 text-white text-sm font-medium">
-          {{ $page.flash.alert }}
+          {{ $page.props.flash.alert }}
         </div>
       </div>
       <button
@@ -57,7 +57,7 @@
       </button>
     </div>
     <div
-      v-if="Object.keys($page.errors).length > 0"
+      v-if="Object.keys($page.props.errors).length > 0"
       class="mb-8 flex items-center justify-between bg-red-400 rounded max-w-3xl"
     >
       <div class="flex items-center">
@@ -67,8 +67,8 @@
           viewBox="0 0 20 20"
         ><path d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm1.41-1.41A8 8 0 1 0 15.66 4.34 8 8 0 0 0 4.34 15.66zm9.9-8.49L11.41 10l2.83 2.83-1.41 1.41L10 11.41l-2.83 2.83-1.41-1.41L8.59 10 5.76 7.17l1.41-1.41L10 8.59l2.83-2.83 1.41 1.41z" /></svg>
         <div class="py-4 text-white text-sm font-medium">
-          <span v-if="Object.keys($page.errors).length === 1">There is one form error.</span>
-          <span v-else>There are {{ Object.keys($page.errors).length }} form errors.</span>
+          <span v-if="Object.keys($page.props.errors).length === 1">There is one form error.</span>
+          <span v-else>There are {{ Object.keys($page.props.errors).length }} form errors.</span>
         </div>
       </div>
       <button
@@ -96,7 +96,7 @@ export default {
     }
   },
   watch: {
-    '$page.flash': {
+    '$page.props.flash': {
       handler() {
         this.show = true
       },

@@ -22,23 +22,23 @@ Vue.use(PortalVue)
 import MatomoTracker from '@/utils/matomo-tracker'
 Vue.use(MatomoTracker)
 
-import { InertiaApp } from '@inertiajs/inertia-vue'
-import { InertiaProgress } from '@inertiajs/progress/src'
-Vue.use(InertiaApp)
-InertiaProgress.init()
+import { app, plugin } from '@inertiajs/inertia-vue'
+import { InertiaProgress as progress } from '@inertiajs/progress'
+Vue.use(plugin)
+progress.init()
 
 import Routes from '@/utils/routes.js'
 Vue.prototype.$routes = Routes
 
-const app = document.getElementById('app')
+const el = document.getElementById('app')
 
 new Vue({
   metaInfo: {
     titleTemplate: (title) => title ? `${title} - PingCRM` : 'PingCRM',
   },
-  render: h => h(InertiaApp, {
+  render: h => h(app, {
     props: {
-      initialPage: JSON.parse(app.dataset.page),
+      initialPage: JSON.parse(el.dataset.page),
       resolveComponent: name => import(`@/Pages/${name}`).then(module => module.default),
       transformProps: props => {
         if (Vue.matomo.enabled)
@@ -51,4 +51,4 @@ new Vue({
       },
     },
   }),
-}).$mount(app)
+}).$mount(el)

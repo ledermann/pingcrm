@@ -38,7 +38,7 @@ export default {
         onStart: () => this.sending = true,
         onFinish: () => {
           this.sending = false
-          if (Object.keys(this.$page.errors).length === 0) {
+          if (Object.keys(this.$page.props.errors).length === 0) {
             this.form = {}
             this.$emit('success')
           }

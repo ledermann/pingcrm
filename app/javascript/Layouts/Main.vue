@@ -119,11 +119,6 @@ export default {
     Logo,
     MainMenu,
   },
-  data() {
-    return {
-      accounts: null,
-    }
-  },
   methods: {
     url() {
       return location.pathname.substr(1)

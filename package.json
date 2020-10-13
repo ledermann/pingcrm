@@ -22,7 +22,7 @@
   "version": "0.1.0",
   "devDependencies": {
     "babel-eslint": "^10.1.0",
-    "css-loader": "^4.3.0",
+    "css-loader": "^5.0.0",
     "eslint": "^7.11.0",
     "eslint-plugin-vue": "^7.0.1",
     "webpack": "^4.44.2",

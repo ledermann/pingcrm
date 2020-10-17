@@ -5,14 +5,14 @@
     "lint": "eslint --ext .js,.vue ."
   },
   "dependencies": {
-    "@inertiajs/inertia": "^0.4.2",
+    "@inertiajs/inertia": "^0.4.3",
     "@inertiajs/inertia-vue": "^0.3.2",
     "@inertiajs/progress": "^0.1.2",
     "@popperjs/core": "^2.5.3",
     "@rails/webpacker": "^5.2.1",
     "lodash": "^4.17.20",
     "portal-vue": "^2.1.7",
-    "tailwindcss": "^1.9.2",
+    "tailwindcss": "^1.9.3",
     "timeago.js": "^4.0.2",
     "vue": "^2.6.12",
     "vue-loader": "^15.9.3",

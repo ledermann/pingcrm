@@ -126,7 +126,7 @@ GEM
     nio4r (2.5.4)
     nokogiri (1.10.10)
       mini_portile2 (~> 2.4.0)
-    oj (3.10.14)
+    oj (3.10.15)
     orm_adapter (0.5.0)
     pagy (3.8.3)
     parallel (1.19.2)

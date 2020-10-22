@@ -22,6 +22,7 @@ updates:
     time: '01:00'
     timezone: Europe/Berlin
   open-pull-requests-limit: 10
+  versioning-strategy: increase-if-necessary
   labels:
     - "dependencies"
     - "javascript"

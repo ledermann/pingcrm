@@ -74,9 +74,10 @@
                   Manage Users
                 </inertia-link>
                 <inertia-link
-                  class="block px-6 py-2 hover:bg-indigo-600 hover:text-white"
+                  class="block w-full text-left px-6 py-2 hover:bg-indigo-600 hover:text-white"
                   :href="$routes.destroy_user_session()"
                   method="delete"
+                  as="button"
                 >
                   Logout
                 </inertia-link>

@@ -176,13 +176,15 @@ export default {
     form: {
       handler: throttle(function() {
         let query = pickBy(this.form)
-        this.$inertia.replace(
+        this.$inertia.get(
           this.$routes.contacts(
             Object.keys(query).length ? query : { remember: 'forget' },
           ),
+          {},
           {
             preserveState: true,
             preserveScroll: true,
+            replace: true,
             only: ['contacts'],
           },
         )

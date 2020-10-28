@@ -868,19 +868,19 @@
   resolved "https://registry.yarnpkg.com/@inertiajs/inertia-vue/-/inertia-vue-0.4.1.tgz#3cafcc829cf2b180087ccb58d490c066ba3d3eda"
   integrity sha512-6Npa1lPWoq15OC2zPNY5+pknq09HVfDdR46JxtHGy/qCskhRlUqqvImm2MQtbzDHlMrSStHm2SYX7q1L865l0Q==
 
-"@inertiajs/inertia@^0.5.0":
-  version "0.5.2"
-  resolved "https://registry.yarnpkg.com/@inertiajs/inertia/-/inertia-0.5.2.tgz#c98c79be459f5786b3b0b75a8b38af9816647a91"
-  integrity sha512-LVL8v4+sUTPKy4ksorWSLvBH8DJk+VguKST88XCxem+IwCg0L9tnaiXE4Hf6EBeqO+Yo24T81RJKO90VkTj/wQ==
+"@inertiajs/inertia@^0.6.0":
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/@inertiajs/inertia/-/inertia-0.6.0.tgz#49ee8f6d18def33d3a4c079020b393a115a2b672"
+  integrity sha512-d95lCHbU9CoyhL/hKto6W3CFBNwfYZuEbhvlaQsvoAi8fxzvKjYrVRDScotgQZQi8CM3M0xsaxO+Mk6uZfPEbA==
   dependencies:
     axios "^0.19.0 || ^0.20.0"
     deepmerge "^4.0.0"
     qs "^6.9.0"
 
-"@inertiajs/progress@^0.1.2":
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/@inertiajs/progress/-/progress-0.1.2.tgz#4a52d75c45d818a469384bd4ffd632c5c38a1889"
-  integrity sha512-XazXCp9ezY2GLfS37O+LUf6Ni1xYLtrQg+svUi+videi3Aby28d4xRCtrqLvyo3HIWQE5DvNqCPQ8BFbaPZTOA==
+"@inertiajs/progress@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@inertiajs/progress/-/progress-0.2.0.tgz#7d153d2cadb454026bb0b150814296eec4697693"
+  integrity sha512-HeOmcW2k6nmttnCufMzQgOwcDkr/aE6qJKKj2CchqEhWrM2coKdDtv569XnhT+uIARszOc1m2D22dTr711OPrg==
   dependencies:
     nprogress "^0.2.0"
 

@@ -864,9 +864,9 @@
     purgecss "^2.3.0"
 
 "@inertiajs/inertia-vue@^0.4.0":
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/@inertiajs/inertia-vue/-/inertia-vue-0.4.0.tgz#90113dbd6c0f9d1ef03c56f1e1bfb6f0354c5ded"
-  integrity sha512-0agOwpsH4QJM5sTz4gBIRhF2vl7ySWADN1wb0fgCnmkJyCI9OPX2gGqCQz3bCWM28LZL3zjBgxNx35eXslPSdw==
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/@inertiajs/inertia-vue/-/inertia-vue-0.4.1.tgz#3cafcc829cf2b180087ccb58d490c066ba3d3eda"
+  integrity sha512-6Npa1lPWoq15OC2zPNY5+pknq09HVfDdR46JxtHGy/qCskhRlUqqvImm2MQtbzDHlMrSStHm2SYX7q1L865l0Q==
 
 "@inertiajs/inertia@^0.5.0":
   version "0.5.2"

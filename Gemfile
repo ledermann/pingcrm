@@ -3,79 +3,89 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '~> 2.7'
 
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+# Full-stack web application framework. (https://rubyonrails.org)
 gem 'rails', '~> 6.0.2'
-# Use postgresql as the database for Active Record
-gem 'pg', '>= 0.18', '< 2.0'
-# Use Puma as the app server
-gem 'puma', '~> 4.3'
-# Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
-gem 'webpacker', '~> 5'
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.7'
-# Use Active Model has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
 
-# Use Active Storage variant
+# Pg is the Ruby interface to the {PostgreSQL RDBMS}[http://www.postgresql.org/] (https://github.com/ged/ruby-pg)
+gem 'pg', '>= 0.18', '< 2.0'
+
+# Puma is a simple, fast, threaded, and highly concurrent HTTP 1.1 server for Ruby/Rack applications (https://puma.io)
+gem 'puma', '~> 4.3'
+
+# Use webpack to manage app-like JavaScript modules in Rails (https://github.com/rails/webpacker)
+gem 'webpacker', '~> 5'
+
+# Create JSON structures via a Builder-style DSL (https://github.com/rails/jbuilder)
+gem 'jbuilder', '~> 2.7'
+
+# High-level wrapper for processing images for the web with ImageMagick or libvips. (https://github.com/janko/image_processing)
 gem 'image_processing', '~> 1.10'
 
-# Reduces boot times through caching; required in config/boot.rb
+# Boot large ruby/rails apps faster (https://github.com/Shopify/bootsnap)
 gem 'bootsnap', '>= 1.4.2', require: false
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  # Ruby fast debugger - base + CLI (https://github.com/deivid-rodriguez/byebug)
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 
-  # Ruby static code analyzer, based on the community Ruby style guide
+  # Automatic Ruby code style checking tool. (https://github.com/rubocop-hq/rubocop)
   gem 'rubocop', require: false
 
-  # An extension of RuboCop focused on code performance checks.
+  # Automatic performance checking tool for Ruby code. (https://github.com/rubocop-hq/rubocop-performance)
   gem 'rubocop-performance', require: false
 
-  # RuboCop extension focused on enforcing Rails best practices and coding conventions.
+  # Automatic Rails code style checking tool. (https://github.com/rubocop-hq/rubocop-rails)
   gem 'rubocop-rails', require: false
 
-  # A library for setting up Ruby objects as test data
+  # factory_bot_rails provides integration between factory_bot and rails 5.0 or newer (https://github.com/thoughtbot/factory_bot_rails)
   gem 'factory_bot_rails'
 end
 
 group :development do
-  # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
+  # A debugging tool for your Ruby on Rails applications. (https://github.com/rails/web-console)
   gem 'web-console', '>= 3.3.0'
+
+  # Listen to file modifications (https://github.com/guard/listen)
   gem 'listen', '>= 3.0.5', '< 3.3'
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+
+  # Rails application preloader (https://github.com/rails/spring)
   gem 'spring'
+
+  # Makes spring watch files using the listen gem. (https://github.com/jonleighton/spring-watcher-listen)
   gem 'spring-watcher-listen', '~> 2.0.0'
 
-  # Brings Rails named routes to javascript
+  # Brings Rails named routes to javascript (http://github.com/railsware/js-routes)
   gem 'js-routes', require: false
 end
 
 group :test do
-  # Adds support for Capybara system testing and selenium driver
+  # Capybara aims to simplify the process of integration testing Rack applications, such as Rails, Sinatra or Merb (https://github.com/teamcapybara/capybara)
   gem 'capybara', '>= 2.15'
+
+  # The next generation developer focused tool for automated testing of webapps (https://github.com/SeleniumHQ/selenium)
   gem 'selenium-webdriver'
-  # Easy installation and use of web drivers to run system tests with browsers
+
+  # Easy download and use of browser drivers. (https://github.com/titusfortner/webdrivers)
   gem 'webdrivers'
 end
 
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+# Timezone Data for TZInfo (https://tzinfo.github.io)
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-# The Rails adapter for Inertia.js
+# Inertia adapter for Rails (https://github.com/inertiajs/inertia-rails)
 gem 'inertia_rails', '>= 1.2.2'
 
-# A library for generating fake data such as names, addresses, and phone numbers.
+# Easily generate fake data (https://github.com/faker-ruby/faker)
 gem 'faker', require: false
 
-# The ultimate pagination ruby gem
+# The Ultimate Pagination Ruby Gem (https://github.com/ddnexus/pagy)
 gem 'pagy'
 
-# Flexible authentication solution for Rails with Warden
+# Flexible authentication solution for Rails with Warden (https://github.com/heartcombo/devise)
 gem 'devise'
 
-# Optimized JSON
+# A fast JSON parser and serializer. (http://www.ohler.com/oj)
 gem 'oj'
 
-# The authorization Gem for Ruby on Rails
+# Simple authorization solution for Rails. (https://github.com/CanCanCommunity/cancancan)
 gem 'cancancan'

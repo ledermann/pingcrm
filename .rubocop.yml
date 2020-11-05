@@ -4,19 +4,18 @@ require:
 
 AllCops:
   TargetRubyVersion: 2.7
-  NewCops: enable
   Exclude:
-    - db/**/*
     - bin/**/*
+    - coverage/**/*
+    - db/schema.rb
     - log/**/*
     - node_modules/**/*
+    - public/**/*
     - tmp/**/*
     - vendor/**/*
+  EnabledByDefault: true
 
 ### Rails
-
-Rails:
-  Enabled: true
 
 Rails/FilePath:
   EnforcedStyle: arguments
@@ -31,11 +30,8 @@ Bundler/OrderedGems:
 Metrics/AbcSize:
   Max: 35
 
-Metrics/ClassLength:
-  Max: 110
-
 Metrics/BlockLength:
-  Max: 150
+  Max: 140
 
 Metrics/MethodLength:
   Max: 30
@@ -44,7 +40,7 @@ Metrics/MethodLength:
 
 Style/BlockComments:
   Exclude:
-    - "spec/spec_helper.rb"
+    - 'spec/spec_helper.rb'
 
 Style/FrozenStringLiteralComment:
   Enabled: false
@@ -67,6 +63,30 @@ Style/Lambda:
 Style/LambdaCall:
   Enabled: false
 
+Style/MethodCallWithArgsParentheses:
+  Enabled: false
+
+Style/MissingElse:
+  Enabled: false
+
+Style/Copyright:
+  Enabled: false
+
+Style/InlineComment:
+  Enabled: false
+
+Style/StringHashKeys:
+  Enabled: false
+
+Style/MethodCalledOnDoEndBlock:
+  Enabled: false
+
+Style/DocumentationMethod:
+  Enabled: false
+
+Style/DisableCopsWithinSourceCodeDirective:
+  Enabled: false
+
 ### Layout
 
 Layout/DotPosition:
@@ -81,5 +101,31 @@ Layout/SpaceInsideArrayLiteralBrackets:
 Layout/HashAlignment:
   Enabled: false
 
+Layout/MultilineMethodArgumentLineBreaks:
+  Enabled: false
+
+Layout/MultilineArrayLineBreaks:
+  Enabled: false
+
+Layout/MultilineAssignmentLayout:
+  Enabled: false
+
 Layout/LineLength:
-  Max: 165
+  Max: 190
+  IgnoredPatterns: ['\A#'] # Allow long comments
+
+# Lint
+
+Lint/ConstantResolution:
+  Enabled: false
+
+Lint/NumberConversion:
+  Enabled: false
+
+# Performance
+
+Performance/ChainArrayAllocation:
+  Enabled: false
+
+Performance/OpenStruct:
+  Enabled: false

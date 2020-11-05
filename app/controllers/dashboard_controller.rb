@@ -9,7 +9,7 @@ class DashboardController < ApplicationController
     }
   end
 
-  def error_500
+  def example_exception
     raise StandardError, 'This is an example exception'
   end
 end

@@ -5,12 +5,12 @@
 * You can see the styles here:
 * https://github.com/tailwindcss/tailwindcss/blob/master/base.css
 */
-@tailwind base;
+@import "tailwindcss/base";
 
 /**
  * This injects any component classes registered by plugins.
  */
-@tailwind components;
+@import "tailwindcss/components";
 
 /**
  * Here you would add any of your custom component classes; stuff that you'd
@@ -34,7 +34,7 @@
  * This injects all of Tailwind's utility classes, generated based on your
  * config file.
  */
-@tailwind utilities;
+@import "tailwindcss/utilities";
 
 @import "transitions";
 

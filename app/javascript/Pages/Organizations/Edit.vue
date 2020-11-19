@@ -46,7 +46,7 @@
       Contacts
     </h2>
     <div class="mt-6 bg-white rounded shadow overflow-x-auto">
-      <table class="w-full whitespace-no-wrap">
+      <table class="w-full whitespace-nowrap">
         <tr class="text-left font-bold">
           <th class="px-6 pt-6 pb-4">
             Name

@@ -869,9 +869,9 @@
   integrity sha512-0WDo85JcAkxMGuy63q8R4oUHhjzoVLnWGaf+bjlrFhS/lYgNJZjHMC1u8xzW5PBPD5uKtp9qEpPjNYPOsk4xGw==
 
 "@inertiajs/inertia@^0.6.0":
-  version "0.6.2"
-  resolved "https://registry.yarnpkg.com/@inertiajs/inertia/-/inertia-0.6.2.tgz#1031e0728bc7645535a83a369fc9c5e16e523f62"
-  integrity sha512-8of2y/x7QlDxw78Uy2Iu2cb+QzN6oQGqVvJcXvmbtu+cbJF0aahuDIUvLr8zPg0Pp+vWnxx/H7QnyzUEr2o9Kw==
+  version "0.6.3"
+  resolved "https://registry.yarnpkg.com/@inertiajs/inertia/-/inertia-0.6.3.tgz#e8ccab5823478e57cef50e46fc32e341bcdfd40d"
+  integrity sha512-Jak1qqJNZqGK7w2tSfZqGPiArmyxJ5Ks8vOv+T0j3ha3u+pmPIrPIrrUdls6j+euy+/HKp2YxxsVoQ0jN/iA1A==
   dependencies:
     axios "^0.19.0 || ^0.20.0"
     deepmerge "^4.0.0"

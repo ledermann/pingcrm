@@ -50,7 +50,7 @@ class UsersController < ApplicationController
     if @user.update(user_params)
       redirect_to users_path, notice: 'User created.'
     else
-      redirect_to new_user_path, errors: @user.errors
+      redirect_to new_user_path, inertia: { errors: @user.errors }
     end
   end
 
@@ -63,7 +63,7 @@ class UsersController < ApplicationController
     if @user.update(user_params)
       redirect_to edit_user_path(@user), notice: 'User updated.'
     else
-      redirect_to edit_user_path(@user), errors: @user.errors
+      redirect_to edit_user_path(@user), inertia: { errors: @user.errors }
     end
   end
 

@@ -50,7 +50,7 @@ class ContactsController < ApplicationController
     if @contact.update(contact_params)
       redirect_to contacts_path, notice: 'Contact created.'
     else
-      redirect_to new_contact_path, errors: @contact.errors
+      redirect_to new_contact_path, inertia: { errors: @contact.errors }
     end
   end
 
@@ -58,7 +58,7 @@ class ContactsController < ApplicationController
     if @contact.update(contact_params)
       redirect_to edit_contact_path(@contact), notice: 'Contact updated.'
     else
-      redirect_to edit_contact_path(@contact), errors: @contact.errors
+      redirect_to edit_contact_path(@contact), inertia: { errors: @contact.errors }
     end
   end
 

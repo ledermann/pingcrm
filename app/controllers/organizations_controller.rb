@@ -36,7 +36,7 @@ class OrganizationsController < ApplicationController
     if @organization.update(organization_params)
       redirect_to organizations_path, notice: 'Organization created.'
     else
-      redirect_to organizations_path, errors: @organization.errors
+      redirect_to organizations_path, inertia: { errors: @organization.errors }
     end
   end
 
@@ -44,7 +44,7 @@ class OrganizationsController < ApplicationController
     if @organization.update(organization_params)
       redirect_to edit_organization_path(@organization), notice: 'Organization updated.'
     else
-      redirect_to edit_organization_path(@organization), errors: @organization.errors
+      redirect_to edit_organization_path(@organization), inertia: { errors: @organization.errors }
     end
   end
 

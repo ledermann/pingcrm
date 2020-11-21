@@ -4,7 +4,6 @@ class ApplicationController < ActionController::Base
   include Pagy::Backend
 
   include InertiaCsrf
-  include InertiaErrors
   include InertiaFlash
   include InertiaJson
 

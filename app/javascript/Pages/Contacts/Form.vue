@@ -3,19 +3,19 @@
     <div class="p-8 -mr-6 -mb-8 flex flex-wrap">
       <text-input
         v-model="form.first_name"
-        :errors="$page.props.errors.first_name"
+        :errors="errors.first_name"
         class="pr-6 pb-8 w-full lg:w-1/2"
         label="First name"
       />
       <text-input
         v-model="form.last_name"
-        :errors="$page.props.errors.last_name"
+        :errors="errors.last_name"
         class="pr-6 pb-8 w-full lg:w-1/2"
         label="Last name"
       />
       <select-input
         v-model="form.organization_id"
-        :errors="$page.props.errors.organization_id"
+        :errors="errors.organization_id"
         class="pr-6 pb-8 w-full lg:w-1/2"
         label="Organization"
       >
@@ -30,37 +30,37 @@
       </select-input>
       <text-input
         v-model="form.email"
-        :errors="$page.props.errors.email"
+        :errors="errors.email"
         class="pr-6 pb-8 w-full lg:w-1/2"
         label="Email"
       />
       <text-input
         v-model="form.phone"
-        :errors="$page.props.errors.phone"
+        :errors="errors.phone"
         class="pr-6 pb-8 w-full lg:w-1/2"
         label="Phone"
       />
       <text-input
         v-model="form.address"
-        :errors="$page.props.errors.address"
+        :errors="errors.address"
         class="pr-6 pb-8 w-full lg:w-1/2"
         label="Address"
       />
       <text-input
         v-model="form.city"
-        :errors="$page.props.errors.city"
+        :errors="errors.city"
         class="pr-6 pb-8 w-full lg:w-1/2"
         label="City"
       />
       <text-input
         v-model="form.region"
-        :errors="$page.props.errors.region"
+        :errors="errors.region"
         class="pr-6 pb-8 w-full lg:w-1/2"
         label="Province/State"
       />
       <select-input
         v-model="form.country"
-        :errors="$page.props.errors.country"
+        :errors="errors.country"
         class="pr-6 pb-8 w-full lg:w-1/2"
         label="Country"
       >
@@ -74,7 +74,7 @@
       </select-input>
       <text-input
         v-model="form.postal_code"
-        :errors="$page.props.errors.postal_code"
+        :errors="errors.postal_code"
         class="pr-6 pb-8 w-full lg:w-1/2"
         label="Postal code"
       />
@@ -104,6 +104,9 @@ export default {
     },
   },
   computed: {
+    errors() {
+      return this.$page.props.errors || {}
+    },
     form: {
       get() {
         return this.value

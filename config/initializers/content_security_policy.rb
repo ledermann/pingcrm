@@ -19,7 +19,7 @@ Rails.application.config.content_security_policy do |policy|
     # Inertia.js uses inline scripts to display error modal in development
     policy.script_src :self, :unsafe_inline, 'https://polyfill.io'
   else
-    policy.connect_src :self
+    policy.connect_src(*[:self, ENV['MATOMO_HOST']].compact)
     policy.script_src(*[:self, 'https://polyfill.io', ENV['MATOMO_HOST']].compact)
   end
 

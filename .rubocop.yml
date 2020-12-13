@@ -20,6 +20,9 @@ AllCops:
 Rails/FilePath:
   EnforcedStyle: arguments
 
+Rails/SkipsModelValidations:
+  Enabled: false
+
 ### Bundler
 
 Bundler/OrderedGems:

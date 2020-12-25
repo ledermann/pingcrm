@@ -867,9 +867,9 @@
     qs "^6.9.0"
 
 "@inertiajs/progress@^0.2.0":
-  version "0.2.3"
-  resolved "https://registry.yarnpkg.com/@inertiajs/progress/-/progress-0.2.3.tgz#a707dbf498fd8edb05326523a46a3bd3e2e3a05b"
-  integrity sha512-Uk0P0uSWfqHKRpWRwyNvQ90ZvFaXrq2IcS4OMEiSI338LWh1g9hRl2MsiXqaj3zdeOiDv3+7mAEl1yEefQw/bw==
+  version "0.2.4"
+  resolved "https://registry.yarnpkg.com/@inertiajs/progress/-/progress-0.2.4.tgz#1193c7d8e788dc6cab8bbc00383ed9ed8339df72"
+  integrity sha512-FVlxQjA3qxXoSljbhDWpXKdDth0IxovmI9lNJLbvxzpVir7iL5n9MCX7Sx9X+JcKdTKezCbGnc3CXQ92B38wbA==
   dependencies:
     nprogress "^0.2.0"
 

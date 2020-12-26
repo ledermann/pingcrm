@@ -7,7 +7,7 @@
       />
       <form
         class="mt-8 bg-white rounded-lg shadow-xl overflow-hidden"
-        @submit.prevent="submit"
+        @submit.prevent="form.post($routes.user_session())"
       >
         <div class="px-10 py-12">
           <flash-messages />
@@ -17,7 +17,7 @@
           </h1>
           <div class="mx-auto mt-6 w-24 border-b-2" />
           <text-input
-            v-model="form.email"
+            v-model="form.user.email"
             class="mt-10"
             label="Email"
             type="email"
@@ -25,7 +25,7 @@
             autocapitalize="off"
           />
           <text-input
-            v-model="form.password"
+            v-model="form.user.password"
             class="mt-6"
             label="Password"
             type="password"
@@ -36,7 +36,7 @@
           >
             <input
               id="remember"
-              v-model="form.remember_me"
+              v-model="form.user.remember_me"
               class="mr-1"
               type="checkbox"
             >
@@ -50,7 +50,7 @@
             href="#reset-password"
           >Forget password?</a>
           <loading-button
-            :loading="sending"
+            :loading="form.processing"
             class="btn-indigo"
             type="submit"
           >
@@ -80,24 +80,14 @@ export default {
   layout: Layout,
   data() {
     return {
-      sending: false,
-      form: {
-        email: 'johndoe@example.com',
-        password: 'secret',
-        remember_me: null,
-      },
+      form: this.$inertia.form({
+        user: {
+          email: 'johndoe@example.com',
+          password: 'secret',
+          remember_me: null,
+        },
+      }),
     }
-  },
-  methods: {
-    submit() {
-      this.$inertia
-        .post(this.$routes.user_session(), {
-          user: this.form,
-        }, {
-          onStart: () => this.sending = true,
-          onFinish: () => this.sending = false,
-        })
-    },
   },
 }
 </script>

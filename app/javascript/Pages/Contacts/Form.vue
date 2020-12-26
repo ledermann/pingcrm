@@ -2,20 +2,20 @@
   <form @submit.prevent="$emit('submit')">
     <div class="p-8 -mr-6 -mb-8 flex flex-wrap">
       <text-input
-        v-model="form.first_name"
-        :errors="errors.first_name"
+        v-model="form.contact.first_name"
+        :errors="form.errors.first_name"
         class="pr-6 pb-8 w-full lg:w-1/2"
         label="First name"
       />
       <text-input
-        v-model="form.last_name"
-        :errors="errors.last_name"
+        v-model="form.contact.last_name"
+        :errors="form.errors.last_name"
         class="pr-6 pb-8 w-full lg:w-1/2"
         label="Last name"
       />
       <select-input
-        v-model="form.organization_id"
-        :errors="errors.organization_id"
+        v-model="form.contact.organization_id"
+        :errors="form.errors.organization_id"
         class="pr-6 pb-8 w-full lg:w-1/2"
         label="Organization"
       >
@@ -29,38 +29,38 @@
         </option>
       </select-input>
       <text-input
-        v-model="form.email"
-        :errors="errors.email"
+        v-model="form.contact.email"
+        :errors="form.errors.email"
         class="pr-6 pb-8 w-full lg:w-1/2"
         label="Email"
       />
       <text-input
-        v-model="form.phone"
-        :errors="errors.phone"
+        v-model="form.contact.phone"
+        :errors="form.errors.phone"
         class="pr-6 pb-8 w-full lg:w-1/2"
         label="Phone"
       />
       <text-input
-        v-model="form.address"
-        :errors="errors.address"
+        v-model="form.contact.address"
+        :errors="form.errors.address"
         class="pr-6 pb-8 w-full lg:w-1/2"
         label="Address"
       />
       <text-input
-        v-model="form.city"
-        :errors="errors.city"
+        v-model="form.contact.city"
+        :errors="form.errors.city"
         class="pr-6 pb-8 w-full lg:w-1/2"
         label="City"
       />
       <text-input
-        v-model="form.region"
-        :errors="errors.region"
+        v-model="form.contact.region"
+        :errors="form.errors.region"
         class="pr-6 pb-8 w-full lg:w-1/2"
         label="Province/State"
       />
       <select-input
-        v-model="form.country"
-        :errors="errors.country"
+        v-model="form.contact.country"
+        :errors="form.errors.country"
         class="pr-6 pb-8 w-full lg:w-1/2"
         label="Country"
       >
@@ -73,8 +73,8 @@
         </option>
       </select-input>
       <text-input
-        v-model="form.postal_code"
-        :errors="errors.postal_code"
+        v-model="form.contact.postal_code"
+        :errors="form.errors.postal_code"
         class="pr-6 pb-8 w-full lg:w-1/2"
         label="Postal code"
       />
@@ -104,9 +104,6 @@ export default {
     },
   },
   computed: {
-    errors() {
-      return this.$page.props.errors || {}
-    },
     form: {
       get() {
         return this.value

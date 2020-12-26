@@ -12,11 +12,11 @@
     <div class="bg-white rounded shadow overflow-hidden max-w-3xl">
       <user-form
         v-model="form"
-        @submit="submit"
+        @submit="form.post($routes.users())"
       >
         <div class="px-8 py-4 bg-gray-100 border-t border-gray-200 flex justify-end items-center">
           <loading-button
-            :loading="sending"
+            :loading="form.processing"
             class="btn-indigo"
             type="submit"
           >
@@ -49,26 +49,8 @@ export default {
   remember: 'form',
   data() {
     return {
-      sending: false,
-      form: this.user,
+      form: this.$inertia.form(this.user),
     }
-  },
-  methods: {
-    submit() {
-      let data = new FormData()
-      data.append('user[first_name]', this.form.first_name || '')
-      data.append('user[last_name]', this.form.last_name || '')
-      data.append('user[email]', this.form.email || '')
-      data.append('user[password]', this.form.password || '')
-      data.append('user[owner]', this.form.owner ? '1' : '0')
-      data.append('user[photo]', this.form.photo || '')
-
-      this.$inertia
-        .post(this.$routes.users(), data, {
-          onStart: () => this.sending = true,
-          onFinish: () => this.sending = false,
-        })
-    },
   },
 }
 </script>

@@ -21,7 +21,7 @@
       <contact-form
         v-model="form"
         :organizations="organizations"
-        @submit="submit"
+        @submit="form.put($routes.contact(contact.id))"
       >
         <div class="px-8 py-4 bg-gray-100 border-t border-gray-200 flex items-center">
           <button
@@ -34,7 +34,7 @@
             Delete Contact
           </button>
           <loading-button
-            :loading="sending"
+            :loading="form.processing"
             class="btn-indigo ml-auto"
             type="submit"
           >
@@ -78,18 +78,12 @@ export default {
   remember: 'form',
   data() {
     return {
-      sending: false,
-      form: _.omit(this.contact, 'id', 'deleted_at'),
+      form: this.$inertia.form({
+        contact: _.omit(this.contact, 'id', 'deleted_at'),
+      }),
     }
   },
   methods: {
-    submit() {
-      this.$inertia
-        .put(this.$routes.contact(this.contact.id), this.form, {
-          onStart: () => this.sending = true,
-          onFinish: () => this.sending = false,
-        })
-    },
     destroy() {
       if (confirm('Are you sure you want to delete this contact?')) {
         this.$inertia.delete(this.$routes.contact(this.contact.id))

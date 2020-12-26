@@ -13,11 +13,11 @@
       <contact-form
         v-model="form"
         :organizations="organizations"
-        @submit="submit"
+        @submit="form.post($routes.contacts())"
       >
         <div class="px-8 py-4 bg-gray-100 border-t border-gray-200 flex justify-end items-center">
           <loading-button
-            :loading="sending"
+            :loading="form.processing"
             class="btn-indigo"
             type="submit"
           >
@@ -50,18 +50,10 @@ export default {
   remember: 'form',
   data() {
     return {
-      sending: false,
-      form: {},
+      form: this.$inertia.form({
+        contact: {},
+      }),
     }
-  },
-  methods: {
-    submit() {
-      this.$inertia
-        .post(this.$routes.contacts(), this.form, {
-          onStart: () => this.sending = true,
-          onFinish: () => this.sending = false,
-        })
-    },
   },
 }
 </script>

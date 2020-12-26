@@ -20,7 +20,7 @@
     <div class="bg-white rounded shadow overflow-hidden max-w-3xl">
       <organization-form
         v-model="form"
-        @submit="submit"
+        @submit="form.put($routes.organization(organization.id))"
       >
         <div class="px-8 py-4 bg-gray-100 border-t border-gray-200 flex items-center">
           <button
@@ -33,7 +33,7 @@
             Delete Organization
           </button>
           <loading-button
-            :loading="sending"
+            :loading="form.processing"
             class="btn-indigo ml-auto"
             type="submit"
           >
@@ -155,18 +155,12 @@ export default {
   remember: 'form',
   data() {
     return {
-      sending: false,
-      form: _.omit(this.organization, 'id', 'deleted_at'),
+      form: this.$inertia.form({
+        organization: _.omit(this.organization, 'id', 'deleted_at'),
+      }),
     }
   },
   methods: {
-    submit() {
-      this.$inertia
-        .put(this.$routes.organization(this.organization.id), this.form, {
-          onStart: () => this.sending = true,
-          onFinish: () => this.sending = false,
-        })
-    },
     destroy() {
       if (confirm('Are you sure you want to delete this organization?')) {
         this.$inertia.delete(this.$routes.organization(this.organization.id))

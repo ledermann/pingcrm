@@ -44,7 +44,7 @@
             Delete User
           </button>
           <loading-button
-            :loading="sending"
+            :loading="form.processing"
             class="btn-indigo ml-auto"
             type="submit"
           >
@@ -87,33 +87,16 @@ export default {
   remember: 'form',
   data() {
     return {
-      sending: false,
-      form: {
+      form: this.$inertia.form({
         ...this.user,
         photo: null,
-      },
+      }),
     }
   },
   methods: {
     submit() {
-      let data = new FormData()
-      data.append('user[first_name]', this.form.first_name || '')
-      data.append('user[last_name]', this.form.last_name || '')
-      data.append('user[email]', this.form.email || '')
-      data.append('user[password]', this.form.password || '')
-      data.append('user[owner]', this.form.owner ? '1' : '0')
-      data.append('user[photo]', this.form.photo || '')
-      data.append('_method', 'put')
-
-      this.$inertia.post(this.$routes.user(this.user.id), data, {
-        onStart: () => this.sending = true,
-        onFinish: () => {
-          this.sending = false
-          if (!(this.$page.props.errors)) {
-            this.form.photo = null
-            this.form.password = null
-          }
-        },
+      this.form.put(this.$routes.user(this.user.id), {
+        onSuccess: () => this.form.reset('password', 'photo'),
       })
     },
     destroy() {

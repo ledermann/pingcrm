@@ -63,7 +63,7 @@ class User < ApplicationRecord
 
   def photo_is_web_image
     return unless photo.attached?
-    return if photo.content_type.in?(ActiveStorage::Variant::WEB_IMAGE_CONTENT_TYPES)
+    return if photo.content_type.in?(Rails.application.config.active_storage.web_image_content_types)
 
     errors.add(:photo, 'Must be a .JPG, .PNG or .GIF file')
   end

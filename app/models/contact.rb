@@ -10,7 +10,7 @@ class Contact < ApplicationRecord
 
   scope :search, ->(query) do
     if query.present?
-      joins(:organization).
+      left_joins(:organization).
         where("contacts.first_name ILIKE :query OR
                contacts.last_name  ILIKE :query OR
                contacts.email      ILIKE :query OR

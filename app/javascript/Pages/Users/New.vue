@@ -49,7 +49,9 @@ export default {
   remember: 'form',
   data() {
     return {
-      form: this.$inertia.form(this.user),
+      form: this.$inertia.form({
+        user: this.user,
+      }),
     }
   },
 }

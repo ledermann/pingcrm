@@ -8,7 +8,7 @@
         Contacts
       </inertia-link>
       <span class="text-indigo-400 font-medium">/</span>
-      {{ form.first_name }} {{ form.last_name }}
+      {{ form.contact.first_name }} {{ form.contact.last_name }}
     </h1>
     <trashed-message
       v-if="contact.deleted_at"
@@ -56,7 +56,7 @@ import _ from 'lodash'
 export default {
   metaInfo() {
     return {
-      title: `${this.form.first_name} ${this.form.last_name}`,
+      title: `${this.form.contact.first_name} ${this.form.contact.last_name}`,
     }
   },
   components: {

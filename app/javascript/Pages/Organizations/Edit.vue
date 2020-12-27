@@ -8,7 +8,7 @@
         Organizations
       </inertia-link>
       <span class="text-indigo-400 font-medium">/</span>
-      {{ form.name }}
+      {{ form.organization.name }}
     </h1>
     <trashed-message
       v-if="organization.deleted_at"
@@ -133,7 +133,7 @@ import _ from 'lodash'
 
 export default {
   metaInfo() {
-    return { title: this.form.name }
+    return { title: this.form.organization.name }
   },
   components: {
     Icon,

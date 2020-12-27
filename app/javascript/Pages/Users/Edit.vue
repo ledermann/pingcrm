@@ -9,7 +9,7 @@
           Users
         </inertia-link>
         <span class="text-indigo-400 font-medium">/</span>
-        {{ form.first_name }} {{ form.last_name }}
+        {{ form.user.first_name }} {{ form.user.last_name }}
       </h1>
       <img
         v-if="user.photo"
@@ -65,7 +65,7 @@ import TrashedMessage from '@/Shared/TrashedMessage'
 export default {
   metaInfo() {
     return {
-      title: `${this.form.first_name} ${this.form.last_name}`,
+      title: `${this.form.user.first_name} ${this.form.user.last_name}`,
     }
   },
   components: {
@@ -88,8 +88,10 @@ export default {
   data() {
     return {
       form: this.$inertia.form({
-        ...this.user,
-        photo: null,
+        user: {
+          ...this.user,
+          photo: null,
+        },
       }),
     }
   },

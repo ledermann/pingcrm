@@ -858,11 +858,11 @@
   integrity sha512-v+Zh0EKcMd+BHHeVKxdnH1ZKfwWUtDptrLtBg+VT2nYwPLmi9n9pyM1Qq/ed/VfqjLJiWGAnqdUTVkSN55e9pQ==
 
 "@inertiajs/inertia@^0.8.0":
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/@inertiajs/inertia/-/inertia-0.8.0.tgz#205dfbae2c2cd157106278b5791de9a5b5b1eabc"
-  integrity sha512-3I2zD5olMNvV69igfxc12jXv0G6N27n3UtaU6cjwrB8TbR64ku1t3YVRGQa4cyi3jg1cSACLo6uyhL7/W7qIrA==
+  version "0.8.2"
+  resolved "https://registry.yarnpkg.com/@inertiajs/inertia/-/inertia-0.8.2.tgz#a5a90619b22d5778d5f1108cfe37e4b3d68fb152"
+  integrity sha512-eJyKGOtwnt33VJhmJOLF5o8VfkpHHgwKcy9Eww5kHyMq+YG46svDCE/hQR6ESpMlJfxRXT0N+ma1Jog1ASNOXg==
   dependencies:
-    axios "^0.19.0 || ^0.20.0"
+    axios "^0.19.0 || ^0.20.0 || ^0.21.0"
     deepmerge "^4.0.0"
     qs "^6.9.0"
 
@@ -1450,10 +1450,10 @@ aws4@^1.8.0:
   resolved "https://registry.yarnpkg.com/aws4/-/aws4-1.11.0.tgz#d61f46d83b2519250e2784daf5b09479a8b41c59"
   integrity sha512-xh1Rl34h6Fi1DC2WWKfxUTVqRsNnr6LsKz2+hfwDxQJWmrx8+c7ylaqBMcHfl1U1r2dsifOvKX3LQuLNZ+XSvA==
 
-"axios@^0.19.0 || ^0.20.0":
-  version "0.20.0"
-  resolved "https://registry.yarnpkg.com/axios/-/axios-0.20.0.tgz#057ba30f04884694993a8cd07fa394cff11c50bd"
-  integrity sha512-ANA4rr2BDcmmAQLOKft2fufrtuvlqR+cXNNinUmvfeSNCOF98PZL+7M/v1zIdGo7OLjEA9J2gXJL+j4zGsl0bA==
+"axios@^0.19.0 || ^0.20.0 || ^0.21.0":
+  version "0.21.1"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-0.21.1.tgz#22563481962f4d6bde9a76d516ef0e5d3c09b2b8"
+  integrity sha512-dKQiRHxGD9PPRIUNIWvZhPTPpl1rf/OxTYKsqKUDjBwYylTvV7SjSHJb9ratfyzM6wCdLCOYLzs73qpg5c4iGA==
   dependencies:
     follow-redirects "^1.10.0"
 

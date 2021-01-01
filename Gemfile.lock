@@ -109,7 +109,7 @@ GEM
       activesupport (>= 5.0.0)
     js-routes (1.4.13)
       railties (>= 4)
-    listen (3.3.3)
+    listen (3.4.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     loofah (2.8.0)

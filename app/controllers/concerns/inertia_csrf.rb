@@ -10,6 +10,10 @@ module InertiaCsrf
 
   included do
     before_action :set_csrf_cookie
+
+    rescue_from ActionController::InvalidAuthenticityToken do
+      redirect_back fallback_location: '/', notice: 'The page expired, please try again.'
+    end
   end
 
   # Rails uses HTTP_X_CSRF_TOKEN, but axios sends HTTP_X_XSRF_TOKEN (different name, X instead of C)

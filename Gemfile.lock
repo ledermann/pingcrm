@@ -112,7 +112,7 @@ GEM
     listen (3.5.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
-    loofah (2.9.0)
+    loofah (2.9.1)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.7.1)
@@ -250,7 +250,7 @@ GEM
 
 PLATFORMS
   ruby
-  x86_64-linux-musl
+  x86_64-linux
 
 DEPENDENCIES
   bootsnap (>= 1.4.4)

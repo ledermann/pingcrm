@@ -68,7 +68,7 @@ jobs:
         run: |
           export COMMIT_TIME=$(git show -s --format=%ci ${GITHUB_SHA})
           export COMMIT_SHA=${GITHUB_SHA}
-          docker build --build-arg COMMIT_TIME --build-arg COMMIT_SHA -t "docker.pkg.github.com/ledermann/pingcrm/pingcrm:latest" .
+          docker buildx build --build-arg COMMIT_TIME --build-arg COMMIT_SHA -t "docker.pkg.github.com/ledermann/pingcrm/pingcrm:latest" .
 
       - name: Push the production image
         run: docker push "docker.pkg.github.com/ledermann/pingcrm/pingcrm:latest"

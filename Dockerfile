@@ -9,6 +9,9 @@ LABEL maintainer="georg@ledermann.dev"
 # Add Alpine packages
 RUN apk add --no-cache vips
 
+# Workaround to trigger Builder's ONBUILDs to finish:
+COPY --from=Builder /etc/alpine-release /tmp/dummy
+
 USER app
 
 # Start up

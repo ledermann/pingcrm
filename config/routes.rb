@@ -25,7 +25,5 @@ Rails.application.routes.draw do
     end
   end
 
-  get '/error-500' => 'dashboard#example_exception'
-
   root 'dashboard#index'
 end

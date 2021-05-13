@@ -509,9 +509,6 @@ Based on Rails 6.0.3.4 routes of Pingcrm::Application
 // edit_user => /users/:id/edit(.:format)
   // function(id, options)
   edit_user: Utils.route([["id",true],["format",false]], {}, [2,[7,"/",false],[2,[6,"users",false],[2,[7,"/",false],[2,[3,"id",false],[2,[7,"/",false],[2,[6,"edit",false],[1,[2,[8,".",false],[3,"format",false]],false]]]]]]]),
-// error_500 => /error-500(.:format)
-  // function(options)
-  error_500: Utils.route([["format",false]], {}, [2,[7,"/",false],[2,[6,"error-500",false],[1,[2,[8,".",false],[3,"format",false]],false]]]),
 // new_contact => /contacts/new(.:format)
   // function(options)
   new_contact: Utils.route([["format",false]], {}, [2,[7,"/",false],[2,[6,"contacts",false],[2,[7,"/",false],[2,[6,"new",false],[1,[2,[8,".",false],[3,"format",false]],false]]]]]),

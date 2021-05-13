@@ -28,6 +28,9 @@ Rails/SkipsModelValidations:
 Bundler/OrderedGems:
   Enabled: false
 
+Bundler/GemVersion:
+  Enabled: false
+
 ### Metrics
 
 Metrics/AbcSize:
@@ -94,6 +97,9 @@ Style/DisableCopsWithinSourceCodeDirective:
 
 Layout/DotPosition:
   EnforcedStyle: trailing
+
+Layout/SingleLineBlockChain:
+  Enabled: false
 
 Layout/EndAlignment:
   EnforcedStyleAlignWith: variable

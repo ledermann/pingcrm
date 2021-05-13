@@ -1,0 +1,3 @@
+input:focus, input:active, select:focus, select:active, textarea:focus, textarea:active, button:focus, button:active, div:focus, div:active, a:focus, a:active {
+  outline: none;
+}

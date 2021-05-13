@@ -6,6 +6,7 @@
 * https://github.com/tailwindcss/tailwindcss/blob/master/base.css
 */
 @import "tailwindcss/base";
+@import 'reset';
 
 /**
  * This injects any component classes registered by plugins.

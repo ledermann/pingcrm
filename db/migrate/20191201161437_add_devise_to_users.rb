@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class AddDeviseToUsers < ActiveRecord::Migration[6.0]
-  def self.up
+  def up
     remove_column :users, :password
 
     change_table :users, bulk: true do |t|
@@ -20,15 +20,17 @@ class AddDeviseToUsers < ActiveRecord::Migration[6.0]
     add_index :users, :reset_password_token, unique: true
   end
 
-  def self.down
-    remove_index :users, :email
-    remove_index :users, :reset_password_token
+  def down
+    change_table :users, bulk: true do |t|
+      t.remove_index :email
+      t.remove_index :reset_password_token
 
-    remove_column :users, :encrypted_password
-    remove_column :users, :reset_password_sent_at
-    remove_column :users, :reset_password_token
-    remove_column :users, :remember_created_at
+      t.remove_column :encrypted_password
+      t.remove_column :reset_password_sent_at
+      t.remove_column :reset_password_token
+      t.remove_column :remember_created_at
 
-    add_column :users, :password, :string
+      t.add_column :password, :string
+    end
   end
 end

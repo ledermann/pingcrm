@@ -51,7 +51,7 @@ import Layout from '@/Layouts/Main'
 import LoadingButton from '@/Shared/LoadingButton'
 import ContactForm from './Form'
 import TrashedMessage from '@/Shared/TrashedMessage'
-import _ from 'lodash'
+import omit from 'lodash/omit'
 
 export default {
   metaInfo() {
@@ -79,7 +79,7 @@ export default {
   data() {
     return {
       form: this.$inertia.form({
-        contact: _.omit(this.contact, 'id', 'deleted_at'),
+        contact: omit(this.contact, 'id', 'deleted_at'),
       }),
     }
   },

@@ -129,7 +129,7 @@ import Layout from '@/Layouts/Main'
 import LoadingButton from '@/Shared/LoadingButton'
 import OrganizationForm from './Form'
 import TrashedMessage from '@/Shared/TrashedMessage'
-import _ from 'lodash'
+import omit from 'lodash/omit'
 
 export default {
   metaInfo() {
@@ -156,7 +156,7 @@ export default {
   data() {
     return {
       form: this.$inertia.form({
-        organization: _.omit(this.organization, 'id', 'deleted_at'),
+        organization: omit(this.organization, 'id', 'deleted_at'),
       }),
     }
   },

@@ -12,6 +12,12 @@ jobs:
         env:
           POSTGRES_PASSWORD: postgres
 
+    env:
+      DB_HOST: localhost
+      DB_USER: postgres
+      DB_PASSWORD: postgres
+      RAILS_ENV: test
+
     steps:
       - uses: actions/checkout@v2
 
@@ -42,12 +48,10 @@ jobs:
       - name: Lint with ESLint
         run: yarn lint
 
+      - name: Compile assets
+        run: bin/rails assets:precompile webpacker:disable_compile_in_test
+
       - name: Run Tests
-        env:
-          DB_HOST: localhost
-          DB_USER: postgres
-          DB_PASSWORD: postgres
-          RAILS_ENV: test
         run: |
           bundle exec rake db:prepare
           bundle exec rake test

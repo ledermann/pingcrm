@@ -39,7 +39,7 @@ new Vue({
   render: h => h(app, {
     props: {
       initialPage: JSON.parse(el.dataset.page),
-      resolveComponent: name => import(`@/Pages/${name}`).then(module => module.default),
+      resolveComponent: name => require(`../Pages/${name}`).default,
       transformProps: props => {
         if (Vue.matomo.enabled)
           // Wait a bit to allow VueMeta to update the document.title

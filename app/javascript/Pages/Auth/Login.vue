@@ -48,7 +48,7 @@
             class="hover:underline"
             tabindex="-1"
             href="#reset-password"
-          >Forget password?</a>
+          >Forgot password?</a>
           <loading-button
             :loading="form.processing"
             class="btn-indigo"

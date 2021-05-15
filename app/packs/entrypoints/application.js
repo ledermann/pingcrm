@@ -27,7 +27,7 @@ import { InertiaProgress as progress } from '@inertiajs/progress'
 Vue.use(plugin)
 progress.init()
 
-import Routes from '@/utils/routes.js'
+import * as Routes from '@/utils/routes.js'
 Vue.prototype.$routes = Routes
 
 const el = document.getElementById('app')

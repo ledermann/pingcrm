@@ -105,6 +105,7 @@ GEM
       ruby-vips (>= 2.0.17, < 3)
     inertia_rails (1.11.0)
       rails (>= 5)
+    io-wait (0.1.0)
     jbuilder (2.11.2)
       activesupport (>= 5.0.0)
     js-routes (2.0.3)
@@ -128,7 +129,9 @@ GEM
     net-ftp (0.1.2)
       net-protocol
       time
-    net-protocol (0.1.0)
+    net-protocol (0.1.1)
+      io-wait
+      timeout
     nio4r (2.5.7)
     nokogiri (1.11.6)
       mini_portile2 (~> 2.5.0)
@@ -228,6 +231,7 @@ GEM
       sprockets (>= 3.0.0)
     thor (1.1.0)
     time (0.1.0)
+    timeout (0.1.1)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
     unicode-display_width (2.0.0)

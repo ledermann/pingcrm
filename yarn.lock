@@ -923,9 +923,9 @@
     lodash.isequal "^4.5.0"
 
 "@inertiajs/inertia@^0.9.0":
-  version "0.9.0"
-  resolved "https://registry.yarnpkg.com/@inertiajs/inertia/-/inertia-0.9.0.tgz#7442b157e3f0108591e13bf4c06072d170ce8965"
-  integrity sha512-n2jAUgR/Z5v0sYv4cfg15WoEwQ9TzlNlNE4iKQRyHWjmQf9buabDVP8lTaH+zn7US2SVswPamQ0gUBRDHgoPpw==
+  version "0.9.1"
+  resolved "https://registry.yarnpkg.com/@inertiajs/inertia/-/inertia-0.9.1.tgz#9cc687feea8b58e271f207720c2f27388dacafb2"
+  integrity sha512-cLyOQIDeXEgVEAtFixUexB/Ne/lYzdM/T5aeH11wTXJ2m1Prm1/RWMEqjTKCiR1RtMkSAIHAE/WiiGc9k/C+sA==
   dependencies:
     axios "^0.21.1"
     deepmerge "^4.0.0"

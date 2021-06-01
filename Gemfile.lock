@@ -108,7 +108,7 @@ GEM
     io-wait (0.1.0)
     jbuilder (2.11.2)
       activesupport (>= 5.0.0)
-    js-routes (2.0.3)
+    js-routes (2.0.4)
       railties (>= 4)
     listen (3.5.1)
       rb-fsevent (~> 0.10, >= 0.10.3)

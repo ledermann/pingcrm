@@ -128,6 +128,8 @@ GEM
     nokogiri (1.11.7)
       mini_portile2 (~> 2.5.0)
       racc (~> 1.4)
+    nokogiri (1.11.7-x86_64-darwin)
+      racc (~> 1.4)
     nokogiri (1.11.7-x86_64-linux)
       racc (~> 1.4)
     oj (3.11.7)
@@ -250,6 +252,7 @@ GEM
 
 PLATFORMS
   ruby
+  x86_64-darwin-19
   x86_64-linux
 
 DEPENDENCIES
@@ -286,4 +289,4 @@ RUBY VERSION
    ruby 3.0.1p64
 
 BUNDLED WITH
-   2.2.15
+   2.2.21

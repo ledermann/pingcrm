@@ -84,7 +84,7 @@ class ContactsController < ApplicationController
 
   private
 
-  # Never trust parameters from the scary internet, only allow the white list through.
+  # Only allow a list of trusted parameters through.
   def contact_params
     params.fetch(:contact, {}).permit(
       :organization_id, :first_name, :last_name, :email, :phone, :address, :city,

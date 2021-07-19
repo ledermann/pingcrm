@@ -22,9 +22,11 @@ Vue.use(PortalVue)
 import MatomoTracker from '@/utils/matomo-tracker'
 Vue.use(MatomoTracker)
 
-import { app, plugin } from '@inertiajs/inertia-vue'
+import { app, plugin, Head, Link } from '@inertiajs/inertia-vue'
 import { InertiaProgress as progress } from '@inertiajs/progress'
 Vue.use(plugin)
+Vue.component('InertiaHead', Head)
+Vue.component('InertiaLink', Link)
 progress.init()
 
 import * as Routes from '@/utils/routes.js'

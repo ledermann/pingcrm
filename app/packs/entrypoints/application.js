@@ -22,35 +22,33 @@ Vue.use(PortalVue)
 import MatomoTracker from '@/utils/matomo-tracker'
 Vue.use(MatomoTracker)
 
-import { app, plugin, Head, Link } from '@inertiajs/inertia-vue'
-import { InertiaProgress as progress } from '@inertiajs/progress'
-Vue.use(plugin)
+import { createInertiaApp } from '@inertiajs/inertia-vue'
+import { Head, Link } from '@inertiajs/inertia-vue'
+import { InertiaProgress } from '@inertiajs/progress'
 Vue.component('InertiaHead', Head)
 Vue.component('InertiaLink', Link)
-progress.init()
+InertiaProgress.init()
 
 import * as Routes from '@/utils/routes.js'
 Vue.prototype.$routes = Routes
 
-const el = document.getElementById('app')
+createInertiaApp({
+  resolve: name => import(`@/Pages/${name}`).then(({ default: component }) => {
+    if (Vue.matomo.enabled)
+      // Wait a bit to allow VueMeta to update the document.title
+      setTimeout(() => {
+        Vue.matomo.trackPageView()
+      }, 100)
 
-new Vue({
-  metaInfo: {
-    titleTemplate: (title) => title ? `${title} - PingCRM` : 'PingCRM',
-  },
-  render: h => h(app, {
-    props: {
-      initialPage: JSON.parse(el.dataset.page),
-      resolveComponent: name => require(`../Pages/${name}`).default,
-      transformProps: props => {
-        if (Vue.matomo.enabled)
-          // Wait a bit to allow VueMeta to update the document.title
-          setTimeout(() => {
-            Vue.matomo.trackPageView()
-          }, 100)
-
-        return props
-      },
-    },
+    return component
   }),
-}).$mount(el)
+
+  setup({ el, app, props }) {
+    new Vue({
+      metaInfo: {
+        titleTemplate: (title) => title ? `${title} - PingCRM` : 'PingCRM',
+      },
+      render: h => h(app, props),
+    }).$mount(el)
+  },
+})

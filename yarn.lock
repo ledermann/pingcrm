@@ -971,10 +971,10 @@
   resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.9.2.tgz#adea7b6953cbb34651766b0548468e743c6a2353"
   integrity sha512-VZMYa7+fXHdwIq1TDhSXoVmSPEGM/aa+6Aiq3nVVJ9bXr24zScr+NlKFKC3iPljA7ho/GAZr+d2jOf5GIRC30Q==
 
-"@rails/webpacker@6.0.0-beta.7":
-  version "6.0.0-beta.7"
-  resolved "https://registry.yarnpkg.com/@rails/webpacker/-/webpacker-6.0.0-beta.7.tgz#5deaadc5bf962c5e031e6d038bbb5d4a591c07a6"
-  integrity sha512-ZnKSixM+XKKTjRBL5mR5b2ZZVtqYGdPP5MAn4d8aehTApu51w8DIFV+9dC4WI59mIjAOsc2411rNvkX/eLX5XQ==
+"@rails/webpacker@6.0.0-pre.2":
+  version "6.0.0-pre.2"
+  resolved "https://registry.yarnpkg.com/@rails/webpacker/-/webpacker-6.0.0-pre.2.tgz#84fa0ac06b5c15b0811830bdd801176bf8ef3330"
+  integrity sha512-VxUaYiNOKAdBZ2TJF5VdQZ/iPZcfR2/Zh9eTg40rLc6XRwAo4P4RyxE59a0TnGxgxYG5Tl3kGahAPCIgikvj0w==
   dependencies:
     "@babel/core" "^7.12.9"
     "@babel/plugin-proposal-class-properties" "^7.12.1"

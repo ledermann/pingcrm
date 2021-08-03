@@ -929,10 +929,10 @@
     lodash.clonedeep "^4.5.0"
     lodash.isequal "^4.5.0"
 
-"@inertiajs/inertia@^0.10.0":
-  version "0.10.0"
-  resolved "https://registry.yarnpkg.com/@inertiajs/inertia/-/inertia-0.10.0.tgz#ed3cfbac025ec8b987e0ad3f6001b00316a723de"
-  integrity sha512-WGjVOeY4UENv2IVe921pTZFqH3VR5bqucjWoK2ES4w9wILr/YroMx2npkLHyL9LHiBeVWZBX3YJlv22fhFQ5nw==
+"@inertiajs/inertia@^0.10.1":
+  version "0.10.1"
+  resolved "https://registry.yarnpkg.com/@inertiajs/inertia/-/inertia-0.10.1.tgz#8e415fd506c3ce5dbf8d206e1486ddee911cb46f"
+  integrity sha512-Ntyaerh07QnpIOxC+qsteUZ9OGVWfogpg3fCkSxciaX6AZyYLT6t7IFPkefPShb9LC2G4Woh1hel4t/pMr2vRQ==
   dependencies:
     axios "^0.21.1"
     deepmerge "^4.0.0"

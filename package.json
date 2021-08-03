@@ -5,7 +5,7 @@
     "lint": "eslint --ext .js,.vue ."
   },
   "dependencies": {
-    "@inertiajs/inertia": "^0.10.0",
+    "@inertiajs/inertia": "^0.10.1",
     "@inertiajs/inertia-vue": "^0.7.1",
     "@inertiajs/progress": "^0.2.5",
     "@popperjs/core": "^2.9.2",

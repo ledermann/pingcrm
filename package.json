@@ -6,7 +6,7 @@
   },
   "dependencies": {
     "@inertiajs/inertia": "^0.10.1",
-    "@inertiajs/inertia-vue": "^0.7.1",
+    "@inertiajs/inertia-vue": "^0.7.2",
     "@inertiajs/progress": "^0.2.5",
     "@popperjs/core": "^2.9.2",
     "@rails/webpacker": "6.0.0-beta.7",

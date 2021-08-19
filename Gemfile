@@ -13,7 +13,7 @@ gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 5.0'
 
 # Use webpack to manage app-like JavaScript modules in Rails (https://github.com/rails/webpacker)
-gem 'webpacker', '6.0.0.beta.7'
+gem 'webpacker', '6.0.0.rc.1'
 
 # Create JSON structures via a Builder-style DSL (https://github.com/rails/jbuilder)
 gem 'jbuilder', '~> 2.7'

@@ -14,7 +14,7 @@
     <%= csp_meta_tag %>
 
     <link rel="manifest" href="/site.webmanifest" >
-    <link rel="icon" type="image/png" href="<%= asset_pack_url('media/images/favicon.png') %>">
+    <link rel="icon" type="image/png" href="<%= asset_pack_url('static/favicon.png') %>">
 
     <%= stylesheet_pack_tag 'application' %>
 
@@ -24,7 +24,7 @@
     <!-- PingCRM -->
     <%= javascript_include_tag "https://polyfill.io/v3/polyfill.min.js?features=String.prototype.startsWith", defer: true %>
 
-    <%= javascript_pack_tag 'application', defer: true %>
+    <%= javascript_pack_tag 'application' %>
   </head>
 
   <body class="font-sans leading-none text-gray-800 antialiased">

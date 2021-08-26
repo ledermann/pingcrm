@@ -9,7 +9,7 @@
     "@inertiajs/inertia-vue": "^0.7.2",
     "@inertiajs/progress": "^0.2.5",
     "@popperjs/core": "^2.9.3",
-    "@rails/webpacker": "6.0.0-rc.5",
+    "@rails/webpacker": "^6.0.0-rc.5",
     "autoprefixer": "^10.3.2",
     "css-loader": "^6.1.0",
     "css-minimizer-webpack-plugin": "^3.0.2",
@@ -18,6 +18,7 @@
     "portal-vue": "^2.1.7",
     "postcss": "^8.3.5",
     "postcss-loader": "^6.1.0",
+    "style-loader": "^3.2.1",
     "tailwindcss": "^2.2.4",
     "timeago.js": "^4.0.2",
     "vue": "^2.6.14",
@@ -30,7 +31,7 @@
     "babel-eslint": "^10.1.0",
     "eslint": "^7.32.0",
     "eslint-plugin-vue": "^7.16.0",
-    "webpack-dev-server": "^3.11.2"
+    "webpack-dev-server": "^4.0.0"
   },
   "babel": {
     "presets": [

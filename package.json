@@ -14,7 +14,7 @@
     "css-loader": "^6.1.0",
     "css-minimizer-webpack-plugin": "^3.0.2",
     "lodash": "^4.17.21",
-    "mini-css-extract-plugin": "^2.2.0",
+    "mini-css-extract-plugin": "^2.2.1",
     "portal-vue": "^2.1.7",
     "postcss": "^8.3.5",
     "postcss-loader": "^6.1.0",

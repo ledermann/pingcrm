@@ -18,7 +18,7 @@
     "portal-vue": "^2.1.7",
     "postcss": "^8.3.5",
     "postcss-loader": "^6.1.0",
-    "style-loader": "^3.2.1",
+    "style-loader": "^3.3.0",
     "tailwindcss": "^2.2.15",
     "timeago.js": "^4.0.2",
     "vue": "^2.6.14",

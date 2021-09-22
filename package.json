@@ -10,7 +10,7 @@
     "@inertiajs/progress": "^0.2.5",
     "@popperjs/core": "^2.10.1",
     "@rails/webpacker": "^6.0.0-rc.5",
-    "autoprefixer": "^10.3.4",
+    "autoprefixer": "^10.3.5",
     "css-loader": "^6.3.0",
     "css-minimizer-webpack-plugin": "^3.0.2",
     "lodash": "^4.17.21",

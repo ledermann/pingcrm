@@ -19,7 +19,7 @@
     "postcss": "^8.3.8",
     "postcss-loader": "^6.1.0",
     "style-loader": "^3.3.0",
-    "tailwindcss": "^2.2.15",
+    "tailwindcss": "^2.2.16",
     "timeago.js": "^4.0.2",
     "vue": "^2.6.14",
     "vue-loader": "^15.9.8",

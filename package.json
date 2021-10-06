@@ -30,7 +30,7 @@
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "eslint": "^7.32.0",
-    "eslint-plugin-vue": "^7.19.0",
+    "eslint-plugin-vue": "^7.19.1",
     "webpack-dev-server": "^4.3.1"
   },
   "babel": {

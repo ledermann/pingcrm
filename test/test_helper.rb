@@ -12,7 +12,7 @@ class ActiveSupport::TestCase
   include FactoryBot::Syntax::Methods
 
   teardown do
-    messages = page.driver.browser.manage.logs.get(:browser).map do |log|
+    messages = page.driver.browser.logs.get(:browser).map do |log|
       "[#{log.level}] #{log.message}"
     end
 

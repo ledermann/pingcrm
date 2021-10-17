@@ -4,12 +4,10 @@
 # Customize only what you really need and notice that Pagy works also without any of the following lines.
 # Should you just cherry pick part of this file, please maintain the require-order of the extras
 
-
 # Pagy Variables
 # See https://ddnexus.github.io/pagy/api/pagy#variables
 # All the Pagy::DEFAULT are set for all the Pagy instances but can be overridden
 # per instance by just passing them to Pagy.new or the #pagy controller method
-
 
 # Instance variables
 # See https://ddnexus.github.io/pagy/api/pagy#instance-variables
@@ -28,10 +26,8 @@ Pagy::DEFAULT[:items] = 10
 # Pagy::DEFAULT[:i18n_key]   = 'pagy.item_name'                # default
 # Pagy::DEFAULT[:cycle]      = true                            # example
 
-
 # Extras
 # See https://ddnexus.github.io/pagy/extras
-
 
 # Backend Extras
 
@@ -84,7 +80,6 @@ Pagy::DEFAULT[:metadata] = [:scaffold_url, :count, :page, :prev, :next, :last, :
 # uncomment if you are going to use Searchkick.pagy_search
 # Searchkick.extend Pagy::Searchkick
 
-
 # Frontend Extras
 
 # Bootstrap extra: Add nav, nav_js and combo_nav_js helpers and templates for Bootstrap pagination
@@ -121,7 +116,6 @@ Pagy::DEFAULT[:metadata] = [:scaffold_url, :count, :page, :prev, :next, :last, :
 # See https://ddnexus.github.io/pagy/extras/navs#steps
 # Pagy::DEFAULT[:steps] = { 0 => [2,3,3,2], 540 => [3,5,5,3], 720 => [5,7,7,5] }   # example
 
-
 # Feature Extras
 
 # Gearbox extra: Automatically change the number of items per page depending on the page number
@@ -154,14 +148,12 @@ Pagy::DEFAULT[:metadata] = [:scaffold_url, :count, :page, :prev, :next, :last, :
 # set to false only if you want to make :trim_extra an opt-in variable
 # Pagy::DEFAULT[:trim_extra] = false # default true
 
-
 # Rails
 
 # Rails: extras assets path required by the helpers that use javascript
 # (pagy*_nav_js, pagy*_combo_nav_js, and pagy_items_selector_js)
 # See https://ddnexus.github.io/pagy/extras#javascript
 # Rails.application.config.assets.paths << Pagy.root.join('javascripts')
-
 
 # I18n
 
@@ -192,7 +184,6 @@ Pagy::DEFAULT[:metadata] = [:scaffold_url, :count, :page, :prev, :next, :last, :
 #                  filepath: 'path/to/pagy-xyz.yml',
 #                  pluralize: lambda{ |count| ... } )
 
-
 # I18n extra: uses the standard i18n gem which is ~18x slower using ~10x more memory
 # than the default pagy internal i18n (see above)
 # See https://ddnexus.github.io/pagy/extras/i18n
@@ -200,7 +191,6 @@ Pagy::DEFAULT[:metadata] = [:scaffold_url, :count, :page, :prev, :next, :last, :
 
 # Default i18n key
 # Pagy::DEFAULT[:i18n_key] = 'pagy.item_name'   # default
-
 
 # When you are done setting your own defaults freeze it,
 # so it will not changed accidentally

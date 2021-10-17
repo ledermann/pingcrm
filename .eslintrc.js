@@ -22,6 +22,6 @@ module.exports = {
     'comma-dangle': ['warn', 'always-multiline'],
   },
   parserOptions: {
-    parser: 'babel-eslint',
+    parser: '@babel/eslint-parser',
   },
 }

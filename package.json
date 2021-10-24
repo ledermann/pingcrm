@@ -29,7 +29,7 @@
   "version": "0.1.0",
   "devDependencies": {
     "@babel/eslint-parser": "^7.15.8",
-    "eslint": "^8.0.1",
+    "eslint": "^8.1.0",
     "eslint-plugin-vue": "^7.20.0",
     "webpack-dev-server": "^4.3.1"
   },

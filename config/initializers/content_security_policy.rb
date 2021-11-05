@@ -17,10 +17,10 @@ Rails.application.config.content_security_policy do |policy|
     policy.connect_src :self, 'http://localhost:3035', 'ws://localhost:3035'
 
     # Inertia.js uses inline scripts to display error modal in development
-    policy.script_src :self, :unsafe_inline, 'https://polyfill.io'
+    policy.script_src :self, :unsafe_inline
   else
     policy.connect_src(*[:self, ENV['MATOMO_HOST']].compact)
-    policy.script_src(*[:self, 'https://polyfill.io', ENV['MATOMO_HOST']].compact)
+    policy.script_src(*[:self, ENV['MATOMO_HOST']].compact)
   end
 
   # @inertiajs/progress uses inline styles

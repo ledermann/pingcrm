@@ -43,7 +43,7 @@ module.exports = {
     './app/**/*.html.erb',
     './app/**/*.vue',
     './app/helpers/**/*.rb',
-    './app/packs/**/*.js',
+    './app/javascript/**/*.js',
   ],
   plugins: [
   ],

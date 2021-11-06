@@ -6,7 +6,7 @@ const customConfig = {
   resolve: {
     extensions: ['.css', '.vue'],
     alias: {
-      '@': path.resolve('app/packs'),
+      '@': path.resolve('app/javascript'),
     },
   },
 }

@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
-# Pagy initializer file (5.0.0)
+# Pagy initializer file (5.3.0)
 # Customize only what you really need and notice that Pagy works also without any of the following lines.
 # Should you just cherry pick part of this file, please maintain the require-order of the extras
 
-# Pagy Variables
+# Pagy DEFAULT Variables
 # See https://ddnexus.github.io/pagy/api/pagy#variables
-# All the Pagy::DEFAULT are set for all the Pagy instances but can be overridden
-# per instance by just passing them to Pagy.new or the #pagy controller method
+# All the Pagy::DEFAULT are set for all the Pagy instances but can be overridden per instance
+# by just passing them to Pagy.new|Pagy::Countless.new|Pagy::Calendar.new or the #pagy controller method
 
 # Instance variables
 # See https://ddnexus.github.io/pagy/api/pagy#instance-variables
@@ -20,6 +20,7 @@ Pagy::DEFAULT[:items] = 10
 # See https://ddnexus.github.io/pagy/api/pagy#other-variables
 # Pagy::DEFAULT[:size]       = [1,4,4,1]                       # default
 # Pagy::DEFAULT[:page_param] = :page                           # default
+# The :params can be also set as a lambda e.g ->(params){ params.exclude('useless').merge!('custom' => 'useful') }
 # Pagy::DEFAULT[:params]     = {}                              # default
 # Pagy::DEFAULT[:fragment]   = '#fragment'                     # example
 # Pagy::DEFAULT[:link_extra] = 'data-remote="true"'            # example
@@ -34,6 +35,18 @@ Pagy::DEFAULT[:items] = 10
 # Array extra: Paginate arrays efficiently, avoiding expensive array-wrapping and without overriding
 # See https://ddnexus.github.io/pagy/extras/array
 # require 'pagy/extras/array'
+
+# Calendar extra: Paginate a collection by calendar Time unit (year, month, week or day)
+# See https://ddnexus.github.io/pagy/extras/calendar
+# require 'pagy/extras/calendar'
+# Pagy::DEFAULT[:local_minmax] = []          # Min and max local Time period must be set by the user (better not not as default)
+# Pagy::DEFAULT[:unit]         = :month      # Time unit allowed %i[year month week day]
+# Pagy::DEFAULT[:week_offset]  = 0           # Day offset from Sunday (0: Sunday; 1: Monday;... 6: Saturday)
+# Pagy::DEFAULT[:order]         = :asc        # Time direction of pagination
+# Pagy::DEFAULT[:year_format]  = '%Y'        # strftime format for :year unit
+# Pagy::DEFAULT[:month_format] = '%Y-%m'     # strftime format for :month unit
+# Pagy::DEFAULT[:week_format]  = '%Y-%W'     # strftime format for :week unit
+# Pagy::DEFAULT[:day_format]   = '%Y-%m-%d'  # strftime format for :day unit
 
 # Countless extra: Paginate without any count, saving one query per rendering
 # See https://ddnexus.github.io/pagy/extras/countless
@@ -64,11 +77,11 @@ Pagy::DEFAULT[:items] = 10
 
 # Metadata extra: Provides the pagination metadata to Javascript frameworks like Vue.js, react.js, etc.
 # See https://ddnexus.github.io/pagy/extras/metadata
-# you must require the shared internal extra (BEFORE the metadata extra) ONLY if you need also the :sequels
-require 'pagy/extras/shared'
+# you must require the frontend_helpers internal extra (BEFORE the metadata extra) ONLY if you need also the :sequels
+require 'pagy/extras/frontend_helpers'
 require 'pagy/extras/metadata'
 # For performance reason, you should explicitly set ONLY the metadata you use in the frontend
-# Pagy::DEFAULT[:metadata] = [:scaffold_url, :count, :page, :prev, :next, :last]    # example
+# Pagy::DEFAULT[:metadata] = %i[scaffold_url count page prev next last]   # example
 Pagy::DEFAULT[:metadata] = [:scaffold_url, :count, :page, :prev, :next, :last, :sequels]
 
 # Searchkick extra: Paginate `Searchkick::Results` objects
@@ -147,6 +160,11 @@ Pagy::DEFAULT[:metadata] = [:scaffold_url, :count, :page, :prev, :next, :last, :
 # require 'pagy/extras/trim'
 # set to false only if you want to make :trim_extra an opt-in variable
 # Pagy::DEFAULT[:trim_extra] = false # default true
+
+# Standalone extra: Use pagy in non Rack environment/gem
+# See https://ddnexus.github.io/pagy/extras/standalone
+# require 'pagy/extras/standalone'
+# Pagy::DEFAULT[:url] = 'http://www.example.com/subdir'  # optional default
 
 # Rails
 

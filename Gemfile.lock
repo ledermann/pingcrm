@@ -97,7 +97,7 @@ GEM
     faker (2.19.0)
       i18n (>= 1.6, < 2)
     ffi (1.15.4)
-    globalid (0.6.0)
+    globalid (1.0.0)
       activesupport (>= 5.0)
     i18n (1.8.11)
       concurrent-ruby (~> 1.0)

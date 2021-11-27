@@ -17,7 +17,7 @@
     "mini-css-extract-plugin": "^2.4.5",
     "portal-vue": "^2.1.7",
     "postcss": "^8.4.1",
-    "postcss-loader": "^6.2.0",
+    "postcss-loader": "^6.2.1",
     "style-loader": "^3.3.1",
     "tailwindcss": "^2.2.19",
     "timeago.js": "^4.0.2",

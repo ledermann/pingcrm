@@ -1,55 +1,16 @@
-/**
-* This injects Tailwind's base styles, which is a combination of
-* Normalize.css and some additional base styles.
-*
-* You can see the styles here:
-* https://github.com/tailwindcss/tailwindcss/blob/master/base.css
-*/
-@import "tailwindcss/base";
-@import 'reset';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-/**
- * This injects any component classes registered by plugins.
- */
-@import "tailwindcss/components";
+@layer utilities {
+  .btn-indigo {
+    @apply px-6 py-3 rounded bg-indigo-600 text-white text-sm font-bold whitespace-nowrap;
+  }
+  .btn-indigo:hover, .btn-indigo:focus {
+    @apply bg-orange-500;
+  }
+}
 
-/**
- * Here you would add any of your custom component classes; stuff that you'd
- * want loaded *before* the utilities so that the utilities could still
- * override them.
- *
- * Example:
- *
- * .btn { ... }
- * .form-input { ... }
- *
- * Or if using a preprocessor or `postcss-import`:
- *
- * @import "components/buttons";
- * @import "components/forms";
- */
-@import "buttons";
 @import "form";
-
-/**
- * This injects all of Tailwind's utility classes, generated based on your
- * config file.
- */
-@import "tailwindcss/utilities";
-
+@import "buttons";
 @import "transitions";
-
-/**
- * Here you would add any custom utilities you need that don't come out of the
- * box with Tailwind.
- *
- * Example :
- *
- * .bg-pattern-graph-paper { ... }
- * .skew-45 { ... }
- *
- * Or if using a preprocessor or `postcss-import`:
- *
- * @import "utilities/background-patterns";
- * @import "utilities/skew-transforms";
- */

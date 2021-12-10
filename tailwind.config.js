@@ -1,8 +1,6 @@
 const colors = require('tailwindcss/colors')
 
 module.exports = {
-  mode: 'jit', // https://tailwindcss.com/docs/just-in-time-mode
-  darkMode: false, // or 'media' or 'class'
   theme: {
     colors: {
       transparent: 'transparent',
@@ -13,7 +11,7 @@ module.exports = {
       orange: colors.orange,
       yellow: colors.yellow,
       green: colors.green,
-      gray: colors.blueGray,
+      gray: colors.slate,
       indigo: {
         100: '#e6e8ff',
         300: '#b2b7ff',
@@ -34,12 +32,7 @@ module.exports = {
       fill: theme => theme('colors'),
     },
   },
-  variants: {
-    extend: {
-      fill: ['focus', 'group-hover'],
-    },
-  },
-  purge: [
+  content: [
     './app/**/*.html.erb',
     './app/**/*.vue',
     './app/helpers/**/*.rb',

@@ -16,7 +16,7 @@
     "lodash": "^4.17.21",
     "mini-css-extract-plugin": "^2.4.5",
     "portal-vue": "^2.1.7",
-    "postcss": "^8.4.4",
+    "postcss": "^8.4.5",
     "postcss-loader": "^6.2.1",
     "style-loader": "^3.3.1",
     "tailwindcss": "^3.0.1",

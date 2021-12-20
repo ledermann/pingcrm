@@ -106,7 +106,7 @@ GEM
       ruby-vips (>= 2.0.17, < 3)
     inertia_rails (1.11.1)
       rails (>= 5)
-    jbuilder (2.11.3)
+    jbuilder (2.11.4)
       activesupport (>= 5.0.0)
     js-routes (2.1.2)
       railties (>= 4)

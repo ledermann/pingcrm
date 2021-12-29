@@ -23,6 +23,9 @@ Rails/FilePath:
 Rails/SkipsModelValidations:
   Enabled: false
 
+Rails/SchemaComment:
+  Enabled: false
+
 ### Bundler
 
 Bundler/OrderedGems:

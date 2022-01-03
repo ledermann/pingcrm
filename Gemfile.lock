@@ -108,7 +108,7 @@ GEM
       ruby-vips (>= 2.0.17, < 3)
     inertia_rails (1.11.1)
       rails (>= 5)
-    io-console (0.5.9)
+    io-console (0.5.11)
     irb (1.4.1)
       reline (>= 0.3.0)
     jbuilder (2.11.5)

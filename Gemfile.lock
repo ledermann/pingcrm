@@ -96,7 +96,7 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
-    digest (3.0.0)
+    digest (3.1.0)
     erubi (1.10.0)
     factory_bot (6.2.0)
       activesupport (>= 5.0.0)
@@ -116,7 +116,7 @@ GEM
     inertia_rails (1.11.1)
       rails (>= 5)
     io-console (0.5.11)
-    io-wait (0.2.0)
+    io-wait (0.2.1)
     irb (1.4.1)
       reline (>= 0.3.0)
     jbuilder (2.11.5)
@@ -304,4 +304,4 @@ RUBY VERSION
    ruby 3.0.3p157
 
 BUNDLED WITH
-   2.2.32
+   2.3.4

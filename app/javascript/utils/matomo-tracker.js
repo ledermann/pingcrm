@@ -15,12 +15,12 @@ class MatomoTracker {
     window._paq.push(['setSiteId', this.matomoId])
 
     // Create a script element and insert it in the DOM
-    let pa = document.createElement('script')
+    const pa = document.createElement('script')
     pa.type = 'text/javascript'
     pa.defer = true
     pa.async = true
     pa.src = this.matomoUrl
-    let firstScript = document.getElementsByTagName('script')[0]
+    const firstScript = document.getElementsByTagName('script')[0]
     firstScript.parentNode.insertBefore(pa, firstScript)
   }
 
@@ -42,7 +42,7 @@ class MatomoTracker {
   }
 
   get matomoUrl() {
-    return '//' + this.matomoHost + '/js/'
+    return `//${this.matomoHost}/js/`
   }
 
   get enabled() {

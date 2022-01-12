@@ -27,7 +27,7 @@ module.exports = {
         DEFAULT: theme('colors.gray.200', 'currentColor'),
       }),
       boxShadow: theme => ({
-        outline: '0 0 0 2px ' + theme('colors.indigo.500'),
+        outline: `0 0 0 2px ${theme('colors.indigo.500')}`,
       }),
       fill: theme => theme('colors'),
     },

@@ -43,7 +43,9 @@ createInertiaApp({
     return component
   }),
 
-  setup({ el, app, props }) {
+  setup({ el, app, props, plugin }) {
+    Vue.use(plugin)
+
     new Vue({
       metaInfo: {
         titleTemplate: (title) => title ? `${title} - PingCRM` : 'PingCRM',

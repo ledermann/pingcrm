@@ -5,8 +5,8 @@
     "lint": "eslint --ext .js,.vue ."
   },
   "dependencies": {
-    "@inertiajs/inertia": "^0.10.1",
-    "@inertiajs/inertia-vue": "^0.7.2",
+    "@inertiajs/inertia": "^0.11.0",
+    "@inertiajs/inertia-vue": "^0.8.0",
     "@inertiajs/progress": "^0.2.7",
     "@popperjs/core": "^2.11.2",
     "@rails/webpacker": "^6.0.0-rc.6",

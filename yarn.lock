@@ -3917,11 +3917,6 @@ prelude-ls@^1.2.1:
   resolved "https://registry.yarnpkg.com/prelude-ls/-/prelude-ls-1.2.1.tgz#debc6489d7a6e6b0e7611888cec880337d316396"
   integrity sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==
 
-prettier-plugin-tailwindcss@^0.1.7:
-  version "0.1.7"
-  resolved "https://registry.yarnpkg.com/prettier-plugin-tailwindcss/-/prettier-plugin-tailwindcss-0.1.7.tgz#f51de7b7bbabaa0724d3aff7a62957e5aa873482"
-  integrity sha512-tmBr45hCLuit2Cz9Pwow0/Jl1bGivYGsfcF29O+3sKcE++ybjz9dfie565S3ZsvAeV8uYer9SRMBWDsHPly2Lg==
-
 "prettier@^1.18.2 || ^2.0.0":
   version "2.5.1"
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.5.1.tgz#fff75fa9d519c54cf0fce328c1017d94546bc56a"
@@ -4480,10 +4475,10 @@ svgo@^2.7.0:
     picocolors "^1.0.0"
     stable "^0.1.8"
 
-tailwindcss@^3.0.20:
-  version "3.0.20"
-  resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-3.0.20.tgz#e2b96f9c99ef68e1c9101d115673f6005cf56643"
-  integrity sha512-Mdo5XMsEkHhZNgh8NzXOEwI9L4WAS9NnnhCWbWWhVDaNZ1bqcHvbybosbmW6CetrCuCgMtDeByQq4trSka7irQ==
+tailwindcss@^3.0.21:
+  version "3.0.21"
+  resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-3.0.21.tgz#2b3f2aa579bc8bb91165af9d23f69c5e7bdfab03"
+  integrity sha512-PGTiaBu/K4QlzjKlLgtz6nVYlrmhy6INPMKYb6RHX18/VXwygFbRdAlJGl2NfXabTQOP62ttKwjQviWLKQuWrA==
   dependencies:
     arg "^5.0.1"
     chalk "^4.1.2"
@@ -4503,7 +4498,6 @@ tailwindcss@^3.0.20:
     postcss-nested "5.0.6"
     postcss-selector-parser "^6.0.9"
     postcss-value-parser "^4.2.0"
-    prettier-plugin-tailwindcss "^0.1.7"
     quick-lru "^5.1.1"
     resolve "^1.22.0"
 

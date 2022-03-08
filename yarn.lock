@@ -1925,13 +1925,13 @@ css-declaration-sorter@^6.0.3:
   dependencies:
     timsort "^0.3.0"
 
-css-loader@^6.6.0:
-  version "6.6.0"
-  resolved "https://registry.yarnpkg.com/css-loader/-/css-loader-6.6.0.tgz#c792ad5510bd1712618b49381bd0310574fafbd3"
-  integrity sha512-FK7H2lisOixPT406s5gZM1S3l8GrfhEBT3ZiL2UX1Ng1XWs0y2GPllz/OTyvbaHe12VgQrIXIzuEGVlbUhodqg==
+css-loader@^6.7.0:
+  version "6.7.0"
+  resolved "https://registry.yarnpkg.com/css-loader/-/css-loader-6.7.0.tgz#c1200da1dfffe6643b18bda20fdd84cad3e36d39"
+  integrity sha512-S7HCfCiDHLA+VXKqdZwyRZgoO0R9BnKDnVIoHMq5grl3N86zAu7MB+FBWHr5xOJC8SmvpTLha/2NpfFkFEN/ig==
   dependencies:
     icss-utils "^5.1.0"
-    postcss "^8.4.5"
+    postcss "^8.4.7"
     postcss-modules-extract-imports "^3.0.0"
     postcss-modules-local-by-default "^4.0.0"
     postcss-modules-scope "^3.0.0"
@@ -3903,7 +3903,7 @@ postcss@^7.0.36:
     picocolors "^0.2.1"
     source-map "^0.6.1"
 
-postcss@^8.3.5, postcss@^8.4.5, postcss@^8.4.8:
+postcss@^8.3.5, postcss@^8.4.7, postcss@^8.4.8:
   version "8.4.8"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.4.8.tgz#dad963a76e82c081a0657d3a2f3602ce10c2e032"
   integrity sha512-2tXEqGxrjvAO6U+CJzDL2Fk2kPHTv1jQsYkSoMeOis2SsYaXRO2COxTdQp99cYvif9JTXaAk9lYGc3VhJt7JPQ==

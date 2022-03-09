@@ -11,7 +11,7 @@
     "@popperjs/core": "^2.11.2",
     "@rails/webpacker": "^6.0.0-rc.6",
     "autoprefixer": "^10.4.2",
-    "css-loader": "^6.7.0",
+    "css-loader": "^6.7.1",
     "css-minimizer-webpack-plugin": "^3.4.1",
     "lodash": "^4.17.21",
     "mini-css-extract-plugin": "^2.6.0",

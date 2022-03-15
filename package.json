@@ -8,7 +8,7 @@
     "@inertiajs/inertia": "^0.11.0",
     "@inertiajs/inertia-vue": "^0.8.0",
     "@inertiajs/progress": "^0.2.7",
-    "@popperjs/core": "^2.11.3",
+    "@popperjs/core": "^2.11.4",
     "@rails/webpacker": "^6.0.0-rc.6",
     "autoprefixer": "^10.4.2",
     "css-loader": "^6.7.1",

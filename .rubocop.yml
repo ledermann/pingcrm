@@ -26,6 +26,9 @@ Rails/SkipsModelValidations:
 Rails/SchemaComment:
   Enabled: false
 
+Rails/I18nLocaleTexts:
+  Enabled: false
+
 ### Bundler
 
 Bundler/OrderedGems:

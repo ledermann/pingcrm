@@ -31,7 +31,7 @@
     "@babel/eslint-parser": "^7.17.0",
     "eslint": "^8.12.0",
     "eslint-plugin-vue": "^8.6.0",
-    "webpack-dev-server": "^4.8.0"
+    "webpack-dev-server": "^4.8.1"
   },
   "babel": {
     "presets": [

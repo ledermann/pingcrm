@@ -7,7 +7,7 @@
 Rails.application.configure do
   config.content_security_policy do |policy|
     policy.font_src     :self
-    policy.img_src(*[   :self, :data, ENV['MATOMO_HOST']].compact)
+    policy.img_src(*[   :self, :data, ENV.fetch('MATOMO_HOST', nil)].compact)
     policy.object_src   :none
     policy.form_action  :self
     policy.manifest_src :self
@@ -20,8 +20,8 @@ Rails.application.configure do
       policy.script_src :self, :unsafe_inline
     else
       policy.default_src :none
-      policy.connect_src(*[:self, ENV['MATOMO_HOST']].compact)
-      policy.script_src(*[:self, ENV['MATOMO_HOST']].compact)
+      policy.connect_src(*[:self, ENV.fetch('MATOMO_HOST', nil)].compact)
+      policy.script_src(*[:self, ENV.fetch('MATOMO_HOST', nil)].compact)
       policy.style_src :self,
                        # @inertiajs/progress uses inline styles to display progress bar
                        "'sha256-kCeyw5rRT2DINADvWYmAhXLhQs4dKZrnn2sofIDmprs='"

@@ -127,7 +127,7 @@ Layout/MultilineAssignmentLayout:
 
 Layout/LineLength:
   Max: 190
-  IgnoredPatterns: ['\A#'] # Allow long comments
+  AllowedPatterns: ['\A#'] # Allow long comments
 
 Layout/RedundantLineBreak:
   Enabled: false

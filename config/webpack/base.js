@@ -1,4 +1,4 @@
-const { webpackConfig, merge } = require('@rails/webpacker')
+const { webpackConfig, merge } = require('shakapacker')
 const vueConfig = require('./rules/vue')
 const path = require('path')
 

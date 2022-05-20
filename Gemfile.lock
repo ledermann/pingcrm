@@ -237,6 +237,11 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2)
     semantic_range (3.0.0)
+    shakapacker (6.3.0)
+      activesupport (>= 5.2)
+      rack-proxy (>= 0.6.1)
+      railties (>= 5.2)
+      semantic_range (>= 2.3.0)
     spring (4.0.0)
     strscan (3.0.3)
     thor (1.2.1)
@@ -255,11 +260,6 @@ GEM
       nokogiri (~> 1.6)
       rubyzip (>= 1.3.0)
       selenium-webdriver (~> 4.0)
-    webpacker (6.0.0.rc.6)
-      activesupport (>= 5.2)
-      rack-proxy (>= 0.6.1)
-      railties (>= 5.2)
-      semantic_range (>= 2.3.0)
     websocket-driver (0.7.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
@@ -293,11 +293,11 @@ DEPENDENCIES
   rubocop-performance
   rubocop-rails
   selenium-webdriver
+  shakapacker
   spring
   tzinfo-data
   web-console
   webdrivers
-  webpacker (= 6.0.0.rc.6)
 
 RUBY VERSION
    ruby 3.1.1p18

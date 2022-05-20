@@ -49,7 +49,7 @@ jobs:
         run: yarn lint
 
       - name: Compile assets
-        run: bin/rails assets:precompile webpacker:disable_compile_in_test
+        run: bin/rails assets:precompile
 
       - name: Run Tests
         run: |

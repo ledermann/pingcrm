@@ -36,7 +36,7 @@
   "devDependencies": {
     "@babel/core": "^7.18.0",
     "@babel/eslint-parser": "^7.17.0",
-    "eslint": "^8.15.0",
+    "eslint": "^8.16.0",
     "eslint-plugin-vue": "^9.0.1",
     "webpack": "^5.72.1",
     "webpack-assets-manifest": "^5.1.0",

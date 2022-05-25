@@ -245,7 +245,7 @@ GEM
     spring (4.0.0)
     strscan (3.0.3)
     thor (1.2.1)
-    timeout (0.2.0)
+    timeout (0.3.0)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
     unicode-display_width (2.1.0)

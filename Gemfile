@@ -6,10 +6,10 @@ ruby '~> 3.1'
 # Full-stack web application framework. (https://rubyonrails.org)
 gem 'rails', '~> 7.0.3'
 
-# Pg is the Ruby interface to the {PostgreSQL RDBMS}[http://www.postgresql.org/] (https://github.com/ged/ruby-pg)
+# Pg is the Ruby interface to the PostgreSQL RDBMS (https://github.com/ged/ruby-pg)
 gem 'pg', '>= 0.18', '< 2.0'
 
-# Puma is a simple, fast, threaded, and highly concurrent HTTP 1.1 server for Ruby/Rack applications (https://puma.io)
+# Puma is a simple, fast, threaded, and highly parallel HTTP 1.1 server for Ruby/Rack applications (https://puma.io)
 gem 'puma', '~> 5.0'
 
 # Use webpack to manage app-like JavaScript modules in Rails (https://github.com/shakacode/shakapacker)
@@ -26,15 +26,16 @@ gem 'bootsnap', require: false
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
+  # Debugging functionality for Ruby (https://github.com/ruby/debug)
   gem "debug", platforms: [:mri, :mingw, :x64_mingw]
 
-  # Automatic Ruby code style checking tool. (https://github.com/rubocop-hq/rubocop)
+  # Automatic Ruby code style checking tool. (https://github.com/rubocop/rubocop)
   gem 'rubocop', require: false
 
-  # Automatic performance checking tool for Ruby code. (https://github.com/rubocop-hq/rubocop-performance)
+  # Automatic performance checking tool for Ruby code. (https://github.com/rubocop/rubocop-performance)
   gem 'rubocop-performance', require: false
 
-  # Automatic Rails code style checking tool. (https://github.com/rubocop-hq/rubocop-rails)
+  # Automatic Rails code style checking tool. (https://github.com/rubocop/rubocop-rails)
   gem 'rubocop-rails', require: false
 
   # factory_bot_rails provides integration between factory_bot and rails 5.0 or newer (https://github.com/thoughtbot/factory_bot_rails)
@@ -59,7 +60,7 @@ group :test do
   # Capybara aims to simplify the process of integration testing Rack applications, such as Rails, Sinatra or Merb (https://github.com/teamcapybara/capybara)
   gem 'capybara'
 
-  # The next generation developer focused tool for automated testing of webapps (https://github.com/SeleniumHQ/selenium)
+  # Selenium is a browser automation tool for automated testing of webapps and more (https://selenium.dev)
   gem 'selenium-webdriver'
 
   # Easy download and use of browser drivers. (https://github.com/titusfortner/webdrivers)
@@ -75,7 +76,7 @@ gem 'inertia_rails', '>= 1.2.2'
 # Easily generate fake data (https://github.com/faker-ruby/faker)
 gem 'faker', require: false
 
-# The Ultimate Pagination Ruby Gem (https://github.com/ddnexus/pagy)
+# The kick-ass pagination ruby gem (https://github.com/ddnexus/pagy)
 gem 'pagy'
 
 # Flexible authentication solution for Rails with Warden (https://github.com/heartcombo/devise)

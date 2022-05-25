@@ -29,9 +29,9 @@
 </template>
 
 <script>
-import Layout from '@/Layouts/Main'
-import LoadingButton from '@/Shared/LoadingButton'
-import UserForm from './Form'
+import Layout from '@/Layouts/Main.vue'
+import LoadingButton from '@/Shared/LoadingButton.vue'
+import UserForm from './Form.vue'
 
 export default {
   metaInfo: { title: 'Create User' },

@@ -22,7 +22,4 @@ module.exports = {
     'quotes': ['warn', 'single'],
     'comma-dangle': ['warn', 'always-multiline'],
   },
-  parserOptions: {
-    parser: '@babel/eslint-parser',
-  },
 }

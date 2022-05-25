@@ -37,7 +37,7 @@
 </template>
 
 <script>
-import Layout from '@/Layouts/Main'
+import Layout from '@/Layouts/Main.vue'
 import * as timeago from 'timeago.js'
 
 export default {

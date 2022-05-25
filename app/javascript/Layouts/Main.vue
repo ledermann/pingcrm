@@ -47,8 +47,7 @@
             >
               <div class="flex items-center cursor-pointer select-none group">
                 <div class="text-gray-800 group-hover:text-indigo-600 focus:text-indigo-600 mr-1 whitespace-nowrap">
-                  <span>{{ $page.props.auth.user.first_name }}</span>
-                  <span class="hidden md:inline">{{ $page.props.auth.user.last_name }}</span>
+                  {{ $page.props.auth.user.first_name }} <span class="hidden md:inline">{{ $page.props.auth.user.last_name }}</span>
                 </div>
                 <icon
                   class="w-5 h-5 group-hover:fill-indigo-600 fill-gray-800 focus:fill-indigo-600"
@@ -101,12 +100,12 @@
 </template>
 
 <script>
-import MinimalLayout from '@/Layouts/Minimal'
-import Dropdown from '@/Shared/Dropdown'
-import FlashMessages from '@/Shared/FlashMessages'
-import Icon from '@/Shared/Icon'
-import Logo from '@/Shared/Logo'
-import MainMenu from '@/Shared/MainMenu'
+import MinimalLayout from '@/Layouts/Minimal.vue'
+import Dropdown from '@/Shared/Dropdown.vue'
+import FlashMessages from '@/Shared/FlashMessages.vue'
+import Icon from '@/Shared/Icon.vue'
+import Logo from '@/Shared/Logo.vue'
+import MainMenu from '@/Shared/MainMenu.vue'
 
 export default {
   components: {

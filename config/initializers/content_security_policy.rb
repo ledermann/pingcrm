@@ -13,11 +13,10 @@ Rails.application.configure do
     policy.manifest_src :self
 
     if Rails.env.development?
-      # If you are using webpack-dev-server then specify webpack-dev-server host
-      policy.connect_src :self, 'http://localhost:3035', 'ws://localhost:3035'
+      policy.connect_src :self, "http://#{ViteRuby.config.host_with_port}", "ws://#{ViteRuby.config.host_with_port}"
 
       # Inertia.js uses inline scripts to display error modal in development
-      policy.script_src :self, :unsafe_inline
+      policy.script_src :self, :unsafe_inline, :unsafe_eval, "http://#{ViteRuby.config.host_with_port}"
     else
       policy.default_src :none
       policy.connect_src(*[:self, ENV.fetch('MATOMO_HOST', nil)].compact)

@@ -1,16 +1,7 @@
-// This file is automatically compiled by Webpack, along with any other files
+// This file is automatically compiled by Vite, along with any other files
 // present in this directory. You're encouraged to place your actual application logic in
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
-
-import './styles/application.css'
-
-// Uncomment to copy all static images under ./images to the output folder and reference
-// them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
-// or the `imagePath` JavaScript helper below.
-//
-require.context('./images', true)
-// const imagePath = (name) => images(name, true)
 
 import Vue from 'vue'
 import VueMeta from 'vue-meta'
@@ -32,8 +23,16 @@ InertiaProgress.init()
 import * as Routes from '@/utils/routes.js'
 Vue.prototype.$routes = Routes
 
+const pages = import.meta.globEagerDefault('../Pages/**/*.vue')
+
 createInertiaApp({
-  resolve: name => import(`@/Pages/${name}`).then(({ default: component }) => {
+  resolve: name => {
+    const component = pages[`../Pages/${name}.vue`]
+    if (!component)
+      throw new Error(
+        `Unknown page ${name}. Is it located under Pages with a .vue extension?`,
+      )
+
     if (Vue.matomo.enabled)
       // Wait a bit to allow VueMeta to update the document.title
       setTimeout(() => {
@@ -41,7 +40,7 @@ createInertiaApp({
       }, 100)
 
     return component
-  }),
+  },
 
   setup({ el, app, props, plugin }) {
     Vue.use(plugin)

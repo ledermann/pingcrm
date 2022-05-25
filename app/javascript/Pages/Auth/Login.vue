@@ -63,11 +63,11 @@
 </template>
 
 <script>
-import Layout from '@/Layouts/Minimal'
-import FlashMessages from '@/Shared/FlashMessages'
-import LoadingButton from '@/Shared/LoadingButton'
-import Logo from '@/Shared/Logo'
-import TextInput from '@/Shared/TextInput'
+import Layout from '@/Layouts/Minimal.vue'
+import FlashMessages from '@/Shared/FlashMessages.vue'
+import LoadingButton from '@/Shared/LoadingButton.vue'
+import Logo from '@/Shared/Logo.vue'
+import TextInput from '@/Shared/TextInput.vue'
 
 export default {
   metaInfo: { title: 'Login' },

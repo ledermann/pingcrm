@@ -14,8 +14,6 @@ docker-compose.yml
 log/*
 node_modules
 public/assets/*
-public/packs
-public/packs-test
 Procfile
 Procfile.dev
 tmp/*

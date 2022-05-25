@@ -30,9 +30,9 @@
 </template>
 
 <script>
-import Layout from '@/Layouts/Main'
-import LoadingButton from '@/Shared/LoadingButton'
-import ContactForm from './Form'
+import Layout from '@/Layouts/Main.vue'
+import LoadingButton from '@/Shared/LoadingButton.vue'
+import ContactForm from './Form.vue'
 
 export default {
   metaInfo: { title: 'Create Contact' },

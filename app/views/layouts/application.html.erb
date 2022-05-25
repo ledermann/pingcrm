@@ -14,10 +14,11 @@
     <%= csp_meta_tag %>
 
     <link rel="manifest" href="/site.webmanifest" >
-    <link rel="icon" type="image/png" href="<%= asset_pack_url('static/favicon.png') %>">
+    <link rel="icon" type="image/png" href="<%= vite_asset_path('images/favicon.png') %>">
 
-    <%= stylesheet_pack_tag 'application' %>
-    <%= javascript_pack_tag 'application' %>
+    <%= vite_client_tag %>
+    <%= vite_javascript_tag 'application' %>
+    <%= vite_stylesheet_tag 'application' %>
   </head>
 
   <body class="font-sans leading-none text-gray-800 antialiased">

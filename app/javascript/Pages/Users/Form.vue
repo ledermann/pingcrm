@@ -54,9 +54,9 @@
 </template>
 
 <script>
-import SelectInput from '@/Shared/SelectInput'
-import TextInput from '@/Shared/TextInput'
-import FileInput from '@/Shared/FileInput'
+import SelectInput from '@/Shared/SelectInput.vue'
+import TextInput from '@/Shared/TextInput.vue'
+import FileInput from '@/Shared/FileInput.vue'
 
 export default {
   components: {

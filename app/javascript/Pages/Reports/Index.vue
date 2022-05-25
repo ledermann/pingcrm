@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import Layout from '@/Layouts/Main'
+import Layout from '@/Layouts/Main.vue'
 
 export default {
   metaInfo: { title: 'Reports' },

@@ -8,11 +8,11 @@ InertiaRails.configure do |config|
   end
 
   asset_path = if Rails.env.test?
-    Rails.root.join('public', 'packs-test')
+    Rails.root.join('public', 'vite-test')
   elsif Rails.env.production?
-    Rails.root.join('public', 'packs')
+    Rails.root.join('public', 'vite')
   elsif Rails.env.development?
-    Rails.root.join('app', 'packs')
+    Rails.root.join('app', 'vite-dev')
   end
 
   config.version = checksum(asset_path)

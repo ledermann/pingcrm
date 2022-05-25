@@ -34,7 +34,7 @@ bin/setup
 Start it:
 
 ```
-foreman start
+bin/dev
 ```
 
 You're ready to go! Visit PingCRM in your browser (http://localhost:3000), and login with:

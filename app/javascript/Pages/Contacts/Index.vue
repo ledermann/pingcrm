@@ -31,8 +31,7 @@
         class="btn-indigo"
         :href="$routes.new_contact()"
       >
-        <span>Create</span>
-        <span class="hidden md:inline">Contact</span>
+        Create <span class="hidden md:inline">Contact</span>
       </inertia-link>
     </div>
     <div class="bg-white rounded shadow overflow-x-auto">
@@ -138,12 +137,12 @@
 </template>
 
 <script>
-import Icon from '@/Shared/Icon'
-import Layout from '@/Layouts/Main'
+import Icon from '@/Shared/Icon.vue'
+import Layout from '@/Layouts/Main.vue'
 import mapValues from 'lodash/mapValues'
-import Pagination from '@/Shared/Pagination'
+import Pagination from '@/Shared/Pagination.vue'
 import pickBy from 'lodash/pickBy'
-import SearchFilter from '@/Shared/SearchFilter'
+import SearchFilter from '@/Shared/SearchFilter.vue'
 import throttle from 'lodash/throttle'
 
 export default {

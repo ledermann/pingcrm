@@ -17,8 +17,8 @@
 </template>
 
 <script>
-import LoadingButton from '@/Shared/LoadingButton'
-import OrganizationForm from './Form'
+import LoadingButton from '@/Shared/LoadingButton.vue'
+import OrganizationForm from './Form.vue'
 
 export default {
   components: {

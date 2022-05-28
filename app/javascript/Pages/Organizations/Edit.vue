@@ -124,11 +124,11 @@
 </template>
 
 <script>
-import Icon from '@/Shared/Icon'
-import Layout from '@/Layouts/Main'
-import LoadingButton from '@/Shared/LoadingButton'
-import OrganizationForm from './Form'
-import TrashedMessage from '@/Shared/TrashedMessage'
+import Icon from '@/Shared/Icon.vue'
+import Layout from '@/Layouts/Main.vue'
+import LoadingButton from '@/Shared/LoadingButton.vue'
+import OrganizationForm from './Form.vue'
+import TrashedMessage from '@/Shared/TrashedMessage.vue'
 import omit from 'lodash/omit'
 
 export default {

@@ -47,10 +47,10 @@
 </template>
 
 <script>
-import Layout from '@/Layouts/Main'
-import LoadingButton from '@/Shared/LoadingButton'
-import ContactForm from './Form'
-import TrashedMessage from '@/Shared/TrashedMessage'
+import Layout from '@/Layouts/Main.vue'
+import LoadingButton from '@/Shared/LoadingButton.vue'
+import ContactForm from './Form.vue'
+import TrashedMessage from '@/Shared/TrashedMessage.vue'
 import omit from 'lodash/omit'
 
 export default {

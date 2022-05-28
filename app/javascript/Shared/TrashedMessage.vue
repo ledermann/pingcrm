@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import Icon from '@/Shared/Icon'
+import Icon from '@/Shared/Icon.vue'
 
 export default {
   components: {

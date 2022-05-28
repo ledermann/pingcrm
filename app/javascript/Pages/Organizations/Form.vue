@@ -63,8 +63,8 @@
 </template>
 
 <script>
-import SelectInput from '@/Shared/SelectInput'
-import TextInput from '@/Shared/TextInput'
+import SelectInput from '@/Shared/SelectInput.vue'
+import TextInput from '@/Shared/TextInput.vue'
 
 export default {
   components: {

@@ -5,48 +5,30 @@
     "lint": "eslint --ext .js,.vue ."
   },
   "dependencies": {
-    "@babel/plugin-transform-runtime": "^7.18.2",
-    "@babel/preset-env": "^7.18.2",
-    "@babel/runtime": "^7.18.3",
     "@inertiajs/inertia": "^0.11.0",
     "@inertiajs/inertia-vue": "^0.8.0",
     "@inertiajs/progress": "^0.2.7",
     "@popperjs/core": "^2.11.5",
     "autoprefixer": "^10.4.7",
-    "babel-loader": "^8.2.5",
-    "compression-webpack-plugin": "^9.2.0",
-    "css-loader": "^6.7.1",
-    "css-minimizer-webpack-plugin": "^4.0.0",
     "lodash": "^4.17.21",
-    "mini-css-extract-plugin": "^2.6.0",
     "portal-vue": "^2.1.7",
     "postcss": "^8.4.14",
-    "postcss-loader": "^7.0.0",
-    "shakapacker": "6.3.0",
-    "style-loader": "^3.3.1",
     "tailwindcss": "^3.0.24",
-    "terser-webpack-plugin": "^5.3.1",
     "timeago.js": "^4.0.2",
     "vue": "^2.6.14",
-    "vue-loader": "^15.9.8",
     "vue-meta": "^2.4.0",
     "vue-template-compiler": "^2.6.14"
   },
   "version": "0.1.0",
   "devDependencies": {
-    "@babel/core": "^7.18.2",
-    "@babel/eslint-parser": "^7.18.2",
     "eslint": "^8.16.0",
     "eslint-plugin-vue": "^9.0.1",
-    "webpack": "^5.72.1",
-    "webpack-assets-manifest": "^5.1.0",
-    "webpack-cli": "^4.9.2",
-    "webpack-dev-server": "^4.9.0",
-    "webpack-merge": "^5.8.0"
-  },
-  "babel": {
-    "presets": [
-      "./node_modules/shakapacker/package/babel/preset.js"
-    ]
+    "rollup": "^2.75.0",
+    "rollup-plugin-gzip": "^3.0.1",
+    "vite": "^2.9.9",
+    "vite-plugin-full-reload": "^1.0.0",
+    "vite-plugin-ruby": "^3.0.12",
+    "vite-plugin-vue2": "^2.0.1",
+    "zlib": "^1.0.5"
   }
 }

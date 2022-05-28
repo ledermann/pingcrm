@@ -32,8 +32,7 @@
         class="btn-indigo"
         @click="modalNew = true"
       >
-        <span>Create</span>
-        <span class="hidden md:inline">Organization</span>
+        Create <span class="hidden md:inline">Organization</span>
       </button>
       <modal
         :open="modalNew"
@@ -130,14 +129,14 @@
 </template>
 
 <script>
-import Icon from '@/Shared/Icon'
-import Layout from '@/Layouts/Main'
+import Icon from '@/Shared/Icon.vue'
+import Layout from '@/Layouts/Main.vue'
 import mapValues from 'lodash/mapValues'
-import Pagination from '@/Shared/Pagination'
+import Pagination from '@/Shared/Pagination.vue'
 import pickBy from 'lodash/pickBy'
-import SearchFilter from '@/Shared/SearchFilter'
-import Modal from '@/Shared/Modal'
-import NewOrganization from '@/Pages/Organizations/_New'
+import SearchFilter from '@/Shared/SearchFilter.vue'
+import Modal from '@/Shared/Modal.vue'
+import NewOrganization from '@/Pages/Organizations/_New.vue'
 import throttle from 'lodash/throttle'
 
 export default {

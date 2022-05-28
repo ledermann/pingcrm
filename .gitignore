@@ -31,9 +31,12 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 
-/public/packs
-/public/packs-test
 /node_modules
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
+
+# Vite on Rails
+/public/vite
+/public/vite-dev
+/public/vite-test

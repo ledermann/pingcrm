@@ -1,6 +1,10 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import "../styles/form";
+@import "../styles/buttons";
+@import "../styles/transitions";
 
 @layer utilities {
   .btn-indigo {
@@ -10,7 +14,3 @@
     @apply bg-orange-500;
   }
 }
-
-@import "form";
-@import "buttons";
-@import "transitions";

@@ -1,7 +1,7 @@
 FROM ledermann/rails-base-builder:3.1.2-alpine AS Builder
 
 # Remove some files not needed in resulting image
-RUN rm .browserslistrc package.json postcss.config.js yarn.lock
+RUN rm .browserslistrc package.json postcss.config.js tailwind.config.js vite.config.ts yarn.lock
 
 FROM ledermann/rails-base-final:3.1.2-alpine
 LABEL maintainer="georg@ledermann.dev"

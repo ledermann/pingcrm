@@ -11,18 +11,27 @@ Rails.application.configure do
     policy.object_src   :none
     policy.form_action  :self
     policy.manifest_src :self
+    policy.default_src :none
 
     if Rails.env.development?
-      policy.connect_src :self, "http://#{ViteRuby.config.host_with_port}", "ws://#{ViteRuby.config.host_with_port}"
+      policy.connect_src :self,
+                         # Allow @vite/client to hot reload changes
+                         "ws://#{ViteRuby.config.host_with_port}"
 
-      # Inertia.js uses inline scripts to display error modal in development
-      policy.script_src :self, :unsafe_inline, :unsafe_eval, "http://#{ViteRuby.config.host_with_port}"
+      policy.script_src :self,
+                        # Allow @vite/client to hot reload JavaScript changes
+                        "http://#{ViteRuby.config.host_with_port}",
+                        # Allow Inertia.js to display error modal
+                        :unsafe_inline
+
+      policy.style_src :self,
+                       # Allow @vite/client to hot reload CSS changes
+                       :unsafe_inline
     else
-      policy.default_src :none
       policy.connect_src(*[:self, ENV.fetch('MATOMO_HOST', nil)].compact)
       policy.script_src(*[:self, ENV.fetch('MATOMO_HOST', nil)].compact)
       policy.style_src :self,
-                       # @inertiajs/progress uses inline styles to display progress bar
+                       # Allow @inertiajs/progress to display progress bar
                        "'sha256-kCeyw5rRT2DINADvWYmAhXLhQs4dKZrnn2sofIDmprs='"
     end
 

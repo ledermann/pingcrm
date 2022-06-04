@@ -21,7 +21,7 @@
   },
   "version": "0.1.0",
   "devDependencies": {
-    "eslint": "^8.16.0",
+    "eslint": "^8.17.0",
     "eslint-plugin-vue": "^9.1.0",
     "rollup": "^2.75.5",
     "rollup-plugin-gzip": "^3.0.1",

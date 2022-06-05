@@ -11,7 +11,12 @@ import PortalVue from 'portal-vue'
 Vue.use(PortalVue)
 
 import MatomoTracker from '@/utils/matomo-tracker'
+import { Inertia } from '@inertiajs/inertia'
 Vue.use(MatomoTracker)
+if (Vue.matomo.enabled)
+  Inertia.on('navigate', () => {
+    Vue.matomo.trackPageView()
+  })
 
 import { createInertiaApp } from '@inertiajs/inertia-vue'
 import { Head, Link } from '@inertiajs/inertia-vue'
@@ -32,12 +37,6 @@ createInertiaApp({
       throw new Error(
         `Unknown page ${name}. Is it located under Pages with a .vue extension?`,
       )
-
-    if (Vue.matomo.enabled)
-      // Wait a bit to allow VueMeta to update the document.title
-      setTimeout(() => {
-        Vue.matomo.trackPageView()
-      }, 100)
 
     return component
   },

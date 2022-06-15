@@ -8,9 +8,9 @@ InertiaRails.configure do |config|
   end
 
   asset_path = if Rails.env.test?
-    Rails.root.join('public', 'vite-test')
+    Rails.public_path.join('vite-test')
   elsif Rails.env.production?
-    Rails.root.join('public', 'vite')
+    Rails.public_path.join('vite')
   elsif Rails.env.development?
     Rails.root.join('app', 'vite-dev')
   end

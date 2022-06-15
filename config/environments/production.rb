@@ -26,7 +26,7 @@ Rails.application.configure do
   config.public_file_server.headers = {
     'Cache-Control' => 'public, s-maxage=31536000, max-age=31536000, immutable',
     'X-Content-Type-Options' => 'nosniff',
-    'Expires' => 1.year.from_now.to_formatted_s(:rfc822)
+    'Expires' => 1.year.from_now.to_fs(:rfc822)
   }
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.

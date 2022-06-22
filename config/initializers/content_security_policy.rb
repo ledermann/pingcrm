@@ -7,7 +7,7 @@
 Rails.application.configure do
   config.content_security_policy do |policy|
     policy.font_src     :self
-    policy.img_src(*[   :self, :data, ENV.fetch('MATOMO_HOST', nil)].compact)
+    policy.img_src(*[   :self, :data].compact)
     policy.object_src   :none
     policy.form_action  :self
     policy.manifest_src :self
@@ -28,8 +28,8 @@ Rails.application.configure do
                        # Allow @vite/client to hot reload CSS changes
                        :unsafe_inline
     else
-      policy.connect_src(*[:self, ENV.fetch('MATOMO_HOST', nil)].compact)
-      policy.script_src(*[:self, ENV.fetch('MATOMO_HOST', nil)].compact)
+      policy.connect_src(*[:self, ENV.fetch('PLAUSIBLE_URL', nil)].compact)
+      policy.script_src(*[:self].compact)
       policy.style_src :self,
                        # Allow @inertiajs/progress to display progress bar
                        "'sha256-kCeyw5rRT2DINADvWYmAhXLhQs4dKZrnn2sofIDmprs='"

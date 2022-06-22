@@ -27,8 +27,7 @@ services:
       - DB_USER=postgres
       - SECRET_KEY_BASE
       - TZ
-      - MATOMO_HOST
-      - MATOMO_ID
+      - PLAUSIBLE_URL
     deploy:
       update_config:
         order: start-first

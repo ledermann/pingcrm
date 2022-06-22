@@ -10,13 +10,21 @@ Vue.use(VueMeta)
 import PortalVue from 'portal-vue'
 Vue.use(PortalVue)
 
-import MatomoTracker from '@/utils/matomo-tracker'
 import { Inertia } from '@inertiajs/inertia'
-Vue.use(MatomoTracker)
-if (Vue.matomo.enabled)
-  Inertia.on('navigate', () => {
-    Vue.matomo.trackPageView()
+import Plausible from 'plausible-tracker'
+const plausibleUrl = document.querySelector(
+  'meta[name="plausible-url"]',
+).content
+if (plausibleUrl) {
+  const plausible = Plausible({
+    domain: document.querySelector('meta[name="app-host"]').content,
+    apiHost: plausibleUrl,
   })
+
+  Inertia.on('navigate', () => {
+    plausible.trackPageview()
+  })
+}
 
 import { createInertiaApp } from '@inertiajs/inertia-vue'
 import { Head, Link } from '@inertiajs/inertia-vue'

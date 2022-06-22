@@ -48,6 +48,7 @@ services:
     links:
       - db
     restart: always
+    command: bundle exec puma -C config/puma.rb
     healthcheck:
       test: ["CMD-SHELL", "nc -z 127.0.0.1 3000 || exit 1"]
       interval: 1m

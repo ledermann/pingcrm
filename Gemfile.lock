@@ -244,7 +244,7 @@ GEM
     timeout (0.3.0)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
-    unicode-display_width (2.1.0)
+    unicode-display_width (2.2.0)
     vite_rails (3.0.10)
       railties (>= 5.1, < 8)
       vite_ruby (~> 3.0)

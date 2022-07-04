@@ -27,7 +27,7 @@
     "rollup": "^2.75.7",
     "rollup-plugin-gzip": "^3.0.1",
     "vite": "^2.9.13",
-    "vite-plugin-full-reload": "^1.0.0",
+    "vite-plugin-full-reload": "^1.0.1",
     "vite-plugin-ruby": "^3.0.12",
     "vite-plugin-vue2": "^2.0.1",
     "zlib": "^1.0.5"

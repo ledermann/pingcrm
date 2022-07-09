@@ -24,7 +24,7 @@
   "devDependencies": {
     "eslint": "^8.19.0",
     "eslint-plugin-vue": "^9.2.0",
-    "rollup": "^2.75.7",
+    "rollup": "^2.76.0",
     "rollup-plugin-gzip": "^3.0.1",
     "vite": "^2.9.13",
     "vite-plugin-full-reload": "^1.0.1",

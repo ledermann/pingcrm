@@ -26,7 +26,7 @@
     "eslint-plugin-vue": "^9.2.0",
     "rollup": "^2.76.0",
     "rollup-plugin-gzip": "^3.0.1",
-    "vite": "^2.9.13",
+    "vite": "^2.9.14",
     "vite-plugin-full-reload": "^1.0.1",
     "vite-plugin-ruby": "^3.0.12",
     "vite-plugin-vue2": "^2.0.1",

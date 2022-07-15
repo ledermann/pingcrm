@@ -6,7 +6,6 @@
   "development": {
     "autoBuild": true,
     "publicOutputDir": "vite-dev",
-    "host": "pingcrm.test",
     "port": 3036
   },
   "test": {

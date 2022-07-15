@@ -315,7 +315,7 @@ de-indent@^1.0.2:
   resolved "https://registry.yarnpkg.com/de-indent/-/de-indent-1.0.2.tgz#b2038e846dc33baa5796128d0804b455b8c1e21d"
   integrity sha512-e/1zu3xH5MQryN2zdVaF0OrdNLUbvWxzMbi+iNA6Bky7l1RoP8a2fIbRocyHclXt/arDrrR6lL3TqFD9pMQTsg==
 
-debug@^4.1.1, debug@^4.3.2, debug@^4.3.3, debug@^4.3.4:
+debug@^4.1.1, debug@^4.3.2, debug@^4.3.4:
   version "4.3.4"
   resolved "https://registry.yarnpkg.com/debug/-/debug-4.3.4.tgz#1319f6579357f2338d3337d2cdd4914bb5dcc865"
   integrity sha512-PRWFHuSU3eDtQJPvnNY7Jcket1j0t5OuOsFzPPzsekD52Zl8qUfFIPEiswXqIvHWGVHOgX+7G/vCNNhehwxfkQ==
@@ -1333,12 +1333,12 @@ vite-plugin-full-reload@^1.0.1:
     picocolors "^1.0.0"
     picomatch "^2.3.1"
 
-vite-plugin-ruby@^3.0.12:
-  version "3.0.12"
-  resolved "https://registry.yarnpkg.com/vite-plugin-ruby/-/vite-plugin-ruby-3.0.12.tgz#6b935e900f10d72dc59161f04ba4b0c24fa40652"
-  integrity sha512-QosYDK6qOV1UeeFXlcH+A4pyoIs2lU9R2gWm+AJZ6gZ2yiiiLShYF6juYV8GeDsaXcOfVbPetkuPfnQCzE4mPQ==
+vite-plugin-ruby@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/vite-plugin-ruby/-/vite-plugin-ruby-3.1.1.tgz#5424a2b82d94b5f24379477b86cf93ba57b286ee"
+  integrity sha512-AT2cwdTJFjcjMkPOQsf2DZUZ1JVMYBWhL58JQ0sPOfyLCLqRfAOVldeZHpDto+ljkehdcUuKtnq/YZS5qT6PGQ==
   dependencies:
-    debug "^4.3.3"
+    debug "^4.3.4"
     fast-glob "^3.2.11"
 
 vite@^2.9.14:

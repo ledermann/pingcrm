@@ -22,6 +22,7 @@
   },
   "version": "0.1.0",
   "devDependencies": {
+    "@vitejs/plugin-vue2": "^1.1.2",
     "eslint": "^8.19.0",
     "eslint-plugin-vue": "^9.2.0",
     "rollup": "^2.76.0",
@@ -29,7 +30,6 @@
     "vite": "^2.9.14",
     "vite-plugin-full-reload": "^1.0.1",
     "vite-plugin-ruby": "^3.0.12",
-    "vite-plugin-vue2": "^2.0.1",
     "zlib": "^1.0.5"
   }
 }

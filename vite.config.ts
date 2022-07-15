@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite';
 import RubyPlugin from 'vite-plugin-ruby';
 import FullReload from 'vite-plugin-full-reload';
-import { createVuePlugin as Vue2Plugin } from 'vite-plugin-vue2';
+import Vue2Plugin from '@vitejs/plugin-vue2';
 import { brotliCompressSync } from 'zlib';
 import gzipPlugin from 'rollup-plugin-gzip';
 

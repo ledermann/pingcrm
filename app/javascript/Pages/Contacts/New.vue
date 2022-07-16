@@ -1,12 +1,13 @@
 <template>
   <div>
+    <Head title="Create Contact" />
     <h1 class="mb-8 text-3xl font-bold">
-      <inertia-link
+      <Link
         class="text-indigo-400 hover:text-indigo-600"
         :href="$routes.contacts()"
       >
         Contacts
-      </inertia-link>
+      </Link>
       <span class="font-medium text-indigo-400">/</span> Create
     </h1>
     <div class="max-w-3xl overflow-hidden rounded bg-white shadow">
@@ -32,13 +33,15 @@
 </template>
 
 <script>
+import { Head, Link } from '@inertiajs/inertia-vue3';
 import Layout from '@/Layouts/Main.vue';
 import LoadingButton from '@/Shared/LoadingButton.vue';
 import ContactForm from './Form.vue';
 
 export default {
-  metaInfo: { title: 'Create Contact' },
   components: {
+    Head,
+    Link,
     LoadingButton,
     ContactForm,
   },

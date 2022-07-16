@@ -3,12 +3,7 @@
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
 
-import Vue from 'vue';
-import VueMeta from 'vue-meta';
-Vue.use(VueMeta);
-
-import PortalVue from 'portal-vue';
-Vue.use(PortalVue);
+import { createApp, h } from 'vue';
 
 import { Inertia } from '@inertiajs/inertia';
 import Plausible from 'plausible-tracker';
@@ -26,15 +21,11 @@ if (plausibleUrl) {
   });
 }
 
-import { createInertiaApp } from '@inertiajs/inertia-vue';
-import { Head, Link } from '@inertiajs/inertia-vue';
+import { createInertiaApp } from '@inertiajs/inertia-vue3';
 import { InertiaProgress } from '@inertiajs/progress';
-Vue.component('InertiaHead', Head);
-Vue.component('InertiaLink', Link);
 InertiaProgress.init();
 
 import * as Routes from '@/utils/routes.js';
-Vue.prototype.$routes = Routes;
 
 const pages = import.meta.globEagerDefault('../Pages/**/*.vue');
 
@@ -49,14 +40,13 @@ createInertiaApp({
     return component;
   },
 
-  setup({ el, app, props, plugin }) {
-    Vue.use(plugin);
+  title: (title) => (title ? `${title} - Ping CRM` : 'Ping CRM'),
 
-    new Vue({
-      metaInfo: {
-        titleTemplate: (title) => (title ? `${title} - PingCRM` : 'PingCRM'),
-      },
-      render: (h) => h(app, props),
-    }).$mount(el);
+  setup({ el, App, props, plugin }) {
+    const vueApp = createApp({
+      render: () => h(App, props),
+    });
+    vueApp.config.globalProperties.$routes = Routes;
+    vueApp.use(plugin).mount(el);
   },
 });

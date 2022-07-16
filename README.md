@@ -1,6 +1,6 @@
 # PingCRM on Rails
 
-A demo application built with Ruby on Rails and Vue.js to illustrate how **[Inertia.js](https://inertiajs.com/)** works.
+A demo application built with Ruby on Rails and Vue.js 3 to illustrate how **[Inertia.js](https://inertiajs.com/)** works.
 
 ![Screenshot](screenshot.jpg)
 

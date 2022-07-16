@@ -1,12 +1,13 @@
 <template>
   <div>
+    <Head :title="`${form.organization.name}`" />
     <h1 class="mb-8 text-3xl font-bold">
-      <inertia-link
+      <Link
         class="text-indigo-500 hover:text-indigo-800"
         :href="$routes.organizations()"
       >
         Organizations
-      </inertia-link>
+      </Link>
       <span class="font-medium text-indigo-400">/</span>
       {{ form.organization.name }}
     </h1>
@@ -58,7 +59,7 @@
           class="focus-within:bg-gray-100 hover:bg-gray-100"
         >
           <td class="border-t">
-            <inertia-link
+            <Link
               class="flex items-center px-6 py-4 focus:text-indigo-500"
               :href="$routes.edit_contact(contact.id)"
             >
@@ -68,34 +69,34 @@
                 name="trash"
                 class="ml-2 h-3 w-3 flex-shrink-0 fill-gray-500"
               />
-            </inertia-link>
+            </Link>
           </td>
           <td class="border-t">
-            <inertia-link
+            <Link
               class="flex items-center px-6 py-4"
               :href="$routes.edit_contact(contact.id)"
               tabindex="-1"
             >
               {{ contact.city }}
-            </inertia-link>
+            </Link>
           </td>
           <td class="border-t">
-            <inertia-link
+            <Link
               class="flex items-center px-6 py-4"
               :href="$routes.edit_contact(contact.id)"
               tabindex="-1"
             >
               {{ contact.phone }}
-            </inertia-link>
+            </Link>
           </td>
           <td class="w-px border-t">
-            <inertia-link
+            <Link
               class="flex items-center px-4"
               :href="$routes.edit_contact(contact.id)"
               tabindex="-1"
             >
               <icon name="cheveron-right" class="block h-6 w-6 fill-gray-500" />
-            </inertia-link>
+            </Link>
           </td>
         </tr>
         <tr v-if="contacts.length === 0">
@@ -107,6 +108,7 @@
 </template>
 
 <script>
+import { Head, Link } from '@inertiajs/inertia-vue3';
 import Icon from '@/Shared/Icon.vue';
 import Layout from '@/Layouts/Main.vue';
 import LoadingButton from '@/Shared/LoadingButton.vue';
@@ -115,10 +117,9 @@ import TrashedMessage from '@/Shared/TrashedMessage.vue';
 import omit from 'lodash/omit';
 
 export default {
-  metaInfo() {
-    return { title: this.form.organization.name };
-  },
   components: {
+    Head,
+    Link,
     Icon,
     LoadingButton,
     OrganizationForm,

@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Head title="Contacts" />
     <h1 class="mb-8 text-3xl font-bold">Contacts</h1>
     <div class="mb-6 flex items-center justify-between">
       <search-filter
@@ -18,9 +19,9 @@
           <option value="only">Only Trashed</option>
         </select>
       </search-filter>
-      <inertia-link class="btn-indigo" :href="$routes.new_contact()">
+      <Link class="btn-indigo" :href="$routes.new_contact()">
         Create <span class="hidden md:inline">Contact</span>
-      </inertia-link>
+      </Link>
     </div>
     <div class="overflow-x-auto rounded bg-white shadow">
       <table class="w-full whitespace-nowrap">
@@ -39,7 +40,7 @@
             class="focus-within:bg-gray-100 hover:bg-gray-100"
           >
             <td class="border-t">
-              <inertia-link
+              <Link
                 class="flex items-center px-6 py-4 focus:text-indigo-500"
                 :href="$routes.edit_contact(contact.id)"
                 aria-label="Edit"
@@ -50,10 +51,10 @@
                   name="trash"
                   class="ml-2 h-3 w-3 flex-shrink-0 fill-gray-500"
                 />
-              </inertia-link>
+              </Link>
             </td>
             <td class="border-t">
-              <inertia-link
+              <Link
                 class="flex items-center px-6 py-4"
                 :href="$routes.edit_contact(contact.id)"
                 tabindex="-1"
@@ -62,30 +63,30 @@
                 <div v-if="contact.organization">
                   {{ contact.organization.name }}
                 </div>
-              </inertia-link>
+              </Link>
             </td>
             <td class="border-t">
-              <inertia-link
+              <Link
                 class="flex items-center px-6 py-4"
                 :href="$routes.edit_contact(contact.id)"
                 tabindex="-1"
                 aria-label="Edit"
               >
                 {{ contact.city }}
-              </inertia-link>
+              </Link>
             </td>
             <td class="border-t">
-              <inertia-link
+              <Link
                 class="flex items-center px-6 py-4"
                 :href="$routes.edit_contact(contact.id)"
                 tabindex="-1"
                 aria-label="Edit"
               >
                 {{ contact.phone }}
-              </inertia-link>
+              </Link>
             </td>
             <td class="w-px border-t">
-              <inertia-link
+              <Link
                 class="flex items-center px-4"
                 :href="$routes.edit_contact(contact.id)"
                 tabindex="-1"
@@ -95,7 +96,7 @@
                   name="cheveron-right"
                   class="block h-6 w-6 fill-gray-500"
                 />
-              </inertia-link>
+              </Link>
             </td>
           </tr>
           <tr v-if="contacts.data.length === 0">
@@ -109,6 +110,7 @@
 </template>
 
 <script>
+import { Head, Link } from '@inertiajs/inertia-vue3';
 import Icon from '@/Shared/Icon.vue';
 import Layout from '@/Layouts/Main.vue';
 import mapValues from 'lodash/mapValues';
@@ -118,8 +120,9 @@ import SearchFilter from '@/Shared/SearchFilter.vue';
 import throttle from 'lodash/throttle';
 
 export default {
-  metaInfo: { title: 'Contacts' },
   components: {
+    Head,
+    Link,
     Icon,
     Pagination,
     SearchFilter,

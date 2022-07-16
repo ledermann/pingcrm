@@ -1,37 +1,39 @@
 <template>
   <minimal-layout>
+    <div id="dropdown" />
     <div class="md:flex md:flex-col">
       <div class="md:flex md:h-screen md:flex-col">
         <div class="md:flex md:flex-shrink-0">
           <div
             class="flex items-center justify-between bg-indigo-900 px-6 py-4 md:w-56 md:flex-shrink-0 md:justify-center"
           >
-            <inertia-link
+            <Link
               class="mt-1"
               :href="$routes.root()"
               aria-label="Home"
               role="navigation"
             >
               <logo class="fill-white" width="120" height="28" />
-            </inertia-link>
+            </Link>
             <dropdown
               class="md:hidden"
               placement="bottom-end"
               aria-label="Main menu"
             >
-              <svg
-                class="h-6 w-6 fill-white"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-              >
-                <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-              </svg>
-              <div
-                slot="dropdown"
-                class="mt-2 rounded bg-indigo-800 px-8 py-4 shadow-lg"
-              >
-                <main-menu />
-              </div>
+              <template #default>
+                <svg
+                  class="h-6 w-6 fill-white"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+                </svg>
+              </template>
+              <template #dropdown>
+                <div class="mt-2 rounded bg-indigo-800 px-8 py-4 shadow-lg">
+                  <main-menu />
+                </div>
+              </template>
             </dropdown>
           </div>
           <div
@@ -45,47 +47,48 @@
               placement="bottom-end"
               aria-label="User menu"
             >
-              <div class="group flex cursor-pointer select-none items-center">
-                <div
-                  class="mr-1 whitespace-nowrap text-gray-800 focus:text-indigo-600 group-hover:text-indigo-600"
-                >
-                  {{ $page.props.auth.user.first_name }}
-                  <span class="hidden md:inline">{{
-                    $page.props.auth.user.last_name
-                  }}</span>
+              <template #default>
+                <div class="group flex cursor-pointer select-none items-center">
+                  <div
+                    class="mr-1 whitespace-nowrap text-gray-800 focus:text-indigo-600 group-hover:text-indigo-600"
+                  >
+                    {{ $page.props.auth.user.first_name }}
+                    <span class="hidden md:inline">{{
+                      $page.props.auth.user.last_name
+                    }}</span>
+                  </div>
+                  <icon
+                    class="h-5 w-5 fill-gray-700 focus:fill-indigo-600 group-hover:fill-indigo-600"
+                    name="cheveron-down"
+                  />
                 </div>
-                <icon
-                  class="h-5 w-5 fill-gray-800 focus:fill-indigo-600 group-hover:fill-indigo-600"
-                  name="cheveron-down"
-                />
-              </div>
-              <div
-                slot="dropdown"
-                class="mt-2 rounded bg-white py-2 text-sm shadow-xl"
-              >
-                <inertia-link
-                  class="block px-6 py-2 hover:bg-indigo-600 hover:text-white"
-                  role="navigation"
-                  :href="$routes.edit_user($page.props.auth.user.id)"
-                >
-                  My Profile
-                </inertia-link>
-                <inertia-link
-                  class="block px-6 py-2 hover:bg-indigo-600 hover:text-white"
-                  role="navigation"
-                  :href="$routes.users()"
-                >
-                  Manage Users
-                </inertia-link>
-                <inertia-link
-                  class="block w-full px-6 py-2 text-left hover:bg-indigo-600 hover:text-white"
-                  :href="$routes.destroy_user_session()"
-                  method="delete"
-                  as="button"
-                >
-                  Logout
-                </inertia-link>
-              </div>
+              </template>
+              <template #dropdown>
+                <div class="mt-2 rounded bg-white py-2 text-sm shadow-xl">
+                  <Link
+                    class="block px-6 py-2 hover:bg-indigo-600 hover:text-white"
+                    role="navigation"
+                    :href="$routes.edit_user($page.props.auth.user.id)"
+                  >
+                    My Profile
+                  </Link>
+                  <Link
+                    class="block px-6 py-2 hover:bg-indigo-600 hover:text-white"
+                    role="navigation"
+                    :href="$routes.users()"
+                  >
+                    Manage Users
+                  </Link>
+                  <Link
+                    class="block w-full px-6 py-2 text-left hover:bg-indigo-600 hover:text-white"
+                    :href="$routes.destroy_user_session()"
+                    method="delete"
+                    as="button"
+                  >
+                    Logout
+                  </Link>
+                </div>
+              </template>
             </dropdown>
           </div>
         </div>
@@ -107,6 +110,7 @@
 </template>
 
 <script>
+import { Link } from '@inertiajs/inertia-vue3';
 import MinimalLayout from '@/Layouts/Minimal.vue';
 import Dropdown from '@/Shared/Dropdown.vue';
 import FlashMessages from '@/Shared/FlashMessages.vue';
@@ -116,6 +120,7 @@ import MainMenu from '@/Shared/MainMenu.vue';
 
 export default {
   components: {
+    Link,
     MinimalLayout,
     Dropdown,
     FlashMessages,

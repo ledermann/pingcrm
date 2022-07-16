@@ -1,5 +1,6 @@
 <template>
   <div class="flex min-h-screen items-center justify-center bg-indigo-800 p-6">
+    <Head title="Login" />
     <div class="w-full max-w-md">
       <logo class="mx-auto block w-full max-w-xs fill-white" height="50" />
       <form
@@ -55,6 +56,7 @@
 </template>
 
 <script>
+import { Head } from '@inertiajs/inertia-vue3';
 import Layout from '@/Layouts/Minimal.vue';
 import FlashMessages from '@/Shared/FlashMessages.vue';
 import LoadingButton from '@/Shared/LoadingButton.vue';
@@ -62,8 +64,8 @@ import Logo from '@/Shared/Logo.vue';
 import TextInput from '@/Shared/TextInput.vue';
 
 export default {
-  metaInfo: { title: 'Login' },
   components: {
+    Head,
     FlashMessages,
     LoadingButton,
     Logo,

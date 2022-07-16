@@ -26,5 +26,6 @@ export default {
   components: {
     Icon,
   },
+  emits: ['restore'],
 };
 </script>

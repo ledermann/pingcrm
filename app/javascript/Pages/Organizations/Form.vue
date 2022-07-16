@@ -68,18 +68,19 @@ export default {
     TextInput,
   },
   props: {
-    value: {
+    modelValue: {
       type: Object,
       required: true,
     },
   },
+  emits: ['update:modelValue', 'submit'],
   computed: {
     form: {
       get() {
-        return this.value;
+        return this.modelValue;
       },
       set(val) {
-        this.$emit('input', val);
+        this.$emit('update:modelValue', val);
       },
     },
   },

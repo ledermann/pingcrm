@@ -1,12 +1,13 @@
 <template>
   <div>
+    <Head :title="`${form.contact.first_name} ${form.contact.last_name}`" />
     <h1 class="mb-8 text-3xl font-bold">
-      <inertia-link
+      <Link
         class="text-indigo-500 hover:text-indigo-800"
         :href="$routes.contacts()"
       >
         Contacts
-      </inertia-link>
+      </Link>
       <span class="font-medium text-indigo-400">/</span>
       {{ form.contact.first_name }} {{ form.contact.last_name }}
     </h1>
@@ -45,6 +46,7 @@
 </template>
 
 <script>
+import { Head, Link } from '@inertiajs/inertia-vue3';
 import Layout from '@/Layouts/Main.vue';
 import LoadingButton from '@/Shared/LoadingButton.vue';
 import ContactForm from './Form.vue';
@@ -52,12 +54,9 @@ import TrashedMessage from '@/Shared/TrashedMessage.vue';
 import omit from 'lodash/omit';
 
 export default {
-  metaInfo() {
-    return {
-      title: `${this.form.contact.first_name} ${this.form.contact.last_name}`,
-    };
-  },
   components: {
+    Head,
+    Link,
     LoadingButton,
     ContactForm,
     TrashedMessage,

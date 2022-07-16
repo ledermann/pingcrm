@@ -1,15 +1,15 @@
 <template>
-  <div>
+  <div :class="$attrs.class">
     <label v-if="label" class="form-label" :for="id">{{ label }}:</label>
     <input
       :id="id"
       ref="input"
-      v-bind="$attrs"
+      v-bind="{ ...$attrs, class: null }"
       class="form-input"
       :class="{ error: errors.length }"
       :type="type"
-      :value="value"
-      @input="$emit('input', $event.target.value)"
+      :value="modelValue"
+      @input="$emit('update:modelValue', $event.target.value)"
     />
     <div v-if="errors.length" class="form-error">
       {{ errors[0] }}
@@ -18,23 +18,21 @@
 </template>
 
 <script>
+import { v4 as uuid } from 'uuid';
 export default {
   inheritAttrs: false,
   props: {
     id: {
       type: String,
       default() {
-        return `text-input-${this._uid}`;
+        return `text-input-${uuid()}`;
       },
     },
     type: {
       type: String,
       default: 'text',
     },
-    value: {
-      type: String,
-      default: null,
-    },
+    modelValue: String,
     label: {
       type: String,
       default: null,
@@ -44,6 +42,7 @@ export default {
       default: () => [],
     },
   },
+  emits: ['update:modelValue'],
   methods: {
     focus() {
       this.$refs.input.focus();

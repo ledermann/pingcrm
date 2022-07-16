@@ -24,6 +24,7 @@ export default {
     OrganizationForm,
   },
   remember: 'form',
+  emits: ['success'],
   data() {
     return {
       form: this.$inertia.form({

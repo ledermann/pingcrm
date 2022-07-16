@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Head title="Organizations" />
     <h1 class="mb-8 text-3xl font-bold">Organizations</h1>
     <div class="mb-6 flex items-center justify-between">
       <search-filter
@@ -46,7 +47,7 @@
             class="focus-within:bg-gray-100 hover:bg-gray-100"
           >
             <td class="border-t">
-              <inertia-link
+              <Link
                 class="flex items-center px-6 py-4 focus:text-indigo-500"
                 :href="$routes.edit_organization(organization.id)"
               >
@@ -56,30 +57,30 @@
                   name="trash"
                   class="ml-2 h-3 w-3 flex-shrink-0 fill-gray-500"
                 />
-              </inertia-link>
+              </Link>
             </td>
             <td class="border-t">
-              <inertia-link
+              <Link
                 class="flex items-center px-6 py-4"
                 :href="$routes.edit_organization(organization.id)"
                 tabindex="-1"
                 aria-label="Edit"
               >
                 {{ organization.city }}
-              </inertia-link>
+              </Link>
             </td>
             <td class="border-t">
-              <inertia-link
+              <Link
                 class="flex items-center px-6 py-4"
                 :href="$routes.edit_organization(organization.id)"
                 tabindex="-1"
                 aria-label="Edit"
               >
                 {{ organization.phone }}
-              </inertia-link>
+              </Link>
             </td>
             <td class="w-px border-t">
-              <inertia-link
+              <Link
                 class="flex items-center px-4"
                 :href="$routes.edit_organization(organization.id)"
                 tabindex="-1"
@@ -89,7 +90,7 @@
                   name="cheveron-right"
                   class="block h-6 w-6 fill-gray-500"
                 />
-              </inertia-link>
+              </Link>
             </td>
           </tr>
           <tr v-if="organizations.data.length === 0">
@@ -105,6 +106,7 @@
 </template>
 
 <script>
+import { Head, Link } from '@inertiajs/inertia-vue3';
 import Icon from '@/Shared/Icon.vue';
 import Layout from '@/Layouts/Main.vue';
 import mapValues from 'lodash/mapValues';
@@ -116,8 +118,9 @@ import NewOrganization from '@/Pages/Organizations/_New.vue';
 import throttle from 'lodash/throttle';
 
 export default {
-  metaInfo: { title: 'Organizations' },
   components: {
+    Head,
+    Link,
     Icon,
     Pagination,
     SearchFilter,

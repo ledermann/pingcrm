@@ -2,6 +2,7 @@
   <div
     class="flex min-h-screen items-center justify-center bg-indigo-800 p-5 text-indigo-100"
   >
+    <Head title="Error" />
     <div class="w-full max-w-md">
       <h1 class="text-3xl">
         {{ title }}
@@ -14,8 +15,12 @@
 </template>
 
 <script>
+import { Head } from '@inertiajs/inertia-vue3';
+
 export default {
-  metaInfo: { title: 'Error' },
+  components: {
+    Head,
+  },
   props: {
     status: {
       type: Number,

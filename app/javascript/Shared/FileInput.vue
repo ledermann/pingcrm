@@ -9,7 +9,7 @@
         class="hidden"
         @change="change"
       />
-      <div v-if="!value" class="p-2">
+      <div v-if="!modelValue" class="p-2">
         <button
           type="button"
           class="rounded-sm bg-gray-700 px-4 py-1 text-xs font-medium text-white hover:bg-gray-700"
@@ -20,9 +20,9 @@
       </div>
       <div v-else class="flex items-center justify-between p-2">
         <div class="flex-1 pr-1">
-          {{ value.name }}
+          {{ modelValue.name }}
           <span class="text-xs text-gray-600"
-            >({{ filesize(value.size) }})</span
+            >({{ filesize(modelValue.size) }})</span
           >
         </div>
         <button
@@ -43,7 +43,7 @@
 <script>
 export default {
   props: {
-    value: File,
+    modelValue: File,
     label: {
       type: String,
       default: null,
@@ -57,8 +57,9 @@ export default {
       default: () => [],
     },
   },
+  emits: ['update:modelValue'],
   watch: {
-    value(value) {
+    modelValue(value) {
       if (!value) {
         this.$refs.file.value = '';
       }
@@ -66,7 +67,7 @@ export default {
   },
   methods: {
     filesize(size) {
-      let i = Math.floor(Math.log(size) / Math.log(1024));
+      var i = Math.floor(Math.log(size) / Math.log(1024));
       return (
         (size / Math.pow(1024, i)).toFixed(2) * 1 +
         ' ' +
@@ -77,10 +78,10 @@ export default {
       this.$refs.file.click();
     },
     change(e) {
-      this.$emit('input', e.target.files[0]);
+      this.$emit('update:modelValue', e.target.files[0]);
     },
     remove() {
-      this.$emit('input', null);
+      this.$emit('update:modelValue', null);
     },
   },
 };

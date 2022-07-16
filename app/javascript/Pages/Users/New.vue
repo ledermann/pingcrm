@@ -1,12 +1,13 @@
 <template>
   <div>
+    <Head title="Create User" />
     <h1 class="mb-8 text-3xl font-bold">
-      <inertia-link
+      <Link
         class="text-indigo-400 hover:text-indigo-600"
         :href="$routes.users()"
       >
         Users
-      </inertia-link>
+      </Link>
       <span class="font-medium text-indigo-400">/</span> Create
     </h1>
     <div class="max-w-3xl overflow-hidden rounded bg-white shadow">
@@ -28,13 +29,15 @@
 </template>
 
 <script>
+import { Head, Link } from '@inertiajs/inertia-vue3';
 import Layout from '@/Layouts/Main.vue';
 import LoadingButton from '@/Shared/LoadingButton.vue';
 import UserForm from './Form.vue';
 
 export default {
-  metaInfo: { title: 'Create User' },
   components: {
+    Head,
+    Link,
     LoadingButton,
     UserForm,
   },

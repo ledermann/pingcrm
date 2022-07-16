@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Head title="Users" />
     <h1 class="mb-8 text-3xl font-bold">Users</h1>
     <div class="mb-6 flex items-center justify-between">
       <search-filter
@@ -30,13 +31,13 @@
           <option value="only">Only Trashed</option>
         </select>
       </search-filter>
-      <inertia-link
+      <Link
         v-if="can.create_user"
         class="btn-indigo"
         :href="$routes.new_user()"
       >
         Create <span class="hidden md:inline">User</span>
-      </inertia-link>
+      </Link>
     </div>
     <div class="overflow-x-auto rounded bg-white shadow">
       <table class="w-full whitespace-nowrap">
@@ -54,7 +55,7 @@
             class="focus-within:bg-gray-100 hover:bg-gray-100"
           >
             <td class="border-t">
-              <inertia-link
+              <Link
                 class="flex items-center px-6 py-4 focus:text-indigo-500"
                 :href="$routes.edit_user(user.id)"
                 aria-label="Edit"
@@ -71,30 +72,30 @@
                   name="trash"
                   class="ml-2 h-3 w-3 flex-shrink-0 fill-gray-500"
                 />
-              </inertia-link>
+              </Link>
             </td>
             <td class="border-t">
-              <inertia-link
+              <Link
                 class="flex items-center px-6 py-4"
                 :href="$routes.edit_user(user.id)"
                 tabindex="-1"
                 aria-label="Edit"
               >
                 {{ user.email }}
-              </inertia-link>
+              </Link>
             </td>
             <td class="border-t">
-              <inertia-link
+              <Link
                 class="flex items-center px-6 py-4"
                 :href="$routes.edit_user(user.id)"
                 tabindex="-1"
                 aria-label="Edit"
               >
                 {{ user.owner ? 'Owner' : 'User' }}
-              </inertia-link>
+              </Link>
             </td>
             <td class="w-px border-t">
-              <inertia-link
+              <Link
                 class="flex items-center px-4"
                 :href="$routes.edit_user(user.id)"
                 tabindex="-1"
@@ -104,7 +105,7 @@
                   name="cheveron-right"
                   class="block h-6 w-6 fill-gray-500"
                 />
-              </inertia-link>
+              </Link>
             </td>
           </tr>
           <tr v-if="users.length === 0">
@@ -117,6 +118,7 @@
 </template>
 
 <script>
+import { Head, Link } from '@inertiajs/inertia-vue3';
 import Icon from '@/Shared/Icon.vue';
 import Layout from '@/Layouts/Main.vue';
 import mapValues from 'lodash/mapValues';
@@ -125,8 +127,9 @@ import SearchFilter from '@/Shared/SearchFilter.vue';
 import throttle from 'lodash/throttle';
 
 export default {
-  metaInfo: { title: 'Users' },
   components: {
+    Head,
+    Link,
     Icon,
     SearchFilter,
   },

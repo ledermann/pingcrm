@@ -1,13 +1,14 @@
 <template>
   <div>
+    <Head :title="`${form.user.first_name} ${form.user.last_name}`" />
     <div class="mb-8 flex max-w-3xl justify-start">
       <h1 class="text-3xl font-bold">
-        <inertia-link
+        <Link
           class="text-indigo-500 hover:text-indigo-600"
           :href="$routes.users()"
         >
           Users
-        </inertia-link>
+        </Link>
         <span class="font-medium text-indigo-400">/</span>
         {{ form.user.first_name }} {{ form.user.last_name }}
       </h1>
@@ -50,18 +51,16 @@
 </template>
 
 <script>
+import { Head, Link } from '@inertiajs/inertia-vue3';
 import Layout from '@/Layouts/Main.vue';
 import LoadingButton from '@/Shared/LoadingButton.vue';
 import UserForm from './Form.vue';
 import TrashedMessage from '@/Shared/TrashedMessage.vue';
 
 export default {
-  metaInfo() {
-    return {
-      title: `${this.form.user.first_name} ${this.form.user.last_name}`,
-    };
-  },
   components: {
+    Head,
+    Link,
     LoadingButton,
     UserForm,
     TrashedMessage,

@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="mb-4">
-      <inertia-link
+      <Link
         class="group flex items-center py-3"
         :href="$routes.root()"
         role="navigation"
@@ -21,10 +21,10 @@
         >
           Dashboard
         </div>
-      </inertia-link>
+      </Link>
     </div>
     <div class="mb-4">
-      <inertia-link
+      <Link
         class="group flex items-center py-3"
         :href="$routes.organizations()"
         role="navigation"
@@ -48,10 +48,10 @@
         >
           Organizations
         </div>
-      </inertia-link>
+      </Link>
     </div>
     <div class="mb-4">
-      <inertia-link
+      <Link
         class="group flex items-center py-3"
         :href="$routes.contacts()"
         role="navigation"
@@ -75,10 +75,10 @@
         >
           Contacts
         </div>
-      </inertia-link>
+      </Link>
     </div>
     <div class="mb-4">
-      <inertia-link
+      <Link
         class="group flex items-center py-3"
         :href="$routes.reports()"
         role="navigation"
@@ -102,17 +102,19 @@
         >
           Reports
         </div>
-      </inertia-link>
+      </Link>
     </div>
   </div>
 </template>
 
 <script>
+import { Link } from '@inertiajs/inertia-vue3';
 import Icon from '@/Shared/Icon.vue';
 
 export default {
   components: {
     Icon,
+    Link,
   },
   methods: {
     isUrl(...urls) {

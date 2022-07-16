@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Head title="Dashboard" />
     <h1 class="mb-8 text-3xl font-bold">Dashboard</h1>
     <p class="mb-8 leading-normal">
       Hey there! Welcome to Ping CRM, a demo app designed to help illustrate how
@@ -30,11 +31,14 @@
 </template>
 
 <script>
+import { Head } from '@inertiajs/inertia-vue3';
 import Layout from '@/Layouts/Main.vue';
 import * as timeago from 'timeago.js';
 
 export default {
-  metaInfo: { title: 'Dashboard' },
+  components: {
+    Head,
+  },
   layout: Layout,
   props: {
     git: {

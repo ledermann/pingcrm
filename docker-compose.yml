@@ -10,7 +10,7 @@ services:
     image: postgres:14-alpine
     restart: always
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      test: ['CMD-SHELL', 'pg_isready -U postgres']
       interval: 30s
       timeout: 30s
       retries: 3
@@ -50,13 +50,13 @@ services:
     restart: always
     command: bundle exec puma -C config/puma.rb
     healthcheck:
-      test: ["CMD-SHELL", "nc -z 127.0.0.1 3000 || exit 1"]
+      test: ['CMD-SHELL', 'nc -z 127.0.0.1 3000 || exit 1']
       interval: 1m
       start_period: 1m
 
 networks:
   internal:
     driver_opts:
-      encrypted: ""
+      encrypted: ''
   traefik_traefik-net:
     external: true

@@ -1,33 +1,26 @@
 <template>
   <div>
-    <h1 class="mb-8 font-bold text-3xl">
-      Dashboard
-    </h1>
+    <h1 class="mb-8 text-3xl font-bold">Dashboard</h1>
     <p class="mb-8 leading-normal">
       Hey there! Welcome to Ping CRM, a demo app designed to help illustrate how
       <a
-        class="text-indigo-800 underline hover:text-orange-600 font-bold"
+        class="font-bold text-indigo-800 underline hover:text-orange-600"
         href="https://inertiajs.com"
       >
         Inertia.js
-      </a> works with
+      </a>
+      works with
       <a
         href="https://rubyonrails.org/"
-        class="text-indigo-800 underline hover:text-orange-600 font-bold"
+        class="font-bold text-indigo-800 underline hover:text-orange-600"
       >
-        Ruby on Rails
-      </a>.
+        Ruby on Rails </a
+      >.
     </p>
 
-    <p
-      v-if="git.commit_url"
-      class="mb-10 leading-normal"
-    >
+    <p v-if="git.commit_url" class="mb-10 leading-normal">
       Version
-      <a
-        :href="git.commit_url"
-        class="hover:underline"
-      >
+      <a :href="git.commit_url" class="hover:underline">
         {{ git.commit_sha }}
       </a>
       &minus;
@@ -37,8 +30,8 @@
 </template>
 
 <script>
-import Layout from '@/Layouts/Main.vue'
-import * as timeago from 'timeago.js'
+import Layout from '@/Layouts/Main.vue';
+import * as timeago from 'timeago.js';
 
 export default {
   metaInfo: { title: 'Dashboard' },
@@ -51,8 +44,8 @@ export default {
   },
   computed: {
     relativeCommitTime() {
-      return timeago.format(this.git.commit_time)
+      return timeago.format(this.git.commit_time);
     },
   },
-}
+};
 </script>

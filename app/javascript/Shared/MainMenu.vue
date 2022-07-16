@@ -2,68 +2,104 @@
   <div>
     <div class="mb-4">
       <inertia-link
-        class="flex items-center group py-3"
+        class="group flex items-center py-3"
         :href="$routes.root()"
         role="navigation"
         aria-label="Dashboard"
       >
         <icon
           name="dashboard"
-          class="w-4 h-4 mr-2"
-          :class="isUrl('') ? 'fill-white' : 'fill-indigo-400 group-hover:fill-white'"
+          class="mr-2 h-4 w-4"
+          :class="
+            isUrl('') ? 'fill-white' : 'fill-indigo-400 group-hover:fill-white'
+          "
         />
-        <div :class="isUrl('') ? 'text-white' : 'text-indigo-300 group-hover:text-white'">
+        <div
+          :class="
+            isUrl('') ? 'text-white' : 'text-indigo-300 group-hover:text-white'
+          "
+        >
           Dashboard
         </div>
       </inertia-link>
     </div>
     <div class="mb-4">
       <inertia-link
-        class="flex items-center group py-3"
+        class="group flex items-center py-3"
         :href="$routes.organizations()"
         role="navigation"
         aria-label="Organizations"
       >
         <icon
           name="office"
-          class="w-4 h-4 mr-2"
-          :class="isUrl('organizations') ? 'fill-white' : 'fill-indigo-400 group-hover:fill-white'"
+          class="mr-2 h-4 w-4"
+          :class="
+            isUrl('organizations')
+              ? 'fill-white'
+              : 'fill-indigo-400 group-hover:fill-white'
+          "
         />
-        <div :class="isUrl('organizations') ? 'text-white' : 'text-indigo-300 group-hover:text-white'">
+        <div
+          :class="
+            isUrl('organizations')
+              ? 'text-white'
+              : 'text-indigo-300 group-hover:text-white'
+          "
+        >
           Organizations
         </div>
       </inertia-link>
     </div>
     <div class="mb-4">
       <inertia-link
-        class="flex items-center group py-3"
+        class="group flex items-center py-3"
         :href="$routes.contacts()"
         role="navigation"
         aria-label="Contacts"
       >
         <icon
           name="users"
-          class="w-4 h-4 mr-2"
-          :class="isUrl('contacts') ? 'fill-white' : 'fill-indigo-400 group-hover:fill-white'"
+          class="mr-2 h-4 w-4"
+          :class="
+            isUrl('contacts')
+              ? 'fill-white'
+              : 'fill-indigo-400 group-hover:fill-white'
+          "
         />
-        <div :class="isUrl('contacts') ? 'text-white' : 'text-indigo-300 group-hover:text-white'">
+        <div
+          :class="
+            isUrl('contacts')
+              ? 'text-white'
+              : 'text-indigo-300 group-hover:text-white'
+          "
+        >
           Contacts
         </div>
       </inertia-link>
     </div>
     <div class="mb-4">
       <inertia-link
-        class="flex items-center group py-3"
+        class="group flex items-center py-3"
         :href="$routes.reports()"
         role="navigation"
         aria-label="Reports"
       >
         <icon
           name="printer"
-          class="w-4 h-4 mr-2"
-          :class="isUrl('reports') ? 'fill-white' : 'fill-indigo-400 group-hover:fill-white'"
+          class="mr-2 h-4 w-4"
+          :class="
+            isUrl('reports')
+              ? 'fill-white'
+              : 'fill-indigo-400 group-hover:fill-white'
+          "
         />
-        <div :class="isUrl('reports') ? 'text-white' : 'text-indigo-300 group-hover:text-white'">
+        <div
+          :class="
+            isUrl('reports')
+              ? 'text-white'
+              : 'text-indigo-300 group-hover:text-white'
+          "
+        >
           Reports
         </div>
       </inertia-link>
@@ -72,7 +108,7 @@
 </template>
 
 <script>
-import Icon from '@/Shared/Icon.vue'
+import Icon from '@/Shared/Icon.vue';
 
 export default {
   components: {
@@ -80,14 +116,14 @@ export default {
   },
   methods: {
     isUrl(...urls) {
-      let currentUrl = this.$page.url.substr(1)
+      let currentUrl = this.$page.url.substr(1);
 
       if (urls[0] === '') {
-        return currentUrl === ''
+        return currentUrl === '';
       }
 
-      return urls.filter(url => currentUrl.startsWith(url)).length
+      return urls.filter((url) => currentUrl.startsWith(url)).length;
     },
   },
-}
+};
 </script>

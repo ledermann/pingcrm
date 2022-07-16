@@ -1,29 +1,27 @@
 <template>
   <div>
-    <h1 class="mb-8 font-bold text-3xl">
+    <h1 class="mb-8 text-3xl font-bold">
       <inertia-link
         class="text-indigo-500 hover:text-indigo-800"
         :href="$routes.contacts()"
       >
         Contacts
       </inertia-link>
-      <span class="text-indigo-400 font-medium">/</span>
+      <span class="font-medium text-indigo-400">/</span>
       {{ form.contact.first_name }} {{ form.contact.last_name }}
     </h1>
-    <trashed-message
-      v-if="contact.deleted_at"
-      class="mb-6"
-      @restore="restore"
-    >
+    <trashed-message v-if="contact.deleted_at" class="mb-6" @restore="restore">
       This contact has been deleted.
     </trashed-message>
-    <div class="bg-white rounded shadow overflow-hidden max-w-3xl">
+    <div class="max-w-3xl overflow-hidden rounded bg-white shadow">
       <contact-form
         v-model="form"
         :organizations="organizations"
         @submit="form.put($routes.contact(contact.id))"
       >
-        <div class="px-8 py-4 bg-gray-100 border-t border-gray-200 flex items-center">
+        <div
+          class="flex items-center border-t border-gray-200 bg-gray-100 px-8 py-4"
+        >
           <button
             v-if="!contact.deleted_at"
             class="text-red-700 hover:underline"
@@ -47,17 +45,17 @@
 </template>
 
 <script>
-import Layout from '@/Layouts/Main.vue'
-import LoadingButton from '@/Shared/LoadingButton.vue'
-import ContactForm from './Form.vue'
-import TrashedMessage from '@/Shared/TrashedMessage.vue'
-import omit from 'lodash/omit'
+import Layout from '@/Layouts/Main.vue';
+import LoadingButton from '@/Shared/LoadingButton.vue';
+import ContactForm from './Form.vue';
+import TrashedMessage from '@/Shared/TrashedMessage.vue';
+import omit from 'lodash/omit';
 
 export default {
   metaInfo() {
     return {
       title: `${this.form.contact.first_name} ${this.form.contact.last_name}`,
-    }
+    };
   },
   components: {
     LoadingButton,
@@ -81,19 +79,19 @@ export default {
       form: this.$inertia.form({
         contact: omit(this.contact, 'id', 'deleted_at'),
       }),
-    }
+    };
   },
   methods: {
     destroy() {
       if (confirm('Are you sure you want to delete this contact?')) {
-        this.$inertia.delete(this.$routes.contact(this.contact.id))
+        this.$inertia.delete(this.$routes.contact(this.contact.id));
       }
     },
     restore() {
       if (confirm('Are you sure you want to restore this contact?')) {
-        this.$inertia.put(this.$routes.restore_contact(this.contact.id))
+        this.$inertia.put(this.$routes.restore_contact(this.contact.id));
       }
     },
   },
-}
+};
 </script>

@@ -1,20 +1,19 @@
 <template>
   <div>
-    <h1 class="mb-8 font-bold text-3xl">
+    <h1 class="mb-8 text-3xl font-bold">
       <inertia-link
         class="text-indigo-400 hover:text-indigo-600"
         :href="$routes.users()"
       >
         Users
       </inertia-link>
-      <span class="text-indigo-400 font-medium">/</span> Create
+      <span class="font-medium text-indigo-400">/</span> Create
     </h1>
-    <div class="bg-white rounded shadow overflow-hidden max-w-3xl">
-      <user-form
-        v-model="form"
-        @submit="form.post($routes.users())"
-      >
-        <div class="px-8 py-4 bg-gray-100 border-t border-gray-200 flex justify-end items-center">
+    <div class="max-w-3xl overflow-hidden rounded bg-white shadow">
+      <user-form v-model="form" @submit="form.post($routes.users())">
+        <div
+          class="flex items-center justify-end border-t border-gray-200 bg-gray-100 px-8 py-4"
+        >
           <loading-button
             :loading="form.processing"
             class="btn-indigo"
@@ -29,9 +28,9 @@
 </template>
 
 <script>
-import Layout from '@/Layouts/Main.vue'
-import LoadingButton from '@/Shared/LoadingButton.vue'
-import UserForm from './Form.vue'
+import Layout from '@/Layouts/Main.vue';
+import LoadingButton from '@/Shared/LoadingButton.vue';
+import UserForm from './Form.vue';
 
 export default {
   metaInfo: { title: 'Create User' },
@@ -52,7 +51,7 @@ export default {
       form: this.$inertia.form({
         user: this.user,
       }),
-    }
+    };
   },
-}
+};
 </script>

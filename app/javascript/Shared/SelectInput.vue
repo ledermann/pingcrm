@@ -1,10 +1,6 @@
 <template>
   <div>
-    <label
-      v-if="label"
-      class="form-label"
-      :for="id"
-    >{{ label }}:</label>
+    <label v-if="label" class="form-label" :for="id">{{ label }}:</label>
     <select
       :id="id"
       ref="input"
@@ -15,10 +11,7 @@
     >
       <slot />
     </select>
-    <div
-      v-if="errors.length"
-      class="form-error"
-    >
+    <div v-if="errors.length" class="form-error">
       {{ errors[0] }}
     </div>
   </div>
@@ -31,7 +24,7 @@ export default {
     id: {
       type: String,
       default() {
-        return `select-input-${this._uid}`
+        return `select-input-${this._uid}`;
       },
     },
     value: {
@@ -50,20 +43,20 @@ export default {
   data() {
     return {
       selected: this.value,
-    }
+    };
   },
   watch: {
     selected(selected) {
-      this.$emit('input', selected)
+      this.$emit('input', selected);
     },
   },
   methods: {
     focus() {
-      this.$refs.input.focus()
+      this.$refs.input.focus();
     },
     select() {
-      this.$refs.input.select()
+      this.$refs.input.select();
     },
   },
-}
+};
 </script>

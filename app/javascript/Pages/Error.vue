@@ -1,5 +1,7 @@
 <template>
-  <div class="p-5 bg-indigo-800 text-indigo-100 min-h-screen flex justify-center items-center">
+  <div
+    class="flex min-h-screen items-center justify-center bg-indigo-800 p-5 text-indigo-100"
+  >
     <div class="w-full max-w-md">
       <h1 class="text-3xl">
         {{ title }}
@@ -27,7 +29,7 @@ export default {
         404: '404: Page Not Found',
         500: '500: Server Error',
         503: '503: Service Unavailable',
-      }[this.status]
+      }[this.status];
     },
     description() {
       return {
@@ -35,8 +37,8 @@ export default {
         404: 'Sorry, the page you are looking for could not be found.',
         500: 'Whoops, something went wrong on our servers.',
         503: 'Sorry, we are doing some maintenance. Please check back soon.',
-      }[this.status]
+      }[this.status];
     },
   },
-}
+};
 </script>

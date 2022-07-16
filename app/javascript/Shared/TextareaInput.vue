@@ -1,10 +1,6 @@
 <template>
   <div>
-    <label
-      v-if="label"
-      class="form-label"
-      :for="id"
-    >{{ label }}:</label>
+    <label v-if="label" class="form-label" :for="id">{{ label }}:</label>
     <textarea
       :id="id"
       ref="input"
@@ -14,10 +10,7 @@
       :value="value"
       @input="$emit('input', $event.target.value)"
     />
-    <div
-      v-if="errors.length"
-      class="form-error"
-    >
+    <div v-if="errors.length" class="form-error">
       {{ errors[0] }}
     </div>
   </div>
@@ -30,7 +23,7 @@ export default {
     id: {
       type: String,
       default() {
-        return `textarea-input-${this._uid}`
+        return `textarea-input-${this._uid}`;
       },
     },
     value: {
@@ -48,11 +41,11 @@ export default {
   },
   methods: {
     focus() {
-      this.$refs.input.focus()
+      this.$refs.input.focus();
     },
     select() {
-      this.$refs.input.select()
+      this.$refs.input.select();
     },
   },
-}
+};
 </script>

@@ -2,15 +2,16 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-@import "../styles/form";
-@import "../styles/buttons";
-@import "../styles/transitions";
+@import '../styles/form';
+@import '../styles/buttons';
+@import '../styles/transitions';
 
 @layer utilities {
   .btn-indigo {
-    @apply px-6 py-3 rounded bg-indigo-600 text-white text-sm font-bold whitespace-nowrap;
+    @apply whitespace-nowrap rounded bg-indigo-600 px-6 py-3 text-sm font-bold text-white;
   }
-  .btn-indigo:hover, .btn-indigo:focus {
+  .btn-indigo:hover,
+  .btn-indigo:focus {
     @apply bg-orange-500;
   }
 }

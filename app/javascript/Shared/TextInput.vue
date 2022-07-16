@@ -1,10 +1,6 @@
 <template>
   <div>
-    <label
-      v-if="label"
-      class="form-label"
-      :for="id"
-    >{{ label }}:</label>
+    <label v-if="label" class="form-label" :for="id">{{ label }}:</label>
     <input
       :id="id"
       ref="input"
@@ -14,11 +10,8 @@
       :type="type"
       :value="value"
       @input="$emit('input', $event.target.value)"
-    >
-    <div
-      v-if="errors.length"
-      class="form-error"
-    >
+    />
+    <div v-if="errors.length" class="form-error">
       {{ errors[0] }}
     </div>
   </div>
@@ -31,7 +24,7 @@ export default {
     id: {
       type: String,
       default() {
-        return `text-input-${this._uid}`
+        return `text-input-${this._uid}`;
       },
     },
     type: {
@@ -53,14 +46,14 @@ export default {
   },
   methods: {
     focus() {
-      this.$refs.input.focus()
+      this.$refs.input.focus();
     },
     select() {
-      this.$refs.input.select()
+      this.$refs.input.select();
     },
     setSelectionRange(start, end) {
-      this.$refs.input.setSelectionRange(start, end)
+      this.$refs.input.setSelectionRange(start, end);
     },
   },
-}
+};
 </script>

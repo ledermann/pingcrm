@@ -1,32 +1,34 @@
 <template>
   <div class="flex items-center">
-    <div class="flex w-full bg-white shadow rounded">
+    <div class="flex w-full rounded bg-white shadow">
       <dropdown
-        class="px-4 md:px-6 rounded-l border-r hover:bg-gray-100 focus:border-white focus:z-10"
+        class="rounded-l border-r px-4 hover:bg-gray-100 focus:z-10 focus:border-white md:px-6"
         placement="bottom-start"
         aria-label="Filter"
         :auto-close="false"
       >
         <div class="flex items-baseline">
-          <span class="text-gray-800 hidden md:inline">Filter</span>
+          <span class="hidden text-gray-800 md:inline">Filter</span>
           <svg
-            class="w-2 h-2 fill-gray-700 md:ml-2"
+            class="h-2 w-2 fill-gray-700 md:ml-2"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 961.243 599.998"
           >
-            <path d="M239.998 239.999L0 0h961.243L721.246 240c-131.999 132-240.28 240-240.624 239.999-.345-.001-108.625-108.001-240.624-240z" />
+            <path
+              d="M239.998 239.999L0 0h961.243L721.246 240c-131.999 132-240.28 240-240.624 239.999-.345-.001-108.625-108.001-240.624-240z"
+            />
           </svg>
         </div>
         <div
           slot="dropdown"
-          class="mt-2 px-4 py-6 w-screen shadow-xl bg-white rounded"
+          class="mt-2 w-screen rounded bg-white px-4 py-6 shadow-xl"
           :style="{ maxWidth: `${maxWidth}px` }"
         >
           <slot />
         </div>
       </dropdown>
       <input
-        class="w-full px-6 py-3 rounded-r"
+        class="w-full rounded-r px-6 py-3"
         aria-label="Search"
         autocomplete="off"
         type="text"
@@ -34,7 +36,7 @@
         placeholder="Search…"
         :value="value"
         @input="$emit('input', $event.target.value)"
-      >
+      />
     </div>
     <button
       class="ml-3 text-sm text-gray-700 hover:text-gray-700 focus:text-indigo-500"
@@ -47,7 +49,7 @@
 </template>
 
 <script>
-import Dropdown from '@/Shared/Dropdown.vue'
+import Dropdown from '@/Shared/Dropdown.vue';
 
 export default {
   components: {
@@ -63,5 +65,5 @@ export default {
       default: 300,
     },
   },
-}
+};
 </script>

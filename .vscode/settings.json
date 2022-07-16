@@ -1,0 +1,19 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+
+  "files.trimTrailingWhitespace": true,
+  "files.watcherExclude": {
+    "**/tmp/**": true,
+    "**/public/vite*": true
+  },
+
+  "search.exclude": {
+    "**/tmp": true,
+    "**/public/vite*": true,
+    "**/node_modules": true
+  },
+
+  "eslint.validate": ["javascript", "vue"]
+}

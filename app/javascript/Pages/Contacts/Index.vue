@@ -1,69 +1,46 @@
 <template>
   <div>
-    <h1 class="mb-8 font-bold text-3xl">
-      Contacts
-    </h1>
-    <div class="mb-6 flex justify-between items-center">
+    <h1 class="mb-8 text-3xl font-bold">Contacts</h1>
+    <div class="mb-6 flex items-center justify-between">
       <search-filter
         v-model="form.search"
-        class="w-full max-w-md mr-4"
+        class="mr-4 w-full max-w-md"
         @reset="reset"
       >
-        <label
-          class="block text-gray-800"
-          for="trashed-filter"
-        >Trashed:</label>
+        <label class="block text-gray-800" for="trashed-filter">Trashed:</label>
         <select
           id="trashed-filter"
           v-model="form.trashed"
-          class="mt-1 w-full form-select"
+          class="form-select mt-1 w-full"
         >
           <option :value="null" />
-          <option value="with">
-            With Trashed
-          </option>
-          <option value="only">
-            Only Trashed
-          </option>
+          <option value="with">With Trashed</option>
+          <option value="only">Only Trashed</option>
         </select>
       </search-filter>
-      <inertia-link
-        class="btn-indigo"
-        :href="$routes.new_contact()"
-      >
+      <inertia-link class="btn-indigo" :href="$routes.new_contact()">
         Create <span class="hidden md:inline">Contact</span>
       </inertia-link>
     </div>
-    <div class="bg-white rounded shadow overflow-x-auto">
+    <div class="overflow-x-auto rounded bg-white shadow">
       <table class="w-full whitespace-nowrap">
         <thead>
           <tr class="text-left font-bold">
-            <th class="px-6 pt-6 pb-4">
-              Name
-            </th>
-            <th class="px-6 pt-6 pb-4">
-              Organization
-            </th>
-            <th class="px-6 pt-6 pb-4">
-              City
-            </th>
-            <th
-              class="px-6 pt-6 pb-4"
-              colspan="2"
-            >
-              Phone
-            </th>
+            <th class="px-6 pt-6 pb-4">Name</th>
+            <th class="px-6 pt-6 pb-4">Organization</th>
+            <th class="px-6 pt-6 pb-4">City</th>
+            <th class="px-6 pt-6 pb-4" colspan="2">Phone</th>
           </tr>
         </thead>
         <tbody>
           <tr
             v-for="contact in contacts.data"
             :key="contact.id"
-            class="hover:bg-gray-100 focus-within:bg-gray-100"
+            class="focus-within:bg-gray-100 hover:bg-gray-100"
           >
             <td class="border-t">
               <inertia-link
-                class="px-6 py-4 flex items-center focus:text-indigo-500"
+                class="flex items-center px-6 py-4 focus:text-indigo-500"
                 :href="$routes.edit_contact(contact.id)"
                 aria-label="Edit"
               >
@@ -71,13 +48,13 @@
                 <icon
                   v-if="contact.deleted_at"
                   name="trash"
-                  class="flex-shrink-0 w-3 h-3 fill-gray-500 ml-2"
+                  class="ml-2 h-3 w-3 flex-shrink-0 fill-gray-500"
                 />
               </inertia-link>
             </td>
             <td class="border-t">
               <inertia-link
-                class="px-6 py-4 flex items-center"
+                class="flex items-center px-6 py-4"
                 :href="$routes.edit_contact(contact.id)"
                 tabindex="-1"
                 aria-label="Edit"
@@ -89,7 +66,7 @@
             </td>
             <td class="border-t">
               <inertia-link
-                class="px-6 py-4 flex items-center"
+                class="flex items-center px-6 py-4"
                 :href="$routes.edit_contact(contact.id)"
                 tabindex="-1"
                 aria-label="Edit"
@@ -99,7 +76,7 @@
             </td>
             <td class="border-t">
               <inertia-link
-                class="px-6 py-4 flex items-center"
+                class="flex items-center px-6 py-4"
                 :href="$routes.edit_contact(contact.id)"
                 tabindex="-1"
                 aria-label="Edit"
@@ -107,27 +84,22 @@
                 {{ contact.phone }}
               </inertia-link>
             </td>
-            <td class="border-t w-px">
+            <td class="w-px border-t">
               <inertia-link
-                class="px-4 flex items-center"
+                class="flex items-center px-4"
                 :href="$routes.edit_contact(contact.id)"
                 tabindex="-1"
                 aria-label="Edit"
               >
                 <icon
                   name="cheveron-right"
-                  class="block w-6 h-6 fill-gray-500"
+                  class="block h-6 w-6 fill-gray-500"
                 />
               </inertia-link>
             </td>
           </tr>
           <tr v-if="contacts.data.length === 0">
-            <td
-              class="border-t px-6 py-4"
-              colspan="4"
-            >
-              No contacts found.
-            </td>
+            <td class="border-t px-6 py-4" colspan="4">No contacts found.</td>
           </tr>
         </tbody>
       </table>
@@ -137,13 +109,13 @@
 </template>
 
 <script>
-import Icon from '@/Shared/Icon.vue'
-import Layout from '@/Layouts/Main.vue'
-import mapValues from 'lodash/mapValues'
-import Pagination from '@/Shared/Pagination.vue'
-import pickBy from 'lodash/pickBy'
-import SearchFilter from '@/Shared/SearchFilter.vue'
-import throttle from 'lodash/throttle'
+import Icon from '@/Shared/Icon.vue';
+import Layout from '@/Layouts/Main.vue';
+import mapValues from 'lodash/mapValues';
+import Pagination from '@/Shared/Pagination.vue';
+import pickBy from 'lodash/pickBy';
+import SearchFilter from '@/Shared/SearchFilter.vue';
+import throttle from 'lodash/throttle';
 
 export default {
   metaInfo: { title: 'Contacts' },
@@ -169,12 +141,12 @@ export default {
         search: this.filters.search,
         trashed: this.filters.trashed,
       },
-    }
+    };
   },
   watch: {
     form: {
-      handler: throttle(function() {
-        let query = pickBy(this.form)
+      handler: throttle(function () {
+        let query = pickBy(this.form);
         this.$inertia.get(
           this.$routes.contacts(
             Object.keys(query).length ? query : { remember: 'forget' },
@@ -186,15 +158,15 @@ export default {
             replace: true,
             only: ['contacts'],
           },
-        )
+        );
       }, 150),
       deep: true,
     },
   },
   methods: {
     reset() {
-      this.form = mapValues(this.form, () => null)
+      this.form = mapValues(this.form, () => null);
     },
   },
-}
+};
 </script>

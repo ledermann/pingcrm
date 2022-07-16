@@ -1,4 +1,4 @@
-const colors = require('tailwindcss/colors')
+const colors = require('tailwindcss/colors');
 
 module.exports = {
   theme: {
@@ -23,13 +23,13 @@ module.exports = {
       },
     },
     extend: {
-      borderColor: theme => ({
+      borderColor: (theme) => ({
         DEFAULT: theme('colors.gray.200', 'currentColor'),
       }),
-      boxShadow: theme => ({
+      boxShadow: (theme) => ({
         outline: `0 0 0 2px ${theme('colors.indigo.500')}`,
       }),
-      fill: theme => theme('colors'),
+      fill: (theme) => theme('colors'),
     },
   },
   content: [
@@ -38,6 +38,5 @@ module.exports = {
     './app/helpers/**/*.rb',
     './app/javascript/**/*.js',
   ],
-  plugins: [
-  ],
-}
+  plugins: [],
+};

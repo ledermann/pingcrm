@@ -2,10 +2,7 @@
 
 <template>
   <portal to="modal">
-    <div
-      v-if="showModal"
-      class="fixed inset-0"
-    >
+    <div v-if="showModal" class="fixed inset-0">
       <transition
         enter-active-class="transition-all transition-fast ease-out-quad"
         leave-active-class="transition-all transition-medium ease-in-quad"
@@ -38,29 +35,33 @@
           class="relative h-full overflow-y-auto text-center"
           @click="close"
         >
-          <div class="absolute inline-block align-middle w-0 h-screen" />
+          <div class="absolute inline-block h-screen w-0 align-middle" />
 
           <div
-            class="inline-block align-middle text-left my-6 rounded overflow-hidden"
+            class="my-6 inline-block overflow-hidden rounded text-left align-middle"
             @click.stop
           >
-            <div class="px-8 py-4 bg-gray-100 border-b border-gray-200 flex justify-between items-center">
-              <h1 class="font-bold text-xl">
+            <div
+              class="flex items-center justify-between border-b border-gray-200 bg-gray-100 px-8 py-4"
+            >
+              <h1 class="text-xl font-bold">
                 {{ title }}
               </h1>
 
               <button
                 type="button"
-                class="p-1 rounded hover:bg-gray-300"
+                class="rounded p-1 hover:bg-gray-300"
                 title="Close"
                 @click="close"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  class="w-4 h-4"
+                  class="h-4 w-4"
                   viewBox="0 0 20 20"
                 >
-                  <path d="M10 8.59L2.93 1.51 1.51 2.93 8.59 10l-7.08 7.07 1.42 1.42L10 11.41l7.07 7.08 1.42-1.42L11.41 10l7.08-7.07-1.42-1.42L10 8.59z" />
+                  <path
+                    d="M10 8.59L2.93 1.51 1.51 2.93 8.59 10l-7.08 7.07 1.42 1.42L10 11.41l7.07 7.08 1.42-1.42L11.41 10l7.08-7.07-1.42-1.42L10 8.59z"
+                  />
                 </svg>
               </button>
             </div>
@@ -92,54 +93,54 @@ export default {
       showContent: false,
       backdropLeaving: false,
       cardLeaving: false,
-    }
+    };
   },
   computed: {
     leaving() {
-      return this.backdropLeaving || this.cardLeaving
+      return this.backdropLeaving || this.cardLeaving;
     },
   },
   watch: {
     open: {
-      handler: function(newValue) {
+      handler: function (newValue) {
         if (newValue) {
-          this.show()
+          this.show();
         } else {
-          this.close()
+          this.close();
         }
       },
       immediate: true,
     },
     leaving(newValue) {
       if (newValue === false) {
-        this.showModal = false
-        this.$emit('close')
+        this.showModal = false;
+        this.$emit('close');
       }
     },
   },
   created() {
-    const onEscape = e => {
+    const onEscape = (e) => {
       if (this.open && e.keyCode === 27) {
-        this.close()
+        this.close();
       }
-    }
-    document.addEventListener('keydown', onEscape)
+    };
+    document.addEventListener('keydown', onEscape);
     this.$once('hook:destroyed', () => {
-      document.removeEventListener('keydown', onEscape)
-    })
+      document.removeEventListener('keydown', onEscape);
+    });
   },
   methods: {
     show() {
-      this.showModal = true
-      this.showBackdrop = true
-      this.showContent = true
-      document.body.style.setProperty('overflow', 'hidden')
+      this.showModal = true;
+      this.showBackdrop = true;
+      this.showContent = true;
+      document.body.style.setProperty('overflow', 'hidden');
     },
     close() {
-      this.showBackdrop = false
-      this.showContent = false
-      document.body.style.removeProperty('overflow')
+      this.showBackdrop = false;
+      this.showContent = false;
+      document.body.style.removeProperty('overflow');
     },
   },
-}
+};
 </script>

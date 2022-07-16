@@ -15,7 +15,6 @@ There is a hosted installation of this demo available at https://pingcrm.lederma
 
 ![Lighthouse audit](lighthouse.png)
 
-
 ## Installation
 
 Clone the repo locally:
@@ -42,7 +41,6 @@ You're ready to go! Visit PingCRM in your browser (http://localhost:3000), and l
 - **Username:** johndoe@example.com
 - **Password:** secret
 
-
 ## Running tests
 
 To run the PingCRM tests, run:
@@ -51,15 +49,13 @@ To run the PingCRM tests, run:
 rails test:system
 ```
 
-
 ## Requirements
 
 - Ruby 3.1
 - Ruby on Rails 7
 - PostgreSQL
 
-
 ## Credits
 
-* Original work by Jonathan Reinink (@reinink) and contributors
-* Port to Ruby on Rails by Georg Ledermann (@ledermann)
+- Original work by Jonathan Reinink (@reinink) and contributors
+- Port to Ruby on Rails by Georg Ledermann (@ledermann)

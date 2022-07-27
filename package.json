@@ -27,7 +27,7 @@
     "eslint-plugin-vue": "^9.3.0",
     "prettier": "^2.7.1",
     "prettier-plugin-tailwindcss": "^0.1.13",
-    "rollup": "^2.77.1",
+    "rollup": "^2.77.2",
     "rollup-plugin-gzip": "^3.0.1",
     "vite": "^3.0.3",
     "vite-plugin-full-reload": "^1.0.3",

@@ -13,7 +13,7 @@
     "lodash": "^4.17.21",
     "plausible-tracker": "^0.3.8",
     "postcss": "^8.4.14",
-    "tailwindcss": "^3.1.6",
+    "tailwindcss": "^3.1.7",
     "timeago.js": "^4.0.2",
     "uuid": "^8.3.2",
     "vue": "^3.2.37"

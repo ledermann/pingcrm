@@ -9,7 +9,7 @@
     "@inertiajs/inertia-vue3": "^0.6.0",
     "@inertiajs/progress": "^0.2.7",
     "@popperjs/core": "^2.11.6",
-    "autoprefixer": "^10.4.8",
+    "autoprefixer": "^10.4.9",
     "lodash": "^4.17.21",
     "plausible-tracker": "^0.3.8",
     "postcss": "^8.4.16",

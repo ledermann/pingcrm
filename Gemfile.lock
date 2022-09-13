@@ -250,7 +250,7 @@ GEM
     vite_rails (3.0.12)
       railties (>= 5.1, < 8)
       vite_ruby (~> 3.0, >= 3.2.2)
-    vite_ruby (3.2.2)
+    vite_ruby (3.2.3)
       dry-cli (~> 0.7.0)
       rack-proxy (~> 0.6, >= 0.6.1)
       zeitwerk (~> 2.2)
@@ -294,7 +294,7 @@ DEPENDENCIES
   pg (>= 0.18, < 2.0)
   puma (~> 5.0)
   rack-mini-profiler
-  rails (~> 7.0.3)
+  rails (~> 7.0.4)
   rubocop
   rubocop-performance
   rubocop-rails
@@ -309,4 +309,4 @@ RUBY VERSION
    ruby 3.1.2p20
 
 BUNDLED WITH
-   2.3.18
+   2.3.22

@@ -29,9 +29,8 @@
     "prettier-plugin-tailwindcss": "^0.1.13",
     "rollup": "^2.79.1",
     "rollup-plugin-gzip": "^3.0.1",
-    "vite": "^3.1.4",
+    "vite": "^3.1.6",
     "vite-plugin-full-reload": "^1.0.4",
-    "vite-plugin-ruby": "^3.1.2",
-    "zlib": "^1.0.5"
+    "vite-plugin-ruby": "^3.1.2"
   }
 }

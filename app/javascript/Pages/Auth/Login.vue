@@ -36,15 +36,10 @@
             <span class="text-sm">Remember Me</span>
           </label>
         </div>
-        <div
-          class="flex items-center justify-between border-t border-gray-200 bg-gray-100 px-10 py-4"
-        >
-          <a class="hover:underline" tabindex="-1" href="#reset-password"
-            >Forgot password?</a
-          >
+        <div class="flex border-t border-gray-200 bg-gray-100 px-10 py-4">
           <loading-button
             :loading="form.processing"
-            class="btn-indigo"
+            class="btn-indigo ml-auto"
             type="submit"
           >
             Login

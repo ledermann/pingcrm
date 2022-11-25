@@ -53,7 +53,7 @@
 </template>
 
 <script>
-import { Head } from '@inertiajs/inertia-vue3';
+import { Head } from '@inertiajs/vue3';
 import Layout from '@/Layouts/Minimal.vue';
 import FlashMessages from '@/Shared/FlashMessages.vue';
 import LoadingButton from '@/Shared/LoadingButton.vue';

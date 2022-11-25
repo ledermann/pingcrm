@@ -7,7 +7,7 @@ import '~/styles/application.css';
 
 import { createApp, h } from 'vue';
 
-import { Inertia } from '@inertiajs/inertia';
+import { router, createInertiaApp } from '@inertiajs/vue3';
 import Plausible from 'plausible-tracker';
 const plausibleUrl = document.querySelector(
   'meta[name="plausible-url"]',
@@ -18,14 +18,10 @@ if (plausibleUrl) {
     apiHost: plausibleUrl,
   });
 
-  Inertia.on('navigate', () => {
+  router.on('navigate', () => {
     plausible.trackPageview();
   });
 }
-
-import { createInertiaApp } from '@inertiajs/inertia-vue3';
-import { InertiaProgress } from '@inertiajs/progress';
-InertiaProgress.init();
 
 import * as Routes from '@/utils/routes.js';
 

@@ -110,7 +110,7 @@
 </template>
 
 <script>
-import { Link } from '@inertiajs/inertia-vue3';
+import { Link } from '@inertiajs/vue3';
 import MinimalLayout from '@/Layouts/Minimal.vue';
 import Dropdown from '@/Shared/Dropdown.vue';
 import FlashMessages from '@/Shared/FlashMessages.vue';

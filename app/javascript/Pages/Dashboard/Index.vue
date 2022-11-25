@@ -31,7 +31,7 @@
 </template>
 
 <script>
-import { Head } from '@inertiajs/inertia-vue3';
+import { Head } from '@inertiajs/vue3';
 import Layout from '@/Layouts/Main.vue';
 import * as timeago from 'timeago.js';
 

@@ -24,7 +24,7 @@
     "eslint": "^8.28.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-vue": "^9.7.0",
+    "eslint-plugin-vue": "^9.8.0",
     "prettier": "^2.8.0",
     "prettier-plugin-tailwindcss": "^0.1.13",
     "rollup": "^2.79.1",

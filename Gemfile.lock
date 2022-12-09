@@ -115,7 +115,7 @@ GEM
     inertia_rails (3.0.0)
       rails (>= 5)
     io-console (0.5.11)
-    irb (1.5.1)
+    irb (1.6.0)
       reline (>= 0.3.0)
     jbuilder (2.11.5)
       actionview (>= 5.0.0)

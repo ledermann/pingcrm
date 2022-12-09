@@ -99,6 +99,9 @@ Style/DocumentationMethod:
 Style/DisableCopsWithinSourceCodeDirective:
   Enabled: false
 
+Style/RequireOrder:
+  Enabled: false
+
 ### Layout
 
 Layout/DotPosition:

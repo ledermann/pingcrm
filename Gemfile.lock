@@ -245,7 +245,7 @@ GEM
     vite_rails (3.0.13)
       railties (>= 5.1, < 8)
       vite_ruby (~> 3.0, >= 3.2.2)
-    vite_ruby (3.2.12)
+    vite_ruby (3.2.13)
       dry-cli (~> 0.7.0)
       rack-proxy (~> 0.6, >= 0.6.1)
       zeitwerk (~> 2.2)

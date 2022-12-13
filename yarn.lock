@@ -1378,10 +1378,10 @@ rollup-plugin-gzip@^3.1.0:
   resolved "https://registry.yarnpkg.com/rollup-plugin-gzip/-/rollup-plugin-gzip-3.1.0.tgz#ce439ba9cd212c0e2c131d91e6214044e8972485"
   integrity sha512-PFS9s6/w6dCra6/Z8PGD+ug3aaaqKLDCbr5y1Ek71Wd4rQSmMnOqCIIMgwbYxZ9A/gjP3pCN6rA4pAG47jxF0w==
 
-rollup@^3.7.0, rollup@^3.7.1:
-  version "3.7.1"
-  resolved "https://registry.yarnpkg.com/rollup/-/rollup-3.7.1.tgz#615b736bdc6ad405953d269fc6afd3822d6d8811"
-  integrity sha512-ek6+FORvI79VQTNlIYtXpIrGEPRlYSNZO+5EcmaozKkRL5L6KLvGDUbM5E+bd6jnHW9fgcK0DKTdWjIsEmNb4g==
+rollup@^3.7.0, rollup@^3.7.4:
+  version "3.7.4"
+  resolved "https://registry.yarnpkg.com/rollup/-/rollup-3.7.4.tgz#993c3b30eff1df96f5eafb7c2ef7648960f2fa34"
+  integrity sha512-jN9rx3k5pfg9H9al0r0y1EYKSeiRANZRYX32SuNXAnKzh6cVyf4LZVto1KAuDnbHT03E1CpsgqDKaqQ8FZtgxw==
   optionalDependencies:
     fsevents "~2.3.2"
 

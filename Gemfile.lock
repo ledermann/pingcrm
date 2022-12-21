@@ -164,7 +164,7 @@ GEM
       ast (~> 2.4.1)
     pg (1.4.5)
     public_suffix (5.0.1)
-    puma (5.6.5)
+    puma (6.0.1)
       nio4r (~> 2.0)
     racc (1.6.1)
     rack (2.2.4)
@@ -287,7 +287,7 @@ DEPENDENCIES
   oj
   pagy
   pg (>= 0.18, < 2.0)
-  puma (~> 5.0)
+  puma (~> 6)
   rack-mini-profiler
   rails (~> 7.0.4)
   rubocop

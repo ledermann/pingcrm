@@ -151,22 +151,22 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz#b520529ec21d8e5945a1851dfd1c32e94e39ff45"
   integrity sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==
 
-"@inertiajs/core@1.0.0-beta.2":
-  version "1.0.0-beta.2"
-  resolved "https://registry.yarnpkg.com/@inertiajs/core/-/core-1.0.0-beta.2.tgz#a3060338c8d7f01be7a8f3c32377305645d4f41d"
-  integrity sha512-0tWQ937hSVpEWfzonCcIMXQMtZhL/OgqsGI+3xJgwWAD+TNk9Bz53RgQUUTpapBSmwMjoJLNKP+OW4COrVUYRg==
+"@inertiajs/core@1.0.0-beta.5":
+  version "1.0.0-beta.5"
+  resolved "https://registry.yarnpkg.com/@inertiajs/core/-/core-1.0.0-beta.5.tgz#d58e28721e0f40583b3cc1779beb7b11274f1a22"
+  integrity sha512-hwpGvO7Z/3qJ2uOs1vEmn1rqkmEkBQdn/ySRwuDrpd8Yld2EUAvrrak2XWfq1jLwzzPqXZSB5guIG5kIsqFOeg==
   dependencies:
-    axios "^0.27.0"
+    axios "^1.2.0"
     deepmerge "^4.0.0"
     nprogress "^0.2.0"
     qs "^6.9.0"
 
-"@inertiajs/vue3@^1.0.0-beta.2":
-  version "1.0.0-beta.2"
-  resolved "https://registry.yarnpkg.com/@inertiajs/vue3/-/vue3-1.0.0-beta.2.tgz#451b1a6a73f2ae87941cbce522fb84d9be5ef623"
-  integrity sha512-4e1s7Bl0QDUO9ZtxJZaic3b8L/zPbTQj1VszgcG5Jnc0tqMP6UZSk27fcnIyUSIuHY15l8fWOlcXgfG1Pn1Tdw==
+"@inertiajs/vue3@^1.0.0-beta.5":
+  version "1.0.0-beta.5"
+  resolved "https://registry.yarnpkg.com/@inertiajs/vue3/-/vue3-1.0.0-beta.5.tgz#0c6fd77d9d2e95f3844f9326bd203962bc2aad64"
+  integrity sha512-d/popC2WEl0Gj9Yp8Wx5vwB5/EsPKF5rrbwwlIvHu41Q3iSuBgDMEkPE3523skatCMipk6ZvHCEVmdeciuvWSw==
   dependencies:
-    "@inertiajs/core" "1.0.0-beta.2"
+    "@inertiajs/core" "1.0.0-beta.5"
     lodash.clonedeep "^4.5.0"
     lodash.isequal "^4.5.0"
 
@@ -377,13 +377,14 @@ autoprefixer@^10.4.13:
     picocolors "^1.0.0"
     postcss-value-parser "^4.2.0"
 
-axios@^0.27.0:
-  version "0.27.2"
-  resolved "https://registry.yarnpkg.com/axios/-/axios-0.27.2.tgz#207658cc8621606e586c85db4b41a750e756d972"
-  integrity sha512-t+yRIyySRTp/wua5xEr+z1q60QmLq8ABsS5O9Me1AsE5dfKqgnCFzwiCZZ/cGNd1lq4/7akDWMxdhVlucjmnOQ==
+axios@^1.2.0:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-1.2.2.tgz#72681724c6e6a43a9fea860fc558127dbe32f9f1"
+  integrity sha512-bz/J4gS2S3I7mpN/YZfGFTqhXTYzRho8Ay38w2otuuDR322KzFIWm/4W2K6gIwvWaws5n+mnb7D1lN9uD+QH6Q==
   dependencies:
-    follow-redirects "^1.14.9"
+    follow-redirects "^1.15.0"
     form-data "^4.0.0"
+    proxy-from-env "^1.1.0"
 
 balanced-match@^1.0.0:
   version "1.0.2"
@@ -816,7 +817,7 @@ flatted@^3.1.0:
   resolved "https://registry.yarnpkg.com/flatted/-/flatted-3.2.7.tgz#609f39207cb614b89d0765b477cb2d437fbf9787"
   integrity sha512-5nqDSxl8nn5BSNxyR3n4I6eDmbolI6WT+QqR547RwxQapgjQBmtktdP+HTBb/a/zLsbzERTONyUB5pefh5TtjQ==
 
-follow-redirects@^1.14.9:
+follow-redirects@^1.15.0:
   version "1.15.2"
   resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.15.2.tgz#b460864144ba63f2681096f274c4e57026da2c13"
   integrity sha512-VQLG33o04KaQ8uYi2tVNbdrWp1QWxNNea+nmIB4EVM28v0hmP17z7aG1+wAkNzVq4KeXTq3221ye5qTJP91JwA==
@@ -1305,6 +1306,11 @@ prettier@^2.8.2:
   version "2.8.2"
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.8.2.tgz#c4ea1b5b454d7c4b59966db2e06ed7eec5dfd160"
   integrity sha512-BtRV9BcncDyI2tsuS19zzhzoxD8Dh8LiCx7j7tHzrkz8GFXAexeWFdi22mjE1d16dftH2qNaytVxqiRTGlMfpw==
+
+proxy-from-env@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/proxy-from-env/-/proxy-from-env-1.1.0.tgz#e102f16ca355424865755d2c9e8ea4f24d58c3e2"
+  integrity sha512-D+zkORCbA9f1tdWRK0RaCR3GPv50cMxcrz4X8k5LTSUD1Dkw47mKJEZQNunItRTkWwgtaUSo1RVFRIG9ZXiFYg==
 
 punycode@^2.1.0:
   version "2.1.1"

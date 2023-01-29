@@ -238,7 +238,7 @@ GEM
     spring (4.1.1)
     thor (1.2.1)
     timeout (0.3.1)
-    tzinfo (2.0.5)
+    tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     unicode-display_width (2.4.2)
     vite_rails (3.0.13)

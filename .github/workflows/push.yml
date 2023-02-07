@@ -21,6 +21,7 @@ jobs:
       DB_USER: postgres
       DB_PASSWORD: postgres
       RAILS_ENV: test
+      RUBY_YJIT_ENABLE: 1
 
     steps:
       - uses: actions/checkout@v3

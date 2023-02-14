@@ -378,9 +378,9 @@ autoprefixer@^10.4.13:
     postcss-value-parser "^4.2.0"
 
 axios@^1.2.0:
-  version "1.3.2"
-  resolved "https://registry.yarnpkg.com/axios/-/axios-1.3.2.tgz#7ac517f0fa3ec46e0e636223fd973713a09c72b3"
-  integrity sha512-1M3O703bYqYuPhbHeya5bnhpYVsDDRyQSabNja04mZtboLNSuZ4YrltestrLXfHgmzua4TpUqRiVKbiQuo2epw==
+  version "1.3.3"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-1.3.3.tgz#e7011384ba839b885007c9c9fae1ff23dceb295b"
+  integrity sha512-eYq77dYIFS77AQlhzEL937yUBSepBfPIe8FcgEDN35vMNZKMrs81pgnyrQpwfy4NF4b4XWX1Zgx7yX+25w8QJA==
   dependencies:
     follow-redirects "^1.15.0"
     form-data "^4.0.0"
@@ -445,9 +445,9 @@ camelcase-css@^2.0.1:
   integrity sha512-QOSvevhslijgYwRx6Rv7zKdMF8lbRmx+uQGx2+vDc+KI/eBnsy9kit5aj23AgGu3pa4t9AgwbnXWqS+iOY+2aA==
 
 caniuse-lite@^1.0.30001426, caniuse-lite@^1.0.30001449:
-  version "1.0.30001450"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001450.tgz#022225b91200589196b814b51b1bbe45144cf74f"
-  integrity sha512-qMBmvmQmFXaSxexkjjfMvD5rnDL0+m+dUMZKoDYsGG8iZN29RuYh9eRoMvKsT6uMAWlyUUGDEQGJJYjzCIO9ew==
+  version "1.0.30001451"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001451.tgz#2e197c698fc1373d63e1406d6607ea4617c613f1"
+  integrity sha512-XY7UbUpGRatZzoRft//5xOa69/1iGJRBlrieH6QYrkKLIFn3m7OVEJ81dSrKoy2BnKsdbX5cLrOispZNYo9v2w==
 
 chalk@^4.0.0:
   version "4.1.2"
@@ -569,9 +569,9 @@ doctrine@^3.0.0:
     esutils "^2.0.2"
 
 electron-to-chromium@^1.4.284:
-  version "1.4.288"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.288.tgz#bbce00eb03c1819fe3d0d0d861374b76c53f7507"
-  integrity sha512-8s9aJf3YiokIrR+HOQzNOGmEHFXVUQzXM/JaViVvKdCkNUjS+lEa/uT7xw3nDVG/IgfxiIwUGkwJ6AR1pTpYsQ==
+  version "1.4.295"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.295.tgz#911d5df67542bf7554336142eb302c5ec90bba66"
+  integrity sha512-lEO94zqf1bDA3aepxwnWoHUjA8sZ+2owgcSZjYQy0+uOSEclJX0VieZC+r+wLpSxUHRd6gG32znTWmr+5iGzFw==
 
 esbuild@^0.16.14:
   version "0.16.17"
@@ -1096,9 +1096,9 @@ minimatch@^3.0.5, minimatch@^3.1.1, minimatch@^3.1.2:
     brace-expansion "^1.1.7"
 
 minimist@^1.2.6:
-  version "1.2.7"
-  resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.7.tgz#daa1c4d91f507390437c6a8bc01078e7000c4d18"
-  integrity sha512-bzfL1YUZsP41gmu/qjrEk0Q6i2ix/cVeAhbCbqH9u3zYutS1cLg00qhrD0M2MVdCcx4Sc0UpP2eBWo9rotpq6g==
+  version "1.2.8"
+  resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.8.tgz#c1a464e7693302e082a075cee0c057741ac4772c"
+  integrity sha512-2yyAR8qBkN3YuheJanUpWC5U3bb5osDywNB8RzDVlDwDHbocAJveqqj1u8+SVD7jkWT4yvsHCpWqqWqAxb0zCA==
 
 ms@2.1.2:
   version "2.1.2"
@@ -1242,9 +1242,9 @@ postcss-import@^14.1.0:
     resolve "^1.1.7"
 
 postcss-js@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/postcss-js/-/postcss-js-4.0.0.tgz#31db79889531b80dc7bc9b0ad283e418dce0ac00"
-  integrity sha512-77QESFBwgX4irogGVPgQ5s07vLvFqWr228qZY+w6lW599cRlK/HmnlivnnVUxkjHnCu4J16PDMHcH+e+2HbvTQ==
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/postcss-js/-/postcss-js-4.0.1.tgz#61598186f3703bab052f1c4f7d805f3991bee9d2"
+  integrity sha512-dDLF8pEO191hJMtlHFPRa8xsizHaM82MLfNkUHdUtVEV3tgTp5oj+8qbEqYM57SLfc74KSbw//4SeJma2LRVIw==
   dependencies:
     camelcase-css "^2.0.1"
 

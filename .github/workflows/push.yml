@@ -34,18 +34,10 @@ jobs:
       - name: Lint with RuboCop
         run: bundle exec rubocop --parallel
 
-      - name: Get Yarn cache directory path
-        id: yarn-cache-dir-path
-        run: echo "::set-output name=dir::$(yarn cache dir)"
-
-      - name: Cache Yarn packages
-        uses: actions/cache@v3
-        id: yarn-cache
+      - name: Setup Node.js
+        uses: actions/setup-node@v3.6.0
         with:
-          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
+          cache: yarn
 
       - name: Install Yarn packages
         run: yarn install --frozen-lockfile

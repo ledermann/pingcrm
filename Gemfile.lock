@@ -237,7 +237,7 @@ GEM
       websocket (~> 1.0)
     spring (4.1.1)
     thor (1.2.1)
-    timeout (0.3.1)
+    timeout (0.3.2)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     unicode-display_width (2.4.2)

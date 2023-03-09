@@ -121,7 +121,7 @@ GEM
     jbuilder (2.11.5)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
-    js-routes (2.2.4)
+    js-routes (2.2.5)
       railties (>= 4)
     json (2.6.3)
     loofah (2.19.1)

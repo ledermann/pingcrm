@@ -772,7 +772,7 @@ fast-diff@^1.1.2:
   resolved "https://registry.yarnpkg.com/fast-diff/-/fast-diff-1.2.0.tgz#73ee11982d86caaf7959828d519cfe927fac5f03"
   integrity sha512-xJuoT5+L99XlZ8twedaRf6Ax2TgQVxvgZOYoPKqZufmJib0tL2tegPBOZb1pVNgIhlqDlA0eO0c3wBvQcmzx4w==
 
-fast-glob@^3.2.11, fast-glob@^3.2.12:
+fast-glob@^3.2.12:
   version "3.2.12"
   resolved "https://registry.yarnpkg.com/fast-glob/-/fast-glob-3.2.12.tgz#7f39ec99c2e6ab030337142da9e0c18f37afae80"
   integrity sha512-DVj4CQIYYow0BlaelwK1pHl5n5cRSJfM60UA0zK891sVInoPri2Ekj7+e1CT3/3qxXenpI+nBBmQAcJPJgaj4w==
@@ -1569,13 +1569,13 @@ vite-plugin-full-reload@^1.0.5:
     picocolors "^1.0.0"
     picomatch "^2.3.1"
 
-vite-plugin-ruby@^3.1.3:
-  version "3.1.3"
-  resolved "https://registry.yarnpkg.com/vite-plugin-ruby/-/vite-plugin-ruby-3.1.3.tgz#893ee7dc3b25daf5611c16c3dc0ca3420e6a801c"
-  integrity sha512-Y7j0lL8xNMSN1c2/sKBlaLkp0nFtxNFU9/kUReX/GMTOAk8fBylrR9ZdC3fej6EnYzbO3VDtfDDyWzYaoCW3hA==
+vite-plugin-ruby@^3.2.0:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/vite-plugin-ruby/-/vite-plugin-ruby-3.2.1.tgz#fe2e2572c450a74d9342d64d183985f32583c0ce"
+  integrity sha512-GBSplgICiQb/pweEZzXtWrJhvOo33ljE7taAVbxDOXCbm4X3w0mFUmowxFf4I7oePtLPIZRU8N+JHCcBYzNIng==
   dependencies:
     debug "^4.3.4"
-    fast-glob "^3.2.11"
+    fast-glob "^3.2.12"
 
 vite@^4.2.0:
   version "4.2.0"

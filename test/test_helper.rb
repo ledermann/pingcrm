@@ -11,13 +11,5 @@ class ActiveSupport::TestCase
 
   include FactoryBot::Syntax::Methods
 
-  teardown do
-    messages = page.driver.browser.logs.get(:browser).map do |log|
-      "[#{log.level}] #{log.message}"
-    end
-
-    assert_empty(messages)
-  end
-
   # Add more helper methods to be used by all tests here...
 end

@@ -1,17 +1,17 @@
 <template>
-  <div class="mt-6 -mb-1 flex flex-wrap">
+  <div class="-mb-1 mt-6 flex flex-wrap">
     <template v-for="(link, key) in links">
       <div
         v-if="link.label === 'gap'"
         :key="key"
-        class="mr-1 mb-1 px-4 py-3 text-sm text-gray-500"
+        class="mb-1 mr-1 px-4 py-3 text-sm text-gray-500"
       >
         …
       </div>
       <div
         v-else-if="link.url === null"
         :key="key + 'else1'"
-        class="mr-1 mb-1 rounded border border-gray-400 px-4 py-3 text-sm text-gray-700"
+        class="mb-1 mr-1 rounded border border-gray-400 px-4 py-3 text-sm text-gray-700"
         :class="{ 'ml-auto': link.label === 'Next' }"
       >
         {{ link.label }}
@@ -19,7 +19,7 @@
       <Link
         v-else
         :key="key + 'else2'"
-        class="mr-1 mb-1 rounded border border-gray-400 px-4 py-3 text-sm text-gray-900 hover:bg-white focus:border-indigo-500 focus:text-indigo-500"
+        class="mb-1 mr-1 rounded border border-gray-400 px-4 py-3 text-sm text-gray-900 hover:bg-white focus:border-indigo-500 focus:text-indigo-500"
         :class="{ 'bg-white': link.active, 'ml-auto': link.label === 'Next' }"
         :href="link.url"
         preserve-state

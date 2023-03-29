@@ -37,9 +37,9 @@
             </dropdown>
           </div>
           <div
-            class="md:text-md flex w-full items-center justify-between border-b bg-white p-4 text-sm md:py-0 md:px-12"
+            class="md:text-md flex w-full items-center justify-between border-b bg-white p-4 text-sm md:px-12 md:py-0"
           >
-            <div class="mt-1 mr-4">
+            <div class="mr-4 mt-1">
               {{ $page.props.auth.user.account.name }}
             </div>
             <dropdown

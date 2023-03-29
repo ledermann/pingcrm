@@ -43,9 +43,9 @@
       <table class="w-full whitespace-nowrap">
         <thead>
           <tr class="text-left font-bold">
-            <th class="px-6 pt-6 pb-4">Name</th>
-            <th class="px-6 pt-6 pb-4">Email</th>
-            <th class="px-6 pt-6 pb-4" colspan="2">Role</th>
+            <th class="px-6 pb-4 pt-6">Name</th>
+            <th class="px-6 pb-4 pt-6">Email</th>
+            <th class="px-6 pb-4 pt-6" colspan="2">Role</th>
           </tr>
         </thead>
         <tbody>

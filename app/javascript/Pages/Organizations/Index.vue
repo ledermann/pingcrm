@@ -35,9 +35,9 @@
       <table class="w-full whitespace-nowrap">
         <thead>
           <tr class="text-left font-bold">
-            <th class="px-6 pt-6 pb-4">Name</th>
-            <th class="px-6 pt-6 pb-4">City</th>
-            <th class="px-6 pt-6 pb-4" colspan="2">Phone</th>
+            <th class="px-6 pb-4 pt-6">Name</th>
+            <th class="px-6 pb-4 pt-6">City</th>
+            <th class="px-6 pb-4 pt-6" colspan="2">Phone</th>
           </tr>
         </thead>
         <tbody>

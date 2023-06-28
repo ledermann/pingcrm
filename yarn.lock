@@ -173,22 +173,22 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz#b520529ec21d8e5945a1851dfd1c32e94e39ff45"
   integrity sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==
 
-"@inertiajs/core@1.0.8":
-  version "1.0.8"
-  resolved "https://registry.yarnpkg.com/@inertiajs/core/-/core-1.0.8.tgz#b632970dcb381d3564005cdf8405286559522f0f"
-  integrity sha512-8nr1C76bE9Pfb5OwDGtjtSsiy2g6EG5J7w/w4dWHmoQdY9g01F+VnN3+QYtf/fsFkd8l7A6HoCBgUEZHkwdhXg==
+"@inertiajs/core@1.0.9":
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/@inertiajs/core/-/core-1.0.9.tgz#347068b9d75e009b15f6a0568a8f022820fef888"
+  integrity sha512-Vd/4akXnY90qwtPJ1nVGtLXYhyGZdDjvQ4rv5qeqFYmqLEARdhDd7Lku1BwkboZX6GSTgDkipBSSGTKuRemOkQ==
   dependencies:
     axios "^1.2.0"
     deepmerge "^4.0.0"
     nprogress "^0.2.0"
     qs "^6.9.0"
 
-"@inertiajs/vue3@^1.0.8":
-  version "1.0.8"
-  resolved "https://registry.yarnpkg.com/@inertiajs/vue3/-/vue3-1.0.8.tgz#314c59570a09b3d8d6f4aec5460b96b7b5bcb069"
-  integrity sha512-vWCMCCUFGYGtqHKTbwsg4cV0hbbZXoKGcDLxGtnV+OGD4sULmXvRzlc5ZuZrjn5gmhpGKWHnW6yY8ifNPLdoMg==
+"@inertiajs/vue3@^1.0.9":
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/@inertiajs/vue3/-/vue3-1.0.9.tgz#a7308a06efa9a8f8a715c28c704697fdbd3d93ed"
+  integrity sha512-KoH1KEYxtHs5vbBb3DTTRh9bjFLBakFeqfj95YzwQXkaKaGkE3M79O0n4CaQqG7BSiOdQ3Z3pB2bx+CHpYV9uA==
   dependencies:
-    "@inertiajs/core" "1.0.8"
+    "@inertiajs/core" "1.0.9"
     lodash.clonedeep "^4.5.0"
     lodash.isequal "^4.5.0"
 

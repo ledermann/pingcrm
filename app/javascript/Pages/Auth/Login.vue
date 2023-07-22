@@ -10,7 +10,9 @@
         <div class="px-10 py-12">
           <flash-messages />
 
-          <h1 class="text-center text-3xl font-bold">Welcome Back!</h1>
+          <h1 class="text-center text-3xl font-bold">
+            Welcome Back!
+          </h1>
           <div class="mx-auto mt-6 w-24 border-b-2" />
           <text-input
             v-model="form.user.email"
@@ -34,7 +36,7 @@
               v-model="form.user.remember_me"
               class="mr-1"
               type="checkbox"
-            />
+            >
             <span class="text-sm">Remember Me</span>
           </label>
         </div>

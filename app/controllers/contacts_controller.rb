@@ -3,47 +3,69 @@ class ContactsController < ApplicationController
   load_and_authorize_resource
 
   def index
-    pagy, paged_contacts = pagy(
-      @contacts.
-        includes(:organization).
-        search(params[:search]).
-        trash_filter(params[:trashed]).
-        order_by_name
-    )
+    pagy, paged_contacts =
+      pagy(
+        @contacts
+          .includes(:organization)
+          .search(params[:search])
+          .trash_filter(params[:trashed])
+          .order_by_name,
+      )
 
-    render inertia: 'Contacts/Index', props: {
-      contacts: jbuilder do |json|
-        json.data(paged_contacts) do |contact|
-          json.(contact, :id, :name, :phone, :city, :deleted_at)
-          json.organization(contact.organization, :name) if contact.organization
-        end
-        json.meta pagy_metadata(pagy)
-      end,
-      filters: params.slice(:search, :trashed)
-    }
+    render inertia: 'Contacts/Index',
+           props: {
+             contacts:
+               jbuilder do |json|
+                 json.data(paged_contacts) do |contact|
+                   json.(contact, :id, :name, :phone, :city, :deleted_at)
+                   if contact.organization
+                     json.organization(contact.organization, :name)
+                   end
+                 end
+                 json.meta pagy_metadata(pagy)
+               end,
+             filters: params.slice(:search, :trashed),
+           }
   end
 
   def new
-    render inertia: 'Contacts/New', props: {
-      organizations: -> {
-        jbuilder do |json|
-          json.array! current_user.organizations.order(:name), :id, :name
-        end
-      }
-    }
+    render inertia: 'Contacts/New',
+           props: {
+             organizations: -> {
+               jbuilder do |json|
+                 json.array! current_user.organizations.order(:name), :id, :name
+               end
+             },
+           }
   end
 
   def edit
-    render inertia: 'Contacts/Edit', props: {
-      contact: jbuilder do |json|
-        json.(@contact, :id, :first_name, :last_name, :organization_id, :email, :phone, :address, :city, :region, :country, :postal_code, :deleted_at)
-      end,
-      organizations: -> {
-        jbuilder do |json|
-          json.array! current_user.organizations.order(:name), :id, :name
-        end
-      }
-    }
+    render inertia: 'Contacts/Edit',
+           props: {
+             contact:
+               jbuilder do |json|
+                 json.(
+                   @contact,
+                   :id,
+                   :first_name,
+                   :last_name,
+                   :organization_id,
+                   :email,
+                   :phone,
+                   :address,
+                   :city,
+                   :region,
+                   :country,
+                   :postal_code,
+                   :deleted_at,
+                 )
+               end,
+             organizations: -> {
+               jbuilder do |json|
+                 json.array! current_user.organizations.order(:name), :id, :name
+               end
+             },
+           }
   end
 
   def create
@@ -58,7 +80,10 @@ class ContactsController < ApplicationController
     if @contact.update(contact_params)
       redirect_to edit_contact_path(@contact), notice: 'Contact updated.'
     else
-      redirect_to edit_contact_path(@contact), inertia: { errors: @contact.errors }
+      redirect_to edit_contact_path(@contact),
+                  inertia: {
+                    errors: @contact.errors,
+                  }
     end
   end
 
@@ -70,7 +95,8 @@ class ContactsController < ApplicationController
         redirect_to contacts_path, notice: 'Contact deleted.'
       end
     else
-      redirect_to edit_contact_path(@contact), alert: 'Contact cannot be deleted!'
+      redirect_to edit_contact_path(@contact),
+                  alert: 'Contact cannot be deleted!'
     end
   end
 
@@ -78,7 +104,8 @@ class ContactsController < ApplicationController
     if @contact.restore
       redirect_to edit_contact_path(@contact), notice: 'Contact restored.'
     else
-      redirect_to edit_contact_path(@contact), alert: 'Contact cannot be restored!'
+      redirect_to edit_contact_path(@contact),
+                  alert: 'Contact cannot be restored!'
     end
   end
 
@@ -87,8 +114,16 @@ class ContactsController < ApplicationController
   # Only allow a list of trusted parameters through.
   def contact_params
     params.fetch(:contact, {}).permit(
-      :organization_id, :first_name, :last_name, :email, :phone, :address, :city,
-      :region, :country, :postal_code
+      :organization_id,
+      :first_name,
+      :last_name,
+      :email,
+      :phone,
+      :address,
+      :city,
+      :region,
+      :country,
+      :postal_code,
     )
   end
 end

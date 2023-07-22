@@ -17,7 +17,7 @@
         class="ml-4 block h-8 w-8 rounded-full"
         :src="user.photo"
         alt="Photo"
-      />
+      >
     </div>
     <trashed-message v-if="user.deleted_at" class="mb-6" @restore="restore">
       This user has been deleted.

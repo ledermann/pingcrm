@@ -77,13 +77,9 @@
           />
         </svg>
         <div class="py-4 text-sm font-medium text-white">
-          <span v-if="Object.keys($page.props.errors).length === 1"
-            >There is one form error.</span
-          >
-          <span v-else
-            >There are {{ Object.keys($page.props.errors).length }} form
-            errors.</span
-          >
+          <span v-if="Object.keys($page.props.errors).length === 1">There is one form error.</span>
+          <span v-else>There are {{ Object.keys($page.props.errors).length }} form
+            errors.</span>
         </div>
       </div>
       <button type="button" class="group mr-2 p-2" @click="show = false">

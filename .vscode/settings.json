@@ -15,5 +15,19 @@
     "**/node_modules": true
   },
 
-  "eslint.validate": ["javascript", "vue"]
+  "eslint.validate": ["javascript", "vue"],
+
+  "ruby.lint": {
+    "rubocop": {
+      "forceExclusion": true
+    }
+  },
+
+  "[ruby]": {
+    "editor.defaultFormatter": "ruby-syntax-tree.vscode-syntax-tree",
+    "editor.formatOnSave": true
+  },
+
+  "syntaxTree.singleQuotes": true,
+  "syntaxTree.trailingComma": true
 }

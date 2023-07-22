@@ -1,4 +1,4 @@
-require "application_system_test_case"
+require 'application_system_test_case'
 
 class UsersTest < ApplicationSystemTestCase
   setup do
@@ -15,9 +15,7 @@ class UsersTest < ApplicationSystemTestCase
 
     assert_selector 'h1', text: 'Users'
     assert_selector 'table tbody tr', count: 15 + 2
-    users.each do |user|
-      assert_selector 'table', text: user.name
-    end
+    users.each { |user| assert_selector 'table', text: user.name }
 
     users.first.update! last_name: 'Turing'
     fill_in 'search', with: 'Turing'
@@ -30,7 +28,7 @@ class UsersTest < ApplicationSystemTestCase
   test 'Owner can add user' do
     sign_in @owner
 
-    visit "/users"
+    visit '/users'
     click_on 'Create User'
 
     assert_selector 'form'
@@ -47,10 +45,10 @@ class UsersTest < ApplicationSystemTestCase
   test 'Non-owner cannot add user' do
     sign_in @user
 
-    visit "/users"
+    visit '/users'
     assert_no_selector 'button', text: 'Create User'
 
-    visit "/users/new"
+    visit '/users/new'
     assert_selector 'div', text: 'Forbidden'
   end
 
@@ -82,9 +80,7 @@ class UsersTest < ApplicationSystemTestCase
     visit "/users/#{@user.id}/edit"
 
     assert_selector 'button', text: 'Delete User'
-    accept_confirm do
-      click_on 'Delete User'
-    end
+    accept_confirm { click_on 'Delete User' }
 
     assert_selector 'div', text: 'User deleted.'
   end

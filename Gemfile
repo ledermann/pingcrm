@@ -27,7 +27,7 @@ gem 'bootsnap', require: false
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   # Debugging functionality for Ruby (https://github.com/ruby/debug)
-  gem "debug", platforms: [:mri, :mingw, :x64_mingw]
+  gem 'debug', platforms: [:mri, :mingw, :x64_mingw]
 
   # Automatic Ruby code style checking tool. (https://github.com/rubocop/rubocop)
   gem 'rubocop', require: false
@@ -37,6 +37,12 @@ group :development, :test do
 
   # Automatic Rails code style checking tool. (https://github.com/rubocop/rubocop-rails)
   gem 'rubocop-rails', require: false
+
+  # Code style checking for Capybara test files (https://github.com/rubocop/rubocop-capybara)
+  gem 'rubocop-capybara', require: false
+
+  # Code style checking for factory_bot files (https://github.com/rubocop/rubocop-factory_bot)
+  gem 'rubocop-factory_bot', require: false
 
   # factory_bot_rails provides integration between factory_bot and rails 5.0 or newer (https://github.com/thoughtbot/factory_bot_rails)
   gem 'factory_bot_rails'

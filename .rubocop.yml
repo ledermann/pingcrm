@@ -1,6 +1,8 @@
 require:
   - rubocop-performance
   - rubocop-rails
+  - rubocop-capybara
+  - rubocop-factory_bot
 
 AllCops:
   TargetRubyVersion: 3.2
@@ -48,6 +50,9 @@ Metrics/BlockLength:
 Metrics/MethodLength:
   Max: 30
 
+Metrics/ClassLength:
+  Max: 120
+
 ### Style
 
 Style/BlockComments:
@@ -57,11 +62,11 @@ Style/BlockComments:
 Style/FrozenStringLiteralComment:
   Enabled: false
 
-Style/StringLiterals:
+Style/SymbolArray:
   Enabled: false
 
-Style/SymbolArray:
-  EnforcedStyle: brackets
+Style/MixinUsage:
+  Enabled: false
 
 Style/Documentation:
   Enabled: false
@@ -99,41 +104,47 @@ Style/DocumentationMethod:
 Style/DisableCopsWithinSourceCodeDirective:
   Enabled: false
 
+Style/ConstantVisibility:
+  Enabled: false
+
+Style/IfUnlessModifier:
+  Enabled: false
+
+Style/StringLiterals:
+  EnforcedStyle: single_quotes
+
+Style/StringLiteralsInInterpolation:
+  EnforcedStyle: single_quotes
+
+Style/QuotedSymbols:
+  EnforcedStyle: single_quotes
+
 Style/RequireOrder:
+  Enabled: false
+
+Style/TrailingCommaInArrayLiteral:
+  Enabled: false
+
+Style/TrailingCommaInArguments:
+  Enabled: false
+
+Style/TrailingCommaInHashLiteral:
+  Enabled: false
+
+Style/EmptyMethod:
+  EnforcedStyle: expanded
+
+Style/MultilineIfModifier:
   Enabled: false
 
 ### Layout
 
-Layout/DotPosition:
-  EnforcedStyle: trailing
-
-Layout/SingleLineBlockChain:
-  Enabled: false
-
-Layout/EndAlignment:
-  EnforcedStyleAlignWith: variable
-
-Layout/SpaceInsideArrayLiteralBrackets:
-  Enabled: false
-
-Layout/HashAlignment:
-  Enabled: false
-
-Layout/MultilineMethodArgumentLineBreaks:
-  Enabled: false
-
-Layout/MultilineArrayLineBreaks:
-  Enabled: false
-
-Layout/MultilineAssignmentLayout:
+Layout:
   Enabled: false
 
 Layout/LineLength:
   Max: 190
   AllowedPatterns: ['\A#'] # Allow long comments
-
-Layout/RedundantLineBreak:
-  Enabled: false
 
 # Lint
 

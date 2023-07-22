@@ -1,4 +1,4 @@
-require "application_system_test_case"
+require 'application_system_test_case'
 
 class OrganizationsTest < ApplicationSystemTestCase
   setup do
@@ -8,21 +8,22 @@ class OrganizationsTest < ApplicationSystemTestCase
 
   test 'list all organizations and allows to paginate and search' do
     sign_in @user
-    organizations = Array.new(15) { create(:organization, account: @account) }.sort_by(&:name)
+    organizations =
+      Array.new(15) { create(:organization, account: @account) }.sort_by(&:name)
 
     visit '/organizations'
 
     assert_selector 'h1', text: 'Organizations'
     assert_selector 'table tbody tr', count: 10
-    organizations.first(10).each do |organization|
-      assert_selector 'table', text: organization.name
-    end
+    organizations
+      .first(10)
+      .each { |organization| assert_selector 'table', text: organization.name }
 
     click_on 'Next'
     assert_selector 'table tbody tr', count: 5
-    organizations.last(5).each do |organization|
-      assert_selector 'table', text: organization.name
-    end
+    organizations
+      .last(5)
+      .each { |organization| assert_selector 'table', text: organization.name }
 
     organizations.first.update! name: 'Some Big Fancy Company Name'
     fill_in 'search', with: 'Some Big Fancy Company Name'
@@ -52,7 +53,7 @@ class OrganizationsTest < ApplicationSystemTestCase
   test 'can add organization' do
     sign_in @user
 
-    visit "/organizations"
+    visit '/organizations'
     click_on 'Create Organization'
 
     assert_selector 'form'
@@ -86,9 +87,7 @@ class OrganizationsTest < ApplicationSystemTestCase
     visit "/organizations/#{organization.id}/edit"
 
     assert_selector 'button', text: 'Delete Organization'
-    accept_confirm do
-      click_on 'Delete Organization'
-    end
+    accept_confirm { click_on 'Delete Organization' }
 
     assert_selector 'div', text: 'Organization deleted.'
   end

@@ -39,7 +39,7 @@
         placeholder="Search…"
         :value="modelValue"
         @input="$emit('update:modelValue', $event.target.value)"
-      />
+      >
     </div>
     <button
       class="ml-3 text-sm text-gray-700 hover:text-gray-700 focus:text-indigo-500"

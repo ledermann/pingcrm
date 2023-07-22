@@ -65,8 +65,12 @@
         label="Country"
       >
         <option :value="null" />
-        <option value="CA">Canada</option>
-        <option value="US">United States</option>
+        <option value="CA">
+          Canada
+        </option>
+        <option value="US">
+          United States
+        </option>
       </select-input>
       <text-input
         v-model="form.contact.postal_code"

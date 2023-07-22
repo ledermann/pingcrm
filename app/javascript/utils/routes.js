@@ -70,7 +70,7 @@ const __jsr = (() => {
         },
         NIL: {
             define() {
-                // Defined using const __jsr = 
+                // Defined using const __jsr =
             },
             isSupported() {
                 return true;
@@ -664,4 +664,3 @@ export const user_session = __jsr.r({"format":{}}, [2,[7,"/"],[2,[6,"login"],[1,
  * @returns {string} route path
  */
 export const users = __jsr.r({"format":{}}, [2,[7,"/"],[2,[6,"users"],[1,[2,[8,"."],[3,"format"]]]]]);
-

@@ -1,7 +1,9 @@
 <template>
   <div>
     <Head title="Users" />
-    <h1 class="mb-8 text-3xl font-bold">Users</h1>
+    <h1 class="mb-8 text-3xl font-bold">
+      Users
+    </h1>
     <div class="mb-6 flex items-center justify-between">
       <search-filter
         v-model="form.search"
@@ -15,20 +17,26 @@
           class="form-select mt-1 w-full"
         >
           <option :value="null" />
-          <option value="user">User</option>
-          <option value="owner">Owner</option>
+          <option value="user">
+            User
+          </option>
+          <option value="owner">
+            Owner
+          </option>
         </select>
-        <label class="mt-4 block text-gray-800" for="trashed-filter"
-          >Trashed:</label
-        >
+        <label class="mt-4 block text-gray-800" for="trashed-filter">Trashed:</label>
         <select
           id="trashed-filter"
           v-model="form.trashed"
           class="form-select mt-1 w-full"
         >
           <option :value="null" />
-          <option value="with">With Trashed</option>
-          <option value="only">Only Trashed</option>
+          <option value="with">
+            With Trashed
+          </option>
+          <option value="only">
+            Only Trashed
+          </option>
         </select>
       </search-filter>
       <Link
@@ -43,9 +51,15 @@
       <table class="w-full whitespace-nowrap">
         <thead>
           <tr class="text-left font-bold">
-            <th class="px-6 pb-4 pt-6">Name</th>
-            <th class="px-6 pb-4 pt-6">Email</th>
-            <th class="px-6 pb-4 pt-6" colspan="2">Role</th>
+            <th class="px-6 pb-4 pt-6">
+              Name
+            </th>
+            <th class="px-6 pb-4 pt-6">
+              Email
+            </th>
+            <th class="px-6 pb-4 pt-6" colspan="2">
+              Role
+            </th>
           </tr>
         </thead>
         <tbody>
@@ -65,7 +79,7 @@
                   class="-my-2 mr-2 block h-5 w-5 rounded-full"
                   :src="user.photo"
                   alt="Photo"
-                />
+                >
                 {{ user.name }}
                 <icon
                   v-if="user.deleted_at"
@@ -109,7 +123,9 @@
             </td>
           </tr>
           <tr v-if="users.length === 0">
-            <td class="border-t px-6 py-4" colspan="4">No users found.</td>
+            <td class="border-t px-6 py-4" colspan="4">
+              No users found.
+            </td>
           </tr>
         </tbody>
       </table>

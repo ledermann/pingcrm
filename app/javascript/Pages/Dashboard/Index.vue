@@ -1,7 +1,9 @@
 <template>
   <div>
     <Head title="Dashboard" />
-    <h1 class="mb-8 text-3xl font-bold">Dashboard</h1>
+    <h1 class="mb-8 text-3xl font-bold">
+      Dashboard
+    </h1>
     <p class="mb-8 leading-normal">
       Hey there! Welcome to Ping CRM, a demo app designed to help illustrate how
       <a
@@ -15,8 +17,7 @@
         href="https://rubyonrails.org/"
         class="font-bold text-indigo-800 underline hover:text-orange-600"
       >
-        Ruby on Rails </a
-      >.
+        Ruby on Rails </a>.
     </p>
 
     <p v-if="git.commit_url" class="mb-10 leading-normal">

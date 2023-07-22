@@ -1,4 +1,4 @@
-require "application_system_test_case"
+require 'application_system_test_case'
 
 class ContactsTest < ApplicationSystemTestCase
   setup do
@@ -9,21 +9,22 @@ class ContactsTest < ApplicationSystemTestCase
   test 'list all contacts and allows to paginate and search' do
     sign_in @user
 
-    contacts = Array.new(15) { create(:contact, account: @account) }.sort_by(&:name)
+    contacts =
+      Array.new(15) { create(:contact, account: @account) }.sort_by(&:name)
 
     visit '/contacts'
 
     assert_selector 'h1', text: 'Contacts'
     assert_selector 'table tbody tr', count: 10
-    contacts.first(10).each do |contact|
-      assert_selector 'table', text: contact.last_name
-    end
+    contacts
+      .first(10)
+      .each { |contact| assert_selector 'table', text: contact.last_name }
 
     click_on 'Next'
     assert_selector 'table tbody tr', count: 5
-    contacts.last(5).each do |contact|
-      assert_selector 'table', text: contact.last_name
-    end
+    contacts
+      .last(5)
+      .each { |contact| assert_selector 'table', text: contact.last_name }
 
     contacts.first.update! last_name: 'AAA'
     fill_in 'search', with: 'AAA'
@@ -53,7 +54,7 @@ class ContactsTest < ApplicationSystemTestCase
   test 'can add contact' do
     sign_in @user
 
-    visit "/contacts"
+    visit '/contacts'
     click_on 'Create Contact'
 
     assert_selector 'form'
@@ -87,9 +88,7 @@ class ContactsTest < ApplicationSystemTestCase
     visit "/contacts/#{contact.id}/edit"
 
     assert_selector 'button', text: 'Delete Contact'
-    accept_confirm do
-      click_on 'Delete Contact'
-    end
+    accept_confirm { click_on 'Delete Contact' }
 
     assert_selector 'div', text: 'Contact deleted.'
   end

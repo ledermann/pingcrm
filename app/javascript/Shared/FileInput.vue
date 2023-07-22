@@ -8,7 +8,7 @@
         :accept="accept"
         class="hidden"
         @change="change"
-      />
+      >
       <div v-if="!modelValue" class="p-2">
         <button
           type="button"
@@ -21,9 +21,7 @@
       <div v-else class="flex items-center justify-between p-2">
         <div class="flex-1 pr-1">
           {{ modelValue.name }}
-          <span class="text-xs text-gray-600"
-            >({{ filesize(modelValue.size) }})</span
-          >
+          <span class="text-xs text-gray-600">({{ filesize(modelValue.size) }})</span>
         </div>
         <button
           type="button"

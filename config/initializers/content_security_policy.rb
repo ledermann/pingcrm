@@ -6,10 +6,10 @@
 
 Rails.application.configure do
   config.content_security_policy do |policy|
-    policy.font_src     :self
-    policy.img_src(*[   :self, :data].compact)
-    policy.object_src   :none
-    policy.form_action  :self
+    policy.font_src :self
+    policy.img_src(*[:self, :data].compact)
+    policy.object_src :none
+    policy.form_action :self
     policy.manifest_src :self
     policy.default_src :none
 

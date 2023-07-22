@@ -11,8 +11,6 @@ module.exports = {
     'plugin:vue/vue3-essential',
     'plugin:vue/vue3-recommended',
     'plugin:vue/vue3-strongly-recommended',
-    'prettier',
-    'plugin:prettier/recommended',
   ],
   globals: {},
   rules: {
@@ -21,6 +19,7 @@ module.exports = {
     'vue/multi-word-component-names': 'off',
     'vue/require-default-prop': 'off',
     'vue/no-reserved-component-names': 'off',
+    'vue/max-attributes-per-line': 'off',
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
   },

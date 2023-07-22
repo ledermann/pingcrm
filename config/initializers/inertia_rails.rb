@@ -1,3 +1,1 @@
-InertiaRails.configure do |config|
-  config.version = ViteRuby.digest
-end
+InertiaRails.configure { |config| config.version = ViteRuby.digest }

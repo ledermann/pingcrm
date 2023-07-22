@@ -3,47 +3,72 @@ class UsersController < ApplicationController
   load_and_authorize_resource
 
   def index
-    @users = @users.
-             search(params[:search]).
-             trash_filter(params[:trashed]).
-             role_filter(params[:role]).
-             order_by_name
+    @users =
+      @users
+        .search(params[:search])
+        .trash_filter(params[:trashed])
+        .role_filter(params[:role])
+        .order_by_name
 
-    render inertia: 'Users/Index', props: {
-      users: jbuilder do |json|
-        json.array! @users do |user|
-          json.(user, :id, :email, :name, :owner, :deleted_at)
-          json.photo user.photo.attached? ? polymorphic_url(user.photo.variant(resize_to_fill: [64, 64])) : nil
-          json.can do
-            json.edit_user can?(:edit, user)
-          end
-        end
-      end,
-      can: {
-        create_user: can?(:create, User)
-      },
-      filters: params.slice(:search, :trashed, :role)
-    }
+    render inertia: 'Users/Index',
+           props: {
+             users:
+               jbuilder do |json|
+                 json.array! @users do |user|
+                   json.(user, :id, :email, :name, :owner, :deleted_at)
+                   json.photo(
+                     if user.photo.attached?
+                       polymorphic_url(
+                         user.photo.variant(resize_to_fill: [64, 64]),
+                       )
+                     end,
+                   )
+                   json.can { json.edit_user can?(:edit, user) }
+                 end
+               end,
+             can: {
+               create_user: can?(:create, User),
+             },
+             filters: params.slice(:search, :trashed, :role),
+           }
   end
 
   def new
-    render inertia: 'Users/New', props: {
-      user: jbuilder do |json|
-        json.(@user, :email, :first_name, :last_name, :owner)
-      end
-    }
+    render inertia: 'Users/New',
+           props: {
+             user:
+               jbuilder do |json|
+                 json.(@user, :email, :first_name, :last_name, :owner)
+               end,
+           }
   end
 
   def edit
-    render inertia: 'Users/Edit', props: {
-      user: jbuilder do |json|
-        json.(@user, :id, :email, :first_name, :last_name, :owner, :deleted_at)
-        json.photo @user.photo.attached? ? polymorphic_url(@user.photo.variant(resize_to_fill: [64, 64])) : nil
-      end,
-      can: {
-        edit_user: can?(:update, @user)
-      }
-    }
+    render inertia: 'Users/Edit',
+           props: {
+             user:
+               jbuilder do |json|
+                 json.(
+                   @user,
+                   :id,
+                   :email,
+                   :first_name,
+                   :last_name,
+                   :owner,
+                   :deleted_at,
+                 )
+                 json.photo(
+                   if @user.photo.attached?
+                     polymorphic_url(
+                       @user.photo.variant(resize_to_fill: [64, 64]),
+                     )
+                   end,
+                 )
+               end,
+             can: {
+               edit_user: can?(:update, @user),
+             },
+           }
   end
 
   def create
@@ -56,7 +81,8 @@ class UsersController < ApplicationController
 
   def update
     if @user.demo?
-      redirect_to edit_user_path(@user), alert: 'Updating the demo user is not allowed.'
+      redirect_to edit_user_path(@user),
+                  alert: 'Updating the demo user is not allowed.'
       return
     end
 
@@ -69,7 +95,8 @@ class UsersController < ApplicationController
 
   def destroy
     if @user.demo?
-      redirect_to edit_user_path(@user), alert: 'Deleting the demo user is not allowed.'
+      redirect_to edit_user_path(@user),
+                  alert: 'Deleting the demo user is not allowed.'
       return
     end
 
@@ -92,10 +119,9 @@ class UsersController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def user_params
-    params.fetch(:user, {}).permit(
-      :first_name, :last_name, :email, :owner, :password, :photo
-    ).tap do |p|
-      p.delete(:photo) if p[:photo].blank?
-    end
+    params
+      .fetch(:user, {})
+      .permit(:first_name, :last_name, :email, :owner, :password, :photo)
+      .tap { |p| p.delete(:photo) if p[:photo].blank? }
   end
 end

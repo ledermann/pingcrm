@@ -45,13 +45,21 @@
         </div>
       </organization-form>
     </div>
-    <h2 class="mt-12 text-2xl font-bold">Contacts</h2>
+    <h2 class="mt-12 text-2xl font-bold">
+      Contacts
+    </h2>
     <div class="mt-6 overflow-x-auto rounded bg-white shadow">
       <table class="w-full whitespace-nowrap">
         <tr class="text-left font-bold">
-          <th class="px-6 pb-4 pt-6">Name</th>
-          <th class="px-6 pb-4 pt-6">City</th>
-          <th class="px-6 pb-4 pt-6" colspan="2">Phone</th>
+          <th class="px-6 pb-4 pt-6">
+            Name
+          </th>
+          <th class="px-6 pb-4 pt-6">
+            City
+          </th>
+          <th class="px-6 pb-4 pt-6" colspan="2">
+            Phone
+          </th>
         </tr>
         <tr
           v-for="contact in contacts"
@@ -100,7 +108,9 @@
           </td>
         </tr>
         <tr v-if="contacts.length === 0">
-          <td class="border-t px-6 py-4" colspan="4">No contacts found.</td>
+          <td class="border-t px-6 py-4" colspan="4">
+            No contacts found.
+          </td>
         </tr>
       </table>
     </div>

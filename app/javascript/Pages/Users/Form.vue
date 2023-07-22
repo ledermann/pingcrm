@@ -33,8 +33,12 @@
         class="w-full pb-8 pr-6 lg:w-1/2"
         label="Owner"
       >
-        <option :value="true">Yes</option>
-        <option :value="false">No</option>
+        <option :value="true">
+          Yes
+        </option>
+        <option :value="false">
+          No
+        </option>
       </select-input>
       <file-input
         v-model="form.user.photo"

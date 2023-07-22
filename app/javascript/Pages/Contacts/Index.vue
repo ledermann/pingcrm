@@ -1,7 +1,9 @@
 <template>
   <div>
     <Head title="Contacts" />
-    <h1 class="mb-8 text-3xl font-bold">Contacts</h1>
+    <h1 class="mb-8 text-3xl font-bold">
+      Contacts
+    </h1>
     <div class="mb-6 flex items-center justify-between">
       <search-filter
         v-model="form.search"
@@ -15,8 +17,12 @@
           class="form-select mt-1 w-full"
         >
           <option :value="null" />
-          <option value="with">With Trashed</option>
-          <option value="only">Only Trashed</option>
+          <option value="with">
+            With Trashed
+          </option>
+          <option value="only">
+            Only Trashed
+          </option>
         </select>
       </search-filter>
       <Link class="btn-indigo" :href="$routes.new_contact()">
@@ -27,10 +33,18 @@
       <table class="w-full whitespace-nowrap">
         <thead>
           <tr class="text-left font-bold">
-            <th class="px-6 pb-4 pt-6">Name</th>
-            <th class="px-6 pb-4 pt-6">Organization</th>
-            <th class="px-6 pb-4 pt-6">City</th>
-            <th class="px-6 pb-4 pt-6" colspan="2">Phone</th>
+            <th class="px-6 pb-4 pt-6">
+              Name
+            </th>
+            <th class="px-6 pb-4 pt-6">
+              Organization
+            </th>
+            <th class="px-6 pb-4 pt-6">
+              City
+            </th>
+            <th class="px-6 pb-4 pt-6" colspan="2">
+              Phone
+            </th>
           </tr>
         </thead>
         <tbody>
@@ -100,7 +114,9 @@
             </td>
           </tr>
           <tr v-if="contacts.data.length === 0">
-            <td class="border-t px-6 py-4" colspan="4">No contacts found.</td>
+            <td class="border-t px-6 py-4" colspan="4">
+              No contacts found.
+            </td>
           </tr>
         </tbody>
       </table>

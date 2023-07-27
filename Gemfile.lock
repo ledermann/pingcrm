@@ -141,7 +141,7 @@ GEM
     mini_portile2 (2.8.4)
     minitest (5.18.1)
     msgpack (1.7.2)
-    net-imap (0.3.6)
+    net-imap (0.3.7)
       date
       net-protocol
     net-pop (0.1.2)

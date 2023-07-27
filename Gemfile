@@ -68,9 +68,6 @@ group :test do
 
   # Selenium is a browser automation tool for automated testing of webapps and more (https://selenium.dev)
   gem 'selenium-webdriver'
-
-  # Easy download and use of browser drivers. (https://github.com/titusfortner/webdrivers)
-  gem 'webdrivers'
 end
 
 # Timezone Data for TZInfo (https://tzinfo.github.io)

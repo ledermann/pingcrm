@@ -293,7 +293,7 @@ DEPENDENCIES
   pg (>= 0.18, < 2.0)
   puma (~> 6)
   rack-mini-profiler
-  rails (~> 7.0.4)
+  rails (~> 7.0.6)
   rubocop
   rubocop-capybara
   rubocop-factory_bot

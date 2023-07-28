@@ -4,7 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '~> 3.2'
 
 # Full-stack web application framework. (https://rubyonrails.org)
-gem 'rails', '~> 7.0.4'
+gem 'rails', '~> 7.0.6'
 
 # Pg is the Ruby interface to the PostgreSQL RDBMS (https://github.com/ged/ruby-pg)
 gem 'pg', '>= 0.18', '< 2.0'

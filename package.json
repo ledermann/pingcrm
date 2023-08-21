@@ -18,7 +18,7 @@
   },
   "version": "0.1.0",
   "devDependencies": {
-    "@vitejs/plugin-vue": "^4.3.1",
+    "@vitejs/plugin-vue": "^4.3.2",
     "eslint": "^8.47.0",
     "eslint-plugin-vue": "^9.17.0",
     "rollup": "^3.28.0",

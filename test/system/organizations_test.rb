@@ -9,7 +9,7 @@ class OrganizationsTest < ApplicationSystemTestCase
   test 'list all organizations and allows to paginate and search' do
     sign_in @user
     organizations =
-      Array.new(15) { create(:organization, account: @account) }.sort_by(&:name)
+      create_list(:organization, 15, account: @account).sort_by(&:name)
 
     visit '/organizations'
 
@@ -35,7 +35,7 @@ class OrganizationsTest < ApplicationSystemTestCase
 
   test 'cannot view deleted organizations by default, but allows to change filter' do
     sign_in @user
-    organizations = Array.new(5) { create(:organization, account: @account) }
+    organizations = create_list(:organization, 5, account: @account)
     organizations.first.soft_delete!
 
     visit '/organizations'

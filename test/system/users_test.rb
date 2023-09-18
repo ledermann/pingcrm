@@ -9,7 +9,7 @@ class UsersTest < ApplicationSystemTestCase
 
   test 'list all users and allows to search' do
     sign_in @user
-    users = Array.new(15) { create(:user, account: @account) }.sort_by(&:name)
+    users = create_list(:user, 15, account: @account).sort_by(&:name)
 
     visit '/users'
 

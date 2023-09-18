@@ -10,7 +10,7 @@ class ContactsTest < ApplicationSystemTestCase
     sign_in @user
 
     contacts =
-      Array.new(15) { create(:contact, account: @account) }.sort_by(&:name)
+      create_list(:contact, 15, account: @account).sort_by(&:name)
 
     visit '/contacts'
 
@@ -36,7 +36,7 @@ class ContactsTest < ApplicationSystemTestCase
 
   test 'cannot view deleted contacts by default, but allows to change filter' do
     sign_in @user
-    contacts = Array.new(5) { create(:contact, account: @account) }
+    contacts = create_list(:contact, 5, account: @account)
     contacts.first.soft_delete!
 
     visit '/contacts'

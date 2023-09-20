@@ -19,7 +19,7 @@ class OrganizationsTest < ApplicationSystemTestCase
       .first(10)
       .each { |organization| assert_selector 'table', text: organization.name }
 
-    click_on 'Next'
+    click_link 'Next'
     assert_selector 'table tbody tr', count: 5
     organizations
       .last(5)
@@ -43,7 +43,7 @@ class OrganizationsTest < ApplicationSystemTestCase
     assert_selector 'h1', text: 'Organizations'
     assert_selector 'table tbody tr', count: 4
 
-    click_on 'Filter'
+    click_button 'Filter'
     select 'With Trashed', from: 'Trashed:'
 
     assert_selector 'h1', text: 'Organizations'
@@ -54,14 +54,14 @@ class OrganizationsTest < ApplicationSystemTestCase
     sign_in @user
 
     visit '/organizations'
-    click_on 'Create Organization'
+    click_button 'Create Organization'
 
     assert_selector 'form'
     assert_selector 'button', text: 'Create Organization'
 
     within 'form' do
       fill_in 'Name:', with: 'The new organization'
-      click_on 'Create Organization'
+      click_button 'Create Organization'
     end
     assert_selector 'div', text: 'Organization created.'
   end
@@ -75,7 +75,7 @@ class OrganizationsTest < ApplicationSystemTestCase
     assert_selector 'form'
     assert_selector 'button', text: 'Update Organization'
     fill_in 'Name:', with: 'The updated organization'
-    click_on 'Update Organization'
+    click_button 'Update Organization'
 
     assert_selector 'div', text: 'Organization updated.'
   end
@@ -87,7 +87,7 @@ class OrganizationsTest < ApplicationSystemTestCase
     visit "/organizations/#{organization.id}/edit"
 
     assert_selector 'button', text: 'Delete Organization'
-    accept_confirm { click_on 'Delete Organization' }
+    accept_confirm { click_button 'Delete Organization' }
 
     assert_selector 'div', text: 'Organization deleted.'
   end

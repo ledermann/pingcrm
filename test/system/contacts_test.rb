@@ -9,8 +9,7 @@ class ContactsTest < ApplicationSystemTestCase
   test 'list all contacts and allows to paginate and search' do
     sign_in @user
 
-    contacts =
-      create_list(:contact, 15, account: @account).sort_by(&:name)
+    contacts = create_list(:contact, 15, account: @account).sort_by(&:name)
 
     visit '/contacts'
 
@@ -20,7 +19,7 @@ class ContactsTest < ApplicationSystemTestCase
       .first(10)
       .each { |contact| assert_selector 'table', text: contact.last_name }
 
-    click_on 'Next'
+    click_link 'Next'
     assert_selector 'table tbody tr', count: 5
     contacts
       .last(5)
@@ -44,7 +43,7 @@ class ContactsTest < ApplicationSystemTestCase
     assert_selector 'h1', text: 'Contacts'
     assert_selector 'table tbody tr', count: 4
 
-    click_on 'Filter'
+    click_button 'Filter'
     select 'With Trashed', from: 'Trashed:'
 
     assert_selector 'h1', text: 'Contacts'
@@ -55,14 +54,14 @@ class ContactsTest < ApplicationSystemTestCase
     sign_in @user
 
     visit '/contacts'
-    click_on 'Create Contact'
+    click_link 'Create Contact'
 
     assert_selector 'form'
     assert_selector 'button', text: 'Create Contact'
 
     fill_in 'First name:', with: 'Jane'
     fill_in 'Last name:', with: 'Doe'
-    click_on 'Create Contact'
+    click_button 'Create Contact'
     assert_selector 'div', text: 'Contact created.'
   end
 
@@ -76,7 +75,7 @@ class ContactsTest < ApplicationSystemTestCase
     assert_selector 'button', text: 'Update Contact'
     fill_in 'First name:', with: 'Jane'
     fill_in 'Last name:', with: 'Doe'
-    click_on 'Update Contact'
+    click_button 'Update Contact'
 
     assert_selector 'div', text: 'Contact updated.'
   end
@@ -88,7 +87,7 @@ class ContactsTest < ApplicationSystemTestCase
     visit "/contacts/#{contact.id}/edit"
 
     assert_selector 'button', text: 'Delete Contact'
-    accept_confirm { click_on 'Delete Contact' }
+    accept_confirm { click_button 'Delete Contact' }
 
     assert_selector 'div', text: 'Contact deleted.'
   end

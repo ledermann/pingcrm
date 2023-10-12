@@ -117,7 +117,7 @@ GEM
     inertia_rails (3.1.2)
       rails (>= 5)
     io-console (0.6.0)
-    irb (1.8.1)
+    irb (1.8.2)
       rdoc
       reline (>= 0.3.8)
     jbuilder (2.11.5)

@@ -24,6 +24,9 @@ gem 'image_processing', '~> 1.2'
 # Boot large ruby/rails apps faster (https://github.com/Shopify/bootsnap)
 gem 'bootsnap', require: false
 
+# Brings Rails named routes to javascript (http://github.com/railsware/js-routes)
+gem 'js-routes'
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   # Debugging functionality for Ruby (https://github.com/ruby/debug)
@@ -57,9 +60,6 @@ group :development do
 
   # Rails application preloader (https://github.com/rails/spring)
   gem 'spring'
-
-  # Brings Rails named routes to javascript (http://github.com/railsware/js-routes)
-  gem 'js-routes', require: false
 end
 
 group :test do

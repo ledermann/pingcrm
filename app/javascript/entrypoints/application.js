@@ -23,7 +23,7 @@ if (plausibleUrl) {
   });
 }
 
-import * as Routes from '@/utils/routes.js';
+import * as Routes from '@/routes.js';
 
 const pages = import.meta.globEagerDefault('../Pages/**/*.vue');
 

@@ -1,16 +1,15 @@
 source 'https://rubygems.org'
-git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '~> 3.2'
 
 # Full-stack web application framework. (https://rubyonrails.org)
-gem 'rails', '~> 7.0.6'
+gem 'rails', '~> 7.1.1'
 
 # Pg is the Ruby interface to the PostgreSQL RDBMS (https://github.com/ged/ruby-pg)
 gem 'pg', '>= 0.18', '< 2.0'
 
 # Puma is a simple, fast, threaded, and highly parallel HTTP 1.1 server for Ruby/Rack applications (https://puma.io)
-gem 'puma', '~> 6'
+gem 'puma', '>= 5.0'
 
 # Use Vite in Rails and bring joy to your JavaScript experience (https://github.com/ElMassimo/vite_ruby)
 gem 'vite_rails'
@@ -30,7 +29,7 @@ gem 'js-routes'
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   # Debugging functionality for Ruby (https://github.com/ruby/debug)
-  gem 'debug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'debug', platforms: %i[mri windows]
 
   # Automatic Ruby code style checking tool. (https://github.com/rubocop/rubocop)
   gem 'rubocop', require: false
@@ -57,9 +56,6 @@ group :development do
 
   # Profiles loading speed for rack applications. (https://miniprofiler.com)
   gem 'rack-mini-profiler'
-
-  # Rails application preloader (https://github.com/rails/spring)
-  gem 'spring'
 end
 
 group :test do
@@ -71,7 +67,7 @@ group :test do
 end
 
 # Timezone Data for TZInfo (https://tzinfo.github.io)
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'tzinfo-data', platforms: %i[windows jruby]
 
 # Inertia adapter for Rails (https://github.com/inertiajs/inertia-rails)
 gem 'inertia_rails', '>= 1.2.2'

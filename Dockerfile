@@ -14,5 +14,8 @@ COPY --from=Builder /etc/alpine-release /tmp/dummy
 
 USER app
 
-# Script to be executed every time the container starts
+# Entrypoint prepares the database.
 ENTRYPOINT ["docker/startup.sh"]
+
+# Start the server by default, this can be overwritten at runtime
+CMD ["./bin/rails", "server"]

@@ -26,6 +26,9 @@ gem 'bootsnap', require: false
 # Brings Rails named routes to javascript (http://github.com/railsware/js-routes)
 gem 'js-routes'
 
+# Tame Rails' multi-line logging into a single line per request (https://github.com/roidrage/lograge)
+gem 'lograge'
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   # Debugging functionality for Ruby (https://github.com/ruby/debug)

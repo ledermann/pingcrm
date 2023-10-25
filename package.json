@@ -5,7 +5,7 @@
     "lint": "eslint --ext .js,.vue ."
   },
   "dependencies": {
-    "@inertiajs/vue3": "^1.0.12",
+    "@inertiajs/vue3": "^1.0.13",
     "@popperjs/core": "^2.11.8",
     "autoprefixer": "^10.4.16",
     "lodash": "^4.17.21",

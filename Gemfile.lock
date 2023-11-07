@@ -107,7 +107,7 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
-    drb (2.1.1)
+    drb (2.2.0)
       ruby2_keywords
     dry-cli (1.0.0)
     erubi (1.12.0)

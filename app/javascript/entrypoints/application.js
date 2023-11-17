@@ -25,7 +25,7 @@ if (plausibleUrl) {
 
 import * as Routes from '@/routes.js';
 
-const pages = import.meta.globEagerDefault('../Pages/**/*.vue');
+const pages = import.meta.glob('../Pages/**/*.vue', { eager: true });
 
 createInertiaApp({
   resolve: (name) => {

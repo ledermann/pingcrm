@@ -112,10 +112,10 @@ GEM
       ruby2_keywords
     dry-cli (1.0.0)
     erubi (1.12.0)
-    factory_bot (6.2.1)
+    factory_bot (6.4.0)
       activesupport (>= 5.0.0)
-    factory_bot_rails (6.2.0)
-      factory_bot (~> 6.2.0)
+    factory_bot_rails (6.4.0)
+      factory_bot (~> 6.4)
       railties (>= 5.0.0)
     faker (3.2.2)
       i18n (>= 1.8.11, < 2)
@@ -170,7 +170,7 @@ GEM
     net-smtp (0.4.0)
       net-protocol
     nio4r (2.6.0)
-    nokogiri (1.15.4-x86_64-linux)
+    nokogiri (1.15.5-x86_64-linux)
       racc (~> 1.4)
     oj (3.16.1)
     orm_adapter (0.5.0)

@@ -7,6 +7,9 @@ class ApplicationSystemTestCase < ActionDispatch::SystemTestCase
             using: :headless_chrome,
             screen_size: [1400, 1400] do |driver_option|
     driver_option.add_argument('--disable-ipc-flooding-protection')
+
+    # Chrome 120 compatibility
+    driver_option.add_argument '--headless=new'
   end
 
   teardown do

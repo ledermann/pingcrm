@@ -32,11 +32,17 @@
 /config/master.key
 
 /node_modules
-/yarn-error.log
-yarn-debug.log*
-.yarn-integrity
 
 # Vite on Rails
 /public/vite
 /public/vite-dev
 /public/vite-test
+
+# https://yarnpkg.com/getting-started/qa#which-files-should-be-gitignored
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions

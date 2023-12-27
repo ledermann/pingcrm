@@ -1,9 +1,9 @@
-FROM ledermann/rails-base-builder:3.2.2-alpine AS Builder
+FROM ledermann/rails-base-builder:3.3.0-alpine AS Builder
 
 # Remove some files not needed in resulting image
 RUN rm .browserslistrc package.json postcss.config.js tailwind.config.js vite.config.mts
 
-FROM ledermann/rails-base-final:3.2.2-alpine
+FROM ledermann/rails-base-final:3.3.0-alpine
 LABEL maintainer="georg@ledermann.dev"
 
 # Add Alpine packages

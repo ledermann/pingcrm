@@ -19,7 +19,7 @@ class ContactsTest < ApplicationSystemTestCase
       .first(10)
       .each { |contact| assert_selector 'table', text: contact.last_name }
 
-    click_link 'Next'
+    click_on 'Next'
     assert_selector 'table tbody tr', count: 5
     contacts
       .last(5)
@@ -43,7 +43,7 @@ class ContactsTest < ApplicationSystemTestCase
     assert_selector 'h1', text: 'Contacts'
     assert_selector 'table tbody tr', count: 4
 
-    click_button 'Filter'
+    click_on 'Filter'
     select 'With Trashed', from: 'Trashed:'
 
     assert_selector 'h1', text: 'Contacts'
@@ -54,14 +54,14 @@ class ContactsTest < ApplicationSystemTestCase
     sign_in @user
 
     visit '/contacts'
-    click_link 'Create Contact'
+    click_on 'Create Contact'
 
     assert_selector 'form'
     assert_selector 'button', text: 'Create Contact'
 
     fill_in 'First name:', with: 'Jane'
     fill_in 'Last name:', with: 'Doe'
-    click_button 'Create Contact'
+    click_on 'Create Contact'
     assert_selector 'div', text: 'Contact created.'
   end
 
@@ -75,7 +75,7 @@ class ContactsTest < ApplicationSystemTestCase
     assert_selector 'button', text: 'Update Contact'
     fill_in 'First name:', with: 'Jane'
     fill_in 'Last name:', with: 'Doe'
-    click_button 'Update Contact'
+    click_on 'Update Contact'
 
     assert_selector 'div', text: 'Contact updated.'
   end
@@ -87,7 +87,7 @@ class ContactsTest < ApplicationSystemTestCase
     visit "/contacts/#{contact.id}/edit"
 
     assert_selector 'button', text: 'Delete Contact'
-    accept_confirm { click_button 'Delete Contact' }
+    accept_confirm { click_on 'Delete Contact' }
 
     assert_selector 'div', text: 'Contact deleted.'
   end

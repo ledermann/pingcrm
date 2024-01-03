@@ -29,7 +29,7 @@ class UsersTest < ApplicationSystemTestCase
     sign_in @owner
 
     visit '/users'
-    click_link 'Create User'
+    click_on 'Create User'
 
     assert_selector 'form'
     assert true, find_field('Owner:').value
@@ -38,7 +38,7 @@ class UsersTest < ApplicationSystemTestCase
     fill_in 'First name:', with: 'Jonathan'
     fill_in 'Last name:', with: 'Smith'
     fill_in 'Email:', with: 'john@smith.com'
-    click_button 'Create User'
+    click_on 'Create User'
     assert_selector 'div', text: 'User created.'
   end
 
@@ -60,7 +60,7 @@ class UsersTest < ApplicationSystemTestCase
     assert_selector 'form'
     assert_selector 'button', text: 'Update User'
     fill_in 'First name:', with: 'Jonathan'
-    click_button 'Update User'
+    click_on 'Update User'
 
     assert_selector 'div', text: 'User updated.'
   end
@@ -80,7 +80,7 @@ class UsersTest < ApplicationSystemTestCase
     visit "/users/#{@user.id}/edit"
 
     assert_selector 'button', text: 'Delete User'
-    accept_confirm { click_button 'Delete User' }
+    accept_confirm { click_on 'Delete User' }
 
     assert_selector 'div', text: 'User deleted.'
   end
@@ -102,7 +102,7 @@ class UsersTest < ApplicationSystemTestCase
     assert_selector 'h1', text: 'Users'
     assert_no_selector 'table tbody tr', text: @user.email
 
-    click_button 'Filter'
+    click_on 'Filter'
     select 'With Trashed', from: 'Trashed:'
     select 'User', from: 'Role:'
 

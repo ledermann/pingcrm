@@ -12,12 +12,12 @@ class LoginTest < ApplicationSystemTestCase
 
     fill_in 'Email', with: @user.email
     fill_in 'Password', with: @user.password
-    click_button 'Login'
+    click_on 'Login'
 
     assert_selector 'div', text: 'Hey there!'
 
-    click_button 'John Doe'
-    click_button 'Logout'
+    click_on 'John Doe'
+    click_on 'Logout'
     assert_selector 'div', text: 'Welcome Back!'
   end
 
@@ -26,7 +26,7 @@ class LoginTest < ApplicationSystemTestCase
 
     fill_in 'Email', with: @user.email
     fill_in 'Password', with: 'invalid'
-    click_button 'Login'
+    click_on 'Login'
 
     assert_selector 'div', text: I18n.t('devise.failure.invalid')
   end
@@ -39,7 +39,7 @@ class LoginTest < ApplicationSystemTestCase
     sign_out @user
 
     # Click a link that requires authentication
-    click_link 'Contacts'
+    click_on 'Contacts'
 
     assert_current_path('/login')
   end

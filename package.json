@@ -14,7 +14,7 @@
     "tailwindcss": "^3.4.0",
     "timeago.js": "^4.0.2",
     "uuid": "^9.0.1",
-    "vue": "^3.4.3"
+    "vue": "^3.4.4"
   },
   "version": "0.1.0",
   "devDependencies": {

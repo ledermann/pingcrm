@@ -161,3 +161,8 @@ Performance/ChainArrayAllocation:
 
 Performance/OpenStruct:
   Enabled: false
+
+# FactoryBot
+
+FactoryBot/ExcessiveCreateList:
+  MaxAmount: 15

@@ -1326,20 +1326,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-vue@npm:^9.19.2":
-  version: 9.19.2
-  resolution: "eslint-plugin-vue@npm:9.19.2"
+"eslint-plugin-vue@npm:^9.20.0":
+  version: 9.20.0
+  resolution: "eslint-plugin-vue@npm:9.20.0"
   dependencies:
     "@eslint-community/eslint-utils": "npm:^4.4.0"
     natural-compare: "npm:^1.4.0"
     nth-check: "npm:^2.1.1"
     postcss-selector-parser: "npm:^6.0.13"
     semver: "npm:^7.5.4"
-    vue-eslint-parser: "npm:^9.3.1"
+    vue-eslint-parser: "npm:^9.4.0"
     xml-name-validator: "npm:^4.0.0"
   peerDependencies:
     eslint: ^6.2.0 || ^7.0.0 || ^8.0.0
-  checksum: b48c24c6aedcc690b4cf2432df08da62fba6f7f24f3a561d7a2592329c2c947d01ba51b49b2a256f65735dcea4f73b44cbffc0c373fec461f49f5a02a078561e
+  checksum: 9361ef2e2058717d7b79d2b78b300c70022469ff0e91c6181ee2243d0769c68cbd78bf72ffe25c93cc49373cef61f2ad2e6ac42cb8a7e6af9d54c21911eea7a5
   languageName: node
   linkType: hard
 
@@ -2516,7 +2516,7 @@ __metadata:
     "@vitejs/plugin-vue": "npm:^5.0.2"
     autoprefixer: "npm:^10.4.16"
     eslint: "npm:^8.56.0"
-    eslint-plugin-vue: "npm:^9.19.2"
+    eslint-plugin-vue: "npm:^9.20.0"
     lodash: "npm:^4.17.21"
     plausible-tracker: "npm:^0.3.8"
     postcss: "npm:^8.4.33"
@@ -3320,9 +3320,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vue-eslint-parser@npm:^9.3.1":
-  version: 9.3.2
-  resolution: "vue-eslint-parser@npm:9.3.2"
+"vue-eslint-parser@npm:^9.4.0":
+  version: 9.4.0
+  resolution: "vue-eslint-parser@npm:9.4.0"
   dependencies:
     debug: "npm:^4.3.4"
     eslint-scope: "npm:^7.1.1"
@@ -3333,7 +3333,7 @@ __metadata:
     semver: "npm:^7.3.6"
   peerDependencies:
     eslint: ">=6.0.0"
-  checksum: da0e0bcc603e7845253f1600e595f91de7f46ad1947827008aca5e545de405993f83dabfc01c57c9d0d95d22040a2d0f9d82cb640918e18e3d8dcff2c98513fc
+  checksum: c77ddaf69ef076f69164cb52fd1295cc73b002f99bf5bcde25dcbce2c3bba66decdc2abd29ce73434720dd3fca20323073b6044f84fec219c629f7b9276abce6
   languageName: node
   linkType: hard
 

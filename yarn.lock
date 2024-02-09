@@ -2434,7 +2434,7 @@ __metadata:
     tailwindcss: "npm:^3.4.1"
     timeago.js: "npm:^4.0.2"
     uuid: "npm:^9.0.1"
-    vite: "npm:^5.0.12"
+    vite: "npm:^5.1.0"
     vite-plugin-full-reload: "npm:^1.1.0"
     vite-plugin-ruby: "npm:^5.0.0"
     vue: "npm:^3.4.15"
@@ -2526,7 +2526,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss@npm:^8.4.23, postcss@npm:^8.4.32, postcss@npm:^8.4.33":
+"postcss@npm:^8.4.23, postcss@npm:^8.4.33":
   version: 8.4.33
   resolution: "postcss@npm:8.4.33"
   dependencies:
@@ -3137,13 +3137,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite@npm:^5.0.12":
-  version: 5.0.12
-  resolution: "vite@npm:5.0.12"
+"vite@npm:^5.1.0":
+  version: 5.1.0
+  resolution: "vite@npm:5.1.0"
   dependencies:
     esbuild: "npm:^0.19.3"
     fsevents: "npm:~2.3.3"
-    postcss: "npm:^8.4.32"
+    postcss: "npm:^8.4.35"
     rollup: "npm:^4.2.0"
   peerDependencies:
     "@types/node": ^18.0.0 || >=20.0.0
@@ -3173,7 +3173,7 @@ __metadata:
       optional: true
   bin:
     vite: bin/vite.js
-  checksum: 10c0/c51b8e458851943c903fddde6973e720099ef8a5f364fb107cddade59c9e90f6d9ad98b61a7419cdfa0c6374236e10bff965d0c2d9e7b1790c68b874e5e7950c
+  checksum: 10c0/62aa632b6f30cfca39db534b5b461b1e73dc4f4a3093088c1140a1e1b0c4c8f4eacc0e472a0d96d765ad6976b00e202da20a647865886df692240a2b06b62c6f
   languageName: node
   linkType: hard
 

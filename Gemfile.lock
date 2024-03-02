@@ -108,8 +108,7 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
-    drb (2.2.0)
-      ruby2_keywords
+    drb (2.2.1)
     dry-cli (1.0.0)
     erubi (1.12.0)
     factory_bot (6.4.6)
@@ -273,7 +272,6 @@ GEM
     ruby-progressbar (1.13.0)
     ruby-vips (2.2.1)
       ffi (~> 1.12)
-    ruby2_keywords (0.0.5)
     rubyzip (2.3.2)
     selenium-webdriver (4.18.1)
       base64 (~> 0.2)

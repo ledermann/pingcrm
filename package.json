@@ -21,7 +21,7 @@
     "@vitejs/plugin-vue": "^5.0.4",
     "eslint": "^8.57.0",
     "eslint-plugin-vue": "^9.24.0",
-    "rollup": "^4.13.1",
+    "rollup": "^4.13.2",
     "rollup-plugin-gzip": "^3.1.2",
     "vite": "^5.2.6",
     "vite-plugin-full-reload": "^1.1.0",

@@ -1358,9 +1358,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-vue@npm:^9.24.0":
-  version: 9.24.0
-  resolution: "eslint-plugin-vue@npm:9.24.0"
+"eslint-plugin-vue@npm:^9.24.1":
+  version: 9.24.1
+  resolution: "eslint-plugin-vue@npm:9.24.1"
   dependencies:
     "@eslint-community/eslint-utils": "npm:^4.4.0"
     globals: "npm:^13.24.0"
@@ -1371,8 +1371,8 @@ __metadata:
     vue-eslint-parser: "npm:^9.4.2"
     xml-name-validator: "npm:^4.0.0"
   peerDependencies:
-    eslint: ^6.2.0 || ^7.0.0 || ^8.0.0
-  checksum: 10c0/4b8a5ec008bd35fe26953c9a916fc285375cdc5fa3025f0c427a16c1032bf38b21c8dfed2d616fa7242efc84bbc133d4872f3fbe5ab0f25e9529370179746f7c
+    eslint: ^6.2.0 || ^7.0.0 || ^8.0.0 || ^9.0.0
+  checksum: 10c0/a20f2004f3e4993d5abce4da94f05c8927a0f61d2179cfc78dc3ea0e597f9dfecddf33fae3ba24f9ead44ea22d7c7c79e622c75e188e524e8d62491a4a6e4d3b
   languageName: node
   linkType: hard
 
@@ -2560,7 +2560,7 @@ __metadata:
     "@vitejs/plugin-vue": "npm:^5.0.4"
     autoprefixer: "npm:^10.4.19"
     eslint: "npm:^8.57.0"
-    eslint-plugin-vue: "npm:^9.24.0"
+    eslint-plugin-vue: "npm:^9.24.1"
     lodash: "npm:^4.17.21"
     plausible-tracker: "npm:^0.3.8"
     postcss: "npm:^8.4.38"

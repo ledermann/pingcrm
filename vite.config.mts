@@ -6,9 +6,6 @@ import { brotliCompressSync } from 'zlib';
 import gzipPlugin from 'rollup-plugin-gzip';
 
 export default defineConfig({
-  optimizeDeps: {
-    include: ['@inertiajs/inertia'],
-  },
   plugins: [
     RubyPlugin(),
     FullReload(['config/routes.rb', 'app/views/**/*']),

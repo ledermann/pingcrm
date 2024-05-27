@@ -2473,7 +2473,7 @@ __metadata:
     eslint: "npm:^8.57.0"
     eslint-plugin-vue: "npm:^9.26.0"
     lodash: "npm:^4.17.21"
-    plausible-tracker: "npm:^0.3.8"
+    plausible-tracker: "npm:^0.3.9"
     postcss: "npm:^8.4.38"
     rollup: "npm:^4.18.0"
     rollup-plugin-gzip: "npm:^3.1.2"
@@ -2495,10 +2495,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"plausible-tracker@npm:^0.3.8":
-  version: 0.3.8
-  resolution: "plausible-tracker@npm:0.3.8"
-  checksum: 10c0/e711dac9e07d4d4d6b9fbd4102ff00212e3105ed17f65ea741f1e92df4d0363555fac8856f8f231946a1da3722374f3379a96efe479c70dab5e5accef7878a86
+"plausible-tracker@npm:^0.3.9":
+  version: 0.3.9
+  resolution: "plausible-tracker@npm:0.3.9"
+  checksum: 10c0/750018ad255119f7a5e6d108b35c1c7e4dd04ad9b0e950951812658b02b464865fdcb22a72f8a29881bcf3e5a4da7653ff881d333362ee6c319e63fae03153fb
   languageName: node
   linkType: hard
 

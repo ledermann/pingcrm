@@ -241,7 +241,7 @@ GEM
     responders (3.1.1)
       actionpack (>= 5.2)
       railties (>= 5.2)
-    rexml (3.2.9)
+    rexml (3.3.0)
       strscan
     rubocop (1.64.1)
       json (~> 2.3)

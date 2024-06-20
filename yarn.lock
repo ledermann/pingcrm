@@ -537,12 +537,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^20.14.6":
-  version: 20.14.6
-  resolution: "@types/node@npm:20.14.6"
+"@types/node@npm:^20.14.7":
+  version: 20.14.7
+  resolution: "@types/node@npm:20.14.7"
   dependencies:
     undici-types: "npm:~5.26.4"
-  checksum: 10c0/22640f0eb2a955872e4529a93be1b719f67b527b80fdab51419756d20e21b5ce0f4ccbee9a3e2ff20e5def647f77baf77b4b0434ff8896791c102165ec0c3e48
+  checksum: 10c0/6211ffe86f769a58617e3bdca58610256021ef54bd99d2c442ee6109196cd6ee8e0bcd1cfac0e39bf4bb353f8900fa5fae540485a03816bd91ad1f86a0e18512
   languageName: node
   linkType: hard
 
@@ -2476,7 +2476,7 @@ __metadata:
   dependencies:
     "@inertiajs/vue3": "npm:^1.2.0"
     "@popperjs/core": "npm:^2.11.8"
-    "@types/node": "npm:^20.14.6"
+    "@types/node": "npm:^20.14.7"
     "@vitejs/plugin-vue": "npm:^5.0.5"
     autoprefixer: "npm:^10.4.19"
     eslint: "npm:^8.57.0"

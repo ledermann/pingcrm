@@ -29,5 +29,5 @@
     "vite-plugin-ruby": "^5.0.0",
     "zlib": "^1.0.5"
   },
-  "packageManager": "yarn@4.3.0"
+  "packageManager": "yarn@4.3.1"
 }

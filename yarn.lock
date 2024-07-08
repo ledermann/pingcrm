@@ -2490,7 +2490,7 @@ __metadata:
     timeago.js: "npm:^4.0.2"
     uuid: "npm:^10.0.0"
     vite: "npm:^5.3.3"
-    vite-plugin-full-reload: "npm:^1.1.0"
+    vite-plugin-full-reload: "npm:^1.2.0"
     vite-plugin-ruby: "npm:^5.0.0"
     vue: "npm:^3.4.31"
     zlib: "npm:^1.0.5"
@@ -3200,13 +3200,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite-plugin-full-reload@npm:^1.1.0":
-  version: 1.1.0
-  resolution: "vite-plugin-full-reload@npm:1.1.0"
+"vite-plugin-full-reload@npm:^1.2.0":
+  version: 1.2.0
+  resolution: "vite-plugin-full-reload@npm:1.2.0"
   dependencies:
     picocolors: "npm:^1.0.0"
     picomatch: "npm:^2.3.1"
-  checksum: 10c0/f33ccb4c58051e43b7d261d60f0078c0e28c49631dd86218cfa1902e0a61f038d1f6839f64a4fb95da0445720612d75656eb9b3d13c8b50d336e2548251c54b8
+  checksum: 10c0/ffc3d21daa6aa2953f138907979b6c61d921d5d5f7fcb2e0da146c9c81185298e0844664a34e5028a2231906600f6aaa0aa7375a48659dcafc5722bed22a56d9
   languageName: node
   linkType: hard
 

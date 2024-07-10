@@ -118,7 +118,7 @@ GEM
       railties (>= 5.0.0)
     faker (3.4.1)
       i18n (>= 1.8.11, < 2)
-    ffi (1.17.0-x86_64-linux-gnu)
+    ffi (1.17.0)
     globalid (1.2.1)
       activesupport (>= 6.1)
     i18n (1.14.5)
@@ -157,6 +157,7 @@ GEM
     matrix (0.4.2)
     mini_magick (4.13.2)
     mini_mime (1.1.5)
+    mini_portile2 (2.8.7)
     minitest (5.24.1)
     msgpack (1.7.2)
     mutex_m (0.2.0)
@@ -170,7 +171,8 @@ GEM
     net-smtp (0.5.0)
       net-protocol
     nio4r (2.7.3)
-    nokogiri (1.16.6-x86_64-linux)
+    nokogiri (1.16.6)
+      mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
     oj (3.16.4)
       bigdecimal (>= 3.0)
@@ -308,7 +310,7 @@ GEM
     zeitwerk (2.6.16)
 
 PLATFORMS
-  x86_64-linux
+  ruby
 
 DEPENDENCIES
   bootsnap
@@ -340,7 +342,7 @@ DEPENDENCIES
   web-console
 
 RUBY VERSION
-   ruby 3.3.2p78
+   ruby 3.3.4p94
 
 BUNDLED WITH
-   2.5.14
+   2.5.15

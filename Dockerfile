@@ -1,4 +1,4 @@
-FROM ghcr.io/ledermann/rails-base-builder:3.3.4-alpine AS Builder
+FROM ghcr.io/ledermann/rails-base-builder:3.3.4-alpine AS builder
 
 # Remove some files not needed in resulting image
 RUN rm .browserslistrc package.json postcss.config.js tailwind.config.js vite.config.mts
@@ -9,8 +9,8 @@ LABEL maintainer="georg@ledermann.dev"
 # Add Alpine packages
 RUN apk add --no-cache vips
 
-# Workaround to trigger Builder's ONBUILDs to finish:
-COPY --from=Builder /etc/alpine-release /tmp/dummy
+# Workaround to trigger builder's ONBUILDs to finish:
+COPY --from=builder /etc/alpine-release /tmp/dummy
 
 USER app
 

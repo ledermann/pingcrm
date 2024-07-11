@@ -7,12 +7,7 @@
           <div
             class="flex items-center justify-between bg-indigo-900 px-6 py-4 md:w-56 md:flex-shrink-0 md:justify-center"
           >
-            <Link
-              class="mt-1"
-              :href="$routes.root()"
-              aria-label="Home"
-              role="navigation"
-            >
+            <Link class="mt-1" :href="$routes.root()" aria-label="Home">
               <logo class="fill-white" width="120" height="28" />
             </Link>
             <dropdown

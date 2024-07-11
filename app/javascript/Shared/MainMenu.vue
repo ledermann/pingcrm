@@ -1,10 +1,9 @@
 <template>
-  <div>
+  <nav>
     <div class="mb-4">
       <Link
         class="group flex items-center py-3"
         :href="$routes.root()"
-        role="navigation"
         aria-label="Dashboard"
       >
         <icon
@@ -27,7 +26,6 @@
       <Link
         class="group flex items-center py-3"
         :href="$routes.organizations()"
-        role="navigation"
         aria-label="Organizations"
       >
         <icon
@@ -54,7 +52,6 @@
       <Link
         class="group flex items-center py-3"
         :href="$routes.contacts()"
-        role="navigation"
         aria-label="Contacts"
       >
         <icon
@@ -81,7 +78,6 @@
       <Link
         class="group flex items-center py-3"
         :href="$routes.reports()"
-        role="navigation"
         aria-label="Reports"
       >
         <icon
@@ -104,7 +100,7 @@
         </div>
       </Link>
     </div>
-  </div>
+  </nav>
 </template>
 
 <script>

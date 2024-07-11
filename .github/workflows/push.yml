@@ -60,18 +60,63 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
-      - name: Login to GitHub Package Registry
-        run: docker login docker.pkg.github.com -u $GITHUB_ACTOR -p ${{ secrets.PACKAGES_TOKEN }}
+      - name: Fetch tag annotations
+        # https://github.com/actions/checkout/issues/290
+        run: git fetch --tags --force
 
-      - name: Build the production image
+      - name: Docker meta
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          # list of Docker images to use as base name for tags
+          images: |
+            ghcr.io/ledermann/pingcrm
+          # generate Docker tags based on the following events/attributes
+          tags: |
+            type=ref,event=branch
+            type=ref,event=pr
+            type=semver,pattern={{version}}
+            type=semver,pattern={{major}}.{{minor}}
+            type=semver,pattern={{major}}
+            type=raw,value=latest,enable=${{ github.ref == format('refs/heads/{0}', 'master') }}
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.repository_owner }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set ENV values
         run: |
-          export COMMIT_TIME=$(git show -s --format=%ci ${GITHUB_SHA})
-          export COMMIT_SHA=${GITHUB_SHA}
-          docker buildx build --build-arg COMMIT_TIME --build-arg COMMIT_SHA -t "docker.pkg.github.com/ledermann/pingcrm/pingcrm:latest" .
+          echo "COMMIT_TIME=$(git show -s --format=%cI $GITHUB_SHA)" >> $GITHUB_ENV
+          echo "COMMIT_VERSION=$(git describe --always)" >> $GITHUB_ENV
 
-      - name: Push the production image
-        run: docker push "docker.pkg.github.com/ledermann/pingcrm/pingcrm:latest"
+      - name: Build and push
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          platforms: linux/amd64
+          provenance: false
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          build-args: |
+            COMMIT_SHA=${{ github.sha }}
+            COMMIT_TIME=${{ env.COMMIT_TIME }}
+            COMMIT_VERSION=${{ env.COMMIT_VERSION }}
+            COMMIT_BRANCH=${{ github.head_ref || github.ref_name }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
 
-      - name: Send notification
-        run: curl -X POST ${{ secrets.DEPLOY_HOOK }}
+      - name: Send webhook to start deployment
+        env:
+          DEPLOY_HOOK: ${{ secrets.DEPLOY_HOOK }}
+        if: env.DEPLOY_HOOK != null
+        run: curl -X POST ${{ env.DEPLOY_HOOK }}

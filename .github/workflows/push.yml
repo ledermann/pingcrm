@@ -39,7 +39,7 @@ jobs:
           cache: yarn
 
       - name: Install Yarn packages
-        run: yarn install --frozen-lockfile
+        run: yarn install --immutable
 
       - name: Lint with ESLint
         run: yarn lint

@@ -78,7 +78,7 @@ gem 'inertia_rails', '>= 1.2.2'
 # Easily generate fake data (https://github.com/faker-ruby/faker)
 gem 'faker', require: false
 
-# The kick-ass pagination ruby gem (https://github.com/ddnexus/pagy)
+# The best pagination ruby gem (https://github.com/ddnexus/pagy)
 gem 'pagy'
 
 # Flexible authentication solution for Rails with Warden (https://github.com/heartcombo/devise)

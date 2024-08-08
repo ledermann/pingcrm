@@ -2,7 +2,7 @@
   "name": "pingcrm",
   "private": true,
   "scripts": {
-    "lint": "eslint --ext .js,.vue ."
+    "lint": "eslint --cache ."
   },
   "dependencies": {
     "@inertiajs/vue3": "^1.2.0",
@@ -20,7 +20,8 @@
   "devDependencies": {
     "@types/node": "^22.1.0",
     "@vitejs/plugin-vue": "^5.1.2",
-    "eslint": "^8.57.0",
+    "eslint": "^9.8.0",
+    "eslint-plugin-tailwindcss": "^3.17.4",
     "eslint-plugin-vue": "^9.27.0",
     "rollup": "^4.20.0",
     "rollup-plugin-gzip": "^4.0.0",

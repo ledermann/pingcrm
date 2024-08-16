@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 ruby '~> 3.3'
 
 # Full-stack web application framework. (https://rubyonrails.org)
-gem 'rails', '~> 7.1.1'
+gem 'rails', '~> 7.2.0'
 
 # Pg is the Ruby interface to the PostgreSQL RDBMS (https://github.com/ged/ruby-pg)
 gem 'pg', '>= 0.18', '< 2.0'
@@ -32,7 +32,10 @@ gem 'lograge'
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   # Debugging functionality for Ruby (https://github.com/ruby/debug)
-  gem 'debug', platforms: %i[mri windows]
+  gem 'debug', platforms: %i[mri windows], require: 'debug/prelude'
+
+  # Static analysis for security vulnerabilities [https://brakemanscanner.org/]
+  gem 'brakeman', require: false
 
   # Automatic Ruby code style checking tool. (https://github.com/rubocop/rubocop)
   gem 'rubocop', require: false
@@ -56,9 +59,6 @@ end
 group :development do
   # A debugging tool for your Ruby on Rails applications. (https://github.com/rails/web-console)
   gem 'web-console'
-
-  # Profiles loading speed for rack applications. (https://miniprofiler.com)
-  gem 'rack-mini-profiler'
 end
 
 group :test do

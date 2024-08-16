@@ -31,7 +31,10 @@ jobs:
           bundler-cache: true
 
       - name: Lint with RuboCop
-        run: bundle exec rubocop --parallel
+        run: bin/rubocop --parallel
+
+      - name: Scan for common Rails security vulnerabilities using static analysis
+        run: bin/brakeman --no-pager
 
       - name: Setup Node.js
         uses: actions/setup-node@v4.0.3

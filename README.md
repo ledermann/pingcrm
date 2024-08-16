@@ -52,7 +52,7 @@ rails test:system
 ## Requirements
 
 - Ruby 3.3
-- Ruby on Rails 7
+- Ruby on Rails 7.2
 - PostgreSQL
 
 ## Credits

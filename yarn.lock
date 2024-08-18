@@ -2577,7 +2577,7 @@ __metadata:
     plausible-tracker: "npm:^0.3.9"
     postcss: "npm:^8.4.41"
     rollup: "npm:^4.21.0"
-    rollup-plugin-gzip: "npm:^4.0.0"
+    rollup-plugin-gzip: "npm:^4.0.1"
     tailwindcss: "npm:^3.4.10"
     timeago.js: "npm:^4.0.2"
     uuid: "npm:^10.0.0"
@@ -2803,12 +2803,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rollup-plugin-gzip@npm:^4.0.0":
-  version: 4.0.0
-  resolution: "rollup-plugin-gzip@npm:4.0.0"
+"rollup-plugin-gzip@npm:^4.0.1":
+  version: 4.0.1
+  resolution: "rollup-plugin-gzip@npm:4.0.1"
   peerDependencies:
     rollup: ">=2.0.0"
-  checksum: 10c0/6b48ab9a3bdbb718daeafb2c7f114f6958a22c9359a1a6d24f1e9ba4f2a04322862488964f9fe28ec7ff1cc1a58ae7bd39257cdba7c4dd11b82139ffb9cfaff1
+  checksum: 10c0/c4e375ddfbe1934acfae6ffdf36d05cb430ba22763669cb08f048e88f67bd0677abde3bb09905263d8c8fc8760b04700e2eecba263cda76a985a33d0776e8084
   languageName: node
   linkType: hard
 

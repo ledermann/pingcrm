@@ -24,7 +24,7 @@
     "eslint-plugin-tailwindcss": "^3.17.4",
     "eslint-plugin-vue": "^9.27.0",
     "rollup": "^4.21.0",
-    "rollup-plugin-gzip": "^4.0.0",
+    "rollup-plugin-gzip": "^4.0.1",
     "vite": "^5.4.1",
     "vite-plugin-full-reload": "^1.2.0",
     "vite-plugin-ruby": "^5.0.0",

@@ -2471,7 +2471,7 @@ __metadata:
     uuid: "npm:^10.0.0"
     vite: "npm:^5.4.3"
     vite-plugin-full-reload: "npm:^1.2.0"
-    vite-plugin-ruby: "npm:^5.0.0"
+    vite-plugin-ruby: "npm:^5.1.0"
     vue: "npm:^3.5.1"
     zlib: "npm:^1.0.5"
   languageName: unknown
@@ -3183,15 +3183,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite-plugin-ruby@npm:^5.0.0":
-  version: 5.0.0
-  resolution: "vite-plugin-ruby@npm:5.0.0"
+"vite-plugin-ruby@npm:^5.1.0":
+  version: 5.1.0
+  resolution: "vite-plugin-ruby@npm:5.1.0"
   dependencies:
     debug: "npm:^4.3.4"
     fast-glob: "npm:^3.3.2"
   peerDependencies:
     vite: ">=5.0.0"
-  checksum: 10c0/2ff117e6c39339b8954e4ba1a4b0e0a8960f646e355b9c196d2e29a3768a32ce70fa5a303065b2268929c018a38d46ac6ac7928b85e85e765dead60c9bdadcc4
+  checksum: 10c0/4c4b3193ee506a5054adbf9c08d38519b04522f88603f80c7822d2073b53bf1e3f3a3ec9459b76cb613b4eafce0991baa781fdeb297ea4acb68a7c1e2eeea0de
   languageName: node
   linkType: hard
 

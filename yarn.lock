@@ -929,9 +929,9 @@ __metadata:
   linkType: hard
 
 "caniuse-lite@npm:^1.0.30001646":
-  version: 1.0.30001655
-  resolution: "caniuse-lite@npm:1.0.30001655"
-  checksum: 10c0/fff0c0c3ffcba89828bfa6b99f118e82c064f46f15bb8655b9f2a352a3f552ccac0b87a9fe9532f8c5a29e284aae5579791e196480ec717d11ef1d1a1c2e3ff9
+  version: 1.0.30001657
+  resolution: "caniuse-lite@npm:1.0.30001657"
+  checksum: 10c0/bf40189e41d0ae9bad59c8b4054ecda3a8603754ad85fc04999679a92e2bca506350573342c9397c14a8b877a50210a37e744d8fc06adf38d1af33686d41db69
   languageName: node
   linkType: hard
 
@@ -1110,9 +1110,9 @@ __metadata:
   linkType: hard
 
 "electron-to-chromium@npm:^1.5.4":
-  version: 1.5.13
-  resolution: "electron-to-chromium@npm:1.5.13"
-  checksum: 10c0/1d88ac39447e1d718c4296f92fe89836df4688daf2d362d6c49108136795f05a56dd9c950f1c6715e0395fa037c3b5f5ea686c543fdc90e6d74a005877c45022
+  version: 1.5.14
+  resolution: "electron-to-chromium@npm:1.5.14"
+  checksum: 10c0/2a77cd7486347a5d304f31de46b874e3deabc0b665bea91dbe8bf3b52aba59059115a10e5d0edcbd33c1450065a2f7b28b07a2cf1a7de92fefbf443730d69131
   languageName: node
   linkType: hard
 
@@ -1540,12 +1540,12 @@ __metadata:
   linkType: hard
 
 "follow-redirects@npm:^1.15.6":
-  version: 1.15.6
-  resolution: "follow-redirects@npm:1.15.6"
+  version: 1.15.8
+  resolution: "follow-redirects@npm:1.15.8"
   peerDependenciesMeta:
     debug:
       optional: true
-  checksum: 10c0/9ff767f0d7be6aa6870c82ac79cf0368cd73e01bbc00e9eb1c2a16fbb198ec105e3c9b6628bb98e9f3ac66fe29a957b9645bcb9a490bb7aa0d35f908b6b85071
+  checksum: 10c0/ffb8f71338000717f6bfefddc3247dda226326f29fdafb9ef32ef67176339a1ae13c419aea837645b58331f94eba6168704149f4d10a8a976687efd2e45131d2
   languageName: node
   linkType: hard
 
@@ -2429,9 +2429,9 @@ __metadata:
   linkType: hard
 
 "picocolors@npm:^1.0.0, picocolors@npm:^1.0.1":
-  version: 1.0.1
-  resolution: "picocolors@npm:1.0.1"
-  checksum: 10c0/c63cdad2bf812ef0d66c8db29583802355d4ca67b9285d846f390cc15c2f6ccb94e8cb7eb6a6e97fc5990a6d3ad4ae42d86c84d3146e667c739a4234ed50d400
+  version: 1.1.0
+  resolution: "picocolors@npm:1.1.0"
+  checksum: 10c0/86946f6032148801ef09c051c6fb13b5cf942eaf147e30ea79edb91dd32d700934edebe782a1078ff859fb2b816792e97ef4dab03d7f0b804f6b01a0df35e023
   languageName: node
   linkType: hard
 
@@ -2561,29 +2561,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss@npm:^8.4.23, postcss@npm:^8.4.4":
-  version: 8.4.42
-  resolution: "postcss@npm:8.4.42"
-  dependencies:
-    nanoid: "npm:^3.3.7"
-    picocolors: "npm:^1.0.1"
-    source-map-js: "npm:^1.2.0"
-  checksum: 10c0/ac4dd01b07b2b9db12c24284aed497d35436ed05e4944be6cf00eb8daa4914fd9fbc5ec729e47981b4f1a9c51847d043d1808c796b9440ae0c5e8ff7a29bc821
-  languageName: node
-  linkType: hard
-
-"postcss@npm:^8.4.43, postcss@npm:^8.4.44":
-  version: 8.4.44
-  resolution: "postcss@npm:8.4.44"
-  dependencies:
-    nanoid: "npm:^3.3.7"
-    picocolors: "npm:^1.0.1"
-    source-map-js: "npm:^1.2.0"
-  checksum: 10c0/53c33338261a3d4f4198f8893e9dfe8b828d8d9186142ee85f02d228f04245c5bbe31239411a357a556ad20ed96f28db24d0921d63edc428fdc9133289371a1d
-  languageName: node
-  linkType: hard
-
-"postcss@npm:^8.4.45":
+"postcss@npm:^8.4.23, postcss@npm:^8.4.4, postcss@npm:^8.4.43, postcss@npm:^8.4.44, postcss@npm:^8.4.45":
   version: 8.4.45
   resolution: "postcss@npm:8.4.45"
   dependencies:
@@ -3339,11 +3317,11 @@ __metadata:
   linkType: hard
 
 "yaml@npm:^2.3.4":
-  version: 2.5.0
-  resolution: "yaml@npm:2.5.0"
+  version: 2.5.1
+  resolution: "yaml@npm:2.5.1"
   bin:
     yaml: bin.mjs
-  checksum: 10c0/771a1df083c8217cf04ef49f87244ae2dd7d7457094425e793b8f056159f167602ce172aa32d6bca21f787d24ec724aee3cecde938f6643564117bd151452631
+  checksum: 10c0/40fba5682898dbeeb3319e358a968fe886509fab6f58725732a15f8dda3abac509f91e76817c708c9959a15f786f38ff863c1b88062d7c1162c5334a7d09cb4a
   languageName: node
   linkType: hard
 

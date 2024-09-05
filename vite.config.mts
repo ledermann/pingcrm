@@ -1,21 +1,32 @@
 import { defineConfig } from 'vite';
-import RubyPlugin from 'vite-plugin-ruby';
-import FullReload from 'vite-plugin-full-reload';
+import ViteRails from 'vite-plugin-rails';
 import VuePlugin from '@vitejs/plugin-vue';
-import { brotliCompressSync } from 'zlib';
-import gzipPlugin from 'rollup-plugin-gzip';
+import { resolve } from 'path';
 
 export default defineConfig({
+  build: {
+    assetsInlineLimit: 0,
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (id.includes('node_modules')) {
+            return 'vendor';
+          }
+        },
+      },
+    },
+  },
   plugins: [
-    RubyPlugin(),
-    FullReload(['config/routes.rb', 'app/views/**/*']),
-    VuePlugin(),
-    // Create gzip copies of relevant assets
-    gzipPlugin(),
-    // Create brotli copies of relevant assets
-    gzipPlugin({
-      customCompression: (content) => brotliCompressSync(Buffer.from(content)),
-      fileName: '.br',
+    ViteRails({
+      fullReload: {
+        additionalPaths: ['config/routes.rb', 'app/views/**/*'],
+      },
     }),
+    VuePlugin(),
   ],
+  resolve: {
+    alias: {
+      '@': resolve(__dirname, 'app/javascript'),
+    },
+  },
 });

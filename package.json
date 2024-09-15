@@ -10,7 +10,7 @@
     "autoprefixer": "^10.4.20",
     "lodash": "^4.17.21",
     "plausible-tracker": "^0.3.9",
-    "postcss": "^8.4.45",
+    "postcss": "^8.4.47",
     "tailwindcss": "^3.4.11",
     "timeago.js": "^4.0.2",
     "uuid": "^10.0.0",

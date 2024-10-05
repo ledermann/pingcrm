@@ -159,7 +159,7 @@ GEM
     mini_magick (4.13.2)
     mini_mime (1.1.5)
     minitest (5.25.1)
-    msgpack (1.7.2)
+    msgpack (1.7.3)
     net-imap (0.4.16)
       date
       net-protocol

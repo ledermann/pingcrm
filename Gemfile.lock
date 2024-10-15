@@ -107,7 +107,7 @@ GEM
       responders
       warden (~> 1.2.3)
     drb (2.2.1)
-    dry-cli (1.1.0)
+    dry-cli (1.2.0)
     erubi (1.13.0)
     factory_bot (6.5.0)
       activesupport (>= 5.0.0)

@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 ruby '~> 3.3'
 
 # Full-stack web application framework. (https://rubyonrails.org)
-gem 'rails', '~> 7.2.1'
+gem 'rails', '~> 7.2.1', '>= 7.2.1.1'
 
 # Pg is the Ruby interface to the PostgreSQL RDBMS (https://github.com/ged/ruby-pg)
 gem 'pg', '>= 0.18', '< 2.0'
@@ -34,7 +34,7 @@ group :development, :test do
   # Debugging functionality for Ruby (https://github.com/ruby/debug)
   gem 'debug', platforms: %i[mri windows], require: 'debug/prelude'
 
-  # Static analysis for security vulnerabilities [https://brakemanscanner.org/]
+  # Security vulnerability scanner for Ruby on Rails. (https://brakemanscanner.org)
   gem 'brakeman', require: false
 
   # Automatic Ruby code style checking tool. (https://github.com/rubocop/rubocop)

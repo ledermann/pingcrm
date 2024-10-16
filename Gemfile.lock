@@ -334,7 +334,7 @@ DEPENDENCIES
   pagy
   pg (>= 0.18, < 2.0)
   puma (>= 5.0)
-  rails (~> 7.2.1)
+  rails (~> 7.2.1, >= 7.2.1.1)
   rubocop
   rubocop-capybara
   rubocop-factory_bot

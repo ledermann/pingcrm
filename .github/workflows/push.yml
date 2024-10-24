@@ -37,7 +37,7 @@ jobs:
         run: bin/brakeman --no-pager
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4.0.4
+        uses: actions/setup-node@v4.1.0
         with:
           cache: yarn
 

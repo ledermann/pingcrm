@@ -23,7 +23,7 @@
     "eslint": "^9.13.0",
     "eslint-plugin-tailwindcss": "^3.17.5",
     "eslint-plugin-vue": "^9.29.1",
-    "rollup": "^4.24.0",
+    "rollup": "^4.24.2",
     "vite": "^5.4.10",
     "vite-plugin-full-reload": "^1.2.0",
     "vite-plugin-rails": "^0.5.0"

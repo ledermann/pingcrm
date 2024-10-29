@@ -2626,7 +2626,7 @@ __metadata:
     rollup: "npm:^4.24.2"
     tailwindcss: "npm:^3.4.14"
     timeago.js: "npm:^4.0.2"
-    uuid: "npm:^11.0.1"
+    uuid: "npm:^11.0.2"
     vite: "npm:^5.4.10"
     vite-plugin-full-reload: "npm:^1.2.0"
     vite-plugin-rails: "npm:^0.5.0"
@@ -3368,12 +3368,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"uuid@npm:^11.0.1":
-  version: 11.0.1
-  resolution: "uuid@npm:11.0.1"
+"uuid@npm:^11.0.2":
+  version: 11.0.2
+  resolution: "uuid@npm:11.0.2"
   bin:
     uuid: dist/esm/bin/uuid
-  checksum: 10c0/cd5a1d7eccfd6da80382ec88cfa28b68dce2c1c1402228b813fc0065ab8b29d20594cffeb67d850bc166ade677a6c35741072bd9dd0cc7d565c1fe8eca14ef22
+  checksum: 10c0/bd0670a0d6f77f1932da7544c51c32ceb467f3835382df2265f3275c4981d32c136a08a4369fb027ecfffd0b2ae48f19a28266ef636c7347264d5720e85d5ba0
   languageName: node
   linkType: hard
 

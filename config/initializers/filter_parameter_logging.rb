@@ -14,4 +14,6 @@ Rails.application.config.filter_parameters += %i[
   certificate
   otp
   ssn
+  cvv
+  cvc
 ]

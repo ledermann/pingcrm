@@ -10,9 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2020_12_10_064131) do
+ActiveRecord::Schema[8.0].define(version: 2024_11_10_120021) do
   # These are extensions that must be enabled in order to support this database
-  enable_extension 'plpgsql'
+  enable_extension 'pg_catalog.plpgsql'
 
   create_table 'accounts', force: :cascade do |t|
     t.string 'name', null: false
@@ -38,7 +38,7 @@ ActiveRecord::Schema[7.2].define(version: 2020_12_10_064131) do
     t.string 'content_type'
     t.text 'metadata'
     t.bigint 'byte_size', null: false
-    t.string 'checksum', null: false
+    t.string 'checksum'
     t.datetime 'created_at', precision: nil, null: false
     t.string 'service_name', null: false
     t.index ['key'], name: 'index_active_storage_blobs_on_key', unique: true

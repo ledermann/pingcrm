@@ -615,13 +615,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vitejs/plugin-vue@npm:^5.1.5":
-  version: 5.1.5
-  resolution: "@vitejs/plugin-vue@npm:5.1.5"
+"@vitejs/plugin-vue@npm:^5.2.0":
+  version: 5.2.0
+  resolution: "@vitejs/plugin-vue@npm:5.2.0"
   peerDependencies:
     vite: ^5.0.0
     vue: ^3.2.25
-  checksum: 10c0/a1599c4044b887be632734b9ed2a1b1b1a6605174fd33726959feed53c66c0acb3c4d977d79552408bbc2916dfc97e8236258c2569f7bdf1e34d19ad2f1bf948
+  checksum: 10c0/cdd1850b9dfb4a4548731420381bcfea0912a4dac2392bef0ca0448d5689eefd08e7cfd928f12fccbf7c4a72dd8355fc5d5e8dc61d58853eabb95c96172eb529
   languageName: node
   linkType: hard
 
@@ -2510,7 +2510,7 @@ __metadata:
     "@inertiajs/vue3": "npm:^1.2.0"
     "@popperjs/core": "npm:^2.11.8"
     "@types/node": "npm:^22.9.0"
-    "@vitejs/plugin-vue": "npm:^5.1.5"
+    "@vitejs/plugin-vue": "npm:^5.2.0"
     autoprefixer: "npm:^10.4.20"
     eslint: "npm:^9.14.0"
     eslint-plugin-tailwindcss: "npm:^3.17.5"

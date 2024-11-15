@@ -287,7 +287,7 @@ GEM
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     unicode-display_width (2.6.0)
-    uri (1.0.1)
+    uri (1.0.2)
     useragent (0.16.10)
     vite_rails (3.0.19)
       railties (>= 5.1, < 9)

@@ -8,7 +8,7 @@ gem 'rails', '~> 8.0.0'
 # Pg is the Ruby interface to the PostgreSQL RDBMS (https://github.com/ged/ruby-pg)
 gem 'pg', '>= 0.18', '< 2.0'
 
-# Puma is a simple, fast, threaded, and highly parallel HTTP 1.1 server for Ruby/Rack applications (https://puma.io)
+# A Ruby/Rack web server built for parallelism. (https://puma.io)
 gem 'puma', '>= 5.0'
 
 # Use Vite in Rails and bring joy to your JavaScript experience (https://github.com/ElMassimo/vite_ruby)
@@ -72,7 +72,7 @@ end
 # Timezone Data for TZInfo (https://tzinfo.github.io)
 gem 'tzinfo-data', platforms: %i[windows jruby]
 
-# Inertia adapter for Rails (https://github.com/inertiajs/inertia-rails)
+# Inertia.js adapter for Rails (https://github.com/inertiajs/inertia-rails)
 gem 'inertia_rails', '>= 1.2.2'
 
 # Easily generate fake data (https://github.com/faker-ruby/faker)

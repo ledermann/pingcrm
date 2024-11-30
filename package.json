@@ -22,7 +22,7 @@
     "@vitejs/plugin-vue": "^5.2.1",
     "eslint": "^9.16.0",
     "eslint-plugin-tailwindcss": "^3.17.5",
-    "eslint-plugin-vue": "^9.31.0",
+    "eslint-plugin-vue": "^9.32.0",
     "rollup": "^4.27.4",
     "vite": "^6.0.1",
     "vite-plugin-full-reload": "^1.2.0",

@@ -140,7 +140,7 @@ GEM
     js-routes (2.3.1)
       railties (>= 5)
       sorbet-runtime
-    json (2.8.2)
+    json (2.9.0)
     language_server-protocol (3.17.0.3)
     logger (1.6.2)
     lograge (0.14.0)

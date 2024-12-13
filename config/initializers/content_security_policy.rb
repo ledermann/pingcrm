@@ -32,7 +32,7 @@ Rails.application.configure do
       policy.script_src(*[:self].compact)
       policy.style_src :self,
                        # Allow @inertiajs/progress to display progress bar
-                       "'sha256-kCeyw5rRT2DINADvWYmAhXLhQs4dKZrnn2sofIDmprs='"
+                       "'sha256-YfWBLaAD17kgcjrajLlty6AH2yMikIiscRhC6OENK74='"
     end
 
     policy.base_uri :self

@@ -142,7 +142,7 @@ GEM
       sorbet-runtime
     json (2.9.0)
     language_server-protocol (3.17.0.3)
-    logger (1.6.2)
+    logger (1.6.3)
     lograge (0.14.0)
       actionpack (>= 4)
       activesupport (>= 4)

@@ -331,28 +331,27 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@inertiajs/core@npm:1.2.0":
-  version: 1.2.0
-  resolution: "@inertiajs/core@npm:1.2.0"
+"@inertiajs/core@npm:2.0.0":
+  version: 2.0.0
+  resolution: "@inertiajs/core@npm:2.0.0"
   dependencies:
     axios: "npm:^1.6.0"
     deepmerge: "npm:^4.0.0"
-    nprogress: "npm:^0.2.0"
     qs: "npm:^6.9.0"
-  checksum: 10c0/05213ff696a0eba6008bb578a3ac0548fd1e4815e76a8f8bc65eccae980aaeb0d70bdbfe63f80380ff4bafdf03f10c6d9816704dfe0f1b0705c89f02192dd84e
+  checksum: 10c0/c69e677483c8c1c1fa66a065c1113c1a46f28291660507505ab2665132ddbc7e304adf98d4fa98b5ab3bdc342dfdd80a5cec1f46018af51ee5640555ca6dc12c
   languageName: node
   linkType: hard
 
-"@inertiajs/vue3@npm:^1.2.0":
-  version: 1.2.0
-  resolution: "@inertiajs/vue3@npm:1.2.0"
+"@inertiajs/vue3@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "@inertiajs/vue3@npm:2.0.0"
   dependencies:
-    "@inertiajs/core": "npm:1.2.0"
+    "@inertiajs/core": "npm:2.0.0"
     lodash.clonedeep: "npm:^4.5.0"
     lodash.isequal: "npm:^4.5.0"
   peerDependencies:
     vue: ^3.0.0
-  checksum: 10c0/ede13ae25c7fbad2ea268a394a3b80505ed05a6c540eb66c32c4fe097ccc09410dedb83df0f99cc31eb58a30aef8ea03cd8cb628ad5a59651fa53709f7943573
+  checksum: 10c0/dfea658eafd28d86575ac3e25bc07b3fcb2e73bfc92a6b560dc503e6faf09c01d7a709f88fb7c376cc91545938d9c1330a3791c28e7c909c8bc55ea768597df5
   languageName: node
   linkType: hard
 
@@ -2339,13 +2338,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nprogress@npm:^0.2.0":
-  version: 0.2.0
-  resolution: "nprogress@npm:0.2.0"
-  checksum: 10c0/eab9a923a1ad1eed71a455ecfbc358442dd9bcd71b9fa3fa1c67eddf5159360b182c218f76fca320c97541a1b45e19ced04e6dcb044a662244c5419f8ae9e821
-  languageName: node
-  linkType: hard
-
 "nth-check@npm:^2.1.1":
   version: 2.1.1
   resolution: "nth-check@npm:2.1.1"
@@ -2487,7 +2479,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "pingcrm@workspace:."
   dependencies:
-    "@inertiajs/vue3": "npm:^1.2.0"
+    "@inertiajs/vue3": "npm:^2.0.0"
     "@popperjs/core": "npm:^2.11.8"
     "@types/node": "npm:^22.10.2"
     "@vitejs/plugin-vue": "npm:^5.2.1"

@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 ruby '~> 3.3'
 
 # Full-stack web application framework. (https://rubyonrails.org)
-gem 'rails', '~> 8.0.0'
+gem 'rails', '~> 8.0.1'
 
 # Pg is the Ruby interface to the PostgreSQL RDBMS (https://github.com/ged/ruby-pg)
 gem 'pg', '>= 0.18', '< 2.0'

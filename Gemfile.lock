@@ -163,7 +163,7 @@ GEM
     minitest (5.25.4)
     msgpack (1.7.5)
     mutex_m (0.3.0)
-    net-imap (0.5.4)
+    net-imap (0.5.5)
       date
       net-protocol
     net-pop (0.1.2)

@@ -27,23 +27,23 @@ __metadata:
   linkType: hard
 
 "@babel/parser@npm:^7.25.3":
-  version: 7.26.3
-  resolution: "@babel/parser@npm:7.26.3"
+  version: 7.26.5
+  resolution: "@babel/parser@npm:7.26.5"
   dependencies:
-    "@babel/types": "npm:^7.26.3"
+    "@babel/types": "npm:^7.26.5"
   bin:
     parser: ./bin/babel-parser.js
-  checksum: 10c0/48f736374e61cfd10ddbf7b80678514ae1f16d0e88bc793d2b505d73d9b987ea786fc8c2f7ee8f8b8c467df062030eb07fd0eb2168f0f541ca1f542775852cad
+  checksum: 10c0/2e77dd99ee028ee3c10fa03517ae1169f2432751adf71315e4dc0d90b61639d51760d622f418f6ac665ae4ea65f8485232a112ea0e76f18e5900225d3d19a61e
   languageName: node
   linkType: hard
 
-"@babel/types@npm:^7.26.3":
-  version: 7.26.3
-  resolution: "@babel/types@npm:7.26.3"
+"@babel/types@npm:^7.26.5":
+  version: 7.26.5
+  resolution: "@babel/types@npm:7.26.5"
   dependencies:
     "@babel/helper-string-parser": "npm:^7.25.9"
     "@babel/helper-validator-identifier": "npm:^7.25.9"
-  checksum: 10c0/966c5242c5e55c8704bf7a7418e7be2703a0afa4d19a8480999d5a4ef13d095dd60686615fe5983cb7593b4b06ba3a7de8d6ca501c1d78bdd233a10d90be787b
+  checksum: 10c0/0278053b69d7c2b8573aa36dc5242cad95f0d965e1c0ed21ccacac6330092e59ba5949753448f6d6eccf6ad59baaef270295cc05218352e060ea8c68388638c4
   languageName: node
   linkType: hard
 
@@ -1016,9 +1016,9 @@ __metadata:
   linkType: hard
 
 "caniuse-lite@npm:^1.0.30001646, caniuse-lite@npm:^1.0.30001688":
-  version: 1.0.30001690
-  resolution: "caniuse-lite@npm:1.0.30001690"
-  checksum: 10c0/646bd469032afa90400a84dec30a2b00a6eda62c03ead358117e3f884cda8aacec02ec058a6dbee5eaf9714f83e483b9b0eb4fb42febb8076569f5ca40f1d347
+  version: 1.0.30001692
+  resolution: "caniuse-lite@npm:1.0.30001692"
+  checksum: 10c0/fca5105561ea12f3de593f3b0f062af82f7d07519e8dbcb97f34e7fd23349bcef1b1622a9a6cd2164d98e3d2f20059ef7e271edae46567aef88caf4c16c7708a
   languageName: node
   linkType: hard
 
@@ -1190,9 +1190,9 @@ __metadata:
   linkType: hard
 
 "electron-to-chromium@npm:^1.5.73":
-  version: 1.5.79
-  resolution: "electron-to-chromium@npm:1.5.79"
-  checksum: 10c0/ad781ad55add24b5c61c9d77c3a8efeb781ca0de9d9e4dd55658c70447ac41297d0babfd975d59eeab83de5f863ab1309276d310648f0316231340eb9a18590e
+  version: 1.5.80
+  resolution: "electron-to-chromium@npm:1.5.80"
+  checksum: 10c0/6aaf1891e1b05251efac6f4a63c0ddccf567f0f76506cf0cb284f11413762423fddd7786558066f74c3a95e2a533dad7a97bebe38779b46b7a799d8dd20cea53
   languageName: node
   linkType: hard
 

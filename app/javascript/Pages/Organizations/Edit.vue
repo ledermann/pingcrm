@@ -18,7 +18,7 @@
     >
       This organization has been deleted.
     </trashed-message>
-    <div class="max-w-3xl overflow-hidden rounded bg-white shadow">
+    <div class="max-w-3xl overflow-hidden rounded-sm bg-white shadow-sm">
       <organization-form
         v-model="form"
         @submit="form.put($routes.organization(organization.id))"
@@ -48,7 +48,7 @@
     <h2 class="mt-12 text-2xl font-bold">
       Contacts
     </h2>
-    <div class="mt-6 overflow-x-auto rounded bg-white shadow">
+    <div class="mt-6 overflow-x-auto rounded-sm bg-white shadow-sm">
       <table class="w-full whitespace-nowrap">
         <tr class="text-left font-bold">
           <th class="px-6 pb-4 pt-6">
@@ -75,7 +75,7 @@
               <icon
                 v-if="contact.deleted_at"
                 name="trash"
-                class="ml-2 h-3 w-3 flex-shrink-0 fill-gray-500"
+                class="ml-2 h-3 w-3 shrink-0 fill-gray-500"
               />
             </Link>
           </td>

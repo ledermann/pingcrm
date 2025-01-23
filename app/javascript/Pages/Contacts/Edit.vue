@@ -14,7 +14,7 @@
     <trashed-message v-if="contact.deleted_at" class="mb-6" @restore="restore">
       This contact has been deleted.
     </trashed-message>
-    <div class="max-w-3xl overflow-hidden rounded bg-white shadow">
+    <div class="max-w-3xl overflow-hidden rounded-sm bg-white shadow-sm">
       <contact-form
         v-model="form"
         :organizations="organizations"

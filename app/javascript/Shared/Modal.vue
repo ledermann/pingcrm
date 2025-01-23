@@ -37,7 +37,7 @@
         <div class="absolute inline-block h-screen w-0 align-middle" />
 
         <div
-          class="my-6 inline-block overflow-hidden rounded text-left align-middle"
+          class="my-6 inline-block overflow-hidden rounded-sm text-left align-middle"
           @click.stop
         >
           <div
@@ -49,7 +49,7 @@
 
             <button
               type="button"
-              class="rounded p-1 hover:bg-gray-300"
+              class="rounded-sm p-1 hover:bg-gray-300"
               title="Close"
               @click="close"
             >

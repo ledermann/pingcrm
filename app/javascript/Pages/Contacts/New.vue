@@ -10,7 +10,7 @@
       </Link>
       <span class="font-medium text-indigo-400">/</span> Create
     </h1>
-    <div class="max-w-3xl overflow-hidden rounded bg-white shadow">
+    <div class="max-w-3xl overflow-hidden rounded-sm bg-white shadow-sm">
       <contact-form
         v-model="form"
         :organizations="organizations"

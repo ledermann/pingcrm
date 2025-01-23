@@ -1,6 +1,6 @@
 <template>
   <div class="flex items-center">
-    <div class="flex w-full rounded bg-white shadow">
+    <div class="flex w-full rounded-sm bg-white shadow-sm">
       <dropdown
         class="rounded-l border-r px-4 hover:bg-gray-100 focus:z-10 focus:border-white md:px-6"
         placement="bottom-start"
@@ -23,7 +23,7 @@
         </template>
         <template #dropdown>
           <div
-            class="mt-2 w-screen rounded bg-white px-4 py-6 shadow-xl"
+            class="mt-2 w-screen rounded-sm bg-white px-4 py-6 shadow-xl"
             :style="{ maxWidth: `${maxWidth}px` }"
           >
             <slot />

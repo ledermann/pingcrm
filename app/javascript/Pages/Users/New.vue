@@ -10,7 +10,7 @@
       </Link>
       <span class="font-medium text-indigo-400">/</span> Create
     </h1>
-    <div class="max-w-3xl overflow-hidden rounded bg-white shadow">
+    <div class="max-w-3xl overflow-hidden rounded-sm bg-white shadow-sm">
       <user-form v-model="form" @submit="form.post($routes.users())">
         <div
           class="flex items-center justify-end border-t border-gray-200 bg-gray-100 px-8 py-4"

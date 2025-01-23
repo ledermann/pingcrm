@@ -3,9 +3,9 @@
     <div id="dropdown" />
     <div class="md:flex md:flex-col">
       <div class="md:flex md:h-screen md:flex-col">
-        <div class="md:flex md:flex-shrink-0">
+        <div class="md:flex md:shrink-0">
           <div
-            class="flex items-center justify-between bg-indigo-900 px-6 py-4 md:w-56 md:flex-shrink-0 md:justify-center"
+            class="flex items-center justify-between bg-indigo-900 px-6 py-4 md:w-56 md:shrink-0 md:justify-center"
           >
             <Link class="mt-1" :href="$routes.root()" aria-label="Home">
               <logo class="fill-white" width="120" height="28" />
@@ -25,7 +25,7 @@
                 </svg>
               </template>
               <template #dropdown>
-                <div class="mt-2 rounded bg-indigo-800 px-8 py-4 shadow-lg">
+                <div class="mt-2 rounded-sm bg-indigo-800 px-8 py-4 shadow-lg">
                   <main-menu />
                 </div>
               </template>
@@ -59,7 +59,7 @@
                 </div>
               </template>
               <template #dropdown>
-                <div class="mt-2 rounded bg-white py-2 text-sm shadow-xl">
+                <div class="mt-2 rounded-sm bg-white py-2 text-sm shadow-xl">
                   <Link
                     class="block px-6 py-2 hover:bg-indigo-600 hover:text-white"
                     role="navigation"
@@ -87,9 +87,9 @@
             </dropdown>
           </div>
         </div>
-        <div class="md:flex md:flex-grow md:overflow-hidden">
+        <div class="md:flex md:grow md:overflow-hidden">
           <main-menu
-            class="hidden w-56 flex-shrink-0 overflow-y-auto bg-indigo-800 p-12 md:block"
+            class="hidden w-56 shrink-0 overflow-y-auto bg-indigo-800 p-12 md:block"
           />
           <div
             class="px-4 py-8 md:flex-1 md:overflow-y-auto md:p-12"

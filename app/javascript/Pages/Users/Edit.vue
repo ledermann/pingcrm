@@ -22,7 +22,7 @@
     <trashed-message v-if="user.deleted_at" class="mb-6" @restore="restore">
       This user has been deleted.
     </trashed-message>
-    <div class="max-w-3xl overflow-hidden rounded bg-white shadow">
+    <div class="max-w-3xl overflow-hidden rounded-sm bg-white shadow-sm">
       <user-form v-model="form" @submit="submit">
         <div
           v-if="can.edit_user"

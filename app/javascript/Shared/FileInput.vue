@@ -12,7 +12,7 @@
       <div v-if="!modelValue" class="p-2">
         <button
           type="button"
-          class="rounded-sm bg-gray-700 px-4 py-1 text-xs font-medium text-white hover:bg-gray-700"
+          class="rounded-xs bg-gray-700 px-4 py-1 text-xs font-medium text-white hover:bg-gray-700"
           @click="browse"
         >
           Browse
@@ -25,7 +25,7 @@
         </div>
         <button
           type="button"
-          class="rounded-sm bg-gray-700 px-4 py-1 text-xs font-medium text-white hover:bg-gray-700"
+          class="rounded-xs bg-gray-700 px-4 py-1 text-xs font-medium text-white hover:bg-gray-700"
           @click="remove"
         >
           Remove

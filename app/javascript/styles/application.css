@@ -1,17 +1,46 @@
-@import '../styles/form';
-@import '../styles/buttons';
-@import '../styles/transitions';
+@import '../styles/form.css' layer(base);
+@import '../styles/buttons.css' layer(base);
+@import '../styles/transitions.css' layer(base);
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
-@layer utilities {
-  .btn-indigo {
-    @apply whitespace-nowrap rounded bg-indigo-600 px-6 py-3 text-sm font-bold text-white;
+@theme {
+  --color-indigo-100: #e6e8ff;
+  --color-indigo-300: #b2b7ff;
+  --color-indigo-400: #7886d7;
+  --color-indigo-500: #6574cd;
+  --color-indigo-600: #5661b3;
+  --color-indigo-800: #2f365f;
+  --color-indigo-900: #191e38;
+
+  --font-sans: 'Cerebri Sans', ui-sans-serif, system-ui, sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
   }
-  .btn-indigo:hover,
-  .btn-indigo:focus {
+}
+
+@utility btn-indigo {
+  @apply whitespace-nowrap rounded-sm bg-indigo-600 px-6 py-3 text-sm font-bold text-white;
+  &:hover {
+    @apply bg-orange-500;
+  }
+  &:focus {
     @apply bg-orange-500;
   }
 }

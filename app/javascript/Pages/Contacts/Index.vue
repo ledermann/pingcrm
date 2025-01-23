@@ -29,7 +29,7 @@
         Create <span class="hidden md:inline">Contact</span>
       </Link>
     </div>
-    <div class="overflow-x-auto rounded bg-white shadow">
+    <div class="overflow-x-auto rounded-sm bg-white shadow-sm">
       <table class="w-full whitespace-nowrap">
         <thead>
           <tr class="text-left font-bold">
@@ -63,7 +63,7 @@
                 <icon
                   v-if="contact.deleted_at"
                   name="trash"
-                  class="ml-2 h-3 w-3 flex-shrink-0 fill-gray-500"
+                  class="ml-2 h-3 w-3 shrink-0 fill-gray-500"
                 />
               </Link>
             </td>

@@ -1,7 +1,7 @@
 FROM ghcr.io/ledermann/rails-base-builder:3.4.1-alpine AS builder
 
 # Remove some files not needed in resulting image
-RUN rm .browserslistrc package.json postcss.config.js tailwind.config.js vite.config.mts
+RUN rm .browserslistrc package.json postcss.config.js vite.config.mts
 
 FROM ghcr.io/ledermann/rails-base-final:3.4.1-alpine
 LABEL maintainer="georg@ledermann.dev"

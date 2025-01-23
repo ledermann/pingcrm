@@ -11,7 +11,7 @@
       <div
         v-else-if="link.url === null"
         :key="key + 'else1'"
-        class="mb-1 mr-1 rounded border border-gray-400 px-4 py-3 text-sm text-gray-700"
+        class="mb-1 mr-1 rounded-sm border border-gray-400 px-4 py-3 text-sm text-gray-700"
         :class="{ 'ml-auto': link.label === 'Next' }"
       >
         {{ link.label }}
@@ -19,7 +19,7 @@
       <Link
         v-else
         :key="key + 'else2'"
-        class="mb-1 mr-1 rounded border border-gray-400 px-4 py-3 text-sm text-gray-900 hover:bg-white focus:border-indigo-500 focus:text-indigo-500"
+        class="mb-1 mr-1 rounded-sm border border-gray-400 px-4 py-3 text-sm text-gray-900 hover:bg-white focus:border-indigo-500 focus:text-indigo-500"
         :class="{ 'bg-white': link.active, 'ml-auto': link.label === 'Next' }"
         :href="link.url"
         preserve-state

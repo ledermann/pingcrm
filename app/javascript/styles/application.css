@@ -2,7 +2,7 @@
 @import '../styles/buttons.css' layer(base);
 @import '../styles/transitions.css' layer(base);
 
-@import 'tailwindcss';
+@import 'tailwindcss' source('../..');
 
 @theme {
   --color-indigo-100: #e6e8ff;

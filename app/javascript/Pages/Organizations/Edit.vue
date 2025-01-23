@@ -50,68 +50,75 @@
     </h2>
     <div class="mt-6 overflow-x-auto rounded-sm bg-white shadow-sm">
       <table class="w-full whitespace-nowrap">
-        <tr class="text-left font-bold">
-          <th class="px-6 pb-4 pt-6">
-            Name
-          </th>
-          <th class="px-6 pb-4 pt-6">
-            City
-          </th>
-          <th class="px-6 pb-4 pt-6" colspan="2">
-            Phone
-          </th>
-        </tr>
-        <tr
-          v-for="contact in contacts"
-          :key="contact.id"
-          class="focus-within:bg-gray-100 hover:bg-gray-100"
-        >
-          <td class="border-t">
-            <Link
-              class="flex items-center px-6 py-4 focus:text-indigo-500"
-              :href="$routes.edit_contact(contact.id)"
-            >
-              {{ contact.name }}
-              <icon
-                v-if="contact.deleted_at"
-                name="trash"
-                class="ml-2 h-3 w-3 shrink-0 fill-gray-500"
-              />
-            </Link>
-          </td>
-          <td class="border-t">
-            <Link
-              class="flex items-center px-6 py-4"
-              :href="$routes.edit_contact(contact.id)"
-              tabindex="-1"
-            >
-              {{ contact.city }}
-            </Link>
-          </td>
-          <td class="border-t">
-            <Link
-              class="flex items-center px-6 py-4"
-              :href="$routes.edit_contact(contact.id)"
-              tabindex="-1"
-            >
-              {{ contact.phone }}
-            </Link>
-          </td>
-          <td class="w-px border-t">
-            <Link
-              class="flex items-center px-4"
-              :href="$routes.edit_contact(contact.id)"
-              tabindex="-1"
-            >
-              <icon name="cheveron-right" class="block h-6 w-6 fill-gray-500" />
-            </Link>
-          </td>
-        </tr>
-        <tr v-if="contacts.length === 0">
-          <td class="border-t px-6 py-4" colspan="4">
-            No contacts found.
-          </td>
-        </tr>
+        <thead>
+          <tr class="text-left font-bold">
+            <th class="px-6 pb-4 pt-6">
+              Name
+            </th>
+            <th class="px-6 pb-4 pt-6">
+              City
+            </th>
+            <th class="px-6 pb-4 pt-6" colspan="2">
+              Phone
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            v-for="contact in contacts"
+            :key="contact.id"
+            class="focus-within:bg-gray-100 hover:bg-gray-100"
+          >
+            <td class="border-t">
+              <Link
+                class="flex items-center px-6 py-4 focus:text-indigo-500"
+                :href="$routes.edit_contact(contact.id)"
+              >
+                {{ contact.name }}
+                <icon
+                  v-if="contact.deleted_at"
+                  name="trash"
+                  class="ml-2 h-3 w-3 shrink-0 fill-gray-500"
+                />
+              </Link>
+            </td>
+            <td class="border-t">
+              <Link
+                class="flex items-center px-6 py-4"
+                :href="$routes.edit_contact(contact.id)"
+                tabindex="-1"
+              >
+                {{ contact.city }}
+              </Link>
+            </td>
+            <td class="border-t">
+              <Link
+                class="flex items-center px-6 py-4"
+                :href="$routes.edit_contact(contact.id)"
+                tabindex="-1"
+              >
+                {{ contact.phone }}
+              </Link>
+            </td>
+            <td class="w-px border-t">
+              <Link
+                class="flex items-center px-4"
+                :href="$routes.edit_contact(contact.id)"
+                tabindex="-1"
+              >
+                <icon
+                  name="cheveron-right"
+                  class="block h-6 w-6 fill-gray-500"
+                />
+              </Link>
+            </td>
+          </tr>
+          <tr v-if="contacts.length === 0">
+            <td class="border-t px-6 py-4" colspan="4">
+              No contacts found.
+            </td>
+          </tr>
+        </tbody>
       </table>
     </div>
   </div>

@@ -880,12 +880,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^22.10.7":
-  version: 22.10.7
-  resolution: "@types/node@npm:22.10.7"
+"@types/node@npm:^22.10.10":
+  version: 22.10.10
+  resolution: "@types/node@npm:22.10.10"
   dependencies:
     undici-types: "npm:~6.20.0"
-  checksum: 10c0/c941b4689dfc4044b64a5f601306cbcb0c7210be853ba378a5dd44137898c45accedd796ee002ad9407024cac7ecaf5049304951cb1d80ce3d7cebbbae56f20e
+  checksum: 10c0/3425772d4513cd5dbdd87c00acda088113c03a97445f84f6a89744c60a66990b56c9d3a7213d09d57b6b944ae8ff45f985565e0c1846726112588e33a22dd12b
   languageName: node
   linkType: hard
 
@@ -2640,7 +2640,7 @@ __metadata:
     "@inertiajs/vue3": "npm:^2.0.3"
     "@popperjs/core": "npm:^2.11.8"
     "@tailwindcss/postcss": "npm:^4.0.0"
-    "@types/node": "npm:^22.10.7"
+    "@types/node": "npm:^22.10.10"
     "@vitejs/plugin-vue": "npm:^5.2.1"
     eslint: "npm:^9.18.0"
     eslint-plugin-tailwindcss: "npm:^3.18.0"

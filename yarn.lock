@@ -2516,7 +2516,7 @@ __metadata:
     plausible-tracker: "npm:^0.3.9"
     postcss: "npm:^8.5.1"
     rollup: "npm:^4.32.1"
-    tailwindcss: "npm:^4.0.0"
+    tailwindcss: "npm:^4.0.1"
     timeago.js: "npm:^4.0.2"
     uuid: "npm:^11.0.5"
     vite: "npm:^6.0.11"
@@ -2931,17 +2931,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tailwindcss@npm:4.0.1":
+"tailwindcss@npm:4.0.1, tailwindcss@npm:^4.0.1":
   version: 4.0.1
   resolution: "tailwindcss@npm:4.0.1"
   checksum: 10c0/06a512f34a3eb89ad3de83952d6b4f00a8a07d9859145a7c60e6cb20dcaaed97a2b96e0a204823cb63d385575eb0380b26be124f02e73d729fd8a98ac4ed7087
-  languageName: node
-  linkType: hard
-
-"tailwindcss@npm:^4.0.0":
-  version: 4.0.0
-  resolution: "tailwindcss@npm:4.0.0"
-  checksum: 10c0/418b1cb02c46f5064bdd4931d8bb030e5c2a986744226dc282b47ecd4b95d1eb919a6f35a68cac948fbf3224fd976feafd9476e289cb5774062f6a3b2a49606e
   languageName: node
   linkType: hard
 

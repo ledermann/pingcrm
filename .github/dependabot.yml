@@ -55,6 +55,11 @@ updates:
     labels:
       - 'dependencies'
       - 'javascript'
+    groups:
+      tailwindcss:
+        patterns:
+          - '@tailwindcss/postcss'
+          - 'tailwindcss'
 
   - package-ecosystem: 'github-actions'
     directory: '/'

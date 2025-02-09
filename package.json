@@ -20,7 +20,7 @@
   "devDependencies": {
     "@types/node": "^22.13.1",
     "@vitejs/plugin-vue": "^5.2.1",
-    "eslint": "^9.19.0",
+    "eslint": "^9.20.0",
     "eslint-plugin-tailwindcss": "^3.18.0",
     "eslint-plugin-vue": "^9.32.0",
     "rollup": "^4.34.4",

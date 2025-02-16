@@ -9,9 +9,6 @@ LABEL maintainer="georg@ledermann.dev"
 # Add Alpine packages
 RUN apk add --no-cache vips
 
-# Workaround to trigger builder's ONBUILDs to finish:
-COPY --from=builder /etc/alpine-release /tmp/dummy
-
 USER app
 
 # Entrypoint prepares the database.

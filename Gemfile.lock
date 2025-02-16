@@ -255,7 +255,7 @@ GEM
     responders (3.1.1)
       actionpack (>= 5.2)
       railties (>= 5.2)
-    rexml (3.4.0)
+    rexml (3.4.1)
     rubocop (1.72.1)
       json (~> 2.3)
       language_server-protocol (~> 3.17.0.2)

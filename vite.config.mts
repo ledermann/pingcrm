@@ -1,4 +1,5 @@
 import { defineConfig } from 'vite';
+import tailwindcss from '@tailwindcss/vite';
 import ViteRails from 'vite-plugin-rails';
 import VuePlugin from '@vitejs/plugin-vue';
 import { resolve } from 'path';
@@ -17,6 +18,7 @@ export default defineConfig({
     },
   },
   plugins: [
+    tailwindcss(),
     ViteRails({
       fullReload: {
         additionalPaths: ['config/routes.rb', 'app/views/**/*'],

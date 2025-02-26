@@ -5,13 +5,6 @@ __metadata:
   version: 8
   cacheKey: 10c0
 
-"@alloc/quick-lru@npm:^5.2.0":
-  version: 5.2.0
-  resolution: "@alloc/quick-lru@npm:5.2.0"
-  checksum: 10c0/7b878c48b9d25277d0e1a9b8b2f2312a314af806b4129dc902f2bc29ab09b58236e53964689feec187b28c80d2203aff03829754773a707a8a5987f1b7682d92
-  languageName: node
-  linkType: hard
-
 "@babel/helper-string-parser@npm:^7.25.9":
   version: 7.25.9
   resolution: "@babel/helper-string-parser@npm:7.25.9"
@@ -719,17 +712,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tailwindcss/postcss@npm:^4.0.9":
+"@tailwindcss/vite@npm:^4.0.9":
   version: 4.0.9
-  resolution: "@tailwindcss/postcss@npm:4.0.9"
+  resolution: "@tailwindcss/vite@npm:4.0.9"
   dependencies:
-    "@alloc/quick-lru": "npm:^5.2.0"
     "@tailwindcss/node": "npm:4.0.9"
     "@tailwindcss/oxide": "npm:4.0.9"
     lightningcss: "npm:^1.29.1"
-    postcss: "npm:^8.4.41"
     tailwindcss: "npm:4.0.9"
-  checksum: 10c0/ee6e2ef244bf4384594a9486df9d680ef892faeafd114236d81e9855154d2f8ef79631febb09064a9df6191251ab631b28ebcbcd78b88bb45a732c855fb3ef68
+  peerDependencies:
+    vite: ^5.2.0 || ^6
+  checksum: 10c0/d976738cc12522dc2ce6537c03d81685d6dd5b6777599dbd584bb1dacd6de8ae4e543b516dc56893d0e79092449edfc137341aecf149bc321a53c9fca70a469d
   languageName: node
   linkType: hard
 
@@ -955,13 +948,13 @@ __metadata:
   linkType: hard
 
 "axios@npm:^1.6.0":
-  version: 1.7.9
-  resolution: "axios@npm:1.7.9"
+  version: 1.8.1
+  resolution: "axios@npm:1.8.1"
   dependencies:
     follow-redirects: "npm:^1.15.6"
     form-data: "npm:^4.0.0"
     proxy-from-env: "npm:^1.1.0"
-  checksum: 10c0/b7a41e24b59fee5f0f26c1fc844b45b17442832eb3a0fb42dd4f1430eb4abc571fe168e67913e8a1d91c993232bd1d1ab03e20e4d1fee8c6147649b576fc1b0b
+  checksum: 10c0/b2e1d5a61264502deee4b50f0a6df0aa3b174c546ccf68c0dff714a2b8863232e0bd8cb5b84f853303e97f242a98260f9bb9beabeafe451ad5af538e9eb7ac22
   languageName: node
   linkType: hard
 
@@ -1103,7 +1096,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cross-spawn@npm:^7.0.0, cross-spawn@npm:^7.0.6":
+"cross-spawn@npm:^7.0.6":
   version: 7.0.6
   resolution: "cross-spawn@npm:7.0.6"
   dependencies:
@@ -1372,18 +1365,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-tailwindcss@npm:^3.18.0":
-  version: 3.18.0
-  resolution: "eslint-plugin-tailwindcss@npm:3.18.0"
-  dependencies:
-    fast-glob: "npm:^3.2.5"
-    postcss: "npm:^8.4.4"
-  peerDependencies:
-    tailwindcss: ^3.4.0
-  checksum: 10c0/e4e782c55bea1937d0a247853c8539914f99d08351d70b33b279289674c85cbb5cbed2e5d3e35cc8b7fea62b1a5495c2e51ad3b98d07468e4af37497d23921b4
-  languageName: node
-  linkType: hard
-
 "eslint-plugin-vue@npm:^9.32.0":
   version: 9.32.0
   resolution: "eslint-plugin-vue@npm:9.32.0"
@@ -1560,7 +1541,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fast-glob@npm:^3.2.5, fast-glob@npm:^3.3.2":
+"fast-glob@npm:^3.3.2":
   version: 3.3.3
   resolution: "fast-glob@npm:3.3.3"
   dependencies:
@@ -1588,11 +1569,11 @@ __metadata:
   linkType: hard
 
 "fastq@npm:^1.6.0":
-  version: 1.19.0
-  resolution: "fastq@npm:1.19.0"
+  version: 1.19.1
+  resolution: "fastq@npm:1.19.1"
   dependencies:
     reusify: "npm:^1.0.4"
-  checksum: 10c0/d6a001638f1574a696660fcbba5300d017760432372c801632c325ca7c16819604841c92fd3ccadcdacec0966ca336363a5ff57bc5f0be335d8ea7ac6087b98f
+  checksum: 10c0/ebc6e50ac7048daaeb8e64522a1ea7a26e92b3cee5cd1c7f2316cdca81ba543aa40a136b53891446ea5c3a67ec215fbaca87ad405f102dd97012f62916905630
   languageName: node
   linkType: hard
 
@@ -1652,12 +1633,12 @@ __metadata:
   linkType: hard
 
 "foreground-child@npm:^3.1.0":
-  version: 3.3.0
-  resolution: "foreground-child@npm:3.3.0"
+  version: 3.3.1
+  resolution: "foreground-child@npm:3.3.1"
   dependencies:
-    cross-spawn: "npm:^7.0.0"
+    cross-spawn: "npm:^7.0.6"
     signal-exit: "npm:^4.0.1"
-  checksum: 10c0/028f1d41000553fcfa6c4bb5c372963bf3d9bf0b1f25a87d1a6253014343fb69dfb1b42d9625d7cf44c8ba429940f3d0ff718b62105d4d4a4f6ef8ca0a53faa2
+  checksum: 10c0/8986e4af2430896e65bc2788d6679067294d6aee9545daefc84923a0a4b399ad9c7a3ea7bd8c0b2b80fdf4a92de4c69df3f628233ff3224260e9c1541a9e9ed3
   languageName: node
   linkType: hard
 
@@ -2528,16 +2509,13 @@ __metadata:
   dependencies:
     "@inertiajs/vue3": "npm:^2.0.3"
     "@popperjs/core": "npm:^2.11.8"
-    "@tailwindcss/postcss": "npm:^4.0.9"
+    "@tailwindcss/vite": "npm:^4.0.9"
     "@types/node": "npm:^22.13.5"
     "@vitejs/plugin-vue": "npm:^5.2.1"
     eslint: "npm:^9.21.0"
-    eslint-plugin-tailwindcss: "npm:^3.18.0"
     eslint-plugin-vue: "npm:^9.32.0"
     lodash: "npm:^4.17.21"
     plausible-tracker: "npm:^0.3.9"
-    postcss: "npm:^8.5.3"
-    rollup: "npm:^4.34.8"
     tailwindcss: "npm:^4.0.9"
     timeago.js: "npm:^4.0.2"
     uuid: "npm:^11.1.0"
@@ -2565,7 +2543,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss@npm:^8.4.4, postcss@npm:^8.4.41, postcss@npm:^8.4.48, postcss@npm:^8.5.3":
+"postcss@npm:^8.4.48, postcss@npm:^8.5.3":
   version: 8.5.3
   resolution: "postcss@npm:8.5.3"
   dependencies:
@@ -2645,9 +2623,9 @@ __metadata:
   linkType: hard
 
 "reusify@npm:^1.0.4":
-  version: 1.0.4
-  resolution: "reusify@npm:1.0.4"
-  checksum: 10c0/c19ef26e4e188f408922c46f7ff480d38e8dfc55d448310dfb518736b23ed2c4f547fb64a6ed5bdba92cd7e7ddc889d36ff78f794816d5e71498d645ef476107
+  version: 1.1.0
+  resolution: "reusify@npm:1.1.0"
+  checksum: 10c0/4eff0d4a5f9383566c7d7ec437b671cc51b25963bd61bf127c3f3d3f68e44a026d99b8d2f1ad344afff8d278a8fe70a8ea092650a716d22287e8bef7126bb2fa
   languageName: node
   linkType: hard
 
@@ -2671,7 +2649,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rollup@npm:^4.30.1, rollup@npm:^4.34.8":
+"rollup@npm:^4.30.1":
   version: 4.34.8
   resolution: "rollup@npm:4.34.8"
   dependencies:

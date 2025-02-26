@@ -58,7 +58,7 @@ updates:
     groups:
       tailwindcss:
         patterns:
-          - '@tailwindcss/postcss'
+          - '@tailwindcss/vite'
           - 'tailwindcss'
 
   - package-ecosystem: 'github-actions'

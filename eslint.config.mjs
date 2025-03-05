@@ -14,7 +14,6 @@ export default [
     },
     rules: {
       'vue/no-unused-vars': 'error',
-      'vue/script-setup-uses-vars': 'error',
       'vue/multi-word-component-names': 'off',
       'vue/require-default-prop': 'off',
       'vue/no-reserved-component-names': 'off',

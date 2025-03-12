@@ -1,4 +1,4 @@
-require:
+plugins:
   - rubocop-performance
   - rubocop-rails
   - rubocop-capybara
@@ -169,3 +169,8 @@ Performance/OpenStruct:
 
 FactoryBot/ExcessiveCreateList:
   MaxAmount: 15
+
+# Capybara:
+
+Capybara/AmbiguousClick:
+  Enabled: false

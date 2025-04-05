@@ -2532,7 +2532,7 @@ __metadata:
     vite-plugin-full-reload: "npm:^1.2.0"
     vite-plugin-rails: "npm:^0.5.0"
     vue: "npm:^3.5.13"
-    vue-eslint-parser: "npm:^10.1.1"
+    vue-eslint-parser: "npm:^10.1.3"
   languageName: unknown
   linkType: soft
 
@@ -3162,9 +3162,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vue-eslint-parser@npm:^10.1.1":
-  version: 10.1.1
-  resolution: "vue-eslint-parser@npm:10.1.1"
+"vue-eslint-parser@npm:^10.1.3":
+  version: 10.1.3
+  resolution: "vue-eslint-parser@npm:10.1.3"
   dependencies:
     debug: "npm:^4.4.0"
     eslint-scope: "npm:^8.2.0"
@@ -3175,7 +3175,7 @@ __metadata:
     semver: "npm:^7.6.3"
   peerDependencies:
     eslint: ^8.57.0 || ^9.0.0
-  checksum: 10c0/dabf59cbc072df9aae50b8e768fc9e1c53b2c86b4e9813c08775771f77758986e008fe8d10346745a7bf3e46f4e508c1c2c6f5ea2e6b3c4694ff896e42d83197
+  checksum: 10c0/b4a045113966a90d0b8248a9e9eb67db65e654335cedab5d8a2dd01e0d4f1d95caf4135fe9d6a2739cc8cef1ff6f4da9457ea7ba118176d5a5b6a22862661f58
   languageName: node
   linkType: hard
 

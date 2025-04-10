@@ -348,26 +348,26 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@inertiajs/core@npm:2.0.7":
-  version: 2.0.7
-  resolution: "@inertiajs/core@npm:2.0.7"
+"@inertiajs/core@npm:2.0.8":
+  version: 2.0.8
+  resolution: "@inertiajs/core@npm:2.0.8"
   dependencies:
     axios: "npm:^1.8.2"
-    deepmerge: "npm:^4.0.0"
+    es-toolkit: "npm:^1.34.1"
     qs: "npm:^6.9.0"
-  checksum: 10c0/af00baa9a4dc33ff8bb417c8b426147c080136a41864aae11771abe6a140d3f187318040109459335d96fa46261c76ca1da58a46c9b81de2c76321d5d1ec1d1f
+  checksum: 10c0/7bfcdb50f8993eeaadba9f2c0a6acd155ab624876ea025f23cd938b9a874f54c275db2a03e6442caf69c694d03a34e05832cc47256920be9907e4889da169018
   languageName: node
   linkType: hard
 
-"@inertiajs/vue3@npm:^2.0.7":
-  version: 2.0.7
-  resolution: "@inertiajs/vue3@npm:2.0.7"
+"@inertiajs/vue3@npm:^2.0.8":
+  version: 2.0.8
+  resolution: "@inertiajs/vue3@npm:2.0.8"
   dependencies:
-    "@inertiajs/core": "npm:2.0.7"
+    "@inertiajs/core": "npm:2.0.8"
     es-toolkit: "npm:^1.33.0"
   peerDependencies:
     vue: ^3.0.0
-  checksum: 10c0/9d7766435e3e87d3e397bc5621236e20a57a23cbfd39ff6a4292999632d095f188d939f3fc40466e8adece457d9af749a3f679a643b92ee62738a714d8cfc20f
+  checksum: 10c0/c4f9d5c37cb4fc8924d4fbfdd2a37fab057deadb4a6a480c74ecd548f376cf098db7a62d2c24f400a223d061ae6e7d609917d35efecb7d70affa8cebfc0efe18
   languageName: node
   linkType: hard
 
@@ -1164,13 +1164,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"deepmerge@npm:^4.0.0":
-  version: 4.3.1
-  resolution: "deepmerge@npm:4.3.1"
-  checksum: 10c0/e53481aaf1aa2c4082b5342be6b6d8ad9dfe387bc92ce197a66dea08bd4265904a087e75e464f14d1347cf2ac8afe1e4c16b266e0561cc5df29382d3c5f80044
-  languageName: node
-  linkType: hard
-
 "delayed-stream@npm:~1.0.0":
   version: 1.0.0
   resolution: "delayed-stream@npm:1.0.0"
@@ -1292,7 +1285,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"es-toolkit@npm:^1.33.0":
+"es-toolkit@npm:^1.33.0, es-toolkit@npm:^1.34.1":
   version: 1.34.1
   resolution: "es-toolkit@npm:1.34.1"
   dependenciesMeta:
@@ -2513,7 +2506,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "pingcrm@workspace:."
   dependencies:
-    "@inertiajs/vue3": "npm:^2.0.7"
+    "@inertiajs/vue3": "npm:^2.0.8"
     "@popperjs/core": "npm:^2.11.8"
     "@tailwindcss/vite": "npm:^4.1.3"
     "@types/node": "npm:^22.14.0"

@@ -1474,9 +1474,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-vue@npm:^10.0.1":
-  version: 10.0.1
-  resolution: "eslint-plugin-vue@npm:10.0.1"
+"eslint-plugin-vue@npm:^10.1.0":
+  version: 10.1.0
+  resolution: "eslint-plugin-vue@npm:10.1.0"
   dependencies:
     "@eslint-community/eslint-utils": "npm:^4.4.0"
     natural-compare: "npm:^1.4.0"
@@ -1487,7 +1487,7 @@ __metadata:
   peerDependencies:
     eslint: ^8.57.0 || ^9.0.0
     vue-eslint-parser: ^10.0.0
-  checksum: 10c0/54d4e2b47147aa7fe131472ada1954fe9e98e18313f803d724ce4cff16ca670cfe66348c5c67da1bc4e2d604c0f34cea38a568364de155d6dd312c31b10ff65f
+  checksum: 10c0/3c2b5b54c4d0da6f42ddd207ae44d8b3ea4ded4834d6672804ace7ef746a31c20a03d6fd09adf3556106f8e1f79599b2a16992f8e48da9ba0a4b17e4fd1ab562
   languageName: node
   linkType: hard
 
@@ -2608,7 +2608,7 @@ __metadata:
     "@types/node": "npm:^22.15.3"
     "@vitejs/plugin-vue": "npm:^5.2.3"
     eslint: "npm:^9.25.1"
-    eslint-plugin-vue: "npm:^10.0.1"
+    eslint-plugin-vue: "npm:^10.1.0"
     lodash: "npm:^4.17.21"
     plausible-tracker: "npm:^0.3.9"
     tailwindcss: "npm:^4.1.5"

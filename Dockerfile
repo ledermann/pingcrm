@@ -13,6 +13,9 @@ RUN apk add --no-cache vips
 
 USER app
 
+# Enable YJIT
+ENV RUBY_YJIT_ENABLE=1
+
 # Entrypoint prepares the database.
 ENTRYPOINT ["docker/startup.sh"]
 

@@ -1,3 +1,5 @@
+# syntax=docker/dockerfile:1
+# check=error=true
 FROM ghcr.io/ledermann/rails-base-builder:3.4.3-alpine AS builder
 
 # Remove some files not needed in resulting image

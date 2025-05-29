@@ -11,7 +11,7 @@
     "plausible-tracker": "^0.3.9",
     "timeago.js": "^4.0.2",
     "uuid": "^11.1.0",
-    "vue": "^3.5.15"
+    "vue": "^3.5.16"
   },
   "version": "0.1.0",
   "devDependencies": {

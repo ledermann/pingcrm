@@ -11,6 +11,7 @@ export default [
         ...globals.browser,
         ...globals.node,
       },
+      ecmaVersion: 2024,
     },
     rules: {
       'vue/no-unused-vars': 'error',

@@ -16,7 +16,7 @@
   "version": "0.1.0",
   "devDependencies": {
     "@tailwindcss/vite": "^4.1.10",
-    "@types/node": "^24.0.1",
+    "@types/node": "^24.0.3",
     "@vitejs/plugin-vue": "^5.2.4",
     "eslint": "^9.29.0",
     "eslint-plugin-vue": "^10.2.0",

@@ -884,12 +884,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^24.0.6":
-  version: 24.0.6
-  resolution: "@types/node@npm:24.0.6"
+"@types/node@npm:^24.0.7":
+  version: 24.0.7
+  resolution: "@types/node@npm:24.0.7"
   dependencies:
     undici-types: "npm:~7.8.0"
-  checksum: 10c0/17f976364358f85294912e04f0de147da6ba5ce3fe495b758df58458241f110475905cd0bb4ace373e9c44a0a7927202043bf0501cc1f7644306bde310c62650
+  checksum: 10c0/be3849816dafc54ec79e6be6dafcf60bdb6466beaf0081b941142d260e2b2864855210dfe5b4395c59b276468528695aefcf4f060ac95cc433b2968e80a311f9
   languageName: node
   linkType: hard
 
@@ -2634,7 +2634,7 @@ __metadata:
     "@inertiajs/vue3": "npm:^2.0.14"
     "@popperjs/core": "npm:^2.11.8"
     "@tailwindcss/vite": "npm:^4.1.11"
-    "@types/node": "npm:^24.0.6"
+    "@types/node": "npm:^24.0.7"
     "@vitejs/plugin-vue": "npm:^6.0.0"
     eslint: "npm:^9.30.0"
     eslint-plugin-vue: "npm:^10.2.0"

@@ -2639,7 +2639,7 @@ __metadata:
     tailwindcss: "npm:^4.1.11"
     timeago.js: "npm:^4.0.2"
     uuid: "npm:^11.1.0"
-    vite: "npm:^7.0.0"
+    vite: "npm:^7.0.1"
     vite-plugin-full-reload: "npm:^1.2.0"
     vite-plugin-rails: "npm:^0.5.0"
     vue: "npm:^3.5.17"
@@ -3228,9 +3228,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite@npm:^7.0.0":
-  version: 7.0.0
-  resolution: "vite@npm:7.0.0"
+"vite@npm:^7.0.1":
+  version: 7.0.1
+  resolution: "vite@npm:7.0.1"
   dependencies:
     esbuild: "npm:^0.25.0"
     fdir: "npm:^6.4.6"
@@ -3279,7 +3279,7 @@ __metadata:
       optional: true
   bin:
     vite: bin/vite.js
-  checksum: 10c0/860838d223f877dd8e04bd2b8f33cf67a38706643bdf07e3153e2857d7c0d33c3ee94cea7e86e60937cc91b3793272912cc7af14565641476f814bd61b3a1374
+  checksum: 10c0/2bfa3c5505b9d5b393b3b0f22e57c3e2f7a5d50460595277082488e38b70c838e261f35b09cbdaa0698081f3038ce3450633f6fc0d88dfc9f000880c3ed05217
   languageName: node
   linkType: hard
 

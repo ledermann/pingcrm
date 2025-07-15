@@ -110,7 +110,7 @@ GEM
       warden (~> 1.2.3)
     drb (2.2.3)
     dry-cli (1.2.0)
-    erb (5.0.1)
+    erb (5.0.2)
     erubi (1.13.1)
     factory_bot (6.5.4)
       activesupport (>= 6.1.0)

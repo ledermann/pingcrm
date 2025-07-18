@@ -393,26 +393,26 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@inertiajs/core@npm:2.0.16":
-  version: 2.0.16
-  resolution: "@inertiajs/core@npm:2.0.16"
+"@inertiajs/core@npm:2.0.17":
+  version: 2.0.17
+  resolution: "@inertiajs/core@npm:2.0.17"
   dependencies:
     axios: "npm:^1.8.2"
     es-toolkit: "npm:^1.34.1"
     qs: "npm:^6.9.0"
-  checksum: 10c0/0f2513262ad71792b8bdb6c1a49b16a22794c02479c96167b98b2b563103614a1536f3f9c3965b0749a9046509e0c46324e2eff5d41533023611d6f048ca9ab6
+  checksum: 10c0/7eb25eeca4e785a9eaf436926df079347e4a70e25ba3913de785296c70e1859c519a951947be6d9931e627f804bcce84cdebe56b41325664bd7bb5998af49238
   languageName: node
   linkType: hard
 
-"@inertiajs/vue3@npm:^2.0.16":
-  version: 2.0.16
-  resolution: "@inertiajs/vue3@npm:2.0.16"
+"@inertiajs/vue3@npm:^2.0.17":
+  version: 2.0.17
+  resolution: "@inertiajs/vue3@npm:2.0.17"
   dependencies:
-    "@inertiajs/core": "npm:2.0.16"
+    "@inertiajs/core": "npm:2.0.17"
     es-toolkit: "npm:^1.33.0"
   peerDependencies:
     vue: ^3.0.0
-  checksum: 10c0/d648fade97af33ac54c80b31b9f749ac2be45f0f1c325d4c2352885c65826e5105cad4674d9c962865ff2c9a1bc9c5822f337150a774cffa66d8c89d3d78126d
+  checksum: 10c0/375a63bdb708ab66b15e32302232bb28d06560fec019e1a59ce64e460a757043fe236bd21c1f4f621759763daa03edd93df759893545f2ae754ce9631b68112f
   languageName: node
   linkType: hard
 
@@ -2646,7 +2646,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "pingcrm@workspace:."
   dependencies:
-    "@inertiajs/vue3": "npm:^2.0.16"
+    "@inertiajs/vue3": "npm:^2.0.17"
     "@popperjs/core": "npm:^2.11.8"
     "@tailwindcss/vite": "npm:^4.1.11"
     "@types/node": "npm:^24.0.14"

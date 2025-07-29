@@ -143,7 +143,7 @@ GEM
     js-routes (2.3.5)
       railties (>= 5)
       sorbet-runtime
-    json (2.13.1)
+    json (2.13.2)
     language_server-protocol (3.17.0.5)
     lint_roller (1.1.0)
     logger (1.7.0)

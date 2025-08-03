@@ -26,5 +26,8 @@
     "vite-plugin-rails": "^0.5.0",
     "vue-eslint-parser": "^10.2.0"
   },
+  "engines": {
+    "node": ">=22"
+  },
   "packageManager": "yarn@4.9.2"
 }

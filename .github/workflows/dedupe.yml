@@ -1,0 +1,73 @@
+name: Dedupe Yarn Dependencies
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+    branches: [main]
+    paths:
+      - 'yarn.lock'
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  dedupe:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: 'package.json'
+          cache: 'yarn'
+
+      - name: Install dependencies (immutable)
+        run: yarn install --immutable
+
+      - name: Dedupe
+        run: yarn dedupe
+
+      - name: Commit and push if yarn.lock changed
+        id: dedupe-check
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          if ! git diff --quiet; then
+            git pull origin ${{ github.head_ref }} --rebase
+            git commit -am 'chore: yarn dedupe'
+            git push origin HEAD:${{ github.head_ref }}
+            echo "performed=true" >> $GITHUB_OUTPUT
+          else
+            echo "performed=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Comment on PR - Dedupe performed
+        if: steps.dedupe-check.outputs.performed == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: '🧹 **Yarn dedupe performed** - Duplicate dependencies have been removed from yarn.lock'
+            })
+
+      - name: Comment on PR - No dedupe needed
+        if: steps.dedupe-check.outputs.performed == 'false'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: '✅ **No yarn dedupe needed** - yarn.lock is fine'
+            })

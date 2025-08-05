@@ -20,6 +20,7 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           fetch-depth: 0
+          ref: ${{ github.head_ref }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -40,8 +41,8 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
           if ! git diff --quiet; then
-            git pull origin ${{ github.head_ref }} --rebase
-            git commit -am 'chore: yarn dedupe'
+            git add yarn.lock
+            git commit -m 'chore: yarn dedupe'
             git push origin HEAD:${{ github.head_ref }}
             echo "performed=true" >> $GITHUB_OUTPUT
           else

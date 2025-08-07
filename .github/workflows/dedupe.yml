@@ -1,7 +1,7 @@
 name: Dedupe Yarn Dependencies
 
 on:
-  pull_request:
+  pull_request_target:
     types: [opened, synchronize]
     branches: [main]
     paths:
@@ -18,7 +18,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.PAT }}
           fetch-depth: 0
           ref: ${{ github.head_ref }}
 
@@ -37,8 +37,8 @@ jobs:
       - name: Commit and push if yarn.lock changed
         id: dedupe-check
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.name "ledermann-bot"
+          git config user.email "ledermann-bot@users.noreply.github.com"
 
           if ! git diff --quiet; then
             git add yarn.lock
@@ -59,16 +59,4 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               body: '🧹 **Yarn dedupe performed** - Duplicate dependencies have been removed from yarn.lock'
-            })
-
-      - name: Comment on PR - No dedupe needed
-        if: steps.dedupe-check.outputs.performed == 'false'
-        uses: actions/github-script@v7
-        with:
-          script: |
-            github.rest.issues.createComment({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              body: '✅ **No yarn dedupe needed** - yarn.lock is fine'
             })

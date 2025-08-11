@@ -5,12 +5,12 @@ class Users::SessionsController < Devise::SessionsController
   end
 
   # POST /login
-  def create # rubocop:disable Lint/UselessMethodDefinition
+  def create
     super
   end
 
   # DELETE /logout
-  def destroy # rubocop:disable Lint/UselessMethodDefinition
+  def destroy
     super
   end
 end

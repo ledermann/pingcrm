@@ -14,10 +14,17 @@ class LoginTest < ApplicationSystemTestCase
     fill_in 'Password', with: @user.password
     click_on 'Login'
 
+    # Wait for the login form to disappear (indicating successful login)
+    assert_no_selector 'h1', text: 'Welcome Back!'
+
+    # Now check for the content on the dashboard
     assert_selector 'div', text: 'Hey there!'
 
     click_on 'John Doe'
     click_on 'Logout'
+
+    # Wait for dashboard to disappear and login page to appear
+    assert_no_selector 'div', text: 'Hey there!'
     assert_selector 'div', text: 'Welcome Back!'
   end
 

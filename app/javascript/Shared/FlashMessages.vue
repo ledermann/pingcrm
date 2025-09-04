@@ -63,7 +63,7 @@
       </button>
     </div>
     <div
-      v-if="$page.props.errors"
+      v-if="$page.props.errors.length > 0"
       class="mb-8 flex max-w-3xl items-center justify-between rounded-sm bg-red-400"
     >
       <div class="flex items-center">

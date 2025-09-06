@@ -10,7 +10,7 @@
     "lodash": "^4.17.21",
     "plausible-tracker": "^0.3.9",
     "timeago.js": "^4.0.2",
-    "uuid": "^11.1.0",
+    "uuid": "^12.0.0",
     "vue": "^3.5.21"
   },
   "version": "0.1.0",

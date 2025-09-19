@@ -26,6 +26,17 @@
     "vite-plugin-rails": "^0.5.0",
     "vue-eslint-parser": "^10.2.0"
   },
+  "dependenciesMeta": {
+    "@tailwindcss/oxide": {
+      "built": true
+    },
+    "esbuild": {
+      "built": true
+    },
+    "vite": {
+      "built": true
+    }
+  },
   "engines": {
     "node": ">=22"
   },

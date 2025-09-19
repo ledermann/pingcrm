@@ -42,10 +42,10 @@ jobs:
           cache: yarn
 
       - name: Install Yarn packages
-        run: yarn install --immutable
+        run: bin/yarn install --immutable
 
       - name: Lint with ESLint
-        run: yarn lint
+        run: bin/yarn lint
 
       - name: Compile assets
         run: bin/rails assets:precompile

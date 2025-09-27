@@ -367,28 +367,28 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@inertiajs/core@npm:2.1.11":
-  version: 2.1.11
-  resolution: "@inertiajs/core@npm:2.1.11"
+"@inertiajs/core@npm:2.2.0":
+  version: 2.2.0
+  resolution: "@inertiajs/core@npm:2.2.0"
   dependencies:
     "@types/lodash-es": "npm:^4.17.12"
-    axios: "npm:^1.12.0"
+    axios: "npm:^1.12.2"
     lodash-es: "npm:^4.17.21"
-    qs: "npm:^6.9.0"
-  checksum: 10c0/4ad2d481c4e7c527a45aeda882cb393435d6e741cde2f9406ebc0149aedff011bdc1bf2565b504f9faaefc9650e06eb84cb8a9709f6cf7f683731e6d4407ac68
+    qs: "npm:^6.14.0"
+  checksum: 10c0/76e7e0e8c07b5e0b49134a343bc894047ca04eb97196e631aea71e425165802f2f09afc87ec9ef009d8814fd4fc5ab0a57c3f36dd197f9a8c57840e1820e40c9
   languageName: node
   linkType: hard
 
-"@inertiajs/vue3@npm:^2.1.11":
-  version: 2.1.11
-  resolution: "@inertiajs/vue3@npm:2.1.11"
+"@inertiajs/vue3@npm:^2.2.0":
+  version: 2.2.0
+  resolution: "@inertiajs/vue3@npm:2.2.0"
   dependencies:
-    "@inertiajs/core": "npm:2.1.11"
+    "@inertiajs/core": "npm:2.2.0"
     "@types/lodash-es": "npm:^4.17.12"
     lodash-es: "npm:^4.17.21"
   peerDependencies:
     vue: ^3.0.0
-  checksum: 10c0/9258963380a5666486ad4fdc50c0bfb63d4cd551fbccffe3582134732dbac3130525c08fed0aacb93acf886dbac1fa27dff7ce4230d623a9dd679767b44403b7
+  checksum: 10c0/a54889d73526d85122c694cb33cf8799b022a880a84bd098f795c61d5864447e2120d88cd7f9e99d1a7543d74eda78d99fba521a5d3c8fe378e3f96858b2b435
   languageName: node
   linkType: hard
 
@@ -1108,7 +1108,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"axios@npm:^1.12.0":
+"axios@npm:^1.12.2":
   version: 1.12.2
   resolution: "axios@npm:1.12.2"
   dependencies:
@@ -2632,7 +2632,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "pingcrm@workspace:."
   dependencies:
-    "@inertiajs/vue3": "npm:^2.1.11"
+    "@inertiajs/vue3": "npm:^2.2.0"
     "@popperjs/core": "npm:^2.11.8"
     "@tailwindcss/vite": "npm:^4.1.13"
     "@types/node": "npm:^24.5.2"
@@ -2725,7 +2725,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"qs@npm:^6.9.0":
+"qs@npm:^6.14.0":
   version: 6.14.0
   resolution: "qs@npm:6.14.0"
   dependencies:

@@ -5,7 +5,7 @@
     "lint": "eslint --cache ."
   },
   "dependencies": {
-    "@inertiajs/vue3": "^2.2.2",
+    "@inertiajs/vue3": "^2.2.3",
     "@popperjs/core": "^2.11.8",
     "lodash": "^4.17.21",
     "plausible-tracker": "^0.3.9",

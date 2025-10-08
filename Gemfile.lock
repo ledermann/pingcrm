@@ -349,7 +349,7 @@ GEM
 
 PLATFORMS
   aarch64-linux-musl
-  arm64-darwin-24
+  arm64-darwin-25
   x86_64-linux
   x86_64-linux-musl
 

@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+require_relative '../config/boot'
+require 'bundler/audit/cli'
+
+if ARGV.empty? || ARGV.include?('check')
+  ARGV.concat %w[--config config/bundler-audit.yml]
+end
+Bundler::Audit::CLI.start

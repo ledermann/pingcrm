@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 ruby '~> 3.4'
 
 # Full-stack web application framework. (https://rubyonrails.org)
-gem 'rails', '~> 8.0.2'
+gem 'rails', '~> 8.1.0'
 
 # Pg is the Ruby interface to the PostgreSQL RDBMS (https://github.com/ged/ruby-pg)
 gem 'pg', '>= 0.18', '< 2.0'
@@ -36,6 +36,9 @@ group :development, :test do
 
   # Security vulnerability scanner for Ruby on Rails. (https://brakemanscanner.org)
   gem 'brakeman', require: false
+
+  # Patch-level verification for Bundler (https://github.com/rubysec/bundler-audit)
+  gem 'bundler-audit', require: false
 
   # Automatic Ruby code style checking tool. (https://github.com/rubocop/rubocop)
   gem 'rubocop', require: false

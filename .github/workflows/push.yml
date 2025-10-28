@@ -44,9 +44,6 @@ jobs:
       - name: Install Yarn packages
         run: bin/yarn install --immutable
 
-      - name: Run security audit for Yarn packages
-        run: bin/yarn npm audit
-
       - name: Lint with ESLint
         run: bin/yarn lint
 

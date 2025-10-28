@@ -1,0 +1,41 @@
+name: Security checks
+on:
+  schedule:
+    - cron: '0 4 * * *'
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ruby-security:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+
+      - name: Run security audit for Ruby gems
+        run: bin/bundler-audit check --update
+
+  yarn-security:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          cache: yarn
+
+      - name: Install Yarn packages
+        run: bin/yarn install --immutable
+
+      - name: Run security audit for Yarn packages
+        run: bin/yarn npm audit --recursive

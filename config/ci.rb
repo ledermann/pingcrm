@@ -5,7 +5,7 @@ CI.run do
 
   step 'Style: Ruby', 'bin/rubocop'
 
-  step 'Security: npm audit', 'bin/yarn npm audit'
+  step 'Security: npm audit', 'bin/yarn npm audit --recursive'
   step 'Security: Bundler audit', 'bin/bundler-audit'
   step 'Security: Gem audit', 'bin/bundler-audit'
   step 'Security: Brakeman code analysis',

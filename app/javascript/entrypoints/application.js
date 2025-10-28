@@ -8,18 +8,21 @@ import '~/styles/application.css';
 import { createApp, h } from 'vue';
 
 import { router, createInertiaApp } from '@inertiajs/vue3';
-import Plausible from 'plausible-tracker';
+import { init, track } from '@plausible-analytics/tracker';
 const plausibleUrl = document.querySelector(
   'meta[name="plausible-url"]',
 ).content;
 if (plausibleUrl) {
-  const plausible = Plausible({
+  init({
     domain: document.querySelector('meta[name="app-host"]').content,
-    apiHost: plausibleUrl,
+    endpoint: plausibleUrl,
+    origin: globalThis.location.origin,
+    autoCapturePageviews: false,
+    outboundLinks: true,
   });
 
   router.on('navigate', () => {
-    plausible.trackPageview();
+    track('pageview', {});
   });
 }
 

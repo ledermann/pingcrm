@@ -528,6 +528,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@plausible-analytics/tracker@npm:^0.4.3":
+  version: 0.4.3
+  resolution: "@plausible-analytics/tracker@npm:0.4.3"
+  checksum: 10c0/2958454b9f01db5c64aec1d74e820de2cb9645cbadf109c591b33521a62fa1118de5a6b7358a421e61f118ce18c4b699a4d836a3386b020e6983c245e741870d
+  languageName: node
+  linkType: hard
+
 "@popperjs/core@npm:^2.11.8":
   version: 2.11.8
   resolution: "@popperjs/core@npm:2.11.8"
@@ -2666,6 +2673,7 @@ __metadata:
   resolution: "pingcrm@workspace:."
   dependencies:
     "@inertiajs/vue3": "npm:^2.2.11"
+    "@plausible-analytics/tracker": "npm:^0.4.3"
     "@popperjs/core": "npm:^2.11.8"
     "@tailwindcss/vite": "npm:^4.1.16"
     "@types/node": "npm:^24.9.1"
@@ -2673,7 +2681,6 @@ __metadata:
     eslint: "npm:^9.38.0"
     eslint-plugin-vue: "npm:^10.5.1"
     lodash: "npm:^4.17.21"
-    plausible-tracker: "npm:^0.3.9"
     tailwindcss: "npm:^4.1.16"
     timeago.js: "npm:^4.0.2"
     uuid: "npm:^13.0.0"
@@ -2691,13 +2698,6 @@ __metadata:
       built: true
   languageName: unknown
   linkType: soft
-
-"plausible-tracker@npm:^0.3.9":
-  version: 0.3.9
-  resolution: "plausible-tracker@npm:0.3.9"
-  checksum: 10c0/750018ad255119f7a5e6d108b35c1c7e4dd04ad9b0e950951812658b02b464865fdcb22a72f8a29881bcf3e5a4da7653ff881d333362ee6c319e63fae03153fb
-  languageName: node
-  linkType: hard
 
 "postcss-selector-parser@npm:^6.0.15":
   version: 6.1.2

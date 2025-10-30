@@ -317,7 +317,7 @@ GEM
     sorbet-runtime (0.6.12673)
     stringio (3.1.7)
     thor (1.4.0)
-    timeout (0.4.3)
+    timeout (0.4.4)
     tsort (0.2.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)

@@ -15,7 +15,7 @@ const plausibleUrl = document.querySelector(
 if (plausibleUrl) {
   init({
     domain: document.querySelector('meta[name="app-host"]').content,
-    endpoint: plausibleUrl,
+    endpoint: `${plausibleUrl}/api/event`,
     origin: globalThis.location.origin,
     autoCapturePageviews: false,
     outboundLinks: true,

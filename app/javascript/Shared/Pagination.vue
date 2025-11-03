@@ -47,15 +47,16 @@ export default {
 
   computed: {
     links() {
+      const series = this.meta.series || [];
       return [
         {
           label: 'Previous',
-          url: this.url(this.meta.prev),
+          url: this.url(this.meta.previous),
         },
-        ...this.meta.sequels['0'].map((page) => {
+        ...series.map((page) => {
           return {
-            label: page,
-            url: this.url(page),
+            label: page === 'gap' ? 'gap' : page,
+            url: page === 'gap' ? null : this.url(page),
             active: this.active(page),
           };
         }),
@@ -69,12 +70,22 @@ export default {
 
   methods: {
     url(pageNumber) {
-      return pageNumber
-        ? this.meta.scaffold_url.replace(/__pagy_page__/, pageNumber)
-        : null;
+      // Handle null, undefined, or 'gap'
+      if (!pageNumber || pageNumber === 'gap') {
+        return null;
+      }
+      // Convert string to number (current page is returned as string from Pagy)
+      const num = typeof pageNumber === 'string' ? parseInt(pageNumber, 10) : pageNumber;
+      if (isNaN(num)) {
+        return null;
+      }
+      // In Pagy 43.x, the page token is 'P ' (note the space!)
+      return this.meta.url_template.replace('P ', num);
     },
+
     active(pageNumber) {
-      return this.meta.page == pageNumber;
+      const num = typeof pageNumber === 'string' ? parseInt(pageNumber, 10) : pageNumber;
+      return this.meta.page == num;
     },
   },
 };

@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   include Auth
 
-  include Pagy::Backend
+  include Pagy::Method
 
   include InertiaCsrf
   include InertiaFlash
@@ -20,4 +20,10 @@ class ApplicationController < ActionController::Base
                       ),
                   }
                 }
+
+  private
+
+  def pagy_metadata(pagy)
+    pagy.data_hash
+  end
 end

@@ -31,6 +31,9 @@ Rails/SchemaComment:
 Rails/I18nLocaleTexts:
   Enabled: false
 
+Rails/Env:
+  Enabled: false
+
 Rails/EnvironmentVariableAccess:
   AllowReads: true
 

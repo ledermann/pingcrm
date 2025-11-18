@@ -388,28 +388,28 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@inertiajs/core@npm:2.2.17":
-  version: 2.2.17
-  resolution: "@inertiajs/core@npm:2.2.17"
+"@inertiajs/core@npm:2.2.18":
+  version: 2.2.18
+  resolution: "@inertiajs/core@npm:2.2.18"
   dependencies:
     "@types/lodash-es": "npm:^4.17.12"
     axios: "npm:^1.13.2"
     lodash-es: "npm:^4.17.21"
     qs: "npm:^6.14.0"
-  checksum: 10c0/bac3ba6fb063320734fbc4ab73eb4ef8f8c746e551fba1b9b43831942e345bd5aaded35f9ad6a4edcd874777682dd94c4d4f3b8874436951628053b68ac49384
+  checksum: 10c0/c15547bdd8f862cd30152392c7aae84c8aec2255e285804de3223e615daa899807fdd2bb279f8aecb1e62b347d34785efb83a08996e29e57010cc1af65264d92
   languageName: node
   linkType: hard
 
-"@inertiajs/vue3@npm:^2.2.17":
-  version: 2.2.17
-  resolution: "@inertiajs/vue3@npm:2.2.17"
+"@inertiajs/vue3@npm:^2.2.18":
+  version: 2.2.18
+  resolution: "@inertiajs/vue3@npm:2.2.18"
   dependencies:
-    "@inertiajs/core": "npm:2.2.17"
+    "@inertiajs/core": "npm:2.2.18"
     "@types/lodash-es": "npm:^4.17.12"
     lodash-es: "npm:^4.17.21"
   peerDependencies:
     vue: ^3.0.0
-  checksum: 10c0/70534c0789033a02f199854e5133fc4d31d1529d588c0df2d4313865176076c04828e0ca2cbb2eb91d39b334136bd9d46f2c81e4c6990c94541a6d1c01a1297f
+  checksum: 10c0/4ce1f2f0ceeb97e4f99bd7edd66844274fac936272c1daee814fc099bdd4e385444b3d85602386df203e94611d415d316decbfeb97609a836dc8688b3559dcfa
   languageName: node
   linkType: hard
 
@@ -2691,7 +2691,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "pingcrm@workspace:."
   dependencies:
-    "@inertiajs/vue3": "npm:^2.2.17"
+    "@inertiajs/vue3": "npm:^2.2.18"
     "@plausible-analytics/tracker": "npm:^0.4.4"
     "@popperjs/core": "npm:^2.11.8"
     "@tailwindcss/vite": "npm:^4.1.17"

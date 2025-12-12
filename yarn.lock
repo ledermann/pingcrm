@@ -369,28 +369,30 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@inertiajs/core@npm:2.2.21":
-  version: 2.2.21
-  resolution: "@inertiajs/core@npm:2.2.21"
+"@inertiajs/core@npm:2.3.0":
+  version: 2.3.0
+  resolution: "@inertiajs/core@npm:2.3.0"
   dependencies:
     "@types/lodash-es": "npm:^4.17.12"
     axios: "npm:^1.13.2"
+    laravel-precognition: "npm:^1.0.0"
     lodash-es: "npm:^4.17.21"
     qs: "npm:^6.14.0"
-  checksum: 10c0/2c677afe9c7251e813ae300da1ed80a9f09f20704a8f10bb96967ac91022eeec132ed0c1abeb0ab3c643d31fbcd8204a40bc4cb90ea55454454f4de1201d70a5
+  checksum: 10c0/7d3e2c2ca4a2f89d2274974b81d256b915af27996981aa777738b84b14fc97272c53e47d7c644926ead86895f0c5e19a06bc4d37308482e70d5c328216f8e15b
   languageName: node
   linkType: hard
 
-"@inertiajs/vue3@npm:^2.2.21":
-  version: 2.2.21
-  resolution: "@inertiajs/vue3@npm:2.2.21"
+"@inertiajs/vue3@npm:^2.3.0":
+  version: 2.3.0
+  resolution: "@inertiajs/vue3@npm:2.3.0"
   dependencies:
-    "@inertiajs/core": "npm:2.2.21"
+    "@inertiajs/core": "npm:2.3.0"
     "@types/lodash-es": "npm:^4.17.12"
+    laravel-precognition: "npm:^1.0.0"
     lodash-es: "npm:^4.17.21"
   peerDependencies:
     vue: ^3.0.0
-  checksum: 10c0/c673f257a520b329377fc59d8f9074c3adc7d82e2fc507412089fc42ba30f35091574120f3440dcb0e7fa85f377816497908332ae5f48a10afcdab051a171a7e
+  checksum: 10c0/49aeebd092c79501cdd117a2e530c64dbabb30d54220fe56f229530820034d9f59430203cd4355075f482b12727901a0d07aff7267b538d7a516abd2d04a6dfe
   languageName: node
   linkType: hard
 
@@ -1103,7 +1105,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"axios@npm:^1.13.2":
+"axios@npm:^1.13.2, axios@npm:^1.4.0":
   version: 1.13.2
   resolution: "axios@npm:1.13.2"
   dependencies:
@@ -2070,6 +2072,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"laravel-precognition@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "laravel-precognition@npm:1.0.0"
+  dependencies:
+    axios: "npm:^1.4.0"
+    lodash-es: "npm:^4.17.21"
+  checksum: 10c0/ce7978b1b09a399894e1f77903ab00e3be4f84590706ec8075cdaf67b4dc5829327b5df5994c69b8f8cee0e59a76f567ae9e593581b28c0469b55329afe44d10
+  languageName: node
+  linkType: hard
+
 "levn@npm:^0.4.1":
   version: 0.4.1
   resolution: "levn@npm:0.4.1"
@@ -2573,7 +2585,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "pingcrm@workspace:."
   dependencies:
-    "@inertiajs/vue3": "npm:^2.2.21"
+    "@inertiajs/vue3": "npm:^2.3.0"
     "@plausible-analytics/tracker": "npm:^0.4.4"
     "@popperjs/core": "npm:^2.11.8"
     "@tailwindcss/vite": "npm:^4.1.18"

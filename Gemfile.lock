@@ -137,7 +137,7 @@ GEM
       ruby-vips (>= 2.0.17, < 3)
     inertia_rails (3.15.0)
       railties (>= 6)
-    io-console (0.8.1)
+    io-console (0.8.2)
     irb (1.15.3)
       pp (>= 0.6.0)
       rdoc (>= 4.0.0)

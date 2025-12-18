@@ -145,7 +145,7 @@ GEM
     jbuilder (2.14.1)
       actionview (>= 7.0.0)
       activesupport (>= 7.0.0)
-    js-routes (2.3.5)
+    js-routes (2.3.6)
       railties (>= 5)
       sorbet-runtime
     json (2.18.0)
@@ -212,7 +212,7 @@ GEM
     pp (0.6.3)
       prettyprint
     prettyprint (0.2.0)
-    prism (1.6.0)
+    prism (1.7.0)
     psych (5.3.1)
       date
       stringio

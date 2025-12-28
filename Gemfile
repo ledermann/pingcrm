@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '~> 3.4'
+ruby '~> 4.0'
 
 # Full-stack web application framework. (https://rubyonrails.org)
 gem 'rails', '~> 8.1.0'

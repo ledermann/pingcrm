@@ -51,7 +51,7 @@ rails test:system
 
 ## Requirements
 
-- Ruby 3.4
+- Ruby 4.0
 - Ruby on Rails 8.1
 - PostgreSQL
 

@@ -924,12 +924,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^25.0.8":
-  version: 25.0.8
-  resolution: "@types/node@npm:25.0.8"
+"@types/node@npm:^25.0.9":
+  version: 25.0.9
+  resolution: "@types/node@npm:25.0.9"
   dependencies:
     undici-types: "npm:~7.16.0"
-  checksum: 10c0/2282464cd928ab184b2310b79899c76bfaa88c8d14640dfab2f9218fdee7e2d916056492de683aa3a26050c8f3bbcade0305616a55277a7c344926c0393149e0
+  checksum: 10c0/a757efafe303d9c8833eb53c2e9a0981cd5ac725cdc04c5612a71db86468c938778d4fa328be4231b68fffc68258638764df7b9c69e86cf55f0bb67105eb056f
   languageName: node
   linkType: hard
 
@@ -2610,7 +2610,7 @@ __metadata:
     "@plausible-analytics/tracker": "npm:^0.4.4"
     "@popperjs/core": "npm:^2.11.8"
     "@tailwindcss/vite": "npm:^4.1.18"
-    "@types/node": "npm:^25.0.8"
+    "@types/node": "npm:^25.0.9"
     "@vitejs/plugin-vue": "npm:^6.0.3"
     eslint: "npm:^9.39.2"
     eslint-plugin-vue: "npm:^10.6.2"

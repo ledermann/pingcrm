@@ -23,9 +23,9 @@ class LoginTest < ApplicationSystemTestCase
     click_on 'John Doe'
     click_on 'Logout'
 
-    # Wait for dashboard to disappear and login page to appear
-    assert_no_selector 'div', text: 'Hey there!'
+    # Wait for login page to appear
     assert_selector 'div', text: 'Welcome Back!'
+    assert_no_selector 'div', text: 'Hey there!'
   end
 
   test 'Login with invalid credentials will fail' do

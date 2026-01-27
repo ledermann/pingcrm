@@ -369,30 +369,30 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@inertiajs/core@npm:2.3.11":
-  version: 2.3.11
-  resolution: "@inertiajs/core@npm:2.3.11"
+"@inertiajs/core@npm:2.3.12":
+  version: 2.3.12
+  resolution: "@inertiajs/core@npm:2.3.12"
   dependencies:
     "@types/lodash-es": "npm:^4.17.12"
     axios: "npm:^1.13.2"
     laravel-precognition: "npm:^1.0.0"
-    lodash-es: "npm:^4.17.22"
+    lodash-es: "npm:^4.17.23"
     qs: "npm:^6.14.1"
-  checksum: 10c0/3cfe757ec17e42ba4585c8cf3bac946214da3a4a78f6328e5a8672c4f12d20f624e6bd880bb7490d247c4c3bea0069a452be341056040b97e42d05b060b10b8c
+  checksum: 10c0/aa0569a820a512b0ebd47c5f58449d38bde6d3930203bddd9a4493b3c4480fd5349551553f3cb5e66c1f80d891d6848c895256f1447b4307e1fb1f8e658f3230
   languageName: node
   linkType: hard
 
-"@inertiajs/vue3@npm:^2.3.11":
-  version: 2.3.11
-  resolution: "@inertiajs/vue3@npm:2.3.11"
+"@inertiajs/vue3@npm:^2.3.12":
+  version: 2.3.12
+  resolution: "@inertiajs/vue3@npm:2.3.12"
   dependencies:
-    "@inertiajs/core": "npm:2.3.11"
+    "@inertiajs/core": "npm:2.3.12"
     "@types/lodash-es": "npm:^4.17.12"
     laravel-precognition: "npm:^1.0.0"
-    lodash-es: "npm:^4.17.22"
+    lodash-es: "npm:^4.17.23"
   peerDependencies:
     vue: ^3.0.0
-  checksum: 10c0/bfb20af44380c24ef7e25b67052f70975cfdd2c9c8c20a6a5623c0bf4c217b020fc925c5cebf255d921ba347fc96bbc8fe5b31826e626f460371adafa08d97b3
+  checksum: 10c0/bf7139aec077608ae37d9836a89630aa4227fefb8114e4977c0835806dcdc238b11b43839c4829b7218c2349f1f89799af5135175f3c0a19df693152cf58b7b2
   languageName: node
   linkType: hard
 
@@ -2242,7 +2242,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lodash-es@npm:^4.17.21, lodash-es@npm:^4.17.22":
+"lodash-es@npm:^4.17.21, lodash-es@npm:^4.17.23":
   version: 4.17.23
   resolution: "lodash-es@npm:4.17.23"
   checksum: 10c0/3150fb6660c14c7a6b5f23bd11597d884b140c0e862a17fdb415aaa5ef7741523182904a6b7929f04e5f60a11edb5a79499eb448734381c99ffb3c4734beeddd
@@ -2606,7 +2606,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "pingcrm@workspace:."
   dependencies:
-    "@inertiajs/vue3": "npm:^2.3.11"
+    "@inertiajs/vue3": "npm:^2.3.12"
     "@plausible-analytics/tracker": "npm:^0.4.4"
     "@popperjs/core": "npm:^2.11.8"
     "@tailwindcss/vite": "npm:^4.1.18"

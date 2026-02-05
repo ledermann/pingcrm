@@ -56,10 +56,21 @@ jobs:
           bundle exec rake test
           bundle exec rake test:system
 
-  deploy:
-    runs-on: ubuntu-latest
+  docker-build:
+    runs-on: ${{ matrix.runner }}
     if: github.ref == 'refs/heads/master'
     needs: test
+    permissions:
+      contents: read
+      packages: write
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - platform: linux/amd64
+            runner: ubuntu-24.04
+          - platform: linux/arm64
+            runner: ubuntu-24.04-arm
 
     steps:
       - uses: actions/checkout@v6
@@ -70,24 +81,16 @@ jobs:
         # https://github.com/actions/checkout/issues/290
         run: git fetch --tags --force
 
+      - name: Set platform pair
+        run: echo "PLATFORM_PAIR=${platform//\//-}" >> $GITHUB_ENV
+        env:
+          platform: ${{ matrix.platform }}
+
       - name: Docker meta
         id: meta
         uses: docker/metadata-action@v5
         with:
-          # list of Docker images to use as base name for tags
-          images: |
-            ghcr.io/ledermann/pingcrm
-          # generate Docker tags based on the following events/attributes
-          tags: |
-            type=ref,event=branch
-            type=ref,event=pr
-            type=semver,pattern={{version}}
-            type=semver,pattern={{major}}.{{minor}}
-            type=semver,pattern={{major}}
-            type=raw,value=latest,enable=${{ github.ref == format('refs/heads/{0}', 'master') }}
-
-      - name: Set up QEMU
-        uses: docker/setup-qemu-action@v3
+          images: ghcr.io/ledermann/pingcrm
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
@@ -104,22 +107,84 @@ jobs:
           echo "COMMIT_TIME=$(git show -s --format=%cI $GITHUB_SHA)" >> $GITHUB_ENV
           echo "COMMIT_VERSION=$(git describe --always)" >> $GITHUB_ENV
 
-      - name: Build and push
+      - name: Build and push by digest
+        id: build
         uses: docker/build-push-action@v6
         with:
           context: .
-          platforms: linux/amd64,linux/arm64
+          platforms: ${{ matrix.platform }}
           provenance: false
-          push: true
-          tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
           build-args: |
             COMMIT_SHA=${{ github.sha }}
             COMMIT_TIME=${{ env.COMMIT_TIME }}
             COMMIT_VERSION=${{ env.COMMIT_VERSION }}
             COMMIT_BRANCH=${{ github.head_ref || github.ref_name }}
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
+          outputs: type=image,name=ghcr.io/ledermann/pingcrm,push-by-digest=true,name-canonical=true,push=true
+          cache-from: type=gha,scope=${{ env.PLATFORM_PAIR }}
+          cache-to: type=gha,mode=max,scope=${{ env.PLATFORM_PAIR }}
+
+      - name: Export digest
+        run: |
+          mkdir -p /tmp/digests
+          digest="${{ steps.build.outputs.digest }}"
+          touch "/tmp/digests/${digest#sha256:}"
+
+      - name: Upload digest
+        uses: actions/upload-artifact@v6
+        with:
+          name: digests-${{ env.PLATFORM_PAIR }}
+          path: /tmp/digests/*
+          if-no-files-found: error
+          retention-days: 1
+
+  docker-push:
+    runs-on: ubuntu-24.04
+    if: github.ref == 'refs/heads/master'
+    needs: docker-build
+    permissions:
+      packages: write
+
+    steps:
+      - name: Download digests
+        uses: actions/download-artifact@v7
+        with:
+          path: /tmp/digests
+          pattern: digests-*
+          merge-multiple: true
+
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.repository_owner }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Docker meta
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ghcr.io/ledermann/pingcrm
+          tags: |
+            type=ref,event=branch
+            type=ref,event=pr
+            type=semver,pattern={{version}}
+            type=semver,pattern={{major}}.{{minor}}
+            type=semver,pattern={{major}}
+            type=raw,value=latest,enable=${{ github.ref == format('refs/heads/{0}', 'master') }}
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Create manifest list and push
+        working-directory: /tmp/digests
+        run: |
+          tags=$(jq -cr '.tags | map("-t " + .) | join(" ")' <<< "$DOCKER_METADATA_OUTPUT_JSON")
+          images=$(printf 'ghcr.io/ledermann/pingcrm@sha256:%s ' *)
+          docker buildx imagetools create $tags $images
+
+      - name: Inspect image
+        run: docker buildx imagetools inspect ghcr.io/ledermann/pingcrm:${{ steps.meta.outputs.version }}
 
       - name: Send webhook to start deployment
         env:

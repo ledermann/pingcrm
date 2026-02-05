@@ -87,8 +87,5 @@ gem 'pagy'
 # Flexible authentication solution for Rails with Warden (https://github.com/heartcombo/devise)
 gem 'devise'
 
-# A fast JSON parser and serializer. (http://www.ohler.com/oj)
-gem 'oj'
-
 # Simple authorization solution for Rails. (https://github.com/CanCanCommunity/cancancan)
 gem 'cancancan'

@@ -314,7 +314,7 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 4.0)
       websocket (~> 1.0)
-    sorbet-runtime (0.6.12935)
+    sorbet-runtime (0.6.12938)
     stringio (3.2.0)
     thor (1.5.0)
     timeout (0.6.0)

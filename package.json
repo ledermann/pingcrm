@@ -20,7 +20,7 @@
     "@types/node": "^25.2.3",
     "@vitejs/plugin-vue": "^6.0.4",
     "eslint": "^10.0.0",
-    "eslint-plugin-vue": "^10.7.0",
+    "eslint-plugin-vue": "^10.8.0",
     "globals": "^17.3.0",
     "tailwindcss": "^4.1.18",
     "vite": "^7.3.1",

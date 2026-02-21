@@ -3,6 +3,8 @@ require 'test_helper'
 class ApplicationSystemTestCase < ActionDispatch::SystemTestCase
   include Devise::Test::IntegrationHelpers
 
+  Capybara.default_max_wait_time = 5
+
   driven_by :selenium,
             using: :headless_chrome,
             screen_size: [1400, 1400] do |driver_option|

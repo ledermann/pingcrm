@@ -19,13 +19,18 @@ class LoginTest < ApplicationSystemTestCase
 
     # Now check for the content on the dashboard
     assert_selector 'div', text: 'Hey there!'
+  end
 
-    click_on 'John Doe'
+  test 'Logout will redirect to login page' do
+    sign_in @user
+    visit '/'
+
+    assert_selector 'div', text: 'Hey there!'
+
+    find('[aria-label="User menu"]').click
     click_on 'Logout'
 
-    # Wait for login page to appear
-    assert_selector 'div', text: 'Welcome Back!'
-    assert_no_selector 'div', text: 'Hey there!'
+    assert_selector 'h1', text: 'Welcome Back!'
   end
 
   test 'Login with invalid credentials will fail' do

@@ -172,7 +172,7 @@ GEM
       net-smtp
     marcel (1.1.0)
     matrix (0.4.3)
-    mcp (0.7.1)
+    mcp (0.8.0)
       json-schema (>= 4.1)
     mini_magick (5.3.1)
       logger

@@ -18,7 +18,7 @@
     "@eslint/js": "^10.0.1",
     "@tailwindcss/vite": "^4.2.1",
     "@types/node": "^25.4.0",
-    "@vitejs/plugin-vue": "^6.0.4",
+    "@vitejs/plugin-vue": "^6.0.5",
     "eslint": "^10.0.3",
     "eslint-plugin-vue": "^10.8.0",
     "globals": "^17.4.0",

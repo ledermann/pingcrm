@@ -32,9 +32,6 @@
     "@tailwindcss/oxide": {
       "built": true
     },
-    "esbuild": {
-      "built": true
-    },
     "vite": {
       "built": true
     }

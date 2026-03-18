@@ -7,7 +7,7 @@ import { resolve } from 'path';
 export default defineConfig({
   build: {
     assetsInlineLimit: 0,
-    rollupOptions: {
+    rolldownOptions: {
       output: {
         manualChunks(id) {
           if (id.includes('node_modules')) {

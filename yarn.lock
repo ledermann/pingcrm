@@ -2482,7 +2482,7 @@ __metadata:
     uuid: "npm:^13.0.0"
     vite: "npm:^7.3.1"
     vite-plugin-full-reload: "npm:^1.2.0"
-    vite-plugin-rails: "npm:^0.5.0"
+    vite-plugin-rails: "npm:^0.6.0"
     vue: "npm:^3.5.30"
     vue-eslint-parser: "npm:^10.4.0"
   dependenciesMeta:
@@ -2574,12 +2574,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rollup-plugin-gzip@npm:^3.1.0":
-  version: 3.1.2
-  resolution: "rollup-plugin-gzip@npm:3.1.2"
+"rollup-plugin-gzip@npm:^4.2.0":
+  version: 4.2.0
+  resolution: "rollup-plugin-gzip@npm:4.2.0"
   peerDependencies:
     rollup: ">=2.0.0"
-  checksum: 10c0/5129d3970cca37bfb5a2fdeddb863bc76be12489ec0a6fcb2be2764902aa2f8548eb8e6532c4e15912d95e8baaa7391a5ed6b58790ed2529c86a98fa75467edc
+  peerDependenciesMeta:
+    rollup:
+      optional: true
+  checksum: 10c0/05aecd5cb96f5b40ef128d87ea15d86c07e416a1fb98eb5712911254ce1a09ddf60c0128edb7fc8dc7478cbca1f94d04ab07cf4437947f5ce330ce627f80bada
   languageName: node
   linkType: hard
 
@@ -2958,11 +2961,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite-plugin-rails@npm:^0.5.0":
-  version: 0.5.0
-  resolution: "vite-plugin-rails@npm:0.5.0"
+"vite-plugin-rails@npm:^0.6.0":
+  version: 0.6.0
+  resolution: "vite-plugin-rails@npm:0.6.0"
   dependencies:
-    rollup-plugin-gzip: "npm:^3.1.0"
+    rollup-plugin-gzip: "npm:^4.2.0"
     vite-plugin-environment: "npm:^1.1.3"
     vite-plugin-full-reload: "npm:^1.1.0"
     vite-plugin-manifest-sri: "npm:^0.2.0"
@@ -2970,7 +2973,7 @@ __metadata:
     vite-plugin-stimulus-hmr: "npm:^3.0.0"
   peerDependencies:
     vite: ">=5.0.0"
-  checksum: 10c0/c1648e87326527ed92339d10f46b7745849a4b1374ed3581410cbd43d9f3ab7aaf4a9285644d2c70a206d8b8330b5949ad69fbe2a2f616b8d8dbec447d75c366
+  checksum: 10c0/6cf415262c701b7dc19eab1d9e5d8e2b92f606e59a06952a904eb365ca47a740a84eb47326483e53ad3ab1da80f1bc9dbed091a3dd911c1de50281363dba79e2
   languageName: node
   linkType: hard
 

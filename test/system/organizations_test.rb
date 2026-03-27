@@ -54,10 +54,8 @@ class OrganizationsTest < ApplicationSystemTestCase
     sign_in @user
 
     visit '/organizations'
+    assert_selector 'h1', text: 'Organizations'
     click_on 'Create Organization'
-
-    assert_selector 'form'
-    assert_selector 'button', text: 'Create Organization'
 
     within 'form' do
       fill_in 'Name:', with: 'The new organization'

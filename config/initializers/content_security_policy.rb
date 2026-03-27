@@ -31,8 +31,8 @@ Rails.application.configure do
       policy.connect_src(*[:self, ENV.fetch('PLAUSIBLE_URL', nil)].compact)
       policy.script_src(*[:self].compact)
       policy.style_src :self,
-                       # Allow @inertiajs/progress to display progress bar
-                       "'sha256-YfWBLaAD17kgcjrajLlty6AH2yMikIiscRhC6OENK74='"
+                       # Allow @inertiajs/vue3 to apply inline styles
+                       "'sha256-ayyKroIacxqvmLIABAFnWB23Q5I52q/p/FL4/V+HW4c='"
     end
 
     policy.base_uri :self

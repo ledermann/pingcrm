@@ -35,12 +35,13 @@ class LoginTest < ApplicationSystemTestCase
 
   test 'Login with invalid credentials will fail' do
     visit '/login'
+    assert_selector 'h1', text: 'Welcome Back!'
 
     fill_in 'Email', with: @user.email
     fill_in 'Password', with: 'invalid'
     click_on 'Login'
 
-    assert_selector 'div', text: I18n.t('devise.failure.invalid')
+    assert_text I18n.t('devise.failure.invalid')
   end
 
   test 'Redirect to login for Inertia requests, too' do

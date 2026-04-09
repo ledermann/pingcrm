@@ -200,7 +200,7 @@ GEM
       json
       uri
       yaml
-    parallel (2.0.0)
+    parallel (2.0.1)
     parser (3.3.11.1)
       ast (~> 2.4.1)
       racc

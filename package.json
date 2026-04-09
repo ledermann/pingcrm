@@ -23,7 +23,7 @@
     "eslint-plugin-vue": "^10.8.0",
     "globals": "^17.4.0",
     "tailwindcss": "^4.2.2",
-    "vite": "^8.0.7",
+    "vite": "^8.0.8",
     "vite-plugin-full-reload": "^1.2.0",
     "vite-plugin-rails": "^0.6.0",
     "vue-eslint-parser": "^10.4.0"

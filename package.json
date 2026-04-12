@@ -21,7 +21,7 @@
     "@vitejs/plugin-vue": "^6.0.5",
     "eslint": "^10.2.0",
     "eslint-plugin-vue": "^10.8.0",
-    "globals": "^17.4.0",
+    "globals": "^17.5.0",
     "tailwindcss": "^4.2.2",
     "vite": "^8.0.8",
     "vite-plugin-full-reload": "^1.2.0",

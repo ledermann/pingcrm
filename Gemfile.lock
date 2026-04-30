@@ -146,7 +146,7 @@ GEM
     jbuilder (2.14.1)
       actionview (>= 7.0.0)
       activesupport (>= 7.0.0)
-    js-routes (2.3.6)
+    js-routes (2.3.7)
       railties (>= 5)
       sorbet-runtime
     json (2.19.4)

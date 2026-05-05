@@ -117,7 +117,7 @@ GEM
     dry-cli (1.4.1)
     erb (6.0.4)
     erubi (1.13.1)
-    factory_bot (6.5.6)
+    factory_bot (6.6.0)
       activesupport (>= 6.1.0)
     factory_bot_rails (6.5.1)
       factory_bot (~> 6.5)
@@ -149,7 +149,7 @@ GEM
     js-routes (2.3.7)
       railties (>= 5)
       sorbet-runtime
-    json (2.19.4)
+    json (2.19.5)
     language_server-protocol (3.17.0.5)
     lint_roller (1.1.0)
     logger (1.7.0)

@@ -286,10 +286,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@plausible-analytics/tracker@npm:^0.4.4":
-  version: 0.4.4
-  resolution: "@plausible-analytics/tracker@npm:0.4.4"
-  checksum: 10c0/82f584712fa8d4490c12d59da9bf99b05dc2b52c698fa126dbff45d457b782dd0f6093227f16557f5608277f36e65af5843c70c86d5430cbb6af21b136a52ec9
+"@plausible-analytics/tracker@npm:^0.4.5":
+  version: 0.4.5
+  resolution: "@plausible-analytics/tracker@npm:0.4.5"
+  checksum: 10c0/75c0f098b5e1b6c8fc2e07dd1ee3721f1d5e978e40d94f35fb95da9272646422b4832b028d013df041033c5e91c28038c5ef38b38eae867c6f85fc5338abee63
   languageName: node
   linkType: hard
 
@@ -1584,7 +1584,7 @@ __metadata:
   dependencies:
     "@eslint/js": "npm:^10.0.1"
     "@inertiajs/vue3": "npm:^3.0.3"
-    "@plausible-analytics/tracker": "npm:^0.4.4"
+    "@plausible-analytics/tracker": "npm:^0.4.5"
     "@popperjs/core": "npm:^2.11.8"
     "@tailwindcss/vite": "npm:^4.2.4"
     "@types/node": "npm:^25.6.0"

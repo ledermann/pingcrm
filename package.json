@@ -6,7 +6,7 @@
   },
   "dependencies": {
     "@inertiajs/vue3": "^3.0.3",
-    "@plausible-analytics/tracker": "^0.4.4",
+    "@plausible-analytics/tracker": "^0.4.5",
     "@popperjs/core": "^2.11.8",
     "lodash": "^4.18.1",
     "timeago.js": "^4.0.2",

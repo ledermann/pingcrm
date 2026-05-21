@@ -185,9 +185,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@inertiajs/core@npm:3.1.1":
-  version: 3.1.1
-  resolution: "@inertiajs/core@npm:3.1.1"
+"@inertiajs/core@npm:3.2.0":
+  version: 3.2.0
+  resolution: "@inertiajs/core@npm:3.2.0"
   dependencies:
     "@jridgewell/trace-mapping": "npm:^0.3.31"
     es-toolkit: "npm:^1.33.0"
@@ -197,20 +197,20 @@ __metadata:
   peerDependenciesMeta:
     axios:
       optional: true
-  checksum: 10c0/36ddfda81211b610b83c5a582f54d0ae18b42fd8b9b5f6fe2f6ba6d35b114a9d624649e60c35ccce5e228522fd12460761661a78024809b2cfa46639b1db8c2e
+  checksum: 10c0/73b329aa5ccff2ab31174bdd0ba58cecf2d4efe8fdbf9bccc352fa3f0eba934c3cf846540e63f212dd5083c279fb1fce653d339caf67a9de4d8a4c66f7ae0e7f
   languageName: node
   linkType: hard
 
-"@inertiajs/vue3@npm:^3.1.1":
-  version: 3.1.1
-  resolution: "@inertiajs/vue3@npm:3.1.1"
+"@inertiajs/vue3@npm:^3.2.0":
+  version: 3.2.0
+  resolution: "@inertiajs/vue3@npm:3.2.0"
   dependencies:
-    "@inertiajs/core": "npm:3.1.1"
+    "@inertiajs/core": "npm:3.2.0"
     es-toolkit: "npm:^1.33.0"
     laravel-precognition: "npm:^2.0.0"
   peerDependencies:
     vue: ^3.0.0
-  checksum: 10c0/8d4e040e013ff7c6d689e7696863b9cbbca5543fddea48a981ada52f9bc6a7a374a5c1fb5d30b2a9f7a5f6ffcbe554af90cdb1a6cac5134fbda50219bb53389a
+  checksum: 10c0/d4456d99987c5e732408435d07f315d02ccab6aaec42b023172a5a65fbf5e24670e87f7a6682e6052d14b034ab04cb10afb4cb892d01b1a65c7f0e2c5cafc544
   languageName: node
   linkType: hard
 
@@ -1576,7 +1576,7 @@ __metadata:
   resolution: "pingcrm@workspace:."
   dependencies:
     "@eslint/js": "npm:^10.0.1"
-    "@inertiajs/vue3": "npm:^3.1.1"
+    "@inertiajs/vue3": "npm:^3.2.0"
     "@plausible-analytics/tracker": "npm:^0.4.5"
     "@popperjs/core": "npm:^2.11.8"
     "@tailwindcss/vite": "npm:^4.3.0"

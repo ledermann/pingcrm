@@ -196,7 +196,7 @@ GEM
     nokogiri (1.19.3-x86_64-linux-musl)
       racc (~> 1.4)
     orm_adapter (0.5.0)
-    pagy (43.5.4)
+    pagy (43.5.5)
       json
       uri
       yaml

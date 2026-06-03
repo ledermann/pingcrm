@@ -26,7 +26,7 @@
     "vite": "^8.0.14",
     "vite-plugin-full-reload": "^1.2.0",
     "vite-plugin-rails": "^0.6.0",
-    "vue-eslint-parser": "^10.4.0"
+    "vue-eslint-parser": "^10.4.1"
   },
   "dependenciesMeta": {
     "@tailwindcss/oxide": {

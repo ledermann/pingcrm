@@ -36,16 +36,14 @@ jobs:
       - name: Scan for common Rails security vulnerabilities using static analysis
         run: bin/brakeman --no-pager
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v6
-        with:
-          cache: yarn
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
 
-      - name: Install Yarn packages
-        run: bin/yarn install --immutable
+      - name: Install JavaScript packages
+        run: bun install --frozen-lockfile
 
       - name: Lint with ESLint
-        run: bin/yarn lint
+        run: bun run lint
 
       - name: Compile assets
         run: bin/rails assets:precompile

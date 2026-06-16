@@ -18,7 +18,7 @@ FileUtils.chdir APP_ROOT do
   system! 'gem install syntax_tree'
 
   # Install JavaScript dependencies
-  system! 'bin/yarn'
+  system! 'bun install'
 
   # puts "\n== Copying sample files =="
   # unless File.exist?('config/database.yml')

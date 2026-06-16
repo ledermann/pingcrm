@@ -28,16 +28,12 @@
     "vite-plugin-rails": "^0.6.0",
     "vue-eslint-parser": "^10.4.1"
   },
-  "dependenciesMeta": {
-    "@tailwindcss/oxide": {
-      "built": true
-    },
-    "vite": {
-      "built": true
-    }
-  },
+  "trustedDependencies": [
+    "@tailwindcss/oxide",
+    "vite"
+  ],
   "engines": {
     "node": ">=22"
   },
-  "packageManager": "yarn@4.17.0"
+  "packageManager": "bun@1.3.14"
 }

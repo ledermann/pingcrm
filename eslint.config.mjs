@@ -26,7 +26,6 @@ export default [
   {
     ignores: [
       '.ruby-lsp/',
-      '.yarn/',
       'app/javascript/routes.js',
       'config/',
       'db/',

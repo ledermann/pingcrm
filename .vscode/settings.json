@@ -10,7 +10,6 @@
   },
 
   "search.exclude": {
-    "**/.yarn": true,
     "**/tmp": true,
     "**/public/vite*": true,
     "**/node_modules": true

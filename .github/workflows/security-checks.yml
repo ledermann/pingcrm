@@ -23,19 +23,17 @@ jobs:
       - name: Run security audit for Ruby gems
         run: bin/bundler-audit check --update
 
-  yarn-security:
+  js-security:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v6
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v6
-        with:
-          cache: yarn
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
 
-      - name: Install Yarn packages
-        run: bin/yarn install --immutable
+      - name: Install JavaScript packages
+        run: bun install --frozen-lockfile
 
-      - name: Run security audit for Yarn packages
-        run: bin/yarn npm audit --recursive
+      - name: Run security audit for JavaScript packages
+        run: bun audit

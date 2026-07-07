@@ -5,7 +5,7 @@
     "": {
       "name": "pingcrm",
       "dependencies": {
-        "@inertiajs/vue3": "^3.6.0",
+        "@inertiajs/vue3": "^3.6.1",
         "@plausible-analytics/tracker": "^0.4.5",
         "@popperjs/core": "^2.11.8",
         "lodash": "^4.18.1",
@@ -74,9 +74,9 @@
 
     "@humanwhocodes/retry": ["@humanwhocodes/retry@0.4.3", "", {}, "sha512-bV0Tgo9K4hfPCek+aMAn81RppFKv2ySDQeMoSZuvTASywNTnVJCArCZE2FWqpvIatKu7VMRLWlR1EazvVhDyhQ=="],
 
-    "@inertiajs/core": ["@inertiajs/core@3.6.0", "", { "dependencies": { "@jridgewell/trace-mapping": "^0.3.31", "es-toolkit": "^1.33.0", "laravel-precognition": "^2.0.0" }, "peerDependencies": { "axios": "^1.15.2" }, "optionalPeers": ["axios"] }, "sha512-56L16uTtv6rtTfSkqqjte39DO4P5nyNf4Df0HCnn8YBteff5rjifO/2bX8he5unXI7udnJj3YWg9KxRyEkYRHQ=="],
+    "@inertiajs/core": ["@inertiajs/core@3.6.1", "", { "dependencies": { "@jridgewell/trace-mapping": "^0.3.31", "es-toolkit": "^1.33.0", "laravel-precognition": "^2.0.0" }, "peerDependencies": { "axios": "^1.15.2" }, "optionalPeers": ["axios"] }, "sha512-h6+qqkKfpcoZvxWENy/F5yyiD00PIm8lK+ruQkt6HGk4d3N0LMS9GeUbWVQ4+TDZzIxP/vQLurPktnYvDhYeew=="],
 
-    "@inertiajs/vue3": ["@inertiajs/vue3@3.6.0", "", { "dependencies": { "@inertiajs/core": "3.6.0", "es-toolkit": "^1.33.0", "laravel-precognition": "^2.0.0" }, "peerDependencies": { "vue": "^3.0.0" } }, "sha512-o5r7J9uXz/bCQjSKccRyYRRd+v4d/ctNigmciIwdDQF+tOT9a1JM9nlq2uyvJur1o7b6CqZ7hkGR+mEj7l0cfw=="],
+    "@inertiajs/vue3": ["@inertiajs/vue3@3.6.1", "", { "dependencies": { "@inertiajs/core": "3.6.1", "es-toolkit": "^1.33.0", "laravel-precognition": "^2.0.0" }, "peerDependencies": { "vue": "^3.0.0" } }, "sha512-7M76W7uw1DqxWR5O+OV7Yg23yITTDcRxuO7KCdQhI58rp9+OTv2BZId7ePSBmqahYOeXUZbTfZfVoS2O6/hijA=="],
 
     "@jridgewell/gen-mapping": ["@jridgewell/gen-mapping@0.3.13", "", { "dependencies": { "@jridgewell/sourcemap-codec": "^1.5.0", "@jridgewell/trace-mapping": "^0.3.24" } }, "sha512-2kkt/7niJ6MgEPxF0bYdQ6etZaA+fQvDcLKckhy1yIQOzaoKjBBjSj63/aLVjYE3qhRt5dvM+uUyfCg6UKCBbA=="],
 

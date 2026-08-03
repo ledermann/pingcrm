@@ -1,0 +1,5 @@
+[install]
+# Supply-chain hardening: only install package versions published at least
+# three days ago, leaving time for malicious releases to be caught and yanked.
+# Matches the cooldown Dependabot applies to the bun ecosystem.
+minimumReleaseAge = 259200 # seconds (3 days)

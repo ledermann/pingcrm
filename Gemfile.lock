@@ -177,7 +177,7 @@ GEM
       prism (~> 1.5)
     msgpack (1.8.4)
     mutex_m (0.3.0)
-    net-imap (0.6.6)
+    net-imap (0.6.7)
       date
       net-protocol
     net-pop (0.1.2)

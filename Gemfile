@@ -7,6 +7,12 @@ ruby '~> 4.0'
 # Full-stack web application framework. (https://rubyonrails.org)
 gem 'rails', '~> 8.1.0'
 
+# Rails 8.1 hands the options to `JSON.parse` as a positional argument (see
+# active_support/json/decoding.rb). The json gem 3.0 takes keyword arguments
+# only, so every decode raises ArgumentError, and the encrypted session cookie
+# stops to work. Keep json on 2.x until Rails calls json 3 correctly.
+gem 'json', '< 3'
+
 # Pg is the Ruby interface to the PostgreSQL RDBMS (https://github.com/ged/ruby-pg)
 gem 'pg', '>= 0.18', '< 2.0'
 

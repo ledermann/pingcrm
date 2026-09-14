@@ -149,7 +149,7 @@ GEM
     js-routes (2.4.1)
       railties (>= 5)
       sorbet-runtime
-    json (3.0.2)
+    json (2.21.2)
     language_server-protocol (3.17.0.6)
     lint_roller (1.1.0)
     logger (1.7.0)
@@ -375,6 +375,7 @@ DEPENDENCIES
   inertia_rails (>= 1.2.2)
   jbuilder
   js-routes
+  json (< 3)
   lograge
   pagy
   pg (>= 0.18, < 2.0)

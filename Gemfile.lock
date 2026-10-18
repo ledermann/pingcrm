@@ -90,7 +90,7 @@ GEM
     bundler-audit (0.9.3)
       bundler (>= 1.2.0)
       thor (~> 1.0)
-    cancancan (3.6.2)
+    cancancan (3.7.0)
     capybara (3.40.0)
       addressable
       matrix

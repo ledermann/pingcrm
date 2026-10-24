@@ -1,6 +1,4 @@
-# Gem versions must age 3 days before being resolvable, matching the
-# cooldown declared for bundler in .github/dependabot.yml
-source 'https://rubygems.org', cooldown: 3
+source 'https://rubygems.org'
 
 ruby '~> 4.0'
 

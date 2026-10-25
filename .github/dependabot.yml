@@ -13,6 +13,10 @@ updates:
       timezone: Europe/Berlin
     open-pull-requests-limit: 10
     versioning-strategy: lockfile-only
+    # Without this, Dependabot applies a 3-day cooldown by default
+    cooldown:
+      exclude:
+        - '*'
     allow:
       - dependency-type: direct
       - dependency-type: indirect

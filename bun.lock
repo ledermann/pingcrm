@@ -6,7 +6,7 @@
       "name": "pingcrm",
       "dependencies": {
         "@inertiajs/vue3": "^3.9.1",
-        "@plausible-analytics/tracker": "^0.4.6",
+        "@plausible-analytics/tracker": "^0.4.7",
         "@popperjs/core": "^2.11.8",
         "lodash": "^4.18.1",
         "timeago.js": "^4.0.2",
@@ -92,7 +92,7 @@
 
     "@oxc-project/types": ["@oxc-project/types@0.154.0", "", {}, "sha512-KYOUGQFlLWR+s4QMV2Q9ko38TZm7EdO87Qm7rvZLqk/webse/cDjtyxKhg/47l0byCbs/k46LT8qc4PKjAikzA=="],
 
-    "@plausible-analytics/tracker": ["@plausible-analytics/tracker@0.4.6", "", {}, "sha512-nbu6xGgSP6jeYuoVklZBzucUnIpo75tVu3Kr+R0EDycVKaMC/jF5Q/YCaM/8gR4fPZ1IDcXt6FdBJFZ1uZwEPA=="],
+    "@plausible-analytics/tracker": ["@plausible-analytics/tracker@0.4.7", "", {}, "sha512-majmq1uion4uLo88Tr0eMCMfi7TY00okp3I0Vql9egFaAz6DYCW4bJaV3t5LB3BfcvW5exJpmqzROU0a1b6nAA=="],
 
     "@popperjs/core": ["@popperjs/core@2.11.8", "", {}, "sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A=="],
 

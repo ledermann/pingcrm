@@ -3,6 +3,7 @@ FactoryBot.define do
     first_name { 'John' }
     last_name { 'Doe' }
     email { Faker::Internet.unique.email }
-    password { 'secret' }
+    # No weak password: Chrome would show a leak warning that swallows clicks
+    password { SecureRandom.base58(24) }
   end
 end

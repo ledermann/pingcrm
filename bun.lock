@@ -9,7 +9,7 @@
         "@plausible-analytics/tracker": "^0.4.7",
         "@popperjs/core": "^2.11.8",
         "lodash": "^4.18.1",
-        "timeago.js": "^4.3.0",
+        "timeago.js": "^4.3.1",
         "uuid": "^14.0.3",
         "vue": "^3.5.45",
       },
@@ -372,7 +372,7 @@
 
     "tapable": ["tapable@2.3.3", "", {}, "sha512-uxc/zpqFg6x7C8vOE7lh6Lbda8eEL9zmVm/PLeTPBRhh1xCgdWaQ+J1CUieGpIfm2HdtsUpRv+HshiasBMcc6A=="],
 
-    "timeago.js": ["timeago.js@4.3.0", "", {}, "sha512-/pZHN79A/m+GqVa0UZD4YS91AFsTiXN8vmKb2VYM+NK/v6LcH6enmFXNcLgkojEMXXhocc4r3IHMspngyX3Pfg=="],
+    "timeago.js": ["timeago.js@4.3.1", "", {}, "sha512-lK+ZtlgJlzmAIeWDMmnN2WTmTPPwfQoFn8NRanj1ZzIdfC+MMOsivRjQFvurvCy6kB22wJwH0s3TMisfnv93Tw=="],
 
     "tinyglobby": ["tinyglobby@0.2.17", "", { "dependencies": { "fdir": "^6.5.0", "picomatch": "^4.0.4" } }, "sha512-wXR/dYpcqKmfWpEdZjiKJOwCNFndD0DMnrW/cYjVGttEkBfVgcLFHoNrlj47mjOVic9yyNu65alsgF4NQyTa2g=="],
 

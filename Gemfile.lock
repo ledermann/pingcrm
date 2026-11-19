@@ -403,7 +403,7 @@ DEPENDENCIES
   web-console
 
 RUBY VERSION
-  ruby 4.0.9
+  ruby 4.0.10
 
 BUNDLED WITH
   4.0.24
